@@ -1,0 +1,180 @@
+{
+  "zh-CN": [
+    {
+      "name": "说明",
+      "children": [
+        {
+          "path": "/g_preface",
+          "name": "前言"
+        },
+        {
+          "path": "/principle",
+          "name": "设计原则"
+        },
+        {
+          "path": "/code",
+          "name": "代码规范"
+        }
+      ]
+    },
+    {
+      "name": "组件",
+      "groups": [
+        {
+          "groupName": "Basic 基础",
+          "list": [
+            {
+              "path": "/g_layout",
+              "title": "Layout 布局"
+            },
+            {
+              "path": "/g_copywriting",
+              "title": "CopyWriting 文案"
+            },
+            {
+              "path": "/g_color",
+              "title": "Color 色彩"
+            },
+            {
+              "path": "/g_typography",
+              "title": "Typography 字体"
+            },
+            {
+              "path": "/g_icon",
+              "title": "Icon 图标"
+            },
+            {
+              "path": "/g_button",
+              "title": "Button 按钮"
+            }
+          ]
+        },
+        {
+          "groupName": "Form 表单",
+          "list": [
+            {
+              "path": "/g_radio",
+              "title": "Radio 单选框"
+            },
+            {
+              "path": "/g_check-box",
+              "title": "CheckBox 复选框"
+            },
+            {
+              "path": "/g_search",
+              "title": "Search 搜索"
+            },
+            {
+              "path": "/g_select",
+              "title": "Select 下拉框"
+            },
+            {
+              "path": "/g_switch",
+              "title": "Switch 开关"
+            },
+            {
+              "path": "/g_slider",
+              "title": "Slider 滑块"
+            },
+            {
+              "path": "/g_date-picker",
+              "title": "DatePicker 日期选择器"
+            },
+            {
+              "path": "/g_upload",
+              "title": "Upload 上传"
+            },
+            {
+              "path": "/g_transfer",
+              "title": "Transfer 穿梭框"
+            },
+            {
+              "path": "/g_form",
+              "title": "Form 表单"
+            }
+          ]
+        },
+        {
+          "groupName": "Data 数据",
+          "list": [
+            {
+              "path": "/g_table",
+              "title": "Table 表格"
+            },
+            {
+              "path": "/g_progress",
+              "title": "Progress 进度条"
+            },
+            {
+              "path": "/g_tree",
+              "title": "Tree 树形控件"
+            },
+            {
+              "path": "/g_pagination",
+              "title": "Pagination 分页"
+            },
+            {
+              "path": "/g_badge",
+              "title": "Badge 标记"
+            }
+          ]
+        },
+        {
+          "groupName": "Notice 通知",
+          "list": [
+            {
+              "path": "/g_message",
+              "title": "Message 消息提示"
+            }
+          ]
+        },
+        {
+          "groupName": "Navigation 导航",
+          "list": [
+            {
+              "path": "/g_nav-menu",
+              "title": "NavMenu 导航菜单"
+            },
+            {
+              "path": "/g_tabs",
+              "title": "Tabs 标签页"
+            },
+            {
+              "path": "/g_breadcrumb",
+              "title": "Breadcrumb 面包屑"
+            },
+            {
+              "path": "/g_steps",
+              "title": "Steps 步骤条"
+            }
+          ]
+        },
+        {
+          "groupName": "Others 其他",
+          "list": [
+            {
+              "path": "/g_dialog",
+              "title": "Dialog 对话框"
+            },
+            {
+              "path": "/g_card",
+              "title": "Card 卡片"
+            },
+            {
+              "path": "/g_timeline",
+              "title": "TimeLine 时间线"
+            },
+            {
+              "path": "/g_calendar",
+              "title": "Calendar 日历"
+            },
+            {
+              "path": "/g_drawer",
+              "title": "Drawer 抽屉"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

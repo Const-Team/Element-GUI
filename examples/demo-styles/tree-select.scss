@@ -1,0 +1,23 @@
+.demo-tree-select {
+  .el-tree-select {
+    width: 240px;
+  }
+  .el-col {
+    border-right: solid 1px #eff2f6;
+    padding: 30px 0;
+    box-sizing: border-box;
+    .el-tree-select{
+      margin: 0 auto;
+    }
+    &:last-child {
+      border-right: none;
+    }
+  }
+  .demonstration {
+    display: block;
+    text-align: center;
+    color: #8492a6;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}

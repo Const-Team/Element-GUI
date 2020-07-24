@@ -1,0 +1,192 @@
+@import "mixins/mixins";
+@import "mixins/utils";
+@import "common/var";
+@import "select-dropdown";
+@import "input";
+@import "tag";
+@import "option";
+@import "option-group";
+@import "scrollbar";
+
+@include b(select) {
+  display: inline-block;
+  position: relative;
+  .el-select__tags
+    >span {
+      display: inline-block;
+    }
+
+  &:hover {
+    .el-input__inner {
+      border-color: $--select-border-color-hover;
+    }
+    .el-select__caret{
+      color: $--select-border-color-hover;
+    }
+  }
+
+  .el-input__inner {
+    cursor: pointer;
+    padding-right: 35px;
+
+    &:focus {
+      border-color: $--select-input-focus-border-color;
+    }
+  }
+
+  .el-input {
+    & .el-select__caret {
+      // color: $--select-input-color;
+      font-size: $--select-input-font-size;
+      transition: transform .3s;
+      transform: rotateZ(180deg);
+      cursor: pointer;
+
+      @include when(reverse) {
+        transform: rotateZ(0deg);
+      }
+
+      @include when(show-close) {
+        font-size: $--select-font-size;
+        text-align: center;
+        transform: rotateZ(180deg);
+        border-radius: $--border-radius-circle;
+        color: $--select-input-color;
+        transition: $--color-transition-base;
+
+        &:hover {
+          color: $--select-close-hover-color;
+        }
+      }
+    }
+
+    &.is-disabled {
+      & .el-input__inner {
+        cursor: not-allowed;
+
+        &:hover {
+          // 按钮组下拉禁用
+          // border-color: $--select-disabled-border;
+        }
+      }
+      &:hover{
+        .el-input__icon{
+          color: $--input-disabled-color;
+        }
+      }
+    }
+
+    &.is-focus .el-input__inner {
+      border-color: $--select-input-focus-border-color;
+    }
+  }
+
+  > .el-input {
+    display: block;
+  }
+
+  @include e(input) {
+    border: none;
+    outline: none;
+    padding: 0;
+    margin-left: 15px;
+    color: $--select-multiple-input-color;
+    font-size: $--select-font-size;
+    appearance: none;
+    height: 28px;
+    background-color: transparent;
+    @include when(mini) {
+      height: 14px;
+    }
+  }
+
+  @include e(close) {
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    z-index: $--index-top;
+    right: 25px;
+    color: $--select-input-color;
+    line-height: 18px;
+    font-size: $--select-input-font-size;
+
+    &:hover {
+      color: $--select-close-hover-color;
+    }
+  }
+  .el-select__tags-wrapper{
+    width: 100%;
+    .el-select__tags-text{
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  @include e(tags) {
+    position: absolute;
+    line-height: normal;
+    white-space: normal;
+    z-index: $--index-normal;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .el-tag__close {
+    margin-top: -2px;
+  }
+  .el-select-text{
+    width: 100%;
+    margin-left: 15px;
+    color: $--select-multiple-input-color;
+    font-size: $--select-font-size;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    span:after{
+      content: ',';
+      margin:0 3px;
+    }
+    span:last-child:after{
+      content: ''
+    }
+  }
+  .el-tag {
+    box-sizing: border-box;
+    border-color: transparent;
+    margin: 2px 0 2px 6px;
+    background-color: #f0f2f5;
+    @include m(small){
+      height: 24px;
+      line-height: 24px;
+      .el-tag__close.el-icon-close {
+        top: -9px;
+      }
+    }
+    @include m(mini){
+      height: 20px;
+      line-height: 20px;
+      .el-tag__close.el-icon-close {
+        top: -6px;
+      }
+    }
+    .el-tag__close.el-icon-close {
+      // background-color: $--color-text-placeholder;
+      right: -7px;
+      &:hover {
+        background-color: $--color-text-secondary;
+        color: $--color-white;
+      }
+
+      &::before {
+        display: block;
+        transform: translate(0, .5px);
+      }
+    }
+  }
+}

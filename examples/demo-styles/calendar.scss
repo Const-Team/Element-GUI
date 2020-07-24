@@ -1,0 +1,18 @@
+.demo-calendar.demo-block,.demo-calendar-pro.demo-block {
+  .is-selected {
+    color: #1989FA;
+  } 
+  .obj{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 9;
+    font-size: 12px;
+    color: #d2d2d2;
+  }
+  .demonstration{
+    font-size: 14px;
+    color:#8492a6;
+    margin-top:20px
+  }
+}

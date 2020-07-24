@@ -1,0 +1,33 @@
+.demo-color {
+  position: relative;
+  margin: 5px 0;
+  box-sizing: border-box;
+  width: 100%;
+  .color-describe{
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .color-box{
+    color: #fff;
+    font-size: 14px;
+  }
+  .color-item{
+    display: inline-block;
+    width: 10%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    padding: 5px 0;
+    &:nth-child(-n+4){
+      color: #555;
+    }
+  }
+  .color-block{
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    text-indent: 2em;
+    margin: 3px 0;
+    border-radius: 2px;
+  }
+}

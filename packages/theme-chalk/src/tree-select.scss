@@ -1,0 +1,184 @@
+@import "mixins/mixins";
+@import "common/var";
+@import "input";
+
+@include b(tree-select) {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  font-size: $--font-size-base;
+  line-height: $--input-height;
+  &:hover {
+    .el-input__inner {
+      border-color: $--select-border-color-hover;
+    }
+    .el-input__icon{
+      color: $--select-border-color-hover;
+      
+    }
+  }
+  .el-input,
+  .el-input__inner {
+    cursor: pointer;
+    &.is-disabled {
+      .el-input__inner {
+        background-color: $--input-disabled-fill;
+        border-color: $--input-disabled-border;
+        color: $--input-disabled-color;
+        cursor: not-allowed;
+      }
+      &:hover{
+        .el-input__inner {
+          border-color: $--input-disabled-border;
+        }
+        .el-input__icon{
+          color: $--input-disabled-color;
+        }
+      }
+    }
+  }
+
+  .el-icon-arrow-down {
+    transition: transform .3s;
+    font-size: 14px;
+
+    @include when(reverse) {
+      transform: rotateZ(180deg);
+    }
+  }
+
+  .el-icon-circle-close {
+    z-index: #{$--index-normal + 1};
+    transition: $--color-transition-base;
+  }
+
+  .el-input {
+    &.is-focus .el-input__inner {
+      border-color: $--select-input-focus-border-color;
+    }
+  }
+
+  @include m(medium) {
+    font-size: $--input-medium-font-size;
+    line-height: $--input-medium-height;
+  }
+
+  @include m(small) {
+    font-size: $--input-small-font-size;
+    line-height: $--input-small-height;
+  }
+
+  @include m(mini) {
+    font-size: $--input-mini-font-size;
+    line-height: $--input-mini-height;
+  }
+
+  @include e(input) {
+    border: none;
+    outline: none;
+    padding: 0;
+    margin-left: 15px;
+    color: $--color-text-secondary;
+    font-size: 12px;
+    appearance: none;
+    height: 28px;
+    background-color: transparent;
+  }
+
+  .el-select-tree__tags-wrapper{
+    width: 100%;
+    .el-select__tags-text{
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  @include e(tags) {
+    position: absolute;
+    line-height: normal;
+    white-space: normal;
+    z-index: $--index-normal;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    & > span {
+      display: inline-block;
+    }
+  }
+
+  .el-tag__close {
+    margin-top: -2px;
+  }
+  .el-tree-select-text{
+    width: 100%;
+    margin-left: 15px;
+    color: $--select-multiple-input-color;
+    font-size: $--select-font-size;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    span:after{
+      content: ',';
+      margin:0 3px;
+    }
+    span:last-child:after{
+      content: ''
+    }
+  }
+  .el-tag {
+    box-sizing: border-box;
+    border-color: transparent;
+    margin: 2px 0 2px 6px;
+    background-color: #f0f2f5;
+    @include m(small){
+      height: 24px;
+      line-height: 24px;
+    }
+    @include m(mini){
+      height: 20px;
+      line-height: 20px;
+    }
+    .el-tag__close.el-icon-close {
+      // background-color: $--color-text-placeholder;
+      top: -1px;
+      right: -7px;
+      &:hover {
+        background-color: $--color-text-secondary;
+        color: $--color-white;
+      }
+
+      &::before {
+        display: block;
+        transform: translate(0, .5px);
+      }
+    }
+  }
+}
+
+@include b(tree-select-dropdown) {
+  border: $--select-dropdown-border;
+  border-radius: $--border-radius-base;
+  background-color: $--select-dropdown-background;
+  box-shadow: $--select-dropdown-shadow;
+  @include e(wrap){
+    height: 204px;
+    padding: 10px 0;
+  }
+
+  .el-tree {
+    .is-select{
+      color: $--color-primary;
+      &:hover .el-tree-node__content{
+        color: $--color-primary;
+      }
+    }
+    .el-tree-node__expand-icon{
+      margin-left: 6px;
+    }
+  }
+}

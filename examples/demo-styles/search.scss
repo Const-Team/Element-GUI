@@ -1,0 +1,16 @@
+.search-p {
+  position: relative;
+  color: #555555!important;
+  font-size: 26px!important;
+  text-indent: 21px;
+  &:before{
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    background: #D5D5D5;
+    top: 14px;
+    left: 0px;
+  }
+}
