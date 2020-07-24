@@ -1,0 +1,394 @@
+@import "mixins/mixins";
+
+@include b(steps) {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-spacing: 5px 0px;
+  position: relative;
+  // 简洁风格
+  @include m(simple) {
+    font-size: 0;
+    .cell{
+      @include clear;
+    }
+    @include when(average){
+      @include b(step){
+        display: table-cell;
+      }
+    }
+    &:not(.is-average) {
+      // display: block;
+      width: auto;
+      table-layout: auto;
+    }
+    @include b(step){
+      // min-width: 140px;
+      // max-width: 200px;
+      // display: inline-block;
+      display: table-cell;
+      position: relative;
+      background: $--background-color-darken;
+      height: 34px;
+      margin-right: 5px;
+      &:after {
+        position: absolute;
+        content: "";
+        width: 0px;
+        height: 0px;
+        border: 17px solid transparent;
+        border-left: 17px solid $--background-color-darken;
+        right: -34px;
+        z-index: 10;
+        top: 0px;
+      }
+      &:before {
+        position: absolute;
+        content: "";
+        width: 0px;
+        height: 0px;
+        border: 17px solid transparent;
+        border-left: 17px solid $--color-white;
+        left: 0px;
+        top: 0;
+      }
+      @include e(head){
+        @include float;
+        margin-left: 20px;
+        vertical-align: top;
+        color: $--color-text-placeholder;
+      }
+      
+      @include e(main){
+        margin-right: 10px;
+        @include when(icon){
+          margin-left: 60px;
+        }
+        @include when(text){
+          margin-left: 30px;
+        }
+      }
+      @include e((line,description)){
+        display: none;
+      }
+      @include e(icon){
+        
+        @include when(text){
+          i{
+            display: none;
+          }
+        }
+        i{
+          height: 34px;
+          width: 34px;
+          background-color: transparent;
+          text-align: center;
+          font-size: 18px;
+          line-height: 34px;
+        }
+      }
+      @include e(title){
+        line-height: 34px;
+        color: $--color-text-placeholder;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      @include when(step-finish) {
+        background-color: $--color-primary-light-9;
+        &:after {
+          border-left: 17px solid $--color-primary-light-9;
+        }
+        @include e((head,title)){
+          color: $--color-primary;
+        }
+      }
+      @include when(step-process) {
+        background-color: $--color-primary;
+        &:after {
+          border-left: 17px solid $--color-primary;
+        }
+        @include e((head,title)){
+          color: $--color-white;
+        }
+      }
+      @include when(step-error) {
+        background-color: $--color-danger-light;
+        &:after {
+          border-left: 17px solid $--color-danger-light;
+        }
+        @include e((head,title)){
+          color: $--color-danger;
+        }
+      }
+      @include when(step-success) {
+        background-color: $--color-success-light;
+        &:after {
+          border-left: 17px solid $--color-success-light;
+        }
+        @include e((head,title)){
+          color: $--color-success;
+        }
+      }
+    }
+  }
+  // 横向
+  @include m(horizontal) {
+    white-space: nowrap;
+    @include b(step){
+      display: table-cell;
+      @include e(head){
+        height: 43px;
+      }
+      @include e(line){
+        top: 16px;
+        height: 2px;
+        left: calc(50% + 21px);
+        right: calc(-50% + 15px);
+        background-color: $--border-color-base;
+      }
+      @include e(icon){
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        line-height: 22px;
+        color: $--color-text-placeholder;
+        margin-left: 50%;
+        left: -11px;
+        top: 6px;
+        text-align: center;
+        transition: .15s ease-out;
+        font-size: 14px;
+        @include when(text){
+          border-radius: 50%;
+          background: $--background-color-darken;
+          i{
+            display: none;
+          }
+        }
+        
+      }
+      
+      @include e(main){
+        text-align: center;
+      }
+      @include e(title){
+        line-height: 22px;
+        color: $--color-text-placeholder;
+      }
+      @include e(description){
+        padding-top: 5px;
+      }
+      
+      @include when(step-process) {
+        @include e(icon){
+          background-color: $--color-primary;
+          color: $--color-white;
+          border: 0 solid $--color-primary-light-8;
+          &.is-icon{
+            background-color: $--color-white;
+            color: $--color-primary;
+            border: none;
+            padding: 4px;
+          }
+        }
+        
+        @include e(line){
+          background-color:$--color-primary ;
+          i{
+            border-color:$--color-primary ;
+          }
+        }
+        @include e(title){
+          color: $--color-primary;
+        }
+      }
+      @include when(step-error) {
+        @include e(icon){
+          background-color: $--color-danger;
+          color: $--color-white;
+          border: 0 solid mix($--color-white, $--color-danger, 80%);
+          &.is-icon{
+            background-color: $--color-white;
+            color: $--color-danger;
+            border: none;
+            padding: 4px;
+          }
+        }
+        @include e(line){
+          background-color:$--color-danger ;
+          i{
+            border-color:$--color-danger ;
+          }
+        }
+        @include e(title){
+          color: $--color-danger;
+        }
+      }
+      @include when(step-success) {
+        @include e(icon){
+          background-color: $--color-success;
+          color: $--color-white;
+          border: 0 solid mix($--color-white, $--color-success, 80%);
+          &.is-icon{
+            background-color: $--color-white;
+            color: $--color-success;
+            border: none;
+            padding: 4px;
+          }
+        }
+        @include e(line){
+          background-color:$--color-success ;
+          i{
+            border-color:$--color-success ;
+          }
+        }
+        @include e(title){
+          color: $--color-success;
+        }
+      }
+      @include when(step-finish) {
+        @include e(icon){
+          background-color: $--color-primary;
+          color: $--color-white;
+          border: 0 solid mix($--color-white, $--color-primary, 80%);
+          &.is-icon{
+            background-color: $--color-white;
+            color: $--color-primary;
+            border: none;
+            padding: 4px;
+          }
+        }
+        @include e(line){
+          background-color:$--color-primary ;
+          i{
+            border-color:$--color-primary ;
+          }
+        }
+        @include e(title){
+          color: $--color-primary;
+        }
+      }
+      @include when(active){
+        @include e(icon){
+          width: 32px;
+          height: 32px;
+          line-height: 32px;
+          font-size: 18px;
+          top: -4px;
+          left: -20px;
+          border-width: 4px;
+        }
+        @include e(line){
+          background-color:$--border-color-base ;
+          i{
+            border-color:$--border-color-base;
+          }
+        }
+      }
+    }
+  }
+  // 纵向
+  @include m(vertical) {
+    height: 100%;
+    border-spacing:0 20px;
+    @include b(step){
+      @include e(head) {
+        position: absolute;
+      }
+      @include e(main){
+        position: relative;
+        padding-left: 10px;
+      }
+      @include e(title){
+        position: absolute;
+        top: -16px;
+        line-height: 1;
+        color: $--color-text-placeholder;
+      }
+      @include e(description){
+        padding-bottom: 20px;
+      }
+      @include e(icon){
+        width: 12px;
+        height: 12px;
+        position: relative;
+        z-index: 1;
+        font-size: 14px;
+        box-sizing: border-box;
+        background: $--color-white;
+        transition: .15s ease-out;
+        border:2px solid $--border-color-base ;
+        left: -7px;
+        top: -16px;
+        @include when(icon) {
+          width: 24px;
+        }
+      }
+      @include e(line){
+        display: none;
+      }
+      @include when(vertical) {
+        display: table-row;
+        position: relative;
+        .cell{
+          position: relative;
+          display: table-cell;
+          border-left:2px solid $--border-color-base ;
+          @include when(process){
+            border-color: $--border-color-base;
+            @include e(icon){
+              background-color: $--color-primary;
+              border-color: $--color-primary;
+            }
+            @include e(title){
+              color: $--color-primary;
+            }
+          }
+          @include when(finish){
+            border-color: $--color-primary;
+            @include e(icon){
+              background-color: $--color-primary;
+              border-color: $--color-primary;
+            }
+            @include e(title){
+              color: $--color-primary;
+            }
+          }
+          @include when(error){
+            border-color: $--color-danger;
+            @include e(icon){
+              background-color: $--color-danger;
+              border-color: $--color-danger;
+            }
+            @include e(title){
+              color: $--color-danger;
+            }
+          }
+          @include when(success){
+            border-color: $--color-success;
+            @include e(icon){
+              background-color: $--color-success;
+              border-color: $--color-success;
+            }
+            @include e(title){
+              color: $--color-success;
+            }
+          }
+         
+        }
+        @include when(active){
+          .cell{
+            border-color: $--border-color-base;
+          }
+        }
+        &.is-last{
+          .cell{
+            border: none;
+            padding-left: 2px;
+          }
+        }
+      }
+    }
+  }
+}

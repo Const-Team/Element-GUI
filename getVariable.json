@@ -1,0 +1,2323 @@
+[
+  {
+    "name": "color",
+    "config": [
+      {
+        "type": "color",
+        "name": "1",
+        "key": "$--color-primary",
+        "value": "#1890FF",
+        "category": "Brand Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "1",
+        "key": "$--color-white",
+        "value": "#FFFFFF",
+        "category": "Background Color",
+        "order": 4
+      },
+      {
+        "type": "color",
+        "name": "1",
+        "key": "$--color-black",
+        "value": "#000000",
+        "category": "Background Color",
+        "order": 4
+      },
+      {
+        "type": "color",
+        "name": "1",
+        "key": "$--color-success",
+        "value": "#66BF16",
+        "category": "Functional Color",
+        "order": 1
+      },
+      {
+        "type": "color",
+        "name": "1",
+        "key": "$--color-warning",
+        "value": "#E6AD00",
+        "category": "Functional Color",
+        "order": 1
+      },
+      {
+        "type": "color",
+        "name": "1",
+        "key": "$--color-danger",
+        "value": "#FF4B53",
+        "category": "Functional Color",
+        "order": 1
+      },
+      {
+        "type": "color",
+        "name": "1",
+        "key": "$--color-info",
+        "value": "#999999",
+        "category": "Functional Color",
+        "order": 1
+      },
+      {
+        "type": "color",
+        "name": "1",
+        "key": "$--color-text-primary",
+        "value": "#555555",
+        "category": "Font Color",
+        "order": 2
+      },
+      {
+        "type": "color",
+        "name": "1",
+        "key": "$--color-text-regular",
+        "value": "#555555",
+        "category": "Font Color",
+        "order": 2
+      },
+      {
+        "type": "color",
+        "name": "1",
+        "key": "$--color-text-secondary",
+        "value": "#555555",
+        "category": "Font Color",
+        "order": 2
+      },
+      {
+        "type": "color",
+        "name": "1",
+        "key": "$--color-text-placeholder",
+        "value": "#999999",
+        "category": "Font Color",
+        "order": 2
+      },
+      {
+        "type": "color",
+        "name": "1",
+        "key": "$--border-color-base",
+        "value": "#D2D2D2",
+        "category": "Border Color",
+        "order": 3
+      },
+      {
+        "type": "color",
+        "name": "1",
+        "key": "$--border-color-light",
+        "value": "#D2D2D2",
+        "category": "Border Color",
+        "order": 3
+      },
+      {
+        "type": "color",
+        "name": "1",
+        "key": "$--border-color-lighter",
+        "value": "#D2D2D2",
+        "category": "Border Color",
+        "order": 3
+      },
+      {
+        "type": "color",
+        "name": "1",
+        "key": "$--border-color-extra-light",
+        "value": "#D2D2D2",
+        "category": "Border Color",
+        "order": 3
+      },
+      {
+        "type": "color",
+        "name": "1",
+        "key": "$--background-color-base",
+        "value": "#F5F7FA",
+        "category": "Background Color",
+        "order": 4
+      }
+    ]
+  },
+  {
+    "name": "border",
+    "config": [
+      {
+        "type": "borderRadius",
+        "name": "1",
+        "key": "$--border-radius-base",
+        "value": "4px",
+        "category": "Radius",
+        "order": 0
+      },
+      {
+        "type": "borderRadius",
+        "name": "1",
+        "key": "$--border-radius-small",
+        "value": "2px",
+        "category": "Radius",
+        "order": 0
+      },
+      {
+        "type": "borderRadius",
+        "name": "1",
+        "key": "$--border-radius-circle",
+        "value": "100%",
+        "category": "Radius",
+        "order": 0
+      },
+      {
+        "type": "borderRadius",
+        "name": "1",
+        "key": "$--border-radius-zero",
+        "value": "0",
+        "category": "Radius",
+        "order": 0
+      },
+      {
+        "type": "boxShadow",
+        "name": "1",
+        "key": "$--box-shadow-base",
+        "value": "0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)",
+        "category": "Shadow",
+        "order": 1
+      },
+      {
+        "type": "boxShadow",
+        "name": "1",
+        "key": "$--box-shadow-light",
+        "value": "0 2px 12px 0 rgba(0, 0, 0, 0.1)",
+        "category": "Shadow",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "name": "typography",
+    "config": [
+      {
+        "type": "fontSize",
+        "name": "1",
+        "key": "$--font-size-extra-large",
+        "value": "20px",
+        "category": "Font Size",
+        "order": 0
+      },
+      {
+        "type": "fontSize",
+        "name": "1",
+        "key": "$--font-size-large",
+        "value": "18px",
+        "category": "Font Size",
+        "order": 0
+      },
+      {
+        "type": "fontSize",
+        "name": "1",
+        "key": "$--font-size-medium",
+        "value": "16px",
+        "category": "Font Size",
+        "order": 0
+      },
+      {
+        "type": "fontSize",
+        "name": "1",
+        "key": "$--font-size-base",
+        "value": "14px",
+        "category": "Font Size",
+        "order": 0
+      },
+      {
+        "type": "fontSize",
+        "name": "1",
+        "key": "$--font-size-small",
+        "value": "13px",
+        "category": "Font Size",
+        "order": 0
+      },
+      {
+        "type": "fontSize",
+        "name": "1",
+        "key": "$--font-size-extra-small",
+        "value": "12px",
+        "category": "Font Size",
+        "order": 0
+      },
+      {
+        "type": "fontWeight",
+        "name": "1",
+        "key": "$--font-weight-primary",
+        "value": "500",
+        "category": "Font Weight",
+        "order": 1
+      },
+      {
+        "type": "fontWeight",
+        "name": "1",
+        "key": "$--font-weight-secondary",
+        "value": "100",
+        "category": "Font Weight",
+        "order": 1
+      },
+      {
+        "type": "fontLineHeight",
+        "name": "1",
+        "key": "$--font-line-height-primary",
+        "value": "24px",
+        "category": "Line Height",
+        "order": 2
+      },
+      {
+        "type": "fontLineHeight",
+        "name": "1",
+        "key": "$--font-line-height-secondary",
+        "value": "16px",
+        "category": "Line Height",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "name": "checkbox",
+    "config": [
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--checkbox-font-size",
+        "value": "14px",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "fontWeight",
+        "name": "",
+        "key": "$--checkbox-font-weight",
+        "value": "$--font-weight-primary",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--checkbox-font-color",
+        "value": "$--color-text-regular",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "borderRadius",
+        "name": "",
+        "key": "$--checkbox-border-radius",
+        "value": "$--border-radius-small",
+        "category": "Border",
+        "order": 2
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--checkbox-background-color",
+        "value": "$--color-white",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--checkbox-disabled-border-color",
+        "value": "$--border-color-base",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--checkbox-checked-font-color",
+        "value": "$--color-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--checkbox-checked-background-color",
+        "value": "$--color-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--checkbox-bordered-height",
+        "value": "40px",
+        "category": "Other",
+        "order": 4
+      },
+      {
+        "type": "padding",
+        "name": "",
+        "key": "$--checkbox-bordered-padding",
+        "value": "9px 20px 9px 10px",
+        "category": "Spacing",
+        "order": 3
+      },
+      {
+        "type": "padding",
+        "name": "",
+        "key": "$--checkbox-bordered-medium-padding",
+        "value": "7px 20px 7px 10px",
+        "category": "Spacing",
+        "order": 3
+      },
+      {
+        "type": "padding",
+        "name": "",
+        "key": "$--checkbox-bordered-small-padding",
+        "value": "5px 15px 5px 10px",
+        "category": "Spacing",
+        "order": 3
+      },
+      {
+        "type": "padding",
+        "name": "",
+        "key": "$--checkbox-bordered-mini-padding",
+        "value": "3px 15px 3px 10px",
+        "category": "Spacing",
+        "order": 3
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--checkbox-bordered-medium-height",
+        "value": "36px",
+        "category": "Other",
+        "order": 4
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--checkbox-bordered-small-height",
+        "value": "32px",
+        "category": "Other",
+        "order": 4
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--checkbox-bordered-mini-height",
+        "value": "28px",
+        "category": "Other",
+        "order": 4
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--checkbox-button-checked-background-color",
+        "value": "$--color-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--checkbox-button-checked-font-color",
+        "value": "$--color-white",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--checkbox-button-checked-border-color",
+        "value": "$--color-primary",
+        "category": "Color",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "name": "radio",
+    "config": [
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--radio-font-size",
+        "value": "$--font-size-base",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "fontWeight",
+        "name": "",
+        "key": "$--radio-font-weight",
+        "value": "$--font-weight-primary",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--radio-font-color",
+        "value": "$--color-text-regular",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "borderRadius",
+        "name": "",
+        "key": "$--radio-input-border-radius",
+        "value": "$--border-radius-circle",
+        "category": "Border",
+        "order": 2
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--radio-input-background-color",
+        "value": "$--color-white",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--radio-input-border-color",
+        "value": "$--border-color-base",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--radio-icon-color",
+        "value": "$--color-white",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--radio-checked-font-color",
+        "value": "$--color-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--radio-checked-input-border-color",
+        "value": "$--color-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--radio-checked-input-background-color",
+        "value": "$--color-white",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--radio-checked-icon-color",
+        "value": "$--color-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--radio-button-font-size",
+        "value": "$--font-size-base",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--radio-button-checked-background-color",
+        "value": "$--color-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--radio-button-checked-font-color",
+        "value": "$--color-white",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--radio-button-checked-border-color",
+        "value": "$--color-primary",
+        "category": "Color",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "name": "select",
+    "config": [
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--select-font-size",
+        "value": "$--font-size-base",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--select-input-focus-border-color",
+        "value": "$--color-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--select-input-font-size",
+        "value": "14px",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--select-option-height",
+        "value": "34px",
+        "category": "Other",
+        "order": 4
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--select-option-selected-font-color",
+        "value": "$--color-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--select-dropdown-max-height",
+        "value": "274px",
+        "category": "Other",
+        "order": 4
+      }
+    ]
+  },
+  {
+    "name": "alert",
+    "config": [
+      {
+        "type": "borderRadius",
+        "name": "",
+        "key": "$--alert-border-radius",
+        "value": "$--border-radius-base",
+        "category": "Border",
+        "order": 2
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--alert-title-font-size",
+        "value": "13px",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--alert-description-font-size",
+        "value": "12px",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--alert-close-font-size",
+        "value": "12px",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--alert-close-customed-font-size",
+        "value": "13px",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--alert-icon-size",
+        "value": "16px",
+        "category": "Other",
+        "order": 4
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--alert-icon-large-size",
+        "value": "28px",
+        "category": "Other",
+        "order": 4
+      }
+    ]
+  },
+  {
+    "name": "messagebox",
+    "config": [
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--messagebox-title-color",
+        "value": "$--color-text-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--messagebox-font-size",
+        "value": "$--font-size-large",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--messagebox-content-font-size",
+        "value": "$--font-size-base",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--messagebox-content-color",
+        "value": "$--color-text-regular",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--messagebox-error-font-size",
+        "value": "12px",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--messagebox-success-color",
+        "value": "$--color-success",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--messagebox-info-color",
+        "value": "$--color-info",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--messagebox-warning-color",
+        "value": "$--color-warning",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--messagebox-danger-color",
+        "value": "$--color-danger",
+        "category": "Color",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "name": "message",
+    "config": [
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--message-close-icon-color",
+        "value": "$--color-text-placeholder",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--message-close-size",
+        "value": "16px",
+        "category": "Other",
+        "order": 4
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--message-close-hover-color",
+        "value": "$--color-text-secondary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--message-success-font-color",
+        "value": "$--color-success",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--message-info-font-color",
+        "value": "$--color-info",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--message-warning-font-color",
+        "value": "$--color-warning",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--message-danger-font-color",
+        "value": "$--color-danger",
+        "category": "Color",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "name": "notification",
+    "config": [
+      {
+        "type": "padding",
+        "name": "",
+        "key": "$--notification-padding",
+        "value": "14px 26px 14px 13px",
+        "category": "Spacing",
+        "order": 3
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--notification-border-color",
+        "value": "$--border-color-lighter",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--notification-content-font-size",
+        "value": "$--font-size-base",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--notification-content-color",
+        "value": "$--color-text-regular",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--notification-title-font-size",
+        "value": "16px",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--notification-title-color",
+        "value": "$--color-text-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--notification-close-color",
+        "value": "$--color-text-secondary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--notification-close-hover-color",
+        "value": "$--color-text-regular",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--notification-success-icon-color",
+        "value": "$--color-success",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--notification-info-icon-color",
+        "value": "$--color-info",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--notification-warning-icon-color",
+        "value": "$--color-warning",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--notification-danger-icon-color",
+        "value": "$--color-danger",
+        "category": "Color",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "name": "input",
+    "config": [
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--input-font-color",
+        "value": "$--color-text-regular",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--input-width",
+        "value": "140px",
+        "category": "Other",
+        "order": 4
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--input-height",
+        "value": "40px",
+        "category": "Other",
+        "order": 4
+      },
+      {
+        "type": "borderRadius",
+        "name": "",
+        "key": "$--input-border-radius",
+        "value": "$--border-radius-base",
+        "category": "Border",
+        "order": 2
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--input-background-color",
+        "value": "$--color-white",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--input-icon-color",
+        "value": "$--color-text-placeholder",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--input-placeholder-color",
+        "value": "$--color-text-placeholder",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--input-medium-font-size",
+        "value": "14px",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--input-medium-height",
+        "value": "36px",
+        "category": "Other",
+        "order": 4
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--input-small-font-size",
+        "value": "13px",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--input-small-height",
+        "value": "32px",
+        "category": "Other",
+        "order": 4
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--input-mini-font-size",
+        "value": "12px",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--input-mini-height",
+        "value": "28px",
+        "category": "Other",
+        "order": 4
+      }
+    ]
+  },
+  {
+    "name": "cascader",
+    "config": [
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--cascader-menu-font-color",
+        "value": "$--color-text-regular",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--cascader-menu-selected-font-color",
+        "value": "$--color-primary",
+        "category": "Color",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "name": "button",
+    "config": [
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--button-font-size",
+        "value": "$--font-size-base",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "fontWeight",
+        "name": "",
+        "key": "$--button-font-weight",
+        "value": "$--font-weight-primary",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "borderRadius",
+        "name": "",
+        "key": "$--button-border-radius",
+        "value": "$--border-radius-base",
+        "category": "Border",
+        "order": 2
+      },
+      {
+        "type": "padding",
+        "name": "",
+        "key": "$--button-padding-vertical",
+        "value": "9px",
+        "category": "Spacing",
+        "order": 3
+      },
+      {
+        "type": "padding",
+        "name": "",
+        "key": "$--button-padding-horizontal",
+        "value": "20px",
+        "category": "Spacing",
+        "order": 3
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--button-medium-font-size",
+        "value": "$--font-size-base",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "borderRadius",
+        "name": "",
+        "key": "$--button-medium-border-radius",
+        "value": "$--border-radius-base",
+        "category": "Border",
+        "order": 2
+      },
+      {
+        "type": "padding",
+        "name": "",
+        "key": "$--button-medium-padding-vertical",
+        "value": "10px",
+        "category": "Spacing",
+        "order": 3
+      },
+      {
+        "type": "padding",
+        "name": "",
+        "key": "$--button-medium-padding-horizontal",
+        "value": "20px",
+        "category": "Spacing",
+        "order": 3
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--button-small-font-size",
+        "value": "12px",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "padding",
+        "name": "",
+        "key": "$--button-small-padding-vertical",
+        "value": "9px",
+        "category": "Spacing",
+        "order": 3
+      },
+      {
+        "type": "padding",
+        "name": "",
+        "key": "$--button-small-padding-horizontal",
+        "value": "15px",
+        "category": "Spacing",
+        "order": 3
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--button-mini-font-size",
+        "value": "12px",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "padding",
+        "name": "",
+        "key": "$--button-mini-padding-vertical",
+        "value": "7px",
+        "category": "Spacing",
+        "order": 3
+      },
+      {
+        "type": "padding",
+        "name": "",
+        "key": "$--button-mini-padding-horizontal",
+        "value": "15px",
+        "category": "Spacing",
+        "order": 3
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--button-default-font-color",
+        "value": "$--color-text-regular",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--button-default-background-color",
+        "value": "$--color-white",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--button-default-border-color",
+        "value": "$--border-color-base",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--button-disabled-font-color",
+        "value": "$--color-text-placeholder",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--button-disabled-background-color",
+        "value": "$--color-white",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--button-disabled-border-color",
+        "value": "$--border-color-lighter",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--button-primary-border-color",
+        "value": "$--color-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--button-primary-font-color",
+        "value": "$--color-white",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--button-primary-background-color",
+        "value": "$--color-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--button-success-border-color",
+        "value": "$--color-success",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--button-success-font-color",
+        "value": "$--color-white",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--button-success-background-color",
+        "value": "$--color-success",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--button-warning-border-color",
+        "value": "$--color-warning",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--button-warning-font-color",
+        "value": "$--color-white",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--button-warning-background-color",
+        "value": "$--color-warning",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--button-danger-border-color",
+        "value": "$--color-danger",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--button-danger-font-color",
+        "value": "$--color-white",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--button-danger-background-color",
+        "value": "$--color-danger",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--button-info-border-color",
+        "value": "$--color-info",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--button-info-font-color",
+        "value": "$--color-white",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--button-info-background-color",
+        "value": "$--color-info",
+        "category": "Color",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "name": "switch",
+    "config": [
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--switch-on-color",
+        "value": "$--color-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--switch-off-color",
+        "value": "$--border-color-base",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--switch-font-size",
+        "value": "$--font-size-base",
+        "category": "Font",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "name": "dialog",
+    "config": [
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--dialog-title-font-size",
+        "value": "$--font-size-large",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--dialog-content-font-size",
+        "value": "14px",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "fontLineHeight",
+        "name": "",
+        "key": "$--dialog-font-line-height",
+        "value": "$--font-line-height-primary",
+        "category": "LineHeight",
+        "order": 2
+      },
+      {
+        "type": "padding",
+        "name": "",
+        "key": "$--dialog-padding-primary",
+        "value": "20px",
+        "category": "Spacing",
+        "order": 3
+      }
+    ]
+  },
+  {
+    "name": "table",
+    "config": [
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--table-border-color",
+        "value": "$--border-color-lighter",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--table-font-color",
+        "value": "$--color-text-regular",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--table-header-font-color",
+        "value": "$--color-text-secondary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--table-row-hover-background-color",
+        "value": "$--background-color-base",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--table-header-background-color",
+        "value": "$--color-white",
+        "category": "Color",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "name": "pagination",
+    "config": [
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--pagination-font-size",
+        "value": "13px",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--pagination-background-color",
+        "value": "$--color-white",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--pagination-font-color",
+        "value": "$--color-text-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--pagination-button-color",
+        "value": "$--color-text-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--pagination-button-width",
+        "value": "35.5px",
+        "category": "Other",
+        "order": 4
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--pagination-button-height",
+        "value": "28px",
+        "category": "Other",
+        "order": 4
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--pagination-button-disabled-color",
+        "value": "$--color-text-placeholder",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--pagination-button-disabled-background-color",
+        "value": "$--color-white",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--pagination-hover-color",
+        "value": "$--color-primary",
+        "category": "Color",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "name": "popup",
+    "config": [
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--popup-modal-background-color",
+        "value": "$--color-black",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "opacity",
+        "name": "",
+        "key": "$--popup-modal-opacity",
+        "value": "0.5",
+        "category": "Other",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "name": "popover",
+    "config": [
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--popover-background-color",
+        "value": "$--color-white",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--popover-font-size",
+        "value": "$--font-size-base",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--popover-border-color",
+        "value": "$--border-color-lighter",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "padding",
+        "name": "",
+        "key": "$--popover-padding",
+        "value": "12px",
+        "category": "Spacing",
+        "order": 3
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--popover-title-font-size",
+        "value": "16px",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--popover-title-font-color",
+        "value": "$--color-text-primary",
+        "category": "Color",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "name": "tooltip",
+    "config": [
+      {
+        "type": "color",
+        "name": "1",
+        "key": "$--tooltip-fill",
+        "value": "$--color-text-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "1",
+        "key": "$--tooltip-color",
+        "value": "$--color-white",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--tooltip-font-size",
+        "value": "12px",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--tooltip-border-color",
+        "value": "$--color-text-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "padding",
+        "name": "",
+        "key": "$--tooltip-padding",
+        "value": "10px",
+        "category": "Spacing",
+        "order": 3
+      }
+    ]
+  },
+  {
+    "name": "tag",
+    "config": [
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--tag-info-color",
+        "value": "$--color-info",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--tag-primary-color",
+        "value": "$--color-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--tag-success-color",
+        "value": "$--color-success",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--tag-warning-color",
+        "value": "$--color-warning",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--tag-danger-color",
+        "value": "$--color-danger",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--tag-font-size",
+        "value": "12px",
+        "category": "Font",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "name": "tree",
+    "config": [
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--tree-node-hover-background-color",
+        "value": "$--background-color-base",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--tree-font-color",
+        "value": "$--color-text-regular",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--tree-expand-icon-color",
+        "value": "$--color-text-placeholder",
+        "category": "Color",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "name": "badge",
+    "config": [
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--badge-background-color",
+        "value": "$--color-danger",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--badge-font-size",
+        "value": "12px",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "padding",
+        "name": "",
+        "key": "$--badge-padding",
+        "value": "6px",
+        "category": "Spacing",
+        "order": 3
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--badge-size",
+        "value": "18px",
+        "category": "Other",
+        "order": 4
+      }
+    ]
+  },
+  {
+    "name": "card",
+    "config": [
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--card-border-color",
+        "value": "$--border-color-lighter",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "padding",
+        "name": "",
+        "key": "$--card-padding",
+        "value": "20px",
+        "category": "Spacing",
+        "order": 3
+      }
+    ]
+  },
+  {
+    "name": "slider",
+    "config": [
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--slider-main-background-color",
+        "value": "$--color-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--slider-runway-background-color",
+        "value": "$--border-color-light",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "height",
+        "name": "1",
+        "key": "$--slider-height",
+        "value": "6px",
+        "category": "Other",
+        "order": 4
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--slider-button-size",
+        "value": "16px",
+        "category": "Other",
+        "order": 4
+      }
+    ]
+  },
+  {
+    "name": "menu",
+    "config": [
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--menu-item-font-size",
+        "value": "$--font-size-base",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--menu-item-font-color",
+        "value": "$--color-text-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--menu-background-color",
+        "value": "$--color-white",
+        "category": "Color",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "name": "rate",
+    "config": [
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--rate-font-size",
+        "value": "$--font-size-base",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--rate-icon-size",
+        "value": "18px",
+        "category": "Other",
+        "order": 3
+      },
+      {
+        "type": "margin",
+        "name": "",
+        "key": "$--rate-icon-margin",
+        "value": "6px",
+        "category": "Spacing",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "name": "datepicker",
+    "config": [
+      {
+        "type": "color",
+        "name": "1",
+        "key": "$--datepicker-off-font-color",
+        "value": "$--color-text-placeholder",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--datepicker-header-font-color",
+        "value": "$--color-text-regular",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--datepicker-inrange-background-color",
+        "value": "$--border-color-extra-light",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--datepicker-inrange-hover-background-color",
+        "value": "$--border-color-extra-light",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--datepicker-active-color",
+        "value": "$--color-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--datepicker-hover-font-color",
+        "value": "$--color-primary",
+        "category": "Color",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "name": "loading",
+    "config": [
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--loading-spinner-size",
+        "value": "42px",
+        "category": "Other",
+        "order": 4
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--loading-fullscreen-spinner-size",
+        "value": "50px",
+        "category": "Other",
+        "order": 4
+      }
+    ]
+  },
+  {
+    "name": "carousel",
+    "config": [
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--carousel-arrow-font-size",
+        "value": "12px",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "width",
+        "name": "",
+        "key": "$--carousel-indicator-width",
+        "value": "30px",
+        "category": "Other",
+        "order": 4
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--carousel-indicator-height",
+        "value": "2px",
+        "category": "Other",
+        "order": 4
+      }
+    ]
+  },
+  {
+    "name": "collapse",
+    "config": [
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--collapse-border-color",
+        "value": "$--border-color-lighter",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--collapse-header-height",
+        "value": "48px",
+        "category": "Other",
+        "order": 4
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--collapse-header-background-color",
+        "value": "$--color-white",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--collapse-header-font-color",
+        "value": "$--color-text-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--collapse-header-font-size",
+        "value": "13px",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--collapse-content-background-color",
+        "value": "$--color-white",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--collapse-content-font-size",
+        "value": "13px",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--collapse-content-font-color",
+        "value": "$--color-text-primary",
+        "category": "Color",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "name": "transfer",
+    "config": [
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--transfer-panel-width",
+        "value": "200px",
+        "category": "Other",
+        "order": 4
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--transfer-panel-header-height",
+        "value": "40px",
+        "category": "Other",
+        "order": 4
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--transfer-panel-header-background-color",
+        "value": "$--background-color-base",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--transfer-panel-footer-height",
+        "value": "40px",
+        "category": "Other",
+        "order": 4
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--transfer-panel-body-height",
+        "value": "246px",
+        "category": "Other",
+        "order": 4
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--transfer-item-height",
+        "value": "30px",
+        "category": "Other",
+        "order": 4
+      },
+      {
+        "type": "height",
+        "name": "",
+        "key": "$--transfer-filter-height",
+        "value": "32px",
+        "category": "Other",
+        "order": 4
+      }
+    ]
+  },
+  {
+    "name": "backtop",
+    "config": [
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--backtop-background-color",
+        "value": "$--color-white",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--backtop-font-color",
+        "value": "$--color-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--backtop-hover-background-color",
+        "value": "$--border-color-extra-light",
+        "category": "Color",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "name": "link",
+    "config": [
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--link-font-size",
+        "value": "$--font-size-base",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "fontWeight",
+        "name": "",
+        "key": "$--link-font-weight",
+        "value": "$--font-weight-primary",
+        "category": "Font",
+        "order": 1
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--link-default-font-color",
+        "value": "$--color-text-regular",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--link-default-active-color",
+        "value": "$--color-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--link-disabled-font-color",
+        "value": "$--color-text-placeholder",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--link-primary-font-color",
+        "value": "$--color-primary",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--link-success-font-color",
+        "value": "$--color-success",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--link-warning-font-color",
+        "value": "$--color-warning",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--link-danger-font-color",
+        "value": "$--color-danger",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--link-info-font-color",
+        "value": "$--color-info",
+        "category": "Color",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "name": "calendar",
+    "config": [
+      {
+        "type": "border",
+        "name": "",
+        "key": "$--calendar-border",
+        "value": "$--table-border",
+        "category": "Other",
+        "order": 4
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--calendar-selected-background-color",
+        "value": "#F2F8FE",
+        "category": "Other",
+        "order": 4
+      }
+    ]
+  },
+  {
+    "name": "form",
+    "config": [
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--form-label-font-size",
+        "value": "$--font-size-base",
+        "category": "Font",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "name": "avatar",
+    "config": [
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--avatar-font-color",
+        "value": "#fff",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "color",
+        "name": "",
+        "key": "$--avatar-background-color",
+        "value": "#C0C4CC",
+        "category": "Color",
+        "order": 0
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--avatar-text-font-size",
+        "value": "14px",
+        "category": "Font Size",
+        "order": 1
+      },
+      {
+        "type": "fontSize",
+        "name": "",
+        "key": "$--avatar-icon-font-size",
+        "value": "18px",
+        "category": "Font Size",
+        "order": 1
+      },
+      {
+        "type": "borderRadius",
+        "name": "",
+        "key": "$--avatar-border-radius",
+        "value": "$--border-radius-base",
+        "category": "Border",
+        "order": 2
+      },
+      {
+        "type": "size",
+        "name": "1",
+        "key": "$--avatar-large-size",
+        "value": "40px",
+        "category": "Avatar Size",
+        "order": 3
+      },
+      {
+        "type": "size",
+        "name": "1",
+        "key": "$--avatar-medium-size",
+        "value": "36px",
+        "category": "Avatar Size",
+        "order": 3
+      },
+      {
+        "type": "size",
+        "name": "1",
+        "key": "$--avatar-small-size",
+        "value": "28px",
+        "category": "Avatar Size",
+        "order": 3
+      }
+    ]
+  }
+]

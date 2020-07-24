@@ -1,0 +1,23 @@
+{
+  "globals": {
+    "ga": true,
+    "chrome": true
+  },
+  "plugins": ["html", "json"],
+  "extends": "elemefe",
+  "rules": {
+    "no-unused-vars":0,
+    "eqeqeq":"off",
+    "no-self-compare":"off",
+    "comma-spacing":"off",
+    "one-var":"off",
+    "no-restricted-globals": ["error", "event", "fdescribe"],
+    "quotes": [1, "single"] //引号类型 `` "" ''
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  }
+}

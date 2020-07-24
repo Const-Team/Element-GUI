@@ -1,0 +1,84 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(step) {
+  position: relative;
+  // flex-shrink: 1;
+
+  @include pseudo(last-of-type) {
+    @include e(line) {
+      display: none;
+    }
+
+    @include e((main, description)) {
+      padding-right: 0;
+    }
+  }
+
+  @include e(head) {
+    position: relative;
+  }
+
+  @include e(icon) {
+    @include when(text) {
+      border-radius: 50%;
+    }
+
+    @include when(icon) {
+      width: 40px;
+    }
+  }
+
+  @include e(icon-inner) {
+    display: inline-block;
+    user-select: none;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1;
+    color: inherit;
+
+    &[class*=icon-]:not(.is-status) {
+      font-size: 25px;
+      font-weight: normal;
+    }
+
+    // 组件自身表示状态的图标
+    @include when(status) {
+      transform: translateY(1px);
+    }
+  }
+
+  @include e(line) {
+    position: absolute;
+    border-color: inherit;
+    background-color: $--color-text-placeholder;
+  }
+
+  @include e(line-inner) {
+    display: block;
+    border-width: 1px;
+    border-style: solid;
+    border-color: inherit;
+    transition: .15s ease-out;
+    box-sizing: border-box;
+    width: 0;
+    height: 0;
+  }
+
+  @include e(main) {
+    white-space: normal;
+    text-align: left;
+  }
+
+  @include e(title) {
+    font-size: 14px;
+    line-height: 38px;
+  }
+
+  @include e(description) {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: normal;
+  }
+ 
+}

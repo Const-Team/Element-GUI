@@ -1,0 +1,295 @@
+@import "common/var";
+
+@font-face {
+  font-family: 'element-icons';
+  src: url('#{$--font-path}/iconfont.woff') format('woff'), /* chrome, firefox */
+       url('#{$--font-path}/iconfont.ttf') format('truetype'); /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  font-weight: normal;
+  font-display: $--font-display;
+  font-style: normal;
+}
+
+[class^="el-icon-"], [class*=" el-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'element-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: baseline;
+  display: inline-block;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.el-icon-loading {
+  animation: rotating 2s linear infinite;
+}
+
+.el-icon--right {
+  margin-left: 5px;
+}
+.el-icon--left {
+  margin-right: 5px;
+}
+
+.el-icon-full-screen:before {
+  content: "\e657";
+}
+
+.el-icon-c-scale-to-original:before {
+  content: "\e601";
+}
+
+.el-icon-refresh-left:before {
+  content: "\e661";
+}
+
+.el-icon-refresh-right:before {
+  content: "\e600";
+}
+
+.el-icon-zoom-in:before {
+  content: "\e7e0";
+}
+
+.el-icon-zoom-out:before {
+  content: "\e7e1";
+}
+
+.el-icon-arrow-right:before {
+  content: "\e7e2";
+}
+
+.el-icon-arrow-up:before {
+  content: "\e7e3";
+}
+
+.el-icon-arrow-down:before {
+  content: "\e7e4";
+}
+
+.el-icon-arrow-left:before {
+  content: "\e7e5";
+}
+
+.el-icon-caret-left:before {
+  content: "\e7e6";
+}
+
+.el-icon-caret-right:before {
+  content: "\e7e7";
+}
+
+.el-icon-caret-bottom:before {
+  content: "\e7e8";
+}
+
+.el-icon-caret-top:before {
+  content: "\e7e9";
+}
+
+.el-icon-d-arrow-left:before {
+  content: "\e7ea";
+}
+
+.el-icon-d-arrow-right:before {
+  content: "\e7eb";
+}
+
+.el-icon-d-caret:before {
+  content: "\e7ec";
+}
+
+.el-icon-sort:before {
+  content: "\e7f8";
+}
+
+.el-icon-sort-up:before {
+  content: "\e7f9";
+}
+
+.el-icon-sort-down:before {
+  content: "\e7fa";
+}
+
+.el-icon-date:before {
+  content: "\e7ed";
+}
+
+.el-icon-time:before {
+  content: "\e7ee";
+}
+
+.el-icon-check:before {
+  content: "\e7f0";
+}
+
+.el-icon-close:before {
+  content: "\e7f1";
+}
+
+.el-icon-circle-check:before {
+  content: "\e7ef";
+}
+
+.el-icon-circle-close:before {
+  content: "\e7f2";
+}
+
+.el-icon-circle-plus-outline:before {
+  content: "\e7f3";
+}
+
+.el-icon-remove-outline:before {
+  content: "\e7fb";
+}
+
+.el-icon-plus:before {
+  content: "\e7f5";
+}
+
+.el-icon-minus:before {
+  content: "\e7fd";
+}
+
+.el-icon-circle-plus:before {
+  content: "\e7f4";
+}
+
+.el-icon-remove:before {
+  content: "\e7fc";
+}
+
+.el-icon-upload:before {
+  content: "\e7fe";
+}
+
+.el-icon-upload2:before {
+  content: "\e7ff";
+}
+
+.el-icon-download:before {
+  content: "\e800";
+}
+
+.el-icon-star-on:before {
+  content: "\e7f6";
+}
+
+.el-icon-star-off:before {
+  content: "\e7f7";
+}
+
+.el-icon-info:before {
+  content: "\e802";
+}
+
+.el-icon-success:before {
+  content: "\e805";
+}
+
+.el-icon-error:before {
+  content: "\e801";
+}
+
+.el-icon-question:before {
+  content: "\e803";
+}
+
+.el-icon-warning:before {
+  content: "\e806";
+}
+
+.el-icon-warning-outline:before {
+  content: "\e804";
+}
+
+.el-icon-right:before {
+  content: "\e807";
+}
+
+.el-icon-left:before {
+  content: "\e808";
+}
+
+.el-icon-bottom:before {
+  content: "\e809";
+}
+
+.el-icon-top:before {
+  content: "\e80a";
+}
+
+.el-icon-refresh:before {
+  content: "\e80e";
+}
+
+.el-icon-search:before {
+  content: "\e811";
+}
+
+.el-icon-view:before {
+  content: "\e812";
+}
+
+.el-icon-close-eyes:before {
+  content: "\e80f";
+}
+
+.el-icon-edit:before {
+  content: "\e814";
+}
+
+.el-icon-delete:before {
+  content: "\e817";
+}
+
+.el-icon-document:before {
+  content: "\e81c";
+}
+
+.el-icon-setting:before {
+  content: "\e818";
+}
+
+.el-icon-back:before {
+  content: "\e81e";
+}
+
+.el-icon-user:before {
+  content: "\e81f";
+}
+
+.el-icon-lock:before {
+  content: "\e81a";
+}
+
+.el-icon-unlock:before {
+  content: "\e820";
+}
+
+.el-icon-picture:before {
+  content: "\e80d";
+}
+
+.el-icon-more:before {
+  content: "\e810";
+}
+
+.el-icon-loading:before {
+  content: "\e81b";
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

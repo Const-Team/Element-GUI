@@ -1,0 +1,75 @@
+@import 'mixins/mixins';
+@import 'common/var';
+
+$typeMap: (
+  primary: $--link-primary-font-color,
+  danger: $--link-danger-font-color,
+  success: $--link-success-font-color,
+  warning: $--link-warning-font-color,
+  info: $--link-info-font-color,
+);
+
+@include b(link) {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  vertical-align: bottom;
+  position: relative;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 0;
+  font-size: $--link-font-size;
+  font-weight: $--link-font-weight;
+  & + & {
+    margin-left: 10px;
+  }
+  @include when(underline) {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @include when(disabled) {
+    cursor: not-allowed;
+  }
+
+  & [class*='el-icon-'] {
+    & + span {
+      margin-left: 5px;
+    }
+  }
+
+  &.el-link--default {
+    color: $--link-default-font-color;
+    &:hover {
+      color: $--link-default-active-color;
+    }
+    &:after {
+      border-color: $--link-default-active-color;
+    }
+    @include when(disabled) {
+      color: $--link-disabled-font-color;
+    }
+  }
+
+  @each $type, $primaryColor in $typeMap {
+    &.el-link--#{$type} {
+      color: $primaryColor;
+      &:hover {
+        color: mix($primaryColor, $--color-white, 80%);
+      }
+      &:after {
+        border-color: $primaryColor;
+      }
+      @include when(disabled) {
+        color: mix($primaryColor, $--color-white, 50%);
+      }
+      @include when(underline) {
+        &:hover:after {
+          border-color: $primaryColor;
+        }
+      }
+    }
+  }
+}

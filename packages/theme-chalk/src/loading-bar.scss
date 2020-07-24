@@ -1,0 +1,22 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(loading-bar) {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $--index-loading-bar;
+  @include e(inner){
+    transition: $--all-transition;
+    border-radius: 0 2px 2px 0;
+    box-shadow: 0 1px 5px rgba($--color-black,0.2);
+  }
+  .is-primary{
+    background-color: $--color-primary;
+  }
+  .is-error{
+    background-color: $--color-danger;
+  }
+}

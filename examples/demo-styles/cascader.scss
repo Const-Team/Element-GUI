@@ -1,0 +1,46 @@
+.demo-cascader {
+  .el-cascader {
+    width: 222px;
+  }
+  .el-row{
+    width: 100%;
+  }
+  .el-col {
+    border-right: solid 1px #eff2f6;
+    padding: 30px 0;
+    box-sizing: border-box;
+    .el-cascader{
+      display: block;
+      margin: 0 auto;
+    }
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+.demo-cascader-size {
+  .el-cascader {
+    vertical-align: top;
+    margin-right: 15px;
+  }
+}
+.demo-cascader .source > div {
+  display: flex;
+}
+.demo-cascader .block {
+  padding: 30px 0;
+  text-align: center;
+  border-right: solid 1px #eff2f6;
+  width: 50%;
+  box-sizing: border-box;
+  &:last-child {
+    border-right: none;
+  }
+}
+.demo-cascader .demonstration {
+  text-align: center;
+  display: block;
+  color: #8492a6;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
