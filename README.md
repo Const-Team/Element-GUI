@@ -1,6 +1,6 @@
 [![element-gui (latest)](https://img.shields.io/npm/v/element-gui/latest.svg)](https://www.npmjs.com/package/element-gui)  [![element-gui (downloads)](https://img.shields.io/npm/dy/element-gui.svg)](https://www.npmjs.com/package/element-gui) 
-![Build and Deploy](https://github.com/EG-FE/Element-GUI/workflows/Build%20and%20Deploy/badge.svg?branch=master)  ![NPM Publish](https://github.com/EG-FE/Element-GUI/workflows/NPM%20Publish/badge.svg?branch=master)
-[![node](https://img.shields.io/node/v/element-gui/latest.svg)](https://www.npmjs.com/package/element-gui) [![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/element-gui/element-gui/blob/master/LICENSE)
+![Build and Deploy](https://github.com/Const-Team/Element/workflows/Build%20and%20Deploy/badge.svg)  ![NPM Publish](https://github.com/Const-Team/Element/workflows/NPM%20Publish/badge.svg)
+[![node](https://img.shields.io/node/v/element-gui/latest.svg)](https://www.npmjs.com/package/element-gui) [![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/Const-Team/Element/blob/master/LICENSE)
 
 ----
 
