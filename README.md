@@ -20,7 +20,7 @@ npm i element-gui -S
 
 目前可以通过 [unpkg.com/element-gui](https://unpkg.com/element-gui/) 或者 [www.jsdelivr.com/package/npm/element-gui](https://www.jsdelivr.com/package/npm/element-gui) 获取到最新版本的资源，在页面上引入 js 和 css 文件即可开始使用。
 
-因为组件是基于element-ui二次封装，老项目里面已经引用了element-gui，也可以只引用组件样式，达到风格快速统一！
+因为组件是基于element-ui二次封装，老项目里面已经引用了element-ui，也可以只引用组件样式，达到风格快速统一！
 
 ```html
 <!-- 引入样式 -->

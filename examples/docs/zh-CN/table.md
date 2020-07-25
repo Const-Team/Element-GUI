@@ -1211,6 +1211,79 @@
 ```
 :::
 
+使用输入字段筛选表
+
+:::demo 设置 `filters-type="input"` 使列可按输入字段筛选。 `filters-type` 字符串只接受两个参数  `checkbox` 和 `input`， 也可以指定 `filter-type-options` 对 `input` 过滤.
+```html
+<template>
+  <el-table
+    ref="filterTable"
+    :data="tableData"
+    style="width: 100%">
+    </el-table-column>
+    <el-table-column
+      prop="name"
+      label="姓名"
+      width="180"
+      filter-type="input"
+      :filter-method="filterHandler"
+      :filter-type-options="filterTypeOptions"
+       filter-placement="top-end"
+      >
+    </el-table-column>
+    <el-table-column
+      prop="address"
+      label="地址"
+      :filter-method="filterHandler"
+      :formatter="formatter"
+      filter-type="input"
+      filter-placement="top-end">
+    </el-table-column>
+  </el-table>
+</template>
+
+<script>
+  export default {
+    data() {
+      return {
+        tableData: [{
+          name: '妹大爷',
+          address: '北京潭柘寺',
+        }, {
+          name: '朱小明',
+          address: '上海陆家嘴',
+        }, {
+          name: '蘑菇头',
+          address: '南京夫子庙',
+        }, {
+          name: '毛台',
+          address: '河南清明上河园',
+        }]
+      }
+    },
+    methods: {
+      formatter(row, column) {
+        return row.address;
+      },
+      filterHandler(value, row, column) {
+        const property = column['property'];
+        return row[property].toLowerCase().includes(value.toLowerCase());
+      }
+    },
+    computed: {
+      filterTypeOptions() {
+        return {
+          placeholder: '请输入筛选',
+          clearable: true,
+          delay: 300,
+        };
+      },
+    }
+  }
+</script>
+```
+:::
+
 ### 自定义列模板
 
 自定义列的显示内容，可组合其他组件使用。
@@ -2250,6 +2323,8 @@ export default {
 | filter-multiple | 数据过滤的选项是否多选 | Boolean | — | true |
 | filter-method | 数据过滤使用的方法，如果是多选的筛选项，对每一条数据会执行多次，任意一次返回 true 就会显示。 | Function(value, row, column) | — | — |
 | filtered-value | 选中的数据过滤项，如果需要自定义表头过滤的渲染方式，可能会需要此属性。 | Array | — | — |
+| filter-type | 指定筛选器类型 | String | `checkbox`,`input` | `checkbox` |
+| filter-type-options | 假如筛选类型设置为 `input` 您可以为输入指定一些选项，例如 `placeholder`, `clearable` 和 `delay`. <br> `filter-type=input` 对于不立即调用的输入事件，可以指定 `delay` 默认为 `500ms`  | Object | `{placeholder: string, clearable: boolean, delay: number}` | `{label: column label}` |
 
 ### Table-column Scoped Slot
 | name | 说明 |
