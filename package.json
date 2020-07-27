@@ -29,20 +29,6 @@
     "test": "npm run lint && npm run build:theme && cross-env CI_ENV=/dev/ BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test:watch": "npm run build:theme && cross-env BABEL_ENV=test karma start test/unit/karma.conf.js"
   },
-  "faas": [
-    {
-      "domain": "element",
-      "public": "temp_web/element"
-    },
-    {
-      "domain": "element-theme",
-      "public": "examples/element-gui",
-      "build": [
-        "yarn",
-        "npm run deploy:build"
-      ]
-    }
-  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:Const-Team/Element"
