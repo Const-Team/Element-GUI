@@ -31,9 +31,14 @@
   },
   "faas": [
     {
+      "domain": "element",
+      "public": "temp_web/element"
+    },
+    {
+      "domain": "element-theme",
       "public": "examples/element-gui",
       "build": [
-        "npm i",
+        "yarn",
         "npm run deploy:build"
       ]
     }
