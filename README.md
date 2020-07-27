@@ -1,5 +1,5 @@
 [![element-gui (latest)](https://img.shields.io/npm/v/element-gui/latest.svg)](https://www.npmjs.com/package/element-gui)  [![element-gui (downloads)](https://img.shields.io/npm/dy/element-gui.svg)](https://www.npmjs.com/package/element-gui) 
-![Build and Deploy](https://github.com/Const-Team/Element/workflows/Build%20and%20Deploy/badge.svg)  ![NPM Publish](https://github.com/Const-Team/Element/workflows/NPM%20Publish/badge.svg)
+![Build and Deploy](https://github.com/Const-Team/Element/workflows/Build%20and%20Deploy/badge.svg)  ![NPM Publish](https://github.com/Const-Team/Element/workflows/NPM%20Publish/badge.svg)  [![Netlify Status](https://api.netlify.com/api/v1/badges/f4287430-5d5b-433b-9822-85c4e5d81a94/deploy-status)](https://app.netlify.com/sites/element-gui/deploys)
 [![node](https://img.shields.io/node/v/element-gui/latest.svg)](https://www.npmjs.com/package/element-gui) [![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/Const-Team/Element/blob/master/LICENSE)
 
 ----
