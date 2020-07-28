@@ -6,6 +6,7 @@
       v-show="showPopper">
       <div class="el-table-filter__content">
           <el-input 
+            class="el-table-filter__input"
             :placeholder="inputFieldOptions.placeholder" 
             :clearable="!!inputFieldOptions.clearable"
             @clear="handleReset"

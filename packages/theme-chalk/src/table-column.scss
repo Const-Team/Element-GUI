@@ -85,4 +85,11 @@
       margin-bottom: 0;
     }
   }
+
+  @include e(input){
+    padding: 10px;
+    &.el-input{
+      width: auto;
+    }
+  }
 }
