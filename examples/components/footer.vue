@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <p>© 1998-{{new Date().getFullYear()}}  <a href="https://www.glodon.com/">Glodon E-government UED</a></p>
+    <p>© 2019-{{new Date().getFullYear()}}  <a href="https://wangdaodao.com/">const.team</a></p>
   </footer>
 </template>
 
