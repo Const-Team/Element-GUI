@@ -7,7 +7,7 @@
 :::demo `v-model` 的值为当前被选中的树节点的 value 属性值
 ```html
 <template>
-  <el-tree-select option-max-width="300px" :clearable="true" v-model="value" :data="treeData" placeholder="请选择">
+  <el-tree-select option-max-width="300px" :clearable="true" :default-expand-all="false" v-model="value" :data="treeData" placeholder="请选择">
   </el-tree-select>
 </template>
 
@@ -440,6 +440,7 @@ export default {
 | lazy                  | 是否懒加载子节点，需与 load 方法结合使用        | boolean                                   | —         |  false  |
 | load                  | 加载子树数据的方法，仅当 lazy 属性为true 时生效 | function(node, resolve)                   | —          | —       |
 | check-strictly	      | 在显示复选框的情况下，是否严格的遵循父子不互相关联的做法，默认为 false，如果设置此选项 `show-checked-strategy` 设置会失效 | boolean                 | —          | false   |
+| default-expand-all	      | 是否默认展开所有节点 | boolean                 | —          | false   |
 
 
 ### Events

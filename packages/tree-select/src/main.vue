@@ -104,7 +104,7 @@
           :load="load"
           :check-on-click-node="checkOnClickNode"
           :props="props"
-          default-expand-all
+          :default-expand-all="defaultExpandAll"
           node-key="value"
           :show-checkbox="showCheckbox"
           :expand-on-click-node="false"
@@ -191,6 +191,10 @@ export default {
     multiple: Boolean,
     disabled: Boolean,
     clearable: Boolean,
+    defaultExpandAll: {
+      type: Boolean,
+      default: false
+    },
     size: {
       type: String,
       validator(val) {
