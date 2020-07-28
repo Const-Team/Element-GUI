@@ -87,7 +87,7 @@
   }
 
   @include e(input){
-    padding: 10px;
+    margin: 10px;
     &.el-input{
       width: auto;
     }
