@@ -1228,7 +1228,7 @@
       filter-type="input"
       :filter-method="filterHandler"
       :filter-type-options="filterTypeOptions"
-       filter-placement="top-end"
+       filter-placement="bottom"
       >
     </el-table-column>
     <el-table-column
@@ -1237,7 +1237,7 @@
       :filter-method="filterHandler"
       :formatter="formatter"
       filter-type="input"
-      filter-placement="top-end">
+      filter-placement="bottom">
     </el-table-column>
   </el-table>
 </template>
