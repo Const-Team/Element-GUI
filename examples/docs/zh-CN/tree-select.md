@@ -441,6 +441,7 @@ export default {
 | load                  | 加载子树数据的方法，仅当 lazy 属性为true 时生效 | function(node, resolve)                   | —          | —       |
 | check-strictly	      | 在显示复选框的情况下，是否严格的遵循父子不互相关联的做法，默认为 false，如果设置此选项 `show-checked-strategy` 设置会失效 | boolean                 | —          | false   |
 | default-expand-all	      | 是否默认展开所有节点 | boolean                 | —          | false   |
+| expand-on-click-node	      | 是否在点击节点的时候展开或者收缩节点， 默认值为 true，如果为 false，则只有点箭头图标的时候才会展开或者收缩节点。 | boolean                 | —          | true   |
 
 
 ### Events

@@ -8,9 +8,6 @@ export const getChildState = node => {
   let allWithoutDisable = true;
   for (let i = 0, j = node.length; i < j; i++) {
     const n = node[i];
-    if (!n.parent.isAllChildrenNodeIncluded) {
-      all = false;
-    }
     if (n.checked !== true || n.indeterminate) {
       all = false;
       if (!n.disabled) {
@@ -77,7 +74,6 @@ export default class Node {
     this.visible = true;
     this.isCurrent = false;
     this.isSelect = false;
-    this.isAllChildrenNodeIncluded = false;
     for (let name in options) {
       if (options.hasOwnProperty(name)) {
         this[name] = options[name];
@@ -331,10 +327,7 @@ export default class Node {
   }
 
   doCreateChildren(array, defaultProps = {}) {
-    array.forEach((item, index) => {
-      if (index === array.length - 1) {
-        this.isAllChildrenNodeIncluded = true;
-      }
+    array.forEach((item) => {
       this.insertChild(objectAssign({ data: item }, defaultProps), undefined, true);
     });
   }
