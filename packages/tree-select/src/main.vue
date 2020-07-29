@@ -107,7 +107,7 @@
           :default-expand-all="defaultExpandAll"
           node-key="value"
           :show-checkbox="showCheckbox"
-          :expand-on-click-node="false"
+          :expand-on-click-node="expandOnClickNode"
           :check-strictly="checkStrictly"
           :filter-node-method="filterNodeMethod"
           :default-checked-keys="checkedKeys"
@@ -214,6 +214,10 @@ export default {
     checkStrictly: {
       type: Boolean,
       default: false
+    },
+    expandOnClickNode: {
+      type: Boolean,
+      default: true
     },
     filterable: Boolean,
     filterMethod: Function,
@@ -601,9 +605,9 @@ export default {
   },
 
   mounted() {
-    if (this.multiple && this.showCheckbox) {
-      this.checkOnClickNode = true;
-    };
+    // if (this.multiple && this.showCheckbox) {
+    //   this.checkOnClickNode = true;
+    // };
     if (this.checkStrictly) {
       this.showCheckedStrategy = 'all';
     };
