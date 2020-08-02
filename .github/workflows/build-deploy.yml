@@ -37,3 +37,12 @@ jobs:
         BRANCH: gh-pages
         # 构建成果所在目录
         FOLDER: examples/element-gui
+
+    - name: repo-sync
+      uses: yehan-coding/yehan-git-sync@v1
+      with:
+        source_repo_url: git@github.com:Const-Team/Element.git
+        source_branch: gh-pages
+        destination_repo_url: git@e.coding.net:wangdaodao/element/element.git
+        destination_branch: page
+        ssh_private_key: ${{ secrets.CODING_SSH_PRIVATE_KEY }}
