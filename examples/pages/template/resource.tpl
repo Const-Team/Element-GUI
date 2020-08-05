@@ -144,7 +144,7 @@
             <img src="~examples/assets/images/Axure-Components.svg" alt="">
             <h3><%= 3 ></h3>
             <p><%= 4 ></p>
-            <a href="http://resource.wangdaodao.com/axure.rplib"><%= 5 ></a>
+            <a href="~examples/download/axure.rplib"><%= 5 ></a>
           </div>
         </li>
         <li>
@@ -152,7 +152,7 @@
             <img src="~examples/assets/images/Sketch-Template.svg" alt="">
             <h3><%= 6 ></h3>
             <p><%= 7 ></p>
-            <a href="/"><%= 5 ></a>
+            <a href="~examples/download/Sketch.zip"><%= 5 ></a>
           </div>
         </li>
         <!--<li>-->
