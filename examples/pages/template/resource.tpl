@@ -155,14 +155,14 @@
             <a href="http://resource.wangdaodao.com/Sketch.zip"><%= 5 ></a>
           </div>
         </li>
-        <!--<li>-->
-          <!--<div class="card">-->
-            <!--<img src="~examples/assets/images/Module.svg" alt="">-->
-            <!--<h3><%= 8 ></h3>-->
-            <!--<p><%= 9 ></p>-->
-            <!--<a href="https://github.com/ElementUI/Resources/raw/master/Element%20Components%20Documentation.zip"><%= 5 ></a>-->
-          <!--</div>-->
-        <!--</li>-->
+        <li>
+          <div class="card">
+            <img src="~examples/assets/images/Sketch-Template.svg" alt="">
+            <h3><%= 8 ></h3>
+            <p><%= 9 ></p>
+            <a href="http://resource.wangdaodao.com/Guide.zip"><%= 5 ></a>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
