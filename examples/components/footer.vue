@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <p>MIT Licensed | © 2019-{{new Date().getFullYear()}}  <a href="https://wangdaodao.com/">Const.Team</a></p>
+    <p>MIT Licensed</p>
   </footer>
 </template>
 

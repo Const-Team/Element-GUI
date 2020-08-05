@@ -348,9 +348,6 @@
               exact
             >{{ langConfig.resource }}</router-link>
           </li>
-          <li class="nav-item">
-            <a href="https://fe.const.team/" target="_blank">文档</a>
-          </li>
           <!-- gap -->
           <!-- <li class="nav-item" v-show="isComponentPage">
             <div class="nav-gap"></div>
