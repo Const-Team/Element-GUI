@@ -1,12 +1,6 @@
-[![element-gui (latest)](https://img.shields.io/npm/v/element-gui/latest.svg)](https://www.npmjs.com/package/element-gui)  [![element-gui (downloads)](https://img.shields.io/npm/dy/element-gui.svg)](https://www.npmjs.com/package/element-gui) 
-![Build and Deploy](https://github.com/Const-Team/Element/workflows/Build%20and%20Deploy/badge.svg)  ![NPM Publish](https://github.com/Const-Team/Element/workflows/NPM%20Publish/badge.svg)  [![Netlify Status](https://api.netlify.com/api/v1/badges/f4287430-5d5b-433b-9822-85c4e5d81a94/deploy-status)](https://app.netlify.com/sites/element-gui/deploys)
-[![node](https://img.shields.io/node/v/element-gui/latest.svg)](https://www.npmjs.com/package/element-gui) [![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/Const-Team/Element/blob/master/LICENSE)
-
-----
-
 ## 安装
 
-组件会根据现有bug进行升级，使用前请查看[更新日志](https://uxd.const.team/#/component/changelog)，但是建议在使用某一版本稳定后，请锁死版本，以免将来组件升级时受到非兼容性更新的影响。
+组件会根据现有bug进行升级，使用前请查看更新日志，但是建议在使用某一版本稳定后，请锁死版本，以免将来组件升级时受到非兼容性更新的影响。
 
 ### npm 安装
 
@@ -163,7 +157,7 @@ new Vue({
 });
 ```
 
-完整组件列表和引入方式（完整组件列表以 [components.json](https://github.com/ElemeFE/element/blob/master/components.json) 为准）
+完整组件列表和引入方式（完整组件列表以 `components.json` 为准）
 
 ```javascript
 import Vue from 'vue';

@@ -21,8 +21,10 @@
   @include m(inline) {
     & .el-form-item {
       display: inline-block;
-      margin-right: 10px;
       vertical-align: top;
+    }
+    & .el-form-item + .el-form-item {
+      margin-left: 5px;
     }
     & .el-form-item__label {
       float: none;
