@@ -423,6 +423,7 @@ export default {
 | 参数                  | 说明                                      | 类型                                      | 可选值     | 默认值     |
 | --------------------- | ---------------------------------------- | ---------------------------------------- | --------- | --------- |
 | value(v-model)        | 绑定值                                    | number / string / array                  | —         |  —        |
+| name                  | tree-select input 的 name 属性            | string                                   | —          | —        |
 | data                  | 展示数据                                  | array                                     | —         |  —       |
 | disabled              | 是否禁用                                  | boolean                                   | —         |  false   |
 | multiple              | 是否多选                                  | boolean                                   | —         |  false   |
