@@ -87,7 +87,7 @@
 
   .el-select-tree__tags-wrapper{
     width: 100%;
-    .el-select__tags-text{
+    .el-tree-select__tags-text{
       display: inline-block;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -109,10 +109,6 @@
       display: inline-block;
     }
   }
-
-  .el-tag__close {
-    margin-top: -2px;
-  }
   .el-tree-select-text{
     width: 100%;
     margin-left: 15px;
@@ -130,6 +126,9 @@
       content: ''
     }
   }
+  .tag-num{
+    vertical-align: top;
+  }
   .el-tag {
     box-sizing: border-box;
     border-color: transparent;
@@ -145,7 +144,7 @@
     }
     .el-tag__close.el-icon-close {
       // background-color: $--color-text-placeholder;
-      top: -1px;
+      top: -9px;
       right: -7px;
       &:hover {
         background-color: $--color-text-secondary;

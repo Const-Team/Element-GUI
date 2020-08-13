@@ -69,6 +69,8 @@
     <el-input
       ref="reference"
       type="text"
+      :name="name"
+      :id="id"
       v-model="selectedLabel"
       :disabled="selectDisabled"
       :readonly="readonly"
@@ -133,6 +135,8 @@ import { t } from 'element-gui/src/locale';
 // todo: 等 vue-popper 合并后，这里还需要做出调整
 const popperMixin = {
   props: {
+    name: String,
+    id: String,
     placement: {
       type: String,
       default: 'bottom-start'
