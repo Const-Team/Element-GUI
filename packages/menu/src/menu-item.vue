@@ -1,6 +1,7 @@
 <template>
   <li class="el-menu-item"
     role="menuitem"
+    :id="menuId"
     tabindex="-1"
     :style="[paddingStyle, itemStyle]"
     :class="{

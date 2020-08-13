@@ -3,7 +3,17 @@ import ajax from './ajax';
 import UploadDragger from './upload-dragger.vue';
 
 export default {
-  inject: ['uploader'],
+  inject: {
+    uploader: {
+      default: ''
+    },
+    elForm: {
+      default: ''
+    },
+    elFormItem: {
+      default: ''
+    }
+  },
   components: {
     UploadDragger
   },
@@ -13,10 +23,7 @@ export default {
       type: String,
       required: true
     },
-    name: {
-      type: String,
-      default: 'file'
-    },
+    name: String,
     data: Object,
     headers: Object,
     withCredentials: Boolean,
@@ -53,6 +60,12 @@ export default {
       mouseover: false,
       reqs: {}
     };
+  },
+
+  computed: {
+    _elFormItemName() {
+      return this.elFormItem.prop ? this.elFormItem.prop : this.name;
+    }
   },
 
   methods: {
@@ -213,7 +226,7 @@ export default {
             : this.$slots.default
         }
         <form ref="resetForm">
-          <input class="el-upload__input" type="file" ref="input" name={name} on-change={handleChange} multiple={multiple} accept={accept}></input>
+          <input class="el-upload__input" type="file" ref="input" name={this._elFormItemName} on-change={handleChange} multiple={multiple} accept={accept}></input>
         </form>
       </div>
     );

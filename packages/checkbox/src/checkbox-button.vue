@@ -15,7 +15,7 @@
       v-if="trueLabel || falseLabel"
       class="el-checkbox-button__original"
       type="checkbox"
-      :name="name"
+      :name="_elFormItemName"
       :disabled="isDisabled"
       :true-value="trueLabel"
       :false-value="falseLabel"
@@ -27,7 +27,7 @@
       v-else
       class="el-checkbox-button__original"
       type="checkbox"
-      :name="name"
+      :name="_elFormItemName"
       :disabled="isDisabled"
       :value="label"
       v-model="model"
@@ -104,6 +104,10 @@
             this.selfModel = val;
           }
         }
+      },
+
+      _elFormItemName() {
+        return this.elFormItem.prop ? this.elFormItem.prop : this.name;
       },
 
       isChecked() {

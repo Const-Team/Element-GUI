@@ -1,6 +1,6 @@
 <template>
   <div class="el-switch" :class="{ 'is-disabled': switchDisabled, 'is-checked': checked }" role="switch" :aria-checked="checked" :aria-disabled="switchDisabled" @click.prevent="switchValue">
-    <input class="el-switch__input" type="checkbox" @change="handleChange" ref="input" :id="id" :name="name" :true-value="activeValue" :false-value="inactiveValue" :disabled="switchDisabled" @keydown.enter="switchValue">
+    <input class="el-switch__input" type="checkbox" @change="handleChange" ref="input" :id="id" :name="_elFormItemName" :true-value="activeValue" :false-value="inactiveValue" :disabled="switchDisabled" @keydown.enter="switchValue">
     <!-- <span class="el-switch__core" ref="core" :style="{ 'width': width + 'px' }"> -->
     <span class="el-switch__core" ref="core">
       <span :class="['el-switch__label', checked ? 'is-active' : '']" v-if="activeIconClass || activeText">
@@ -22,6 +22,9 @@ export default {
   mixins: [Focus('input'), Migrating, emitter],
   inject: {
     elForm: {
+      default: ''
+    },
+    elFormItem: {
       default: ''
     }
   },
@@ -68,10 +71,7 @@ export default {
       type: [Boolean, String, Number],
       default: false
     },
-    name: {
-      type: String,
-      default: ''
-    },
+    name: String,
     validateEvent: {
       type: Boolean,
       default: true
@@ -87,6 +87,9 @@ export default {
     }
   },
   computed: {
+    _elFormItemName() {
+      return this.elFormItem.prop ? this.elFormItem.prop : this.name;
+    },
     checked() {
       return this.value === this.activeValue;
     },

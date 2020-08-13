@@ -1,6 +1,6 @@
 ## 更新日志
 
-### 1.1.55
+### 1.1.56
 _2020-08-13_
 
 #### 新特性
@@ -23,6 +23,11 @@ _2020-08-13_
   - 修复拖拽时位置问题
 - Form
   - 修复行内表单样式
+
+#### 优化
+- 自动化测试方面
+  - 优化Radio, Checkbox, Input, InputNumber, Select, TreeSelect, Cascader, Switch, TimePicker, DatePicker, DateTimePicker, Upload等，根据form表单的prop自动添加name属性；
+  - 优化 NavMenu，根据index添加唯一ID；
 
 ### 1.1.46
 _2020-07-23_

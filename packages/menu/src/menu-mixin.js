@@ -12,6 +12,9 @@ export default {
       }
       return path;
     },
+    menuId() {
+      return 'path-' + this.index;
+    },
     parentMenu() {
       let parent = this.$parent;
       while (

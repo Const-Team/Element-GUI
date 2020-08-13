@@ -26,7 +26,7 @@
         class="el-checkbox__original"
         type="checkbox"
         :aria-hidden="indeterminate ? 'true' : 'false'"
-        :name="name"
+        :name="_elFormItemName"
         :disabled="isDisabled"
         :true-value="trueLabel"
         :false-value="falseLabel"
@@ -41,7 +41,7 @@
         :aria-hidden="indeterminate ? 'true' : 'false'"
         :disabled="isDisabled"
         :value="label"
-        :name="name"
+        :name="_elFormItemName"
         v-model="model"
         @change="handleChange"
         @focus="focus = true"
@@ -106,6 +106,10 @@
             this.selfModel = val;
           }
         }
+      },
+
+      _elFormItemName() {
+        return this.elFormItem.prop ? this.elFormItem.prop : this.name;
       },
 
       isChecked() {
