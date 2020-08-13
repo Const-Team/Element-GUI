@@ -526,6 +526,7 @@
         popperClass: '',
         date: new Date(),
         value: '',
+        editable: null,
         defaultValue: null, // use getDefaultValue() for time computation
         defaultTime: null,
         defaultView: null,
