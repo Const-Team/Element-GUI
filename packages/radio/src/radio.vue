@@ -31,7 +31,7 @@
         @focus="focus = true"
         @blur="focus = false"
         @change="handleChange"
-        :name="name"
+        :name="_elFormItemName"
         :disabled="isDisabled"
         tabindex="-1"
       >
@@ -77,6 +77,9 @@
       };
     },
     computed: {
+      _elFormItemName() {
+        return this.elFormItem.prop ? this.elFormItem.prop : this.name;
+      },
       isGroup() {
         let parent = this.$parent;
         while (parent) {

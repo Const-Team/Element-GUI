@@ -380,7 +380,7 @@ export default {
       default: 'el-icon-circle-close'
     },
     name: {
-      default: '',
+      type: String,
       validator
     },
     disabled: Boolean,

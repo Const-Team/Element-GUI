@@ -42,10 +42,7 @@ export default {
     },
     data: Object,
     multiple: Boolean,
-    name: {
-      type: String,
-      default: 'file'
-    },
+    name: String,
     drag: Boolean,
     dragger: Boolean,
     withCredentials: Boolean,

@@ -18,7 +18,7 @@
       :value="label"
       type="radio"
       v-model="value"
-      :name="name"
+      :name="_elFormItemName"
       @change="handleChange"
       :disabled="isDisabled"
       tabindex="-1"
@@ -69,6 +69,9 @@
         set(value) {
           this._radioGroup.$emit('input', value);
         }
+      },
+      _elFormItemName() {
+        return this.elFormItem.prop ? this.elFormItem.prop : this.name;
       },
       _radioGroup() {
         let parent = this.$parent;

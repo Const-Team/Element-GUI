@@ -330,6 +330,7 @@
             'is-opened': opened,
             'is-disabled': disabled
           }}
+          id={this.menuId}
           role="menuitem"
           aria-haspopup="true"
           aria-expanded={opened}

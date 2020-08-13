@@ -18,7 +18,7 @@
       <div class="el-input-group__prepend" v-if="$slots.prepend">
         <slot name="prepend"></slot>
       </div>
-      <input :tabindex="tabindex" v-if="type !== 'textarea'" class="el-input__inner" v-bind="$attrs" :type="showPassword ? (passwordVisible ? 'text': 'password') : type" :disabled="inputDisabled" :readonly="readonly" :autocomplete="autoComplete || autocomplete" ref="input" @compositionstart="handleCompositionStart" @compositionupdate="handleCompositionUpdate" @compositionend="handleCompositionEnd" @input="handleInput" @focus="handleFocus" @blur="handleBlur" @change="handleChange" :aria-label="label">
+      <input :tabindex="tabindex" v-if="type !== 'textarea'" class="el-input__inner" v-bind="$attrs" :name="_elFormItemName" :type="showPassword ? (passwordVisible ? 'text': 'password') : type" :disabled="inputDisabled" :readonly="readonly" :autocomplete="autoComplete || autocomplete" ref="input" @compositionstart="handleCompositionStart" @compositionupdate="handleCompositionUpdate" @compositionend="handleCompositionEnd" @input="handleInput" @focus="handleFocus" @blur="handleBlur" @change="handleChange" :aria-label="label">
       <!-- 前置内容 -->
       <span class="el-input__prefix" v-if="$slots.prefix || prefixIcon">
         <slot name="prefix"></slot>
@@ -49,7 +49,7 @@
         <slot name="append"></slot>
       </div>
     </template>
-    <textarea v-else :tabindex="tabindex" class="el-textarea__inner" @compositionstart="handleCompositionStart" @compositionupdate="handleCompositionUpdate" @compositionend="handleCompositionEnd" @input="handleInput" ref="textarea" v-bind="$attrs" :disabled="inputDisabled" :readonly="readonly" :autocomplete="autoComplete || autocomplete" :style="textareaStyle" @focus="handleFocus" @blur="handleBlur" @change="handleChange" :aria-label="label">
+    <textarea v-else :tabindex="tabindex" :name="_elFormItemName" class="el-textarea__inner" @compositionstart="handleCompositionStart" @compositionupdate="handleCompositionUpdate" @compositionend="handleCompositionEnd" @input="handleInput" ref="textarea" v-bind="$attrs" :disabled="inputDisabled" :readonly="readonly" :autocomplete="autoComplete || autocomplete" :style="textareaStyle" @focus="handleFocus" @blur="handleBlur" @change="handleChange" :aria-label="label">
     </textarea>
     <span v-if="isWordLimitVisible && type === 'textarea'" class="el-input__count">{{ textLength }}/{{ upperLimit }}</span>
     <template v-if="type === 'textarea'">
@@ -103,6 +103,7 @@ export default {
   props: {
     value: [String, Number],
     size: String,
+    name: String,
     resize: String,
     form: String,
     disabled: Boolean,
@@ -155,6 +156,9 @@ export default {
   computed: {
     _elFormItemSize() {
       return (this.elFormItem || {}).elFormItemSize;
+    },
+    _elFormItemName() {
+      return this.elFormItem.prop ? this.elFormItem.prop : this.name;
     },
     validateState() {
       return this.elFormItem ? this.elFormItem.validateState : '';
