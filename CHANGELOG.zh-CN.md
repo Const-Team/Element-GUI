@@ -26,8 +26,8 @@ _2020-08-13_
 
 #### 优化
 - 自动化测试方面
-  - 优化Radio, Checkbox, Input, InputNumber, Select, TreeSelect, Cascader, Switch, TimePicker, DatePicker, DateTimePicker, Upload等，根据form表单的prop自动添加name属性；
-  - 优化 NavMenu，根据index添加唯一ID；
+  - 优化`Radio`, `Checkbox`, `Input`, `InputNumber`, `Select`, `TreeSelect`, `Cascader`, `Switch`, `TimePicker`, `DatePicker`, `DateTimePicker`, `Upload`等，根据 `form` 表单的 `prop` 自动添加 `name` 属性；
+  - 优化 `NavMenu`，根据 `index` 属性添加唯一 `id`；
 
 ### 1.1.46
 _2020-07-23_
