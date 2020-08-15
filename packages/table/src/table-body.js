@@ -1,4 +1,4 @@
-import { arrayFindIndex } from 'element-gui/src/utils/util';
+import { arrayFindIndex, noop } from 'element-gui/src/utils/util';
 import { getCell, getColumnByCell, getRowIdentity } from './util';
 import { getStyle, hasClass, removeClass, addClass } from 'element-gui/src/utils/dom';
 import ElCheckbox from 'element-gui/packages/checkbox';
@@ -26,7 +26,8 @@ export default {
     rowClassName: [String, Function],
     rowStyle: [Object, Function],
     fixed: String,
-    highlight: Boolean
+    highlight: Boolean,
+    noHover: Boolean
   },
 
   render(h) {
@@ -373,8 +374,8 @@ export default {
         on-dblclick={ ($event) => this.handleDoubleClick($event, row) }
         on-click={ ($event) => this.handleClick($event, row) }
         on-contextmenu={ ($event) => this.handleContextMenu($event, row) }
-        on-mouseenter={ _ => this.handleMouseEnter($index) }
-        on-mouseleave={ this.handleMouseLeave }>
+        on-mouseenter={ this.noHover ? noop : (_ => this.handleMouseEnter($index)) }
+        on-mouseleave={ this.noHover ? noop : this.handleMouseLeave }>
         {
           columns.map((column, cellIndex) => {
             const { rowspan, colspan } = this.getSpan(row, column, $index, cellIndex);
