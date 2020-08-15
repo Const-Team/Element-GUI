@@ -1841,7 +1841,6 @@
       :data="tableData"
       :span-method="arraySpanMethod"
       border
-      no-hover
       style="width: 100%">
       <el-table-column
         prop="id"
