@@ -138,7 +138,7 @@
       formatTooltip: Function,
       disabled: {
         type: Boolean,
-        default: false
+        default: null
       },
       range: {
         type: Boolean,

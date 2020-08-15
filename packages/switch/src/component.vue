@@ -35,7 +35,7 @@ export default {
     },
     disabled: {
       type: Boolean,
-      default: false
+      default: null
     },
     activeIconClass: {
       type: String,
