@@ -101,10 +101,7 @@
         type: String,
         default: 'el-icon-star-on'
       },
-      disabled: {
-        type: Boolean,
-        default: false
-      },
+      disabled: Boolean,
       allowHalf: {
         type: Boolean,
         default: false

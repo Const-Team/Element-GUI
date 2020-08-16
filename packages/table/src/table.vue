@@ -10,23 +10,16 @@
       'el-table--fluid-height': maxHeight,
       'el-table--scrollable-x': layout.scrollX,
       'el-table--scrollable-y': layout.scrollY,
-      'el-table--enable-row-hover': !store.states.isComplex,
-      'el-table--enable-row-transition': (store.states.data || []).length !== 0 && (store.states.data || []).length < 100
-    }, tableSize ? `el-table--${ tableSize }` : '']" @mouseleave="handleMouseLeave($event)">
+      'el-table--enable-row-hover': !noHover && !store.states.isComplex,
+      'el-table--enable-row-transition': (store.states.data || []).length !== 0 && (store.states.data || []).length < 100}, tableSize ? `el-table--${ tableSize }` : '']" @mouseleave="handleMouseLeave($event)">
     <div class="hidden-columns" ref="hiddenColumns">
       <slot></slot>
     </div>
     <div v-if="showHeader" v-mousewheel="handleHeaderFooterMousewheel" class="el-table__header-wrapper" ref="headerWrapper">
-      <table-header ref="tableHeader" :store="store" :border="border" :isdrag="isdrag" :default-sort="defaultSort" :filter-icon="filterIcon" :style="{
-          width: layout.bodyWidth ? layout.bodyWidth + 'px' : ''
-        }">
-      </table-header>
+      <table-header ref="tableHeader" :store="store" :border="border" :isdrag="isdrag" :default-sort="defaultSort" :filter-icon="filterIcon" :style="{width: layout.bodyWidth ? layout.bodyWidth + 'px' : ''}"></table-header>
     </div>
     <div class="el-table__body-wrapper" ref="bodyWrapper" :class="[layout.scrollX ? `is-scrolling-${scrollPosition}` : 'is-scrolling-none']" :style="[bodyHeight]">
-      <table-body :context="context" :store="store" :stripe="stripe" :row-class-name="rowClassName" :row-style="rowStyle" :highlight="highlightCurrentRow" :style="{
-           width: bodyWidth
-        }">
-      </table-body>
+      <table-body :context="context" :store="store" :stripe="stripe" :row-class-name="rowClassName" :row-style="rowStyle" :highlight="highlightCurrentRow" :style="{width: bodyWidth}" :no-hover="noHover"></table-body>
       <div v-if="!data || data.length === 0" class="el-table__empty-block" ref="emptyBlock" :style="emptyBlockStyle">
         <span class="el-table__empty-text">
           <slot name="empty">{{ emptyText || t('el.table.emptyText') }}</slot>
@@ -37,34 +30,18 @@
       </div>
     </div>
     <div v-if="showSummary" v-show="data && data.length > 0" v-mousewheel="handleHeaderFooterMousewheel" class="el-table__footer-wrapper" ref="footerWrapper">
-      <table-footer :store="store" :border="border" :sum-text="sumText || t('el.table.sumText')" :summary-method="summaryMethod" :default-sort="defaultSort" :style="{
-          width: layout.bodyWidth ? layout.bodyWidth + 'px' : ''
-        }">
-      </table-footer>
+      <table-footer :store="store" :border="border" :sum-text="sumText || t('el.table.sumText')" :summary-method="summaryMethod" :default-sort="defaultSort" :style="{width: layout.bodyWidth ? layout.bodyWidth + 'px' : ''}"></table-footer>
     </div>
-    <div v-if="fixedColumns.length > 0" v-mousewheel="handleFixedMousewheel" class="el-table__fixed" ref="fixedWrapper" :style="[{
-        width: layout.fixedWidth ? layout.fixedWidth + 'px' : ''
-      },
-      fixedHeight]">
+    <div v-if="fixedColumns.length > 0" v-mousewheel="handleFixedMousewheel" class="el-table__fixed" ref="fixedWrapper" :style="[{width: layout.fixedWidth ? layout.fixedWidth + 'px' : ''}, fixedHeight]">
       <div v-if="showHeader" class="el-table__fixed-header-wrapper" ref="fixedHeaderWrapper">
-        <table-header ref="fixedTableHeader" fixed="left" :border="border" :store="store" :filter-icon="filterIcon" :style="{
-            width: bodyWidth
-          }"></table-header>
+        <table-header ref="fixedTableHeader" fixed="left" :border="border" :store="store" :filter-icon="filterIcon" :style="{width: bodyWidth}"></table-header>
       </div>
-      <div class="el-table__fixed-body-wrapper" ref="fixedBodyWrapper" :style="[{
-          top: layout.headerHeight + 'px'
-        },
-        fixedBodyHeight]">
-        <table-body fixed="left" :store="store" :stripe="stripe" :highlight="highlightCurrentRow" :row-class-name="rowClassName" :row-style="rowStyle" :style="{
-            width: bodyWidth
-          }">
-        </table-body>
+      <div class="el-table__fixed-body-wrapper" ref="fixedBodyWrapper" :style="[{top: layout.headerHeight + 'px'}, fixedBodyHeight]">
+        <table-body fixed="left" :store="store" :stripe="stripe" :highlight="highlightCurrentRow" :row-class-name="rowClassName" :row-style="rowStyle" :style="{width: bodyWidth}" :no-hover="noHover"></table-body>
         <div v-if="$slots.append" class="el-table__append-gutter" :style="{ height: layout.appendHeight + 'px'}"></div>
       </div>
       <div v-if="showSummary" v-show="data && data.length > 0" class="el-table__fixed-footer-wrapper" ref="fixedFooterWrapper">
-        <table-footer fixed="left" :border="border" :sum-text="sumText || t('el.table.sumText')" :summary-method="summaryMethod" :store="store" :style="{
-            width: bodyWidth
-          }"></table-footer>
+        <table-footer fixed="left" :border="border" :sum-text="sumText || t('el.table.sumText')" :summary-method="summaryMethod" :store="store" :style="{width: bodyWidth}"></table-footer>
       </div>
     </div>
     <div v-if="rightFixedColumns.length > 0" v-mousewheel="handleFixedMousewheel" class="el-table__fixed-right" ref="rightFixedWrapper" :style="[{
@@ -73,24 +50,14 @@
       },
       fixedHeight]">
       <div v-if="showHeader" class="el-table__fixed-header-wrapper" ref="rightFixedHeaderWrapper">
-        <table-header ref="rightFixedTableHeader" fixed="right" :border="border" :store="store" :filter-icon="filterIcon" :style="{
-            width: bodyWidth
-          }"></table-header>
+        <table-header ref="rightFixedTableHeader" fixed="right" :border="border" :store="store" :filter-icon="filterIcon" :style="{width: bodyWidth}"></table-header>
       </div>
-      <div class="el-table__fixed-body-wrapper" ref="rightFixedBodyWrapper" :style="[{
-          top: layout.headerHeight + 'px'
-        },
-        fixedBodyHeight]">
-        <table-body fixed="right" :store="store" :stripe="stripe" :row-class-name="rowClassName" :row-style="rowStyle" :highlight="highlightCurrentRow" :style="{
-            width: bodyWidth
-          }">
-        </table-body>
+      <div class="el-table__fixed-body-wrapper" ref="rightFixedBodyWrapper" :style="[{top: layout.headerHeight + 'px'},fixedBodyHeight]">
+        <table-body fixed="right" :store="store" :stripe="stripe" :row-class-name="rowClassName" :row-style="rowStyle" :highlight="highlightCurrentRow" :style="{width: bodyWidth}" :no-hover="noHover"></table-body>
         <div v-if="$slots.append" class="el-table__append-gutter" :style="{ height: layout.appendHeight + 'px' }"></div>
       </div>
       <div v-if="showSummary" v-show="data && data.length > 0" class="el-table__fixed-footer-wrapper" ref="rightFixedFooterWrapper">
-        <table-footer fixed="right" :border="border" :sum-text="sumText || t('el.table.sumText')" :summary-method="summaryMethod" :store="store" :style="{
-            width: bodyWidth
-          }"></table-footer>
+        <table-footer fixed="right" :border="border" :sum-text="sumText || t('el.table.sumText')" :summary-method="summaryMethod" :store="store" :style="{width: bodyWidth}"></table-footer>
       </div>
     </div>
     <div v-if="rightFixedColumns.length > 0" class="el-table__fixed-right-patch" ref="rightFixedPatch" :style="{
@@ -231,7 +198,9 @@ export default {
 
     lazy: Boolean,
 
-    load: Function
+    load: Function,
+
+    noHover: Boolean
   },
 
   components: {

@@ -33,10 +33,7 @@ export default {
       type: [Boolean, String, Number],
       default: false
     },
-    disabled: {
-      type: Boolean,
-      default: false
-    },
+    disabled: Boolean,
     activeIconClass: {
       type: String,
       default: ''
