@@ -24,7 +24,7 @@ _2020-08-16_
   - 修复拖拽时位置问题
 - Form
   - 修复行内表单样式
-  - 修复表单为`disabled`时`rate`, `slider`, `switch`状态不变。
+  - 修复表单为 `disabled` 时 `rate`, `slider`, `switch`状态不变。
 
 #### 优化
 - 自动化测试方面
