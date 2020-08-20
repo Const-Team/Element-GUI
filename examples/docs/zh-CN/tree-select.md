@@ -207,7 +207,7 @@ export default {
   <el-radio label="mini">mini</el-radio>
 </el-radio-group>
 <div class="block" style="margin-top:20px">
-  <el-tree-select v-model="value1" ref="sizeTree" :size="size" :data="treeData1" multiple placeholder="请选择"></el-tree-select>
+  <el-tree-select v-model="value1" ref="sizeTree" :size="size" :data="treeData1" node-key="id" multiple placeholder="请选择"></el-tree-select>
 </div>
 
 <script>
@@ -219,48 +219,61 @@ export default {
         treeData1: [{
           label: '一级 1',
           value: '1',
+          id: '1',
           children: [{
             label: '二级 1-1',
             value: '1-1',
+            id: '1-1',
             children: [{
               label: '三级 1-1-1',
-              value: '1-1-1'
+              value: '1-1-1',
+              id: '1-1-1'
             }]
           }]
         }, {
           label: '一级 2',
           value: '2',
+          id: '2',
           children: [{
             label: '二级 2-1',
             value: '2-1',
+            id: '2-1',
             children: [{
               label: '三级 2-1-1',
-              value: '2-1-1'
+              value: '2-1-1',
+              id: '2-1-1'
             }]
           }, {
             label: '二级 2-2',
             value: '2-2',
+            id: '2-2',
             children: [{
               label: '三级 2-2-1',
-              value: '2-2-1'
+              value: '2-2-1',
+              id: '2-2-1'
             }]
           }]
         }, {
           label: '一级 3',
           value: '3',
+          id: '3',
           children: [{
             label: '二级 3-1',
             value: '3-1',
+            id: '3-1',
             children: [{
               label: '三级 3-1-1',
-              value: '3-1-1'
+              value: '3-1-1',
+              id: '3-1-1'
             }]
           }, {
             label: '二级 3-2',
             value: '3-2',
+            id: '3-2',
             children: [{
               label: '三级 3-2-1',
-              value: '3-2-1'
+              value: '3-2-1',
+              id: '3-2-1'
             }]
           }]
         }]
@@ -424,6 +437,7 @@ export default {
 | --------------------- | ---------------------------------------- | ---------------------------------------- | --------- | --------- |
 | value(v-model)        | 绑定值                                    | number / string / array                  | —         |  —        |
 | name                  | tree-select input 的 name 属性            | string                                   | —          | —        |
+| node-key              | 每个树节点用来作为唯一标识的属性，整棵树应该是唯一的               | String                      | —    | —     |
 | data                  | 展示数据                                  | array                                     | —         |  —       |
 | disabled              | 是否禁用                                  | boolean                                   | —         |  false   |
 | multiple              | 是否多选                                  | boolean                                   | —         |  false   |

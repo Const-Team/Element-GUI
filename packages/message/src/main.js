@@ -20,6 +20,9 @@ const Message = function(options) {
   let id = 'message_' + seed++;
 
   if (options.single) {
+    instances.forEach((item) => {
+      item.handleAfterLeave();
+    });
     Message.closeAll();
   };
 

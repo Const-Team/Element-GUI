@@ -1,7 +1,7 @@
 ## 更新日志
 
-### 1.1.57
-_2020-08-16_
+### 1.1.58
+_2020-08-20_
 
 #### 新特性
 
@@ -25,11 +25,15 @@ _2020-08-16_
 - Form
   - 修复行内表单样式
   - 修复表单为 `disabled` 时 `rate`, `slider`, `switch`状态不变。
+- Message
+  - 修复 `single` 属性不消除`DOM`
 
 #### 优化
 - 自动化测试方面
   - 优化`Radio`, `Checkbox`, `Input`, `InputNumber`, `Select`, `TreeSelect`, `Cascader`, `Switch`, `TimePicker`, `DatePicker`, `DateTimePicker`, `Upload`等，根据 `form` 表单的 `prop` 自动添加 `name` 属性；
   - 优化 `NavMenu`，根据 `index` 属性添加唯一 `id`；
+- TreeSelect
+  - 增加 `node-key`
 
 ### 1.1.46
 _2020-07-23_
