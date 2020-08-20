@@ -229,7 +229,7 @@
           if (typeof seriesColor === 'string') {
             return {
               color: seriesColor,
-              progress: (index + 1) * span
+              percentage: (index + 1) * span
             };
           }
           return seriesColor;

@@ -107,7 +107,8 @@
           :check-on-click-node="checkOnClickNode"
           :props="props"
           :default-expand-all="defaultExpandAll"
-          node-key="value"
+          :node-key="nodeKey"
+          v-bind="$attrs"
           :show-checkbox="showCheckbox"
           :expand-on-click-node="expandOnClickNode"
           :check-strictly="checkStrictly"
@@ -211,6 +212,10 @@ export default {
       default() {
         return t('el.treeSelect.placeholder');
       }
+    },
+    nodeKey: {
+      type: [String, Number, Array],
+      default: 'value'
     },
     lazy: Boolean,
     load: Function,
