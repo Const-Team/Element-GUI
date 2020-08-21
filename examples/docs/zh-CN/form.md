@@ -288,6 +288,10 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
   <el-form-item label="活动形式：" prop="desc">
     <el-input type="textarea" v-model="ruleForm.desc"></el-input>
   </el-form-item>
+  <el-form-item label="活动形式：" prop="tree">
+    <el-tree-select option-max-width="300px" :clearable="true" :default-expand-all="false" v-model="ruleForm.tree" :data="treeData" placeholder="请选择">
+  </el-tree-select>
+  </el-form-item>
   <el-form-item>
     <el-button type="primary" @click="submitForm('ruleForm')">立即创建</el-button>
     <el-button @click="resetForm('ruleForm')">重置</el-button>
@@ -306,13 +310,63 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
           type: [],
           resource: '',
           desc: '',
+          tree:''
         },
+        treeData: [{
+        label: '一级 1',
+        value: '1',
+        children: [{
+          label: '二级 1-1',
+          value: '1-1',
+          children: [{
+            label: '特别长的文字特别长的文字特别长的文字特别长的文字特别长的文字特别长的文字',
+            value: '1-1-1'
+          }]
+        }]
+      }, {
+        label: '一级 2',
+        value: '2',
+        children: [{
+          label: '二级 2-1',
+          value: '2-1',
+          children: [{
+            label: '三级 2-1-1',
+            value: '2-1-1'
+          }]
+        }, {
+          label: '二级 2-2',
+          value: '2-2',
+          children: [{
+            label: '三级 2-2-1',
+            value: '2-2-1'
+          }]
+        }]
+      }, {
+        label: '一级 3',
+        value: '3',
+        children: [{
+          label: '二级 3-1',
+          value: '3-1',
+          children: [{
+            label: '三级 3-1-1',
+            value: '3-1-1'
+          }]
+        }, {
+          label: '二级 3-2',
+          value: '3-2',
+          children: [{
+            label: '三级 3-2-1',
+            value: '3-2-1'
+          }]
+        }]
+      }],
         rules: {
           name: [
             { required: true, message: '请输入活动名称', trigger: 'blur' },
             { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' },
           ],
           region: [{ required: true, message: '请选择活动区域', trigger: 'change' }],
+          tree: [{ required: true, message: '请选择活动区域', trigger: 'change' }],
           date1: [{ type: 'date', required: true, message: '请选择日期', trigger: 'change' }],
           date2: [{ type: 'date', required: true, message: '请选择时间', trigger: 'change' }],
           type: [{ type: 'array', required: true, message: '请至少选择一个活动性质', trigger: 'change' }],
