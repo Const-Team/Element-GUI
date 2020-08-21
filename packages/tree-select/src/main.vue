@@ -356,6 +356,14 @@ export default {
       }
     },
     value(val, oldVal) {
+      if(!val) {
+        this.$emit('input', '');
+        this.emitChange('');
+        this.$emit('clear');
+        this.selected = {};
+        this.selectedLabel = '';
+        return;
+      }
       if (this.multiple) {
         this.resetInputHeight();
       } else {
