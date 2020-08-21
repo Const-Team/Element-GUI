@@ -360,7 +360,7 @@ export default {
         this.$emit('input', '');
         this.emitChange('');
         this.$emit('clear');
-        this.$refs.tree.getNode(this.selected.value).isSelect = false;
+        this.$refs.tree.getNode(oldVal).isSelect = false;
         this.selected = {};
         this.selectedLabel = '';
         return ;

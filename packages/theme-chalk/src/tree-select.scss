@@ -8,15 +8,6 @@
   width: 100%;
   font-size: $--font-size-base;
   line-height: $--input-height;
-  &:hover {
-    .el-input__inner {
-      border-color: $--select-border-color-hover;
-    }
-    .el-input__icon{
-      color: $--select-border-color-hover;
-      
-    }
-  }
   .el-input,
   .el-input__inner {
     cursor: pointer;
@@ -50,12 +41,6 @@
   .el-icon-circle-close {
     z-index: #{$--index-normal + 1};
     transition: $--color-transition-base;
-  }
-
-  .el-input {
-    &.is-focus .el-input__inner {
-      border-color: $--select-input-focus-border-color;
-    }
   }
 
   @include m(medium) {
