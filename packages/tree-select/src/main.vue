@@ -356,6 +356,15 @@ export default {
       }
     },
     value(val, oldVal) {
+      if (!val) {
+        this.$emit('input', '');
+        this.emitChange('');
+        this.$emit('clear');
+        this.$refs.tree.getNode(this.selected.value).isSelect = false;
+        this.selected = {};
+        this.selectedLabel = '';
+        return ;
+      }
       if (this.multiple) {
         this.resetInputHeight();
       } else {
@@ -398,6 +407,7 @@ export default {
         this.$emit('input', '');
         this.emitChange('');
         this.$emit('clear');
+        this.$refs.tree.getNode(this.selected.value).isSelect = false;
         this.selected = {};
         this.selectedLabel = '';
       }
