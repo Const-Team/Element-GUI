@@ -3,7 +3,8 @@
     <li
       :class="{ active: currentPage === 1, disabled }"
       v-if="pageCount > 0"
-      class="number">1</li>
+      class="number"
+      id="page-1">1</li>
     <li
       class="el-icon more btn-quickprev"
       :class="[quickprevIconClass, { disabled }]"
@@ -15,7 +16,8 @@
       v-for="pager in pagers"
       :key="pager"
       :class="{ active: currentPage === pager, disabled }"
-      class="number">{{ pager }}</li>
+      class="number"
+      :id="'page-' + pager">{{ pager }}</li>
     <li
       class="el-icon more btn-quicknext"
       :class="[quicknextIconClass, { disabled }]"
@@ -26,6 +28,7 @@
     <li
       :class="{ active: currentPage === pageCount, disabled }"
       class="number"
+      :id="'page-' + pageCount"
       v-if="pageCount > 1">{{ pageCount }}</li>
   </ul>
 </template>
