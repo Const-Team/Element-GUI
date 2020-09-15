@@ -64,7 +64,7 @@ export default {
       validator(val) {
         return Object.keys(val).length &&
         ['placeholder'].every((key) => {
-          return Object.keys(val).includes(key);
+          return Object.keys(val).indexOf(key) > -1;
         });
       }
     },
