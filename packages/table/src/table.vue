@@ -19,7 +19,7 @@
       <table-header ref="tableHeader" :store="store" :border="border" :isdrag="isdrag" :default-sort="defaultSort" :filter-icon="filterIcon" :style="{width: layout.bodyWidth ? layout.bodyWidth + 'px' : ''}"></table-header>
     </div>
     <div class="el-table__body-wrapper" ref="bodyWrapper" :class="[layout.scrollX ? `is-scrolling-${scrollPosition}` : 'is-scrolling-none']" :style="[bodyHeight]">
-      <table-body :context="context" :store="store" :stripe="stripe" :row-class-name="rowClassName" :row-style="rowStyle" :highlight="highlightCurrentRow" :style="{width: bodyWidth}" :no-hover="noHover"></table-body>
+      <table-body :context="context" :store="store" :stripe="stripe" :name="name" :row-class-name="rowClassName" :row-style="rowStyle" :highlight="highlightCurrentRow" :style="{width: bodyWidth}" :no-hover="noHover"></table-body>
       <div v-if="!data || data.length === 0" class="el-table__empty-block" ref="emptyBlock" :style="emptyBlockStyle">
         <span class="el-table__empty-text">
           <slot name="empty">{{ emptyText || t('el.table.emptyText') }}</slot>
@@ -97,6 +97,8 @@ export default {
   },
 
   props: {
+    name: String,
+
     data: {
       type: Array,
       default: function() {
