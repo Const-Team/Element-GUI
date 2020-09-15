@@ -117,6 +117,7 @@ export default {
           <button
             type="button"
             class="btn-prev"
+            id="btn-prev"
             disabled={ this.$parent.disabled || this.$parent.internalCurrentPage <= 1 }
             on-click={ this.$parent.prev }>
             {
@@ -135,6 +136,7 @@ export default {
           <button
             type="button"
             class="btn-next"
+            id="btn-next"
             disabled={ this.$parent.disabled || this.$parent.internalCurrentPage === this.$parent.internalPageCount || this.$parent.internalPageCount === 0 }
             on-click={ this.$parent.next }>
             {
@@ -170,8 +172,9 @@ export default {
 
       render(h) {
         return (
-          <span class="el-pagination__sizes">
+          <span class="el-pagination__sizes" >
             <el-select
+              id="page-size"
               value={ this.$parent.internalPageSize }
               popperClass={ this.$parent.popperClass || '' }
               size="mini"
@@ -248,6 +251,7 @@ export default {
           <span class="el-pagination__jump">
             { this.t('el.pagination.goto') }
             <el-input
+              id="page-jump"
               class="el-pagination__editor is-in-pagination"
               min={ 1 }
               max={ this.$parent.internalPageCount }

@@ -21,6 +21,7 @@ export default {
     store: {
       required: true
     },
+    name: String,
     stripe: Boolean,
     context: {},
     rowClassName: [String, Function],
@@ -263,6 +264,12 @@ export default {
       return classes.join(' ');
     },
 
+    getCellId(rowIndex, columnIndex) {
+      let name = this.name || 'table';
+      let id = name + '-row' + '_' + rowIndex + '_column_' + columnIndex;
+      return id;
+    },
+
     getColspanRealWidth(columns, colspan, index) {
       if (colspan < 1) {
         return columns[index].realWidth;
@@ -410,7 +417,8 @@ export default {
             return (
               <td
                 style={ this.getCellStyle($index, cellIndex, row, column) }
-                class={ this.getCellClass($index, cellIndex, row, column) }
+                class={ this.getCellClass($index, cellIndex, row, column)}
+                id={ this.getCellId($index, cellIndex)}
                 rowspan={ rowspan }
                 colspan={ colspan }
                 on-mouseenter={ ($event) => this.handleCellMouseEnter($event, row) }
