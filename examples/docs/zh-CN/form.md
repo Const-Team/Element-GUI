@@ -130,65 +130,65 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 
 :::
 
-### 多列表单
+### 栅格表单
 
-内置了`2列`、`3列`、`4列`表单，方便循环表单使用，正常情况下，推荐使用*Layout 布局*。
+内置了简单栅格表单，使用方式与栅格布局类似。
 
-:::demo 通过添加内置类名可以改变表单列数，可选值为 `form-col2`、`form-col3`、`form-col4`。
+:::demo 通过在`form`上配置 `grid` 属性，在`form-item`上配置`span`属性，达到简单栅格目的。
 
 ```html
-<el-radio-group v-model="labelCol" size="small">
-  <el-radio label="1">1列</el-radio>
-  <el-radio label="2">2列</el-radio>
-  <el-radio label="3">3列</el-radio>
-  <el-radio label="4">4列</el-radio>
-</el-radio-group>
-<div style="margin: 20px;"></div>
-<el-form :class="'form-col' + labelCol" label-width="auto" :model="formLabelCol" style="width:100%">
-  <el-form-item :key="i" v-for="(itme , i) in formLabelCol.name" :label="'名称'+(i+1)+'：'">
-    <el-input v-model="itme.name"></el-input>
+<el-form :grid="true" :gutter="20" :model="form" label-width="auto">
+  <el-form-item :span="24" label="审批人：">
+    <el-input v-model="form.user" placeholder="审批人"></el-input>
+  </el-form-item>
+  <el-form-item :span="12" label="活动区域：">
+    <el-select v-model="form.region" placeholder="活动区域">
+      <el-option label="区域一" value="shanghai"></el-option>
+      <el-option label="区域二" value="beijing"></el-option>
+    </el-select>
+  </el-form-item>
+  <el-form-item :span="12" label="即时配送：">
+    <el-switch v-model="form.delivery"></el-switch>
+  </el-form-item>
+  <el-form-item label="活动性质：">
+    <el-checkbox-group v-model="form.type">
+      <el-checkbox label="美食/餐厅线上活动" name="type"></el-checkbox>
+      <el-checkbox label="地推活动" name="type"></el-checkbox>
+      <el-checkbox label="线下主题活动" name="type"></el-checkbox>
+      <el-checkbox label="单纯品牌曝光" name="type"></el-checkbox>
+    </el-checkbox-group>
+  </el-form-item>
+  <el-form-item label="特殊资源：">
+    <el-radio-group v-model="form.resource">
+      <el-radio label="线上品牌商赞助"></el-radio>
+      <el-radio label="线下场地免费"></el-radio>
+    </el-radio-group>
+  </el-form-item>
+  <el-form-item label="活动形式：">
+    <el-input type="textarea" v-model="form.desc"></el-input>
+  </el-form-item>
+  <el-form-item>
+    <el-button type="primary" @click="onSubmit">查询</el-button>
   </el-form-item>
 </el-form>
 <script>
   export default {
     data() {
       return {
-        labelCol: '1',
-        formLabelCol: {
-          name: [
-            {
-              value: '',
-            },
-            {
-              value: '',
-            },
-            {
-              value: '',
-            },
-            {
-              value: '',
-            },
-            {
-              value: '',
-            },
-            {
-              value: '',
-            },
-            {
-              value: '',
-            },
-            {
-              value: '',
-            },
-            {
-              value: '',
-            },
-            {
-              value: '',
-            },
-          ],
+        form: {
+          user: '',
+          region: '',
+          delivery: false,
+          type: [],
+          resource: '',
+          desc: '',
         },
       };
+    },
+    methods: {
+      onSubmit() {
+        console.log('submit!');
+      },
     },
   };
 </script>
@@ -1025,6 +1025,8 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 | model                   | 表单数据对象                                                                              | object  | —                     | —      |
 | rules                   | 表单验证规则                                                                              | object  | —                     | —      |
 | inline                  | 行内表单模式                                                                              | boolean | —                     | false  |
+| grid                  | 栅格表单模式                                                                              | boolean | —                     | false  |
+| gutter                  | 栅格间隔                                                                              | number | —                     | 20  |
 | label-position          | 表单域标签的位置，如果值为 left 或者 right 时，则需要设置 `label-width`                   | string  | right/left/top        | right  |
 | label-width             | 表单域标签的宽度，例如 '50px'。作为 Form 直接子元素的 form-item 会继承该值。支持 `auto`。 | string  | —                     | —      |
 | label-max-width         | 表单域标签的最大宽度，当`label-width`为`auto`下生效，例如 '200px'。                       | string  | —                     | —      |
@@ -1059,6 +1061,7 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 | -------------- | ---------------------------------------------------------------------------- | ------- | --------------------------------- | ------ |
 | prop           | 表单域 model 字段，在使用 validate、resetFields 方法的情况下，该属性是必填的 | string  | 传入 Form 组件的 `model` 中的字段 | —      |
 | label          | 标签文本                                                                     | string  | —                                 | —      |
+| span          | 栅格占据的列数                                                                     | number  | —                                 | 24      |
 | label-width    | 表单域标签的宽度，例如 '50px'。支持 `auto`。                                 | string  | —                                 | —      |
 | required       | 是否必填，如不设置，则会根据校验规则自动生成                                 | boolean | —                                 | false  |
 | rules          | 表单验证规则                                                                 | object  | —                                 | —      |
