@@ -1,5 +1,42 @@
 <template>
+<el-col v-if="grid" :span="span">
   <div class="el-form-item" :class="[{
+      'el-form-item--feedback': elForm && elForm.statusIcon,
+      'is-error': validateState === 'error',
+      'is-validating': validateState === 'validating',
+      'is-success': validateState === 'success',
+      'is-required': isRequired || required,
+      'is-no-asterisk': elForm && elForm.hideRequiredAsterisk
+    },
+    sizeClass ? 'el-form-item--' + sizeClass : ''
+  ]">
+    <label-wrap :is-auto-width="labelStyle && labelStyle.width === 'auto'" :update-all="form.labelWidth === 'auto'">
+      <label :for="labelFor" class="el-form-item__label" :style="labelStyle" v-if="label || $slots.label">
+        <slot name="label">{{label + form.labelSuffix}}</slot>
+      </label>
+    </label-wrap>
+    <div class="el-form-item__content" :class="{'el-form-item__block': typeof blockMessage === 'boolean'
+                ? blockMessage
+                : (elForm && elForm.blockMessage || false)}" :style="contentStyle">
+      <slot></slot>
+      <transition name="el-zoom-in-top">
+        <slot v-if="validateState === 'error' && showMessage && form.showMessage" name="error" :error="validateMessage">
+          <div class="el-form-item__error" :class="[{
+              'el-form-item__error--inline': typeof inlineMessage === 'boolean'
+                ? inlineMessage
+                : (elForm && elForm.inlineMessage || false),
+                'el-form-item__error--block': typeof blockMessage === 'boolean'
+                ? blockMessage
+                : (elForm && elForm.blockMessage || false)
+            }]">
+            {{validateMessage}}
+          </div>
+        </slot>
+      </transition>
+    </div>
+  </div>
+</el-col>
+<div v-else class="el-form-item" :class="[{
       'el-form-item--feedback': elForm && elForm.statusIcon,
       'is-error': validateState === 'error',
       'is-validating': validateState === 'validating',
@@ -41,6 +78,7 @@ import emitter from 'element-gui/src/mixins/emitter';
 import objectAssign from 'element-gui/src/utils/merge';
 import { noop, getPropByPath } from 'element-gui/src/utils/util';
 import LabelWrap from './label-wrap';
+import ElCol from 'element-gui/packages/col';
 export default {
   name: 'ElFormItem',
 
@@ -54,7 +92,7 @@ export default {
     };
   },
 
-  inject: ['elForm', 'labelWidthArr'],
+  inject: ['elForm', 'labelWidthArr', 'grid'],
 
   props: {
     label: String,
@@ -80,7 +118,11 @@ export default {
       type: Boolean,
       default: true
     },
-    size: String
+    size: String,
+    span: {
+      type: Number,
+      default: 24
+    }
   },
   components: {
     // use this component to calculate auto width

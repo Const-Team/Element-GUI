@@ -3,12 +3,19 @@
     labelPosition ? 'el-form--label-' + labelPosition : '',
     { 'el-form--inline': inline }
   ]">
-    <slot></slot>
+    <template v-if="grid">
+      <el-row :gutter="gutter">
+        <slot></slot>
+      </el-row>
+    </template>
+    <template v-else>
+      <slot></slot>
+    </template>
   </form>
 </template>
 <script>
 import objectAssign from 'element-gui/src/utils/merge';
-
+import ElRow from 'element-gui/packages/row';
 export default {
   name: 'ElForm',
 
@@ -18,7 +25,8 @@ export default {
     return {
       elForm: this,
       // 把label所有宽度传递到item里面
-      labelWidthArr: this.potentialLabelWidthArr
+      labelWidthArr: this.potentialLabelWidthArr,
+      grid: this.grid
     };
   },
 
@@ -33,6 +41,14 @@ export default {
       default: ''
     },
     inline: Boolean,
+    grid: {
+      type: Boolean,
+      default: false
+    },
+    gutter: {
+      type: Number,
+      default: 20
+    },
     inlineMessage: Boolean,
     blockMessage: Boolean,
     statusIcon: Boolean,
