@@ -14,6 +14,11 @@ export default {
       default: 10
     },
 
+    align: {
+      type: String,
+      default: 'left'
+    },
+
     small: Boolean,
 
     total: Number,
@@ -71,7 +76,7 @@ export default {
     if (!layout) return null;
     if (this.hideOnSinglePage && (!this.internalPageCount || this.internalPageCount === 1)) return null;
 
-    let template = <div class={['el-pagination', {
+    let template = <div class={['el-pagination', 'el-pagination__' + this.align, {
       'is-background': this.background,
       'el-pagination--small': this.small
     }] }></div>;
