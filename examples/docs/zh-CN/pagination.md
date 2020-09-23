@@ -180,6 +180,7 @@
 |--------------------|----------------------------------------------------------|-------------------|-------------|--------|
 | small | 是否使用小型分页样式 | boolean | — | false |
 | background | 是否为分页按钮添加背景色 | boolean | — | false |
+| align | 对齐方式 | String | `left`、`center`、`right` | `left` |
 | page-size | 每页显示条目个数，支持 .sync 修饰符 | number | — | 10 |
 | total | 总条目数 | number | — | — |
 | page-count | 总页数，total 和 page-count 设置任意一个就可以达到显示页码的功能；如果要支持 page-sizes 的更改，则需要使用 total 属性 | Number | — | — |

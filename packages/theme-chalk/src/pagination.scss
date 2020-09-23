@@ -189,6 +189,18 @@
     }
   }
 
+  @include e(left) {
+    text-align: left;
+  }
+
+  @include e(center) {
+    text-align: center;
+  }
+
+  @include e(right) {
+    text-align: right;
+  }
+
   @include when(background) {
     .btn-prev,
     .btn-next,
