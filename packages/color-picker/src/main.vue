@@ -51,7 +51,7 @@
       predefine: Array,
       appendToBody: {
         type: Boolean,
-        default: false
+        default: true
       },
     },
     provide() {
