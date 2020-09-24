@@ -52,8 +52,9 @@
       appendToBody: {
         type: Boolean,
         default: true
-      },
+      }
     },
+
     provide() {
       return {
         appendToBody: this.appendToBody
