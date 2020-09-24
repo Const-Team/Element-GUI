@@ -48,7 +48,16 @@
       disabled: Boolean,
       size: String,
       popperClass: String,
-      predefine: Array
+      predefine: Array,
+      appendToBody: {
+        type: Boolean,
+        default: false
+      },
+    },
+    provide() {
+      return {
+        appendToBody: this.appendToBody
+      };
     },
 
     inject: {
