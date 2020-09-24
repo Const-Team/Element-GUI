@@ -43,6 +43,7 @@
   import HueSlider from './hue-slider';
   import AlphaSlider from './alpha-slider';
   import Predefine from './predefine';
+  import Popup from 'element-gui/src/utils/popup';
   import Popper from 'element-gui/src/utils/vue-popper';
   import Locale from 'element-gui/src/mixins/locale';
   import ElInput from 'element-gui/packages/input';
@@ -61,7 +62,7 @@
       ElButton,
       Predefine
     },
-
+    inject: ['appendToBody'],
     props: {
       color: {
         required: true
@@ -103,6 +104,9 @@
         if (val === true) {
           this.$nextTick(() => {
             const { sl, hue, alpha } = this.$refs;
+            if (this.appendToBody) {
+              document.body.appendChild(this.$el);
+            }
             sl && sl.update();
             hue && hue.update();
             alpha && alpha.update();

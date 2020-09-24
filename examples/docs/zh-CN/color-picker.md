@@ -8,7 +8,7 @@
 ```html
 <div class="block">
   <span class="demonstration">有默认值</span>
-  <el-color-picker v-model="color1"></el-color-picker>
+  <el-color-picker  v-model="color1" :append-to-body="false"></el-color-picker>
 </div>
 <div class="block">
   <span class="demonstration">无默认值</span>
@@ -115,6 +115,7 @@
 | color-format | 写入 v-model 的颜色的格式 | string | hsl / hsv / hex / rgb | hex（show-alpha 为 false）/ rgb（show-alpha 为 true） |
 | popper-class | ColorPicker 下拉框的类名 | string | — | — |
 | predefine | 预定义颜色 | array | — | — |
+| append-to-body     | 下拉面板是否插入至 body 元素上。   | boolean   | — | true |
 
 ### Events
 | 事件名称      | 说明    | 回调参数      |
