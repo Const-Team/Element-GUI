@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="87px" height="74px" viewBox="0 0 87 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-47.000000, -32.000000)">
+            <g id="Group-2" transform="translate(47.000000, 32.000000)">
+                <path d="M65,8.96723789 L74.0098498,8.98942433 C76.2151365,8.99485477 78,10.7841188 78,12.9894122 L78,49.9672379 C78,52.1763769 76.209139,53.9672379 74,53.9672379 L65,53.9672379 L65,53.9672379 L65,8.96723789 Z" id="Rectangle-Copy-2" fill="#DCEFFF"></path>
+                <path d="M13,0 L61,0 C63.209139,-4.05812251e-16 65,1.790861 65,4 L65,54 L65,54 L13,54 C10.790861,54 9,52.209139 9,50 L9,4 C9,1.790861 10.790861,4.05812251e-16 13,0 Z" id="Rectangle-Copy" fill="#F0F8FF"></path>
+                <g id="Group" transform="translate(15.000000, 6.000000)">
+                    <rect id="Rectangle-Copy-3" fill="#00A0FF" x="0" y="0" width="44" height="4" rx="2"></rect>
+                    <rect id="Rectangle-Copy-6" fill="#00A0FF" x="29" y="12" width="14" height="4" rx="2"></rect>
+                    <rect id="Rectangle-Copy-8" fill="#00A0FF" x="29" y="22" width="14" height="4" rx="2"></rect>
+                    <rect id="Rectangle-Copy-9" fill="#00A0FF" x="29" y="32" width="14" height="4" rx="2"></rect>
+                    <circle id="Oval" fill="#00A0FF" cx="24" cy="14" r="2"></circle>
+                    <circle id="Oval-Copy" fill="#00A0FF" cx="24" cy="24" r="2"></circle>
+                    <circle id="Oval-Copy-2" fill="#00A0FF" cx="24" cy="34" r="2"></circle>
+                    <rect id="Rectangle-Copy-4" fill="#FFD4D1" x="0" y="8" width="19" height="34" rx="3"></rect>
+                </g>
+                <rect id="Rectangle" fill="#74A8E6" x="0" y="58" width="87" height="16" rx="4"></rect>
+                <rect id="Rectangle" fill="#F0F8FF" x="34" y="64" width="19" height="5" rx="2.5"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

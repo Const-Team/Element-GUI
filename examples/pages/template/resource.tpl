@@ -159,7 +159,7 @@
         </li>
         <li>
           <div class="card">
-            <img src="~examples/assets/images/Sketch-Template.svg" alt="">
+            <img src="~examples/assets/images/Components-Guide.svg" alt="">
             <h3><%= 8 ></h3>
             <p><%= 9 ></p>
             <a href="http://10.0.204.61:8090/down/V8zU9opkcrgl"><%= 5 ></a>
