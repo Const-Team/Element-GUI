@@ -91,7 +91,7 @@
     }
     a {
       height: 42px;
-      width: 190px;
+      width: 90px;
       display: inline-block;
       line-height: 42px;
       font-size: 14px;
@@ -104,7 +104,7 @@
       border-radius: 2px;
       transition: all .3s;
       text-decoration: none;
-      margin-top: 20px;
+      margin: 20px 10px 0 10px;
       position: relative;
     }
   }
@@ -144,7 +144,8 @@
             <img src="~examples/assets/images/Axure-Components.svg" alt="">
             <h3><%= 3 ></h3>
             <p><%= 4 ></p>
-            <a href="http://resource.wangdaodao.com/axure.rplib"><%= 5 ></a>
+            <a href="http://10.0.204.61:8090/down/Kbw1gcI0W4RD"><%= 5 ></a>
+            <a href="http://10.0.204.61:8090/down/PnGhwtpqLwTZ"><%= 10 ></a>
           </div>
         </li>
         <li>
@@ -152,7 +153,8 @@
             <img src="~examples/assets/images/Sketch-Template.svg" alt="">
             <h3><%= 6 ></h3>
             <p><%= 7 ></p>
-            <a href="http://resource.wangdaodao.com/Sketch.zip"><%= 5 ></a>
+            <a href="http://10.0.204.61:8090/down/TXHZIgMqx52U"><%= 5 ></a>
+            <a href="http://10.0.204.61:8090/down/924rTaykcfuJ"><%= 10 ></a>
           </div>
         </li>
         <li>
@@ -160,7 +162,8 @@
             <img src="~examples/assets/images/Sketch-Template.svg" alt="">
             <h3><%= 8 ></h3>
             <p><%= 9 ></p>
-            <a href="http://resource.wangdaodao.com/Guide.zip"><%= 5 ></a>
+            <a href="http://10.0.204.61:8090/down/V8zU9opkcrgl"><%= 5 ></a>
+            <a href="http://10.0.204.61:8090/down/oKdODKmzjugT"><%= 10 ></a>
           </div>
         </li>
       </ul>
