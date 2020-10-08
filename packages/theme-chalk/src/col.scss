@@ -30,6 +30,12 @@
   }
 }
 
+@each $align in $--align {
+  .el-col-align-#{$align} {
+    text-align: $align;
+  }
+}
+
 @each $size in $--sizes {
   @include res(#{$size}) {
     .el-col-#{$size}-0 {

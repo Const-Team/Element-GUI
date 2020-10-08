@@ -10,6 +10,7 @@ export default {
       type: String,
       default: 'div'
     },
+    align: String,
     offset: Number,
     pull: Number,
     push: Number,
@@ -38,7 +39,7 @@ export default {
       style.paddingRight = style.paddingLeft;
     }
 
-    ['span', 'offset', 'pull', 'push'].forEach(prop => {
+    ['span', 'offset', 'pull', 'push', 'align'].forEach(prop => {
       if (this[prop] || this[prop] === 0) {
         classList.push(
           prop !== 'span'

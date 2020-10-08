@@ -16,8 +16,8 @@
   <el-col :span="12"><div class="grid-content bg-purple-light"></div></el-col>
 </el-row>
 <el-row>
-  <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="8"><div class="grid-content bg-purple-light"></div></el-col>
+  <el-col :span="8" align="center"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="8" align="left"><div class="grid-content bg-purple-light"></div></el-col>
   <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
 </el-row>
 <el-row>
@@ -346,6 +346,7 @@ import 'element-gui/lib/theme-chalk/display.css';
 | offset | 栅格左侧的间隔格数 | number | — | 0 |
 | push |  栅格向右移动格数 | number | — | 0 |
 | pull |  栅格向左移动格数 | number | — | 0 |
+| align | 对齐方式 | string | left/center/right | - |
 | xs | `<768px` 响应式栅格数或者栅格属性对象 | number/object (例如： {span: 4, offset: 4}) | — | — |
 | sm | `≥768px` 响应式栅格数或者栅格属性对象 | number/object (例如： {span: 4, offset: 4}) | — | — |
 | md | `≥992px` 响应式栅格数或者栅格属性对象 | number/object (例如： {span: 4, offset: 4}) | — | — |
