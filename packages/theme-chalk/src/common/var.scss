@@ -985,6 +985,8 @@ $--xl: 1920px !default;
 
 $--sizes: xs sm md lg xl;
 
+$--align: left center right;
+
 $--breakpoints: (
   'xs': (
     max-width: $--sm - 1,
