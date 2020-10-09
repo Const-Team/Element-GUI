@@ -200,12 +200,7 @@ export default {
       type: Boolean,
       default: false
     },
-    size: {
-      type: String,
-      validator(val) {
-        return ['medium', 'small', 'mini'].indexOf(val) > -1;
-      }
-    },
+    size: String,
     props: Object,
     placeholder: {
       type: String,
