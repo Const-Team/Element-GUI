@@ -23,10 +23,10 @@
 
 ```html
 <el-breadcrumb separator-class="el-icon-arrow-right">
-  <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-  <el-breadcrumb-item :to="{ path: '/' }">活动管理</el-breadcrumb-item>
-  <el-breadcrumb-item :to="{ path: '/' }">活动列表</el-breadcrumb-item>
-  <el-breadcrumb-item>活动详情</el-breadcrumb-item>
+  <el-breadcrumb-item :to="{ path: '/' }" title="首页"></el-breadcrumb-item>
+  <el-breadcrumb-item :to="{ path: '/' }" title="活动管理"></el-breadcrumb-item>
+  <el-breadcrumb-item :to="{ path: '/' }" title="活动列表"></el-breadcrumb-item>
+  <el-breadcrumb-item title="活动详情"></el-breadcrumb-item>
 </el-breadcrumb>
 ```
 :::
@@ -40,5 +40,6 @@
 ### Breadcrumb Item Attributes
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
+| title        | 标题 | string | — | — |
 | to        | 路由跳转对象，同 `vue-router` 的 `to` | string/object | — | — |
 | replace   | 在使用 to 进行路由跳转时，启用 replace 将不会向 history 添加新记录 | boolean | — | false |

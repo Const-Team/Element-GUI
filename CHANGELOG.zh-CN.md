@@ -1,6 +1,6 @@
 ## 更新日志
 
-### 1.1.67
+### 1.1.68
 _2020-10-09_
 
 #### 新特性
@@ -12,12 +12,14 @@ _2020-10-09_
 - Layout
   - 新增对齐方式。
 - ColorPicker
-  - 新增`append-to-body	`属性。
+  - 新增`append-to-body`属性。
+- Breadcrumb
+  - 新增`title`属性。
 
 #### 修复
 
 - TreeSelect
-  - 修复size问题。
+  - 修复`size`问题。
 - InputNumber
   - 修复文档错误。
 

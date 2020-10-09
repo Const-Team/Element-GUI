@@ -4,7 +4,7 @@
       :class="['el-breadcrumb__inner', to ? 'is-link' : '']"
       ref="link"
       role="link">
-      <slot></slot>
+      <slot>{{title}}</slot>
     </span>
     <i v-if="separatorClass" class="el-breadcrumb__separator" :class="separatorClass"></i>
     <span v-else class="el-breadcrumb__separator" role="presentation">{{separator}}</span>
@@ -15,7 +15,8 @@
     name: 'ElBreadcrumbItem',
     props: {
       to: {},
-      replace: Boolean
+      replace: Boolean,
+      title: String
     },
     data() {
       return {
