@@ -1,5 +1,5 @@
 <template>
-  <div class="el-image">
+  <div class="el-image" :style="'width:'+ width + ';height:' + height">
     <slot v-if="loading" name="placeholder">
       <div class="el-image__placeholder"></div>
     </slot>
@@ -64,6 +64,14 @@ export default {
     appendToBody: {
       type: Boolean,
       default: false
+    },
+    width: {
+      type: String,
+      default: 'auto'
+    },
+    height: {
+      type: String,
+      default: 'auto'
     }
   },
 

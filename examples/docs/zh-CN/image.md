@@ -66,11 +66,11 @@
 <div class="demo-image__error">
   <div class="block">
     <span class="demonstration">默认</span>
-    <el-image></el-image>
+    <el-image style="width: 100px; height: 100px"></el-image>
   </div>
   <div class="block">
     <span class="demonstration">自定义</span>
-    <el-image>
+    <el-image style="width: 100px; height: 100px">
       <div slot="error" class="image-slot">
         <i class="el-icon-picture"></i>
       </div>
@@ -149,6 +149,8 @@
 | preview-src-list | 开启图片预览功能 | Array | — | - |
 | z-index | 设置图片预览的 z-index | Number | — | 2000 |
 | append-to-body | 预览框是否插入 body 元素，处理 Safari 中 z-index 问题 | boolean | — | false |
+| width | 图片宽度 | string | - | auto |
+| height | 图片高度 | string | - | auto |
 
 ### Events
 | 事件名称      | 说明    | 回调参数      |
