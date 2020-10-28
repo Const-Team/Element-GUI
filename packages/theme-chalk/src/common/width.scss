@@ -1,9 +1,0 @@
-// 常用宽度
-@for $i from 4 through 220 {
-  .width-#{$i*5} {
-    width: $i*5+px;
-  }
-}
-.width-full {
-  width: 100%;
-}

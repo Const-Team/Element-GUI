@@ -1,0 +1,41 @@
+// 常用宽度
+@for $i from 4 through 220 {
+  .el-width#{$i*5} {
+    width: $i*5+px;
+  }
+}
+.el-width_full {
+  width: 100%;
+}
+
+// 常用margin
+@for $i from 0 through 6 {
+  .el-mt#{$i*5} {
+    margin-top: $i*5+px;
+  }
+  .el-mb#{$i*5} {
+    margin-bottom: $i*5+px;
+  }
+  .el-mr#{$i*5} {
+    margin-right: $i*5+px;
+  }
+  .el-ml#{$i*5} {
+    margin-left: $i*5+px;
+  }
+}
+
+// 常用padding
+@for $i from 1 through 6 {
+  .el-pt#{$i*5} {
+    padding-top: $i*5+px;
+  }
+  .el-pb#{$i*5} {
+    padding-bottom: $i*5+px;
+  }
+  .el-pr#{$i*5} {
+    padding-right: $i*5+px;
+  }
+  .el-pl#{$i*5} {
+    padding-left: $i*5+px;
+  }
+}
