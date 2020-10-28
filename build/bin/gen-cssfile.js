@@ -28,5 +28,6 @@ themes.forEach((theme) => {
       console.log(theme, ' 创建遗漏的 ', fileName, ' 文件');
     }
   });
+  indexContent += '@import "common/width.scss";\n';
   fs.writeFileSync(path.resolve(basepath, theme, 'src', isSCSS ? 'index.scss' : 'index.css'), indexContent);
 });
