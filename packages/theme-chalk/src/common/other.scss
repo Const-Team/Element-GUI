@@ -1,11 +1,11 @@
 // 常用宽度
 @for $i from 4 through 220 {
   .el-width#{$i*5} {
-    width: $i*5+px;
+    width: $i*5+px !important;
   }
 }
 .el-width_full {
-  width: 100%;
+  width: 100% !important;
 }
 
 // 常用margin
