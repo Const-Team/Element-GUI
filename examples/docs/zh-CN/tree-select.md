@@ -386,6 +386,14 @@ export default {
             children: [{
               label: '三级 1-1-1',
               value: '1-1-1'
+            },
+            {
+              label: '三级 1-1-2',
+              value: '1-1-2'
+            },
+            {
+              label: '三级 1-1-3',
+              value: '1-1-3'
             }]
           }]
         }, {
@@ -415,6 +423,12 @@ export default {
             children: [{
               label: '三级 3-1-1',
               value: '3-1-1'
+            },{
+              label: '三级 3-1-2',
+              value: '3-1-2'
+            },{
+              label: '三级 3-1-3',
+              value: '3-1-3'
             }]
           }, {
             label: '二级 3-2',
@@ -422,6 +436,9 @@ export default {
             children: [{
               label: '三级 3-2-1',
               value: '3-2-1'
+            },{
+              label: '三级 3-2-2',
+              value: '3-2-2'
             }]
           }]
         }]

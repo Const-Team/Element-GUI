@@ -1,5 +1,5 @@
 <template>
-<el-col v-if="grid" :span="span">
+<el-col v-if="isGrid" :span="span">
   <div class="el-form-item" :class="[{
       'el-form-item--feedback': elForm && elForm.statusIcon,
       'is-error': validateState === 'error',
@@ -92,7 +92,7 @@ export default {
     };
   },
 
-  inject: ['elForm', 'labelWidthArr', 'grid'],
+  inject: ['elForm', 'labelWidthArr', 'gridStatus'],
 
   props: {
     label: String,
@@ -138,6 +138,13 @@ export default {
     },
     validateStatus(value) {
       this.validateState = value;
+    },
+    gridStatus: {
+      handler (value) {
+        this.isGrid = value.status // 可以监听到gridStatus的改变
+      },
+      immediate: true,
+      deep: true
     }
   },
   computed: {
@@ -235,7 +242,8 @@ export default {
       validateDisabled: false,
       validator: {},
       isNested: false,
-      computedLabelWidth: ''
+      computedLabelWidth: '',
+      isGrid: false
     };
   },
   methods: {
