@@ -26,7 +26,7 @@ export default {
       elForm: this,
       // 把label所有宽度传递到item里面
       labelWidthArr: this.potentialLabelWidthArr,
-      grid: this.grid
+      gridStatus: this.gridObj
     };
   },
 
@@ -78,6 +78,13 @@ export default {
       if (this.validateOnRuleChange) {
         this.validate(() => {});
       }
+    },
+    grid: {
+      handler (value) {
+        this.gridObj.status = value; // 可以监听到gridStatus的改变
+      },
+      immediate: true,
+      deep: true
     }
   },
   computed: {
@@ -101,7 +108,11 @@ export default {
   data() {
     return {
       fields: [],
-      potentialLabelWidthArr: [] // use this array to calculate auto width
+      potentialLabelWidthArr: [], // use this array to calculate auto width
+      // 响应式监听grid状态
+      gridObj: {
+        status: null
+      }
     };
   },
   created() {

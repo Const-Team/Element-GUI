@@ -476,6 +476,12 @@ export default {
               label: child.data.label,
               value: child.data.value
             });
+          } else if (child.checked) {
+            // 显示子节点
+            checkedNodes.push({
+              label: child.data.label,
+              value: child.data.value
+            });
           } else {
             traverse(child);
           }

@@ -137,7 +137,11 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 :::demo 通过在`form`上配置 `grid` 属性，在`form-item`上配置`span`属性，达到简单栅格目的。
 
 ```html
-<el-form :grid="true" :gutter="20" :model="form" label-width="auto">
+<div style="margin: 20px;">
+  栅格表格：<el-switch v-model="value"></el-switch>
+</div>
+
+<el-form :grid="value" :gutter="20" :model="form" label-width="auto">
   <el-form-item :span="24" label="审批人：">
     <el-input v-model="form.user" placeholder="审批人"></el-input>
   </el-form-item>
@@ -175,6 +179,7 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
   export default {
     data() {
       return {
+        value: true,
         form: {
           user: '',
           region: '',
