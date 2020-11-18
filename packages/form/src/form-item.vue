@@ -140,8 +140,8 @@ export default {
       this.validateState = value;
     },
     gridStatus: {
-      handler (value) {
-        this.isGrid = value.status // 可以监听到gridStatus的改变
+      handler(value) {
+        this.isGrid = value.status; // 可以监听到gridStatus的改变
       },
       immediate: true,
       deep: true

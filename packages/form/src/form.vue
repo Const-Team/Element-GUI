@@ -80,7 +80,7 @@ export default {
       }
     },
     grid: {
-      handler (value) {
+      handler(value) {
         this.gridObj.status = value; // 可以监听到gridStatus的改变
       },
       immediate: true,
