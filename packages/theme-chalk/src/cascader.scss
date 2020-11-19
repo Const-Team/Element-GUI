@@ -8,6 +8,7 @@
 @include b(cascader) {
   display: inline-block;
   position: relative;
+  vertical-align: middle;
   font-size: $--font-size-base;
   line-height: $--input-height;
 

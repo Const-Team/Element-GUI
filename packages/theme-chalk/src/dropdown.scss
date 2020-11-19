@@ -5,6 +5,7 @@
 
 @include b(dropdown) {
   display: inline-block;
+  vertical-align: middle;
   position: relative;
   color: $--color-text-regular;
   font-size: $--font-size-base;

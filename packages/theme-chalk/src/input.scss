@@ -82,6 +82,7 @@
   position: relative;
   font-size: $--font-size-base;
   display: inline-block;
+  vertical-align: middle;
   width: 100%;
   @include scroll-bar;
 

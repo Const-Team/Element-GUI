@@ -5,6 +5,7 @@
 @include b(input-number) {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   width: 180px;
   line-height: #{$--input-height - 2};
 
