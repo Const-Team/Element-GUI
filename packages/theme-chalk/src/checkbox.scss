@@ -357,4 +357,7 @@
 
 @include b(checkbox-group) {
   font-size: 0;
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
 }

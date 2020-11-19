@@ -10,6 +10,7 @@
 
 @include b(select) {
   display: inline-block;
+  vertical-align: middle;
   position: relative;
   .el-select__tags
     >span {

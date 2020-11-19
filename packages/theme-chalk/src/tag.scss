@@ -94,6 +94,7 @@
 @include b(tag) {
   @include genTheme(10%, 20%, 100%, 100%);
   display: inline-block;
+  vertical-align: middle;
   height: 34px;
   padding: $--tag-padding;
   line-height: 34px;

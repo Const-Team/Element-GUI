@@ -240,6 +240,7 @@
 
 @include b(color-picker) {
   display: inline-block;
+  vertical-align: middle;
   position: relative;
   line-height: normal;
   height: 34px;
