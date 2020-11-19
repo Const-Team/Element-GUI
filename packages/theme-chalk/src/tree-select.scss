@@ -4,9 +4,11 @@
 
 @include b(tree-select) {
   display: inline-block;
+  vertical-align: bottom;
   position: relative;
   width: 100%;
-  font-size: $--font-size-base;
+  // 消除文本距离
+  font-size: 0;
   line-height: $--input-height;
   .el-input,
   .el-input__inner {

@@ -2,8 +2,9 @@
 @import "common/var";
 
 @include b(rate) {
-  height: $--rate-height;
-  line-height: 1;
+  // 表单居中
+  // height: $--rate-height;
+  // line-height: 1;
 
   &:focus, &:active {
     outline-width: 0;
@@ -13,7 +14,9 @@
     display: inline-block;
     position: relative;
     font-size: 0;
-    vertical-align: middle;
+    // 表单居中
+    // vertical-align: middle;
+    line-height: 1;
   }
 
   @include e(icon) {

@@ -8,6 +8,7 @@
   font-weight: $--checkbox-font-weight;
   font-size: $--font-size-base;
   position: relative;
+  line-height: inherit;
   cursor: pointer;
   display: inline-block;
   white-space: nowrap;
@@ -358,5 +359,5 @@
 @include b(checkbox-group) {
   font-size: 0;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: bottom;
 }
