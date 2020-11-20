@@ -53,7 +53,7 @@
 
   @include m(medium) {
     .el-form-item__label {
-      line-height: 32px;
+      padding: 9px 0;
     }
     .el-form-item__content {
       line-height: 32px;

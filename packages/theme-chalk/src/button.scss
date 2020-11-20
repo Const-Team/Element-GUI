@@ -6,7 +6,7 @@
 
 @include b(button) {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: bottom;
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
@@ -183,7 +183,7 @@
 @include b(button-group) {
   @include utils-clearfix;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: bottom;
 
   & > .el-button {
     float: left;

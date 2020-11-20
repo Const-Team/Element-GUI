@@ -82,7 +82,7 @@
   position: relative;
   font-size: $--font-size-base;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: bottom;
   width: 100%;
   @include scroll-bar;
 
@@ -110,6 +110,7 @@
     box-sizing: border-box;
     color: $--input-font-color;
     display: inline-block;
+    vertical-align: bottom;
     font-size: inherit;
     height: $--input-height;
     line-height: $--input-height;

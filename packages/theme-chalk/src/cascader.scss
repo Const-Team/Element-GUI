@@ -8,8 +8,9 @@
 @include b(cascader) {
   display: inline-block;
   position: relative;
-  vertical-align: middle;
-  font-size: $--font-size-base;
+  vertical-align: bottom;
+  // 消除文本距离
+  font-size: 0;
   line-height: $--input-height;
 
   &:not(.is-disabled):hover {

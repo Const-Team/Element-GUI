@@ -8,19 +8,21 @@
   font-weight: $--checkbox-font-weight;
   font-size: $--font-size-base;
   position: relative;
+  line-height: inherit;
   cursor: pointer;
   display: inline-block;
   white-space: nowrap;
   user-select: none;
-  margin-right: 20px;
+  margin-right: 10px;
 
   @include when(bordered) {
     padding: $--checkbox-bordered-padding;
     border-radius: $--border-radius-small;
     border: $--border-base;
     box-sizing: border-box;
-    line-height: normal;
     height: $--checkbox-bordered-height;
+    line-height: 1;
+    vertical-align: bottom;
 
     &.is-checked {
       border-color: $--color-primary;
@@ -32,13 +34,14 @@
     }
 
     & + .el-checkbox.is-bordered {
-      margin-left: 10px;
+      // margin-left: 10px;
     }
 
     &.el-checkbox--medium {
       padding: $--checkbox-bordered-medium-padding;
       border-radius: $--button-medium-border-radius;
       height: $--checkbox-bordered-medium-height;
+      // line-height: $--checkbox-bordered-medium-height;
 
       .el-checkbox__label {
         line-height: 17px;
@@ -55,6 +58,7 @@
       padding: $--checkbox-bordered-small-padding;
       border-radius: $--button-small-border-radius;
       height: $--checkbox-bordered-small-height;
+      line-height: $--checkbox-bordered-small-height;
 
       .el-checkbox__label {
         line-height: 15px;
@@ -76,6 +80,7 @@
       padding: $--checkbox-bordered-mini-padding;
       border-radius: $--button-mini-border-radius;
       height: $--checkbox-bordered-mini-height;
+      line-height: $--checkbox-bordered-mini-height;
 
       .el-checkbox__label {
         line-height: 12px;
@@ -249,7 +254,8 @@
 @include b(checkbox-button) {
   position: relative;
   display: inline-block;
-
+  line-height: 1;
+  vertical-align: bottom;
   @include e(inner) {
     display: inline-block;
     line-height: 1;
@@ -358,5 +364,5 @@
 @include b(checkbox-group) {
   font-size: 0;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: bottom;
 }
