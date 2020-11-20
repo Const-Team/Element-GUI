@@ -48,12 +48,12 @@
       </el-form-item>
     </el-form> -->
     <el-form size="medium" :grid="true" :gutter="20" :model="form" label-width="auto">
-      <el-form-item :span="8" label="按钮：">
+      <el-form-item :span="6" label="按钮：">
         <el-button :plain="false" :round="false" :circle="false" :disabled="false" :loading="false" nativeType="button">
           默认按钮
         </el-button>
       </el-form-item>
-      <el-form-item :span="8" label="复选按钮：">
+      <el-form-item :span="6" label="复选按钮：">
         <el-checkbox-group :disabled="false" textColor="#ffffff" fill="#1890FF" v-model="model_1e70rbovoa">
           <el-checkbox-button label="备选项1" :disabled="false">
           </el-checkbox-button>
@@ -63,10 +63,10 @@
           </el-checkbox-button>
         </el-checkbox-group>
       </el-form-item>
-      <el-form-item :span="8" label="输入框：">
+      <el-form-item :span="6" label="输入框：">
         <el-input v-model="form.name"></el-input>
       </el-form-item>
-      <el-form-item :span="8" label="复选按钮：">
+      <el-form-item :span="6" label="复选按钮：">
         <el-checkbox-group :disabled="false" textColor="#ffffff" fill="#1890FF" v-model="model_1e70rbovoa">
           <el-checkbox label="备选项1" border :disabled="false">
           </el-checkbox>
@@ -76,10 +76,10 @@
           </el-checkbox>
         </el-checkbox-group>
       </el-form-item>
-      <el-form-item :span="8" label="评分：">
+      <el-form-item :span="6" label="评分：">
         <el-rate v-model="form.rate"></el-rate>
       </el-form-item>
-      <el-form-item :span="8" label="单选按钮：">
+      <el-form-item :span="6" label="单选按钮：">
         <el-radio-group :disabled="false" textColor="#ffffff" fill="#1890FF" v-model="model_g9g16kn88q">
           <el-radio-button label="备选项1" :disabled="false">
           </el-radio-button>
@@ -89,13 +89,13 @@
           </el-radio-button>
         </el-radio-group>
       </el-form-item>
-      <el-form-item :span="8" label="特殊资源：">
+      <el-form-item :span="6" label="特殊资源：">
         <el-radio-group v-model="form.resource">
           <el-radio border label="线上品牌商赞助"></el-radio>
           <el-radio border label="线下场地免费"></el-radio>
         </el-radio-group>
       </el-form-item>
-      <el-form-item :span="8" label="按钮组：">
+      <el-form-item :span="6" label="按钮组：">
         <el-button-group>
           <el-button :plain="false" :round="false" :circle="false" :disabled="false" :loading="false" nativeType="button">
             默认按钮
@@ -105,37 +105,37 @@
           </el-button>
         </el-button-group>
       </el-form-item>
-      <el-form-item :span="8" label="数字框：">
+      <el-form-item :span="6" label="数字框：">
         <el-input-number class="el-width140" :disabled="false" :controls="true" :stepStrictly="false" v-model="model_2f96dgh1xfr">
         </el-input-number>
       </el-form-item>
-      <el-form-item :span="8" label="颜色框：">
+      <el-form-item :span="6" label="颜色框：">
         <el-color-picker v-model="color1" :append-to-body="false"></el-color-picker>
       </el-form-item>
-      <el-form-item :span="8" label="下拉框：">
+      <el-form-item :span="6" label="下拉框：">
         <el-select v-model="form.region" placeholder="请选择活动区域">
           <el-option label="区域一" value="shanghai"></el-option>
           <el-option label="区域二" value="beijing"></el-option>
         </el-select>
       </el-form-item>
-      <el-form-item :span="8" label="下拉树：">
+      <el-form-item :span="6" label="下拉树：">
         <el-tree-select placeholder="请选择" class="el-width200" :disabled="false" :filterable="false" :multiple="false" :clearable="false" :defaultExpandAll="false" :expandOnClickNode="false" :collapseTags="false" :showCheckbox="false" :checkStrictly="false" showCheckedStrategy="child" v-model="model_114x7qkypm6" :data="data_114x7qkypm6">
         </el-tree-select>
       </el-form-item>
-      <el-form-item :span="8" label="级联：">
+      <el-form-item :span="6" label="级联：">
         <el-cascader placeholder="请选择" class="el-width200" :disabled="false" :clearable="false" :filterable="false" :showAllLevels="true" optionMaxWidth="300px" separator="/" :collapseTags="false" v-model="model_eajug9l8gg" :options="options_eajug9l8gg" :props="props_eajug9l8gg">
         </el-cascader>
       </el-form-item>
-      <el-form-item :span="8" label="活动时间：">
+      <el-form-item :span="6" label="活动时间：">
         <el-date-picker type="date" placeholder="选择日期" v-model="form.date1" class="el-width300"></el-date-picker>
       </el-form-item>
-      <el-form-item :span="8" label="活动时间：">
+      <el-form-item :span="6" label="活动时间：">
         <el-time-picker placeholder="选择时间" v-model="form.date2" class="el-width300"></el-time-picker>
       </el-form-item>
-      <el-form-item :span="8" label="即时配送：">
+      <el-form-item :span="6" label="即时配送：">
         <el-switch v-model="form.delivery"></el-switch>
       </el-form-item>
-      <el-form-item :span="8" label="活动性质：">
+      <el-form-item :span="6" label="活动性质：">
         <el-checkbox-group v-model="form.type">
           <el-checkbox label="美食/餐厅线上活动" name="type"></el-checkbox>
           <el-checkbox label="地推活动" name="type"></el-checkbox>
@@ -143,7 +143,7 @@
           <el-checkbox label="单纯品牌曝光" name="type"></el-checkbox> -->
         </el-checkbox-group>
       </el-form-item>
-      <el-form-item :span="8" label="特殊资源：">
+      <el-form-item :span="6" label="特殊资源：">
         <el-radio-group v-model="form.resource">
           <el-radio label="线上品牌商赞助"></el-radio>
           <el-radio label="线下场地免费"></el-radio>
