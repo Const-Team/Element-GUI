@@ -47,7 +47,7 @@
         <el-button>取消</el-button>
       </el-form-item>
     </el-form> -->
-    <el-form :grid="true" :gutter="20" :model="form" label-width="auto">
+    <el-form size="medium" :grid="true" :gutter="20" :model="form" label-width="auto">
       <el-form-item :span="8" label="按钮：">
         <el-button :plain="false" :round="false" :circle="false" :disabled="false" :loading="false" nativeType="button">
           默认按钮
@@ -66,9 +66,15 @@
       <el-form-item :span="8" label="输入框：">
         <el-input v-model="form.name"></el-input>
       </el-form-item>
-      <el-form-item :span="8" label="标签：">
-        <el-tag>标签一</el-tag>
-        <el-tag type="success">标签二</el-tag>
+      <el-form-item :span="8" label="复选按钮：">
+        <el-checkbox-group :disabled="false" textColor="#ffffff" fill="#1890FF" v-model="model_1e70rbovoa">
+          <el-checkbox label="备选项1" border :disabled="false">
+          </el-checkbox>
+          <el-checkbox label="备选项2" border :disabled="false">
+          </el-checkbox>
+          <el-checkbox label="备选项3" border :disabled="false">
+          </el-checkbox>
+        </el-checkbox-group>
       </el-form-item>
       <el-form-item :span="8" label="评分：">
         <el-rate v-model="form.rate"></el-rate>
@@ -81,6 +87,12 @@
           </el-radio-button>
           <el-radio-button label="备选项3" :disabled="false">
           </el-radio-button>
+        </el-radio-group>
+      </el-form-item>
+      <el-form-item :span="8" label="特殊资源：">
+        <el-radio-group v-model="form.resource">
+          <el-radio border label="线上品牌商赞助"></el-radio>
+          <el-radio border label="线下场地免费"></el-radio>
         </el-radio-group>
       </el-form-item>
       <el-form-item :span="8" label="按钮组：">
