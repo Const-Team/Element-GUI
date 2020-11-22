@@ -191,7 +191,9 @@ Tag 组件提供了三个不同的主题：`dark`、`light` 和 `plain`
 | closable | 是否可关闭 | boolean | — | false |
 | disable-transitions | 是否禁用渐变动画 | boolean | — | false |
 | hit | 是否有边框描边 | boolean | — | false |
-| color | 背景色 | string | — | — |
+| color | 文本色 | string | — | — |
+| bg-color | 背景色 | string | — | — |
+| border-color | 边框色 | string | — | — |
 | size | 尺寸 | string | medium / small / mini | — |
 | effect | 主题 | string | dark / light / plain | light |
 

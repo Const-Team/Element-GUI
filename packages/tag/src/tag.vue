@@ -8,6 +8,8 @@
       hit: Boolean,
       disableTransitions: Boolean,
       color: String,
+      bgColor: String,
+      borderColor: String,
       size: String,
       effect: {
         type: String,
@@ -43,11 +45,11 @@
       const tagEl = (
         <span
           class={ classes }
-          style={{ backgroundColor: this.color }}
+          style={{ backgroundColor: this.bgColor, color: this.color, borderColor: this.borderColor }}
           on-click={ this.handleClick }>
           { this.$slots.default }
           {
-            this.closable && <i class="el-tag__close el-icon-close" on-click={ this.handleClose }></i>
+            this.closable && <i class="el-tag__close el-icon-close" style={{ color: this.color }} on-click={ this.handleClose }></i>
           }
         </span>
       );
