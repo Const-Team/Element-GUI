@@ -1,6 +1,6 @@
 {
   "name": "element-gui",
-  "version": "1.1.80",
+  "version": "1.1.81",
   "description": "A Component Library for Vue.js.",
   "main": "lib/element-gui.common.js",
   "files": [

@@ -16,7 +16,7 @@
       v-show="!active"
       class="el-carousel__mask">
     </div>
-    <slot></slot>
+    <slot v-if="active"></slot>
   </div>
 </template>
 
