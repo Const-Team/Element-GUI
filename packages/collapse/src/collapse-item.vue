@@ -31,7 +31,7 @@
     <el-collapse-transition>
       <div
         class="el-collapse-item__wrap"
-        v-show="isActive"
+        v-if="isActive"
         role="tabpanel"
         :aria-hidden="!isActive"
         :aria-labelledby="`el-collapse-head-${id}`"
