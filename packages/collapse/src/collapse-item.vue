@@ -31,7 +31,8 @@
     <el-collapse-transition>
       <div
         class="el-collapse-item__wrap"
-        v-if="isActive"
+        v-if="(!lazy || loaded) || isActive"
+        v-show="isActive"
         role="tabpanel"
         :aria-hidden="!isActive"
         :aria-labelledby="`el-collapse-head-${id}`"
@@ -67,6 +68,7 @@
         contentHeight: 0,
         focusing: false,
         isClick: false,
+        loaded: false,
         id: generateId()
       };
     },
@@ -81,12 +83,17 @@
           return this._uid;
         }
       },
-      disabled: Boolean
+      disabled: Boolean,
+      lazy: Boolean
     },
 
     computed: {
       isActive() {
-        return this.collapse.activeNames.indexOf(this.name) > -1;
+        const active = this.collapse.activeNames.indexOf(this.name) > -1;
+        if (active) {
+          this.loaded = true;
+        };
+        return active;
       }
     },
 

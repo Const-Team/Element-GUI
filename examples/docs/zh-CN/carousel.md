@@ -20,7 +20,7 @@
   <div class="block">
     <span class="demonstration">Click 指示器触发</span>
     <el-carousel trigger="click" height="150px">
-      <el-carousel-item v-for="item in 4" :key="item">
+      <el-carousel-item v-for="item in 4" :key="item" lazy>
         <h3 class="small">{{ item }}</h3>
       </el-carousel-item>
     </el-carousel>
@@ -252,3 +252,4 @@
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | name | 幻灯片的名字，可用作 `setActiveItem` 的参数 | string | — | — |
 | label | 该幻灯片所对应指示器的文本 | string | — | — |
+| lazy      | 是否懒加载       | boolean       | —     | false    |

@@ -3,7 +3,7 @@
     v-show="ready"
     class="el-carousel__item"
     :class="{
-      'is-active': active,
+      'is-active': isActive,
       'el-carousel__item--card': $parent.type === 'card',
       'is-in-stage': inStage,
       'is-hover': hover,
@@ -13,10 +13,10 @@
     :style="itemStyle">
     <div
       v-if="$parent.type === 'card'"
-      v-show="!active"
+      v-show="!isActive"
       class="el-carousel__mask">
     </div>
-    <slot v-if="active"></slot>
+    <slot v-if="(!lazy || loaded) || isActive"></slot>
   </div>
 </template>
 
@@ -31,7 +31,8 @@
       label: {
         type: [String, Number],
         default: ''
-      }
+      },
+      lazy: Boolean
     },
 
     data() {
@@ -42,7 +43,8 @@
         active: false,
         ready: false,
         inStage: false,
-        animating: false
+        animating: false,
+        loaded: false
       };
     },
 
@@ -123,6 +125,14 @@
           transform: value
         };
         return autoprefixer(style);
+      },
+
+      isActive() {
+        const active = this.active;
+        if (active) {
+          this.loaded = true;
+        };
+        return active;
       }
     },
 
