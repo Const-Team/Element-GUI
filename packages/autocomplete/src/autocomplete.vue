@@ -201,7 +201,7 @@
         }
         this.debouncedGetData(value);
       },
-      handleChange(event) {
+      handleChange(value) {
         this.$emit('change', event.target.value);
       },
       handleFocus(event) {

@@ -177,7 +177,7 @@
         return this.size || this._elFormItemSize || (this.$ELEMENT || {}).size;
       },
       inputNumberDisabled() {
-        return this.disabled || (this.elForm || {}).disabled;
+        return this.disabled || !!(this.elForm || {}).disabled;
       },
       displayValue() {
         if (this.userInput !== null) {

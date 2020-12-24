@@ -1,5 +1,19 @@
 ## 更新日志
 
+### 1.1.84
+_2020-12-24_
+
+#### 修复
+
+- Autocomplete
+  - 修复 'change event' 错误。
+- Image
+  - 更新错误状态。
+- InputNumber 
+  - 正确计算 inputNumberDisabled。
+- Popover 
+  - 兼容 Vue 2.6 新 v-slot 语法。
+
 ### 1.1.83
 _2020-11-27_
 
