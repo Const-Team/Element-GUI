@@ -4,6 +4,9 @@
     v-clickoutside="close"
     aria-haspopup="listbox"
     role="combobox"
+    :class="[{
+      'is-focus' : focused,
+    }]"
     :aria-expanded="suggestionVisible"
     :aria-owns="id"
   >
@@ -143,7 +146,8 @@
         suggestions: [],
         loading: false,
         highlightedIndex: -1,
-        suggestionDisabled: false
+        suggestionDisabled: false,
+        focused: false,
       };
     },
     computed: {
@@ -202,16 +206,18 @@
         this.debouncedGetData(value);
       },
       handleChange(value) {
-        this.$emit('change', event.target.value);
+        this.$emit('change', value);
       },
       handleFocus(event) {
         this.activated = true;
+        this.focused = true;
         this.$emit('focus', event);
         if (this.triggerOnFocus) {
           this.debouncedGetData(this.value);
         }
       },
       handleBlur(event) {
+        this.focused = false;
         this.$emit('blur', event);
       },
       handleClear() {

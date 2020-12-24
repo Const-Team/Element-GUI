@@ -89,8 +89,7 @@ export default {
   mounted() {
     let reference = this.referenceElm = this.reference || this.$refs.reference;
     const popper = this.popper || this.$refs.popper;
-
-        if (!reference && this.$refs.wrapper.children) {
+    if (!reference && this.$refs.wrapper.children) {
       reference = this.referenceElm = this.$refs.wrapper.children[0];
     }
     // 可访问性
