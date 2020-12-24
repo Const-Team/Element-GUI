@@ -147,7 +147,7 @@
         loading: false,
         highlightedIndex: -1,
         suggestionDisabled: false,
-        focused: false,
+        focused: false
       };
     },
     computed: {
