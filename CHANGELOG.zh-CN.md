@@ -7,6 +7,7 @@ _2020-12-24_
 
 - Autocomplete
   - 修复 'change event' 错误。
+  - 修复验证失败时无法消失验证。
 - Image
   - 更新错误状态。
 - InputNumber 
