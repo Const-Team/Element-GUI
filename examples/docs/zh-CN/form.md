@@ -378,6 +378,7 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
           ],
           search: [
             { required: true, message: '请输入活动名称', trigger: 'blur' },
+            { required: true, message: '请输入活动名称', trigger: 'change' },
           ],
           region: [{ required: true, message: '请选择活动区域', trigger: 'change' }],
           tree: [{ required: true, message: '请选择活动区域', trigger: 'change' }],
