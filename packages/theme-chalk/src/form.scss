@@ -197,14 +197,16 @@
 }
 
 .el-input.is-focus,
-.el-textarea.is-focus {
+.el-textarea.is-focus,
+.el-autocomplete.is-focus {
   & ~ .el-form-item__error {
     display: none;
   }
 }
 
 .el-input.is-focus,
-.el-textarea.is-focus {
+.el-textarea.is-focus,
+.el-autocomplete.is-focus {
   & ~ .el-form-item__error--block {
     display: block;
   }
