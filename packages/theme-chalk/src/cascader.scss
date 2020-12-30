@@ -54,16 +54,25 @@
   @include m(medium) {
     font-size: $--input-medium-font-size;
     line-height: $--input-medium-height;
+    @include e(search-input) {
+      font-size: $--input-medium-font-size;
+    }
   }
 
   @include m(small) {
     font-size: $--input-small-font-size;
     line-height: $--input-small-height;
+    @include e(search-input) {
+      font-size: $--input-small-font-size;
+    }
   }
 
   @include m(mini) {
     font-size: $--input-mini-font-size;
     line-height: $--input-mini-height;
+    @include e(search-input) {
+      font-size: $--input-mini-font-size;
+    }
   }
 
   @include when(disabled) {
@@ -199,8 +208,9 @@
   @include e(search-input) {
     flex: 1;
     height: 24px;
+    font-size: 14px;
     min-width: 60px;
-    margin: 2px 0 2px 15px;
+    margin: 2px 0 2px 12px;
     padding: 0;
     color: $--cascader-menu-font-color;
     border: none;
