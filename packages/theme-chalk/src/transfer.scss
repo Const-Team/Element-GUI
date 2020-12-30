@@ -64,22 +64,17 @@
   background: $--color-white;
   display: inline-block;
   vertical-align: middle;
-  // width: $--transfer-panel-width;
   max-height: 100%;
   box-sizing: border-box;
   position: relative;
 
   @include e(body) {
-    height: $--transfer-panel-body-height;
-
-    @include when(with-footer) {
-      // padding-bottom: $--transfer-panel-footer-height;
-    }
+    // height: $--transfer-panel-body-height;
   }
 
   .is-filterable {
     @include e(list) {
-      height: #{$--transfer-panel-body-height - $--transfer-filter-height - 10px};
+      // height: #{$--transfer-panel-body-height - $--transfer-filter-height - 10px};
       padding-top: 0;
     }
   }
@@ -88,11 +83,9 @@
     height: $--transfer-panel-body-height;
     .el-checkbox-group{
       margin: 0;
-      // padding: 6px 0;
       list-style: none;
       width: 100%;
       box-sizing: border-box;
-      // overflow: auto;
     }
   }
 
@@ -186,14 +179,10 @@
   }
 
   .el-transfer-panel__footer {
-    // height: $--transfer-panel-footer-height;
     background: $--color-white;
     margin: 0;
     padding: 0;
     border-top: 1px solid $--transfer-border-color;
-    // position: absolute;
-    // bottom: 0;
-    // left: 0;
     width: calc(100% - 20px);
     padding: 10px;
     z-index: $--index-normal;
