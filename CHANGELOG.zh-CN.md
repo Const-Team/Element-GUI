@@ -18,6 +18,7 @@ _2020-12-30_
 #### 优化
 - Transfer
   - 替换默认滚动条为 `el-scrollbar` ；
+  - 优化穿梭框样式 ；
 - Scrollbar
   - 添加滚动事件 `doScroll` ；
 
