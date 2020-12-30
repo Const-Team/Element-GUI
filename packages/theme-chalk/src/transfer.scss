@@ -77,18 +77,22 @@
     }
   }
 
-  @include e(list) {
-    margin: 0;
-    padding: 6px 0;
-    list-style: none;
-    width: 100%;
-    height: $--transfer-panel-body-height;
-    overflow: auto;
-    box-sizing: border-box;
-
-    @include when(filterable) {
+  .is-filterable {
+    @include e(list) {
       height: #{$--transfer-panel-body-height - $--transfer-filter-height - 20px};
       padding-top: 0;
+    }
+  }
+
+  @include e(list) {
+    height: $--transfer-panel-body-height;
+    .el-checkbox-group{
+      margin: 0;
+      padding: 6px 0;
+      list-style: none;
+      width: 100%;
+      box-sizing: border-box;
+      // overflow: auto;
     }
   }
 

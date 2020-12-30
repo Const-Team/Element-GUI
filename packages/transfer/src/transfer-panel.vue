@@ -24,22 +24,22 @@
           ></i>
         </el-input>
       </div>
-      <el-checkbox-group
-        v-model="checked"
-        ref="listWrapper"
-        v-show="!hasNoMatch && data.length > 0"
-        :class="{ 'is-filterable': filterable }"
-        class="el-transfer-panel__list"
-        @scroll.native="doScroll">
-        <el-checkbox
-          class="el-transfer-panel__item"
-          :label="item[keyProp]"
-          :disabled="item[disabledProp]"
-          :key="item[keyProp]"
-          v-for="item in renderData">
-          <option-content :option="item"></option-content>
-        </el-checkbox>
-      </el-checkbox-group>
+      <el-scrollbar @doScroll="doScroll" :noresize="true" :class="{ 'is-filterable': filterable }" wrap-class="el-transfer-panel__wrap" view-class="el-transfer-panel__list" ref="componentScrollBar">
+        <el-checkbox-group
+          v-model="checked"
+          ref="listWrapper"
+          v-show="!hasNoMatch && data.length > 0"
+          >
+          <el-checkbox
+            class="el-transfer-panel__item"
+            :label="item[keyProp]"
+            :disabled="item[disabledProp]"
+            :key="item[keyProp]"
+            v-for="item in renderData">
+            <option-content :option="item"></option-content>
+          </el-checkbox>
+        </el-checkbox-group>
+      </el-scrollbar>
       <p
         class="el-transfer-panel__empty"
         v-show="hasNoMatch">{{ t('el.transfer.noMatch') }}</p>
@@ -182,6 +182,7 @@
 
     computed: {
       filteredData() {
+        this.updateScrollBar();
         return this.data.filter(item => {
           if (typeof this.filterMethod === 'function') {
             return this.filterMethod(this.query, item);
@@ -257,6 +258,7 @@
       clearQuery() {
         if (this.inputIcon === 'circle-close') {
           this.query = '';
+          this.updateScrollBar();
         }
       },
 
@@ -295,8 +297,15 @@
           const isApproachBottom = target.scrollTop + target.offsetHeight + 50 >= target.scrollHeight;
           if (isApproachBottom) {
             this.loadRenderData();
+            this.updateScrollBar();
           }
         }
+      },
+
+      updateScrollBar() {
+        this.$nextTick(() => {
+          this.$refs.componentScrollBar.update();
+        });
       }
     }
   };
