@@ -211,8 +211,6 @@
         });
         this.$emit('input', currentValue);
         this.$emit('change', currentValue, 'left', this.rightChecked);
-        this.$refs.rightPanel.updateScrollBar();
-        this.$refs.leftPanel.updateScrollBar();
       },
 
       addToRight() {
@@ -233,8 +231,6 @@
           : currentValue.concat(itemsToBeMoved);
         this.$emit('input', currentValue);
         this.$emit('change', currentValue, 'right', this.leftChecked);
-        this.$refs.rightPanel.updateScrollBar();
-        this.$refs.leftPanel.updateScrollBar();
       },
 
       clearQuery(which) {

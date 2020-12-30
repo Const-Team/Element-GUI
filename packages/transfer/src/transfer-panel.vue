@@ -258,7 +258,6 @@
       clearQuery() {
         if (this.inputIcon === 'circle-close') {
           this.query = '';
-          this.updateScrollBar();
         }
       },
 

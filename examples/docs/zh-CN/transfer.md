@@ -214,7 +214,7 @@
 :::demo 
 ```html
 <template>
-  <el-transfer v-model="value" :data="data" :lazy="20"></el-transfer>
+  <el-transfer v-model="value" :data="data" :lazy="50"></el-transfer>
 </template>
 
 <script>
