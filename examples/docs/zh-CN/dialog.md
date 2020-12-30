@@ -1,7 +1,5 @@
 ## Dialog 对话框
 
-新增弹窗自定义指令`v-drag`;
-
 在保留当前页面状态的情况下，告知用户并承载相关操作。
 
 ### 基本用法
@@ -15,7 +13,6 @@ Dialog 弹出一个对话框，适合需要定制性更大的场景。
 
 <el-dialog
   title="提示"
-  v-drag
   :visible.sync="dialogVisible"
   width="30%"
   custom-class="dialog-demo"
@@ -50,6 +47,40 @@ Dialog 弹出一个对话框，适合需要定制性更大的场景。
 
 :::tip
 `before-close` 仅当用户通过点击关闭图标或遮罩关闭 Dialog 时起效。如果你在 `footer` 具名 slot 里添加了用于关闭 Dialog 的按钮，那么可以在按钮的点击回调函数里加入 `before-close` 的相关逻辑。
+:::
+
+### 拖拽弹窗
+
+Dialog 可以自由拖拽
+
+:::demo `draggable`属性用于指定用户可以通过鼠标拖动标题来移动 Dialog 的位置。
+
+```html
+<el-button type="text" @click="dialogVisible = true">点击打开 Dialog</el-button>
+
+<el-dialog
+  title="提示"
+  :visible.sync="dialogVisible"
+  width="30%"
+  draggable
+  custom-class="dialog-demo">
+  <span>这是一段信息</span>
+  <span slot="footer" class="dialog-footer">
+    <el-button type="primary" @click="dialogVisible = false">确定</el-button>
+    <el-button @click="dialogVisible = false">取消</el-button>
+  </span>
+</el-dialog>
+
+<script>
+  export default {
+    data() {
+      return {
+        dialogVisible: false
+      };
+    }
+  };
+</script>
+```
 :::
 
 ### 自定义内容
@@ -218,6 +249,7 @@ Dialog 的内容是懒渲染的，即在第一次被打开之前，传入的默�
 | title     | Dialog 的标题，也可通过具名 slot （见下表）传入 | string    | — | — |
 | width     | Dialog 的宽度 | string    | — | 50% |
 | fullscreen     | 是否为全屏 Dialog | boolean    | — | false |
+| draggable   | 是否可以通过拖动标题移动 Dialog。此属性设置后再改变不会生效 | boolean | — | false |
 | top       | Dialog CSS 中的 margin-top 值 | string | — | 15vh |
 | modal     | 是否需要遮罩层   | boolean   | — | true |
 | modal-append-to-body     | 遮罩层是否插入至 body 元素上，若为 false，则遮罩层会插入至 Dialog 的父元素上   | boolean   | — | true |

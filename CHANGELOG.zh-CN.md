@@ -1,6 +1,6 @@
 ## 更新日志
 
-### 1.1.86
+### 1.1.87
 _2020-12-30_
 
 #### 修复
@@ -14,6 +14,19 @@ _2020-12-30_
   - 正确计算 ` inputNumberDisabled ` 。
 - Popover 
   - 兼容 Vue 2.6 新 ` v-slot ` 语法。
+- Cascader
+  - 修复多选状态下搜索词被清空
+- Tree
+  - 修复 ` showCheckbox` 状态下，组件拖动后 ` check ` 状态显示不正确
+- Collapse
+  - 修复 ` enter ` 钩子计算高度问题
+- Table
+  - 修复设置表格高度为 ` height='auto' ` 时高度自动增加
+  - 修复当列属性为嵌套对象属性时，表格合计不生效
+- Input
+  - 使用 `show-password`，点击显示密码，光标位置自动移到开头
+- Dialog
+  - 添加 ` draggable ` 属性，允许用户拖动对话框
 
 #### 优化
 - Transfer

@@ -762,6 +762,7 @@
 ```html
 <el-tree
   :data="data"
+  show-checkbox
   node-key="id"
   default-expand-all
   @node-drag-start="handleDragStart"

@@ -257,7 +257,9 @@ export default {
 
   methods: {
     focus() {
-      this.getInput().focus();
+      this.$nextTick(() => {
+        this.getInput().focus();
+      });
     },
     blur() {
       this.getInput().blur();
