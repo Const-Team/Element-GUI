@@ -24,7 +24,7 @@
           ></i>
         </el-input>
       </div>
-      <el-scrollbar @doScroll="doScroll" :noresize="true" :class="{ 'is-filterable': filterable }" wrap-class="el-transfer-panel__wrap" view-class="el-transfer-panel__list" ref="componentScrollBar">
+      <el-scrollbar @doScroll="doScroll" :class="{ 'is-filterable': filterable }" wrap-class="el-transfer-panel__wrap" view-class="el-transfer-panel__list" ref="componentScrollBar">
         <el-checkbox-group
           v-model="checked"
           ref="listWrapper"
@@ -258,7 +258,6 @@
       clearQuery() {
         if (this.inputIcon === 'circle-close') {
           this.query = '';
-          this.updateScrollBar();
         }
       },
 
