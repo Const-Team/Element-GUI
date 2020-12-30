@@ -73,13 +73,13 @@
     height: $--transfer-panel-body-height;
 
     @include when(with-footer) {
-      padding-bottom: $--transfer-panel-footer-height;
+      // padding-bottom: $--transfer-panel-footer-height;
     }
   }
 
   .is-filterable {
     @include e(list) {
-      height: #{$--transfer-panel-body-height - $--transfer-filter-height - 20px};
+      height: #{$--transfer-panel-body-height - $--transfer-filter-height - 10px};
       padding-top: 0;
     }
   }
@@ -88,7 +88,7 @@
     height: $--transfer-panel-body-height;
     .el-checkbox-group{
       margin: 0;
-      padding: 6px 0;
+      // padding: 6px 0;
       list-style: none;
       width: 100%;
       box-sizing: border-box;
@@ -186,15 +186,16 @@
   }
 
   .el-transfer-panel__footer {
-    height: $--transfer-panel-footer-height;
+    // height: $--transfer-panel-footer-height;
     background: $--color-white;
     margin: 0;
     padding: 0;
     border-top: 1px solid $--transfer-border-color;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
+    width: calc(100% - 20px);
+    padding: 10px;
     z-index: $--index-normal;
     @include utils-vertical-center;
 
@@ -205,10 +206,9 @@
   }
 
   .el-transfer-panel__empty {
-    margin: 0;
-    height: $--transfer-item-height;
-    line-height: $--transfer-item-height;
-    padding: 6px 15px 0;
+    position: absolute;
+    top: 50%;
+    width: 100%;
     color: $--color-text-secondary;
     text-align: center;
   }
