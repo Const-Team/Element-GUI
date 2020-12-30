@@ -374,7 +374,10 @@ export default {
       deep: true
     },
     presentText(val) {
-      this.inputValue = val;
+      // this.inputValue = val;
+      if (!this.multiple) {
+        this.inputValue = val;
+      }
     },
     presentTags(val, oldVal) {
       if (this.multiple && (val.length || oldVal.length)) {
@@ -684,7 +687,9 @@ export default {
 
       if (tags) {
         const { offsetHeight } = tags;
-        const height = Math.max(offsetHeight + 4, inputInitialHeight) + 'px';
+        // 修复多选高度
+        // const height = Math.max(offsetHeight + 4, inputInitialHeight) + 'px';
+        const height = Math.max(offsetHeight, inputInitialHeight) + 'px';
         inputInner.style.height = height;
         this.updatePopper();
       }
