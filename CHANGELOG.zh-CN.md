@@ -7,6 +7,8 @@ _2020-12-31 🎉 新年快乐 🥳_
 
 - Dialog
   - 添加 ` draggable ` 属性，允许用户拖动对话框
+- NavMenu
+  - 添加 `tooltip-effect` 属性
 
 #### 修复
 
@@ -21,6 +23,7 @@ _2020-12-31 🎉 新年快乐 🥳_
   - 兼容 Vue 2.6 新 ` v-slot ` 语法。
 - Cascader
   - 修复多选状态下搜索词被清空
+  - 修复 `getCheckedNodes` 返回的勾选节点顺序和`value`传入值的顺序不一致的问题
 - Tree
   - 修复 ` showCheckbox` 状态下，组件拖动后 ` check ` 状态显示不正确
 - Collapse
