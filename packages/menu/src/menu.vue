@@ -121,6 +121,10 @@
       collapseTransition: {
         type: Boolean,
         default: true
+      },
+      tooltipEffect: {
+        type: String,
+        default: 'dark'
       }
     },
     data() {
