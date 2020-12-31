@@ -168,13 +168,6 @@ _2020-05-14_
 
 - TextEllipsis
   - 新增文字截断组件。
-
-### 1.1.39
-
-_2020-05-09_
-
-#### 新特性
-
 - Table
   - 表格增加 ` filter-icon ` 属性，自定义过滤图标。
 - InputNumber
@@ -206,6 +199,10 @@ _2020-04-28_
   - 添加 ` option-max-width ` 属性以限制选项框的最大宽度。
 - TreeSelect
   - 添加 ` option-max-width ` 属性以限制下拉框的最大宽度。
+- Form
+  - 增加 ` label-max-width ` 配置。
+- Switch
+  - 文字放置在开关中，增加文字颜色配置，去掉 ` width ` 属性。
 
 #### 修复
 
@@ -213,6 +210,19 @@ _2020-04-28_
   - 保持输入框为空，而不是重置为最小值。
 - Transfer
   - 修复搜索图标位置。
+- Link
+  - 修复 Link 和文字按钮对齐 bug
+- Input
+  - 修复 ` prefix-icon ` 和 ` suffix-icon ` 属性与 ` clearable ` 属性同时存在时，图标显示 bug
+- Autocomplete
+  - 修复类型为 ` textarea ` 时建议错误问题
+- Image
+  - 修复当 ` preview-src-list ` 属性不包含 ` src ` 时图片预览大图展示为空的问题
+  - 修复 ` preview-src-list ` 为空时点击图片会给 ` body ` 添加 ` overflow:scroll ` 的问题
+- Transfer
+  - 修复和 ` Form ` 组件一起使用时错误的行高问题
+- InputNumber
+  - 正确计算 ` inputNumberDisabled ` 
 
 #### 优化
 
@@ -229,34 +239,6 @@ _2020-04-28_
 - MessageBox
   - 优化相关样式
 
-
-### 1.1.33
-
-_2020-04-19_
-
-#### 新特性
-
-- Form
-  - 增加 ` label-max-width ` 配置。
-- Switch
-  - 文字放置在开关中，增加文字颜色配置，去掉 ` width ` 属性。
-
-#### 修复
-
-- Link
-  - 修复 Link 和文字按钮对齐 bug
-- Input
-  - 修复 ` prefix-icon ` 和 ` suffix-icon ` 属性与 ` clearable ` 属性同时存在时，图标显示 bug
-- Autocomplete
-  - 修复类型为 ` textarea ` 时建议错误问题
-- Image
-  - 修复当 ` preview-src-list ` 属性不包含 ` src ` 时图片预览大图展示为空的问题
-  - 修复 ` preview-src-list ` 为空时点击图片会给 ` body ` 添加 ` overflow:scroll ` 的问题
-- Transfer
-  - 修复和 ` Form ` 组件一起使用时错误的行高问题
-- InputNumber
-  - 正确计算 ` inputNumberDisabled ` 
-
 ### 1.1.31
 
 _2020-03-24_
@@ -266,21 +248,10 @@ _2020-03-24_
 - Transition
   - 增加 ` slide ` 划入。
 
-### 1.1.30
-
-_2020-03-09_
-
 #### 修复
 
 - Table
   - 修复 Table IE 列宽不自适应 bug
-
-### 1.1.29
-
-_2020-03-05_
-
-#### 修复
-
 - Form
   - 修复 Form 表单验证覆盖 bug
 
@@ -336,6 +307,8 @@ _2019-12-25 🎉 圣诞快乐 🎄_
 
 - Splitpanes
   - 增加 ` Splitpanes ` 分割面板组件
+- LoadingBar
+  - 增加 ` LoadingBar ` 组件
 
 #### 修复
 
@@ -347,23 +320,22 @@ _2019-12-25 🎉 圣诞快乐 🎄_
   - IE 下图片无法切换正常比例
 - Upload
   - 修复 ` clearFiles ` 方法，避免同时上传多个文件时，清除 ` uploadFiles ` 列表，导致正在上传中的文件再上传完成后产生报错的问题
+- Select
+  - 默认宽度问题
+- Image
+  - 关闭图片预览后，鼠标键盘事件失效。
+- Table
+  - 自定义表头样式。
+  - 表头和内容复选框对齐样式。
+- Dialog
+  - dialog 误触关闭，使用 ` mousedown ` 替换 ` click ` 。
+- DatePicker
+  - 切换类型时 ` popper ` 定位错误。
 
 #### 优化
 
 - Icon
   - 精简无用图标，保留组件及常用图标
-
-### 1.1.14
-
-_2019-12-13_
-
-#### 新特性
-
-- LoadingBar
-  - 增加 ` LoadingBar ` 组件
-
-#### 优化
-
 - DatePicker
   - 增加 ` defaultView ` ，配置默认面板。
 - Tree
@@ -387,27 +359,6 @@ _2019-12-13_
   - 增加 ` tooltip-effect ` 配置
 - Slider
   - 增加 ` tooltip-effect ` 配置
-
-#### 修复
-
-- Select
-  - 默认宽度问题
-- Image
-  - 关闭图片预览后，鼠标键盘事件失效。
-- Table
-  - 自定义表头样式。
-  - 表头和内容复选框对齐样式。
-- Dialog
-  - dialog 误触关闭，使用 ` mousedown ` 替换 ` click ` 。
-- DatePicker
-  - 切换类型时 ` popper ` 定位错误。
-
-### 1.0.99
-
-_2019-12-02_
-
-#### 优化
-
 - Progress
   - 增加 ` active ` 动效
   - 增加 插槽
