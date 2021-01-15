@@ -358,14 +358,13 @@ export default {
     getCheckedNodes(leafOnly) {
       const { checkedValue, multiple } = this;
 
-      if (isEmpty(checkedValue)) {
-        return [];
-      }
-
       if (multiple) {
-        return checkedValue.map(val => this.getNodeByValue(val, leafOnly));
+        const nodes = this.getFlattedNodes(leafOnly);
+        return nodes.filter(node => node.checked);
       } else {
-        return [this.getNodeByValue(checkedValue)];
+        return isEmpty(checkedValue)
+          ? []
+          : [this.getNodeByValue(checkedValue)];
       }
     },
     clearCheckedNodes() {
