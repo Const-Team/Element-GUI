@@ -50,9 +50,9 @@ export default class Store {
       : flatNodes(this.nodes, leafOnly);
   }
 
-  getNodeByValue(value, leafOnly = false) {
+  getNodeByValue(value) {
     if (value) {
-      const nodes = this.getFlattedNodes(leafOnly, !this.config.lazy)
+      const nodes = this.getFlattedNodes(false, !this.config.lazy)
         .filter(node => (valueEquals(node.path, value) || node.value === value));
       return nodes && nodes.length ? nodes[0] : null;
     }
