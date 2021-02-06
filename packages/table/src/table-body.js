@@ -545,7 +545,7 @@ export default {
         }
       });
       const Wapper = document.createElement('div');
-      document.body.append(Wapper);
+      document.body.appendChild(Wapper);
       this._tooltip.$mount(Wapper);
     }
   },
