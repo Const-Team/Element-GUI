@@ -17,7 +17,7 @@ export default {
           return;
         }
         const values = this.store.states.data.map(item => {
-          if (column.property && column.property.includes('.')) {
+          if (column.property && column.property.indexOf('.') >= 0) {
             const paths = column.property.split('.');
             let prop;
             for (let index = 0; index <= paths.length; index++) {
