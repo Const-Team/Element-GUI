@@ -590,6 +590,8 @@ export default {
       immediate: true,
       handler(value) {
         this.store.commit('setData', value);
+        // 更新滚动条
+        this.updateScrollBar();
         // 修复列表对齐问题
         if (this.$ready) {
           this.$nextTick(() => {

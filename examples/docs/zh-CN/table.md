@@ -1517,6 +1517,7 @@
   <el-table
     :data="tableData1"
     style="width: 100%"
+    max-height="100"
     row-key="id"
     border
     lazy
