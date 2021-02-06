@@ -224,7 +224,7 @@ export default {
 
     updateScrollBar() {
       this.$nextTick(() => {
-        this.$refs.bodyWrapperScrollbar.update();
+        this.$refs.bodyWrapperScrollbar && this.$refs.bodyWrapperScrollbar.update();
       });
     },
 

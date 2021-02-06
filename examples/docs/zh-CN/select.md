@@ -223,13 +223,13 @@
           label: '黄金糕'
         }, {
           value: '选项2',
-          label: '双皮奶'.repeat(10)
+          label: '双皮奶双皮奶双皮奶双皮奶'
         }, {
           value: '选项3',
-          label: '蚵仔煎'.repeat(20)
+          label: '蚵仔煎蚵仔煎蚵仔煎蚵仔煎蚵仔煎蚵仔煎'
         }, {
           value: '选项4',
-          label: '龙须面'.repeat(30)
+          label: '龙须面龙须面龙须面龙须面龙须面龙须面龙须面龙须面龙须面龙须面'
         }, {
           value: '选项5',
           label: '北京烤鸭'
