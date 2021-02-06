@@ -19,15 +19,17 @@
       <table-header ref="tableHeader" :store="store" :border="border" :isdrag="isdrag" :default-sort="defaultSort" :filter-icon="filterIcon" :style="{width: layout.bodyWidth ? layout.bodyWidth + 'px' : ''}"></table-header>
     </div>
     <div class="el-table__body-wrapper" ref="bodyWrapper" :class="[layout.scrollX ? `is-scrolling-${scrollPosition}` : 'is-scrolling-none']" :style="[bodyHeight]">
-      <table-body :context="context" :store="store" :stripe="stripe" :name="name" :row-class-name="rowClassName" :row-style="rowStyle" :highlight="highlightCurrentRow" :style="{width: bodyWidth}" :no-hover="noHover"></table-body>
-      <div v-if="!data || data.length === 0" class="el-table__empty-block" ref="emptyBlock" :style="emptyBlockStyle">
-        <span class="el-table__empty-text">
-          <slot name="empty">{{ emptyText || t('el.table.emptyText') }}</slot>
-        </span>
-      </div>
-      <div v-if="$slots.append" class="el-table__append-wrapper" ref="appendWrapper">
-        <slot name="append"></slot>
-      </div>
+      <el-scrollbar @doScroll="tableOnScroll" class="el-table__scrollbar" :style="[bodyScrollHeight]" :wrap-style="[bodyScrollWrapHeight]" ref="bodyWrapperScrollbar">
+        <table-body :context="context" :store="store" :stripe="stripe" :name="name" :row-class-name="rowClassName" :row-style="rowStyle" :highlight="highlightCurrentRow" :style="{width: bodyWidth}" :no-hover="noHover"></table-body>
+        <div v-if="!data || data.length === 0" class="el-table__empty-block" ref="emptyBlock" :style="emptyBlockStyle">
+          <span class="el-table__empty-text">
+            <slot name="empty">{{ emptyText || t('el.table.emptyText') }}</slot>
+          </span>
+        </div>
+        <div v-if="$slots.append" class="el-table__append-wrapper" ref="appendWrapper">
+          <slot name="append"></slot>
+        </div>
+      </el-scrollbar>
     </div>
     <div v-if="showSummary" v-show="data && data.length > 0" v-mousewheel="handleHeaderFooterMousewheel" class="el-table__footer-wrapper" ref="footerWrapper">
       <table-footer :store="store" :border="border" :sum-text="sumText || t('el.table.sumText')" :summary-method="summaryMethod" :default-sort="defaultSort" :style="{width: layout.bodyWidth ? layout.bodyWidth + 'px' : ''}"></table-footer>
@@ -69,6 +71,7 @@
 </template>
 
 <script type="text/babel">
+import ElScrollbar from 'element-gui/packages/scrollbar';
 import ElCheckbox from 'element-gui/packages/checkbox';
 import { debounce, throttle } from 'throttle-debounce';
 import {
@@ -84,6 +87,7 @@ import TableBody from './table-body';
 import TableHeader from './table-header';
 import TableFooter from './table-footer';
 import { parseHeight } from './util';
+import scrollbarWidth from 'element-gui/src/utils/scrollbar-width';
 
 let tableIdSeed = 1;
 
@@ -209,10 +213,21 @@ export default {
     TableHeader,
     TableFooter,
     TableBody,
-    ElCheckbox
+    ElCheckbox,
+    ElScrollbar
   },
 
   methods: {
+    tableOnScroll: throttle(500, function(e) {
+      this.$emit('table-scroll',e);
+    }),
+
+    updateScrollBar() {
+      this.$nextTick(() => {
+        this.$refs.bodyWrapperScrollbar.update();
+      });
+    },
+
     getMigratingConfig() {
       return {
         events: {
@@ -292,7 +307,7 @@ export default {
         scrollTop,
         offsetWidth,
         scrollWidth
-      } = this.bodyWrapper;
+      } = this.bodyWrapperScrollbar;
       const {
         headerWrapper,
         footerWrapper,
@@ -320,12 +335,22 @@ export default {
       if (this.fit) {
         addResizeListener(this.$el, this.resizeListener);
       }
+      // 监听scrollbar滚动事件
+      this.bodyWrapperScrollbar.addEventListener('scroll', this.syncPostion, {
+        passive: true
+      });
     },
 
     unbindEvents() {
       this.bodyWrapper.removeEventListener('scroll', this.syncPostion, {
         passive: true
       });
+      // 解除scrollbar监听
+      this.bodyWrapperScrollbar.removeEventListener(
+        'scroll',
+        this.syncPostion,
+        { passive: true }
+      );
       if (this.fit) {
         removeResizeListener(this.$el, this.resizeListener);
       }
@@ -359,6 +384,7 @@ export default {
         this.layout.updateElsHeight();
       }
       this.layout.updateColumnsWidth();
+      this.updateScrollBar();
     },
 
     sort(prop, order) {
@@ -377,6 +403,10 @@ export default {
 
     bodyWrapper() {
       return this.$refs.bodyWrapper;
+    },
+
+    bodyWrapperScrollbar() {
+      return this.$refs.bodyWrapperScrollbar.wrap;
     },
 
     shouldUpdateHeight() {
@@ -449,7 +479,7 @@ export default {
         return {
           bottom:
             this.layout.scrollX && this.data.length
-              ? this.layout.gutterWidth + 'px'
+              ? this.layout.gutterWidth - 10 + 'px'
               : ''
         };
       } else {
@@ -462,22 +492,66 @@ export default {
         }
         return {
           height: this.layout.viewportHeight
-            ? this.layout.viewportHeight + 'px'
+            ? this.layout.viewportHeight + 10 + 'px'
             : ''
         };
       }
     },
 
     emptyBlockStyle() {
+      const { bodyHeight, appendHeight } = this.layout;
       if (this.data && this.data.length) return null;
-      let height = '100%';
+      // let height = '100%';
+      let height = bodyHeight + 'px';
       if (this.layout.appendHeight) {
-        height = `calc(100% - ${this.layout.appendHeight}px)`;
+        // height = `calc(100% - ${this.layout.appendHeight}px)`;
+        height = bodyHeight - appendHeight + 'px';
       }
       return {
         width: this.bodyWidth,
         height
       };
+    },
+
+    // 这个方法是当el-table设置max-height时，el-scroll height:100%失效，导致el-scroll-wrap的margin-right失效，所以给el-scroll设置height为max-height的高度
+    bodyScrollHeight() {
+      const { headerHeight = 0, footerHeight = 0 } = this.layout;
+      if (this.maxHeight) {
+        const maxHeight = parseHeight(this.maxHeight);
+        if (typeof maxHeight === 'number') {
+          return {
+            height:
+              maxHeight -
+              footerHeight -
+              (this.showHeader ? headerHeight : 0) +
+              'px'
+          };
+        }
+      }
+      return { height: '100%' };
+    },
+
+    // 这个方法就用到了scrollbarWidth，当el-table设置height为固定高度时，el-scroll-wrap的100%和固定高度一样，导致margin-bottom失效，这里直接把el-scroll-wrap的高度算好，是el-table固定高度加上滚动条宽度
+    bodyScrollWrapHeight() {
+      const { headerHeight = 0, bodyHeight, footerHeight = 0 } = this.layout;
+      if (this.height) {
+        return {
+          height: bodyHeight ? bodyHeight + scrollbarWidth() + 'px' : ''
+        };
+      } else if (this.maxHeight) {
+        const maxHeight = parseHeight(this.maxHeight);
+        if (typeof maxHeight === 'number') {
+          return {
+            height:
+              maxHeight -
+              footerHeight -
+              (this.showHeader ? headerHeight : 0) +
+              scrollbarWidth() +
+              'px'
+          };
+        }
+      }
+      return {};
     },
 
     ...mapStates({
@@ -555,7 +629,7 @@ export default {
     };
 
     // init filters
-    this.store.states.columns.forEach(column => {
+    this.store.states.columns.forEach((column) => {
       if (column.filteredValue && column.filteredValue.length) {
         this.store.commit('filterChange', {
           column,

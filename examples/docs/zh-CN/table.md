@@ -1373,6 +1373,8 @@
 <template>
   <el-table
     :data="tableData"
+    height="300"
+    @table-scroll="tableScroll"
     style="width: 100%">
     <el-table-column type="expand">
       <template slot-scope="props">
@@ -1468,6 +1470,11 @@
           shop: '王小虎夫妻店',
           shopId: '10333'
         }]
+      }
+    },
+    methods:{
+      tableScroll(e){
+        console.log(e)
       }
     }
   }
@@ -2278,6 +2285,7 @@ export default {
 | current-change | 当表格的当前行发生变化的时候会触发该事件，如果要高亮当前行，请打开表格的 highlight-current-row 属性 | currentRow, oldCurrentRow |
 | header-dragend | 当拖动表头改变了列的宽度的时候会触发该事件 | newWidth, oldWidth, column, event |
 | expand-change  | 当用户对某一行展开或者关闭的时候会触发该事件（展开行时，回调的第二个参数为 expandedRows；树形表格时第二参数为 expanded） | row, (expandedRows \| expanded) |
+| table-scroll  | 表格滚动时触发 | event |
 
 ### Table Methods
 | 方法名 | 说明 | 参数 |

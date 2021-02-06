@@ -58,7 +58,13 @@ export default {
 
   computed: {
     table() {
-      return this.$parent;
+      let el = null;
+      if (this.$parent.table || this.$parent.layout) {
+        el = this.$parent;
+      } else {
+        el = this.$parent.$parent;
+      }
+      return el;
     },
 
     ...mapStates({
