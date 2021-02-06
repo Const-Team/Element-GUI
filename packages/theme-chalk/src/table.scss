@@ -43,6 +43,12 @@
     }
   }
 
+  .el-table__scrollbar{
+    .el-scrollbar__bar{
+      z-index: 999;
+    }
+  }
+
   // 数据为空
   @include e(empty-block) {
     min-height: 60px;
