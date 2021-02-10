@@ -158,10 +158,18 @@
       </el-form-item>
     </el-form>
     <br>
-    <el-button :plain="false" :round="false" :circle="false" :disabled="false" :loading="false" nativeType="button">
+    <el-button size="mini" :plain="false" :round="false" :circle="false" :disabled="false" :loading="false" nativeType="button">
       默认按钮
     </el-button>
-    <el-input class="el-width200" placeholder="请输入" :clearable="false" :readonly="false" :disabled="false" :showWordLimit="false" v-model="model_2atnyb6j2lh">
+    <el-input size="mini" class="el-width500" placeholder="请输入内容" v-model="input3">
+      <el-select v-model="select" slot="prepend" placeholder="请选择">
+        <el-option label="餐厅名" value="1"></el-option>
+        <el-option label="订单号" value="2"></el-option>
+        <el-option label="用户电话" value="3"></el-option>
+      </el-select>
+      <el-button type="primary" slot="append" icon="el-icon-search"></el-button>
+    </el-input>
+    <el-input size="mini" class="el-width200" placeholder="请输入" :clearable="false" :readonly="false" :disabled="false" :showWordLimit="false" v-model="model_2atnyb6j2lh">
     </el-input>
     <el-button-group>
       <el-button :plain="false" :round="false" :circle="false" :disabled="false" :loading="false" nativeType="button">
@@ -342,7 +350,7 @@ export default {
           ],
         },
       ],
-      props_eajug9l8gg: { expandTrigger: 'hover', multiple: true },
+      props_eajug9l8gg: { expandTrigger: 'hover'},
       model_hcfqhhmnqo: '',
       pickerOptions_hcfqhhmnqo: { start: '08:30', step: '00:15', end: '18:30' },
       model_1spftzb3ywn: '',

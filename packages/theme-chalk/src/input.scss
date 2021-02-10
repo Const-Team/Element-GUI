@@ -255,6 +255,20 @@
   @include m(medium) {
     font-size: $--input-medium-font-size;
 
+    &.el-input-group{
+      @include e(inner) {
+        height: calc(#{$--input-medium-height} - 2px);
+        line-height: calc(#{$--input-medium-height} - 2px);
+      }
+    }
+    .el-input-group__prepend,
+    .el-input-group__append{
+      @include e(inner) {
+        height: calc(#{$--input-medium-height} - 2px);
+        line-height: calc(#{$--input-medium-height} - 2px);
+      }
+    }
+
     @include e(inner) {
       height: $--input-medium-height;
       line-height: $--input-medium-height;
@@ -267,6 +281,20 @@
   @include m(small) {
     font-size: $--input-small-font-size;
 
+    &.el-input-group{
+      @include e(inner) {
+        height: calc(#{$--input-small-height} - 2px);
+        line-height: calc(#{$--input-small-height} - 2px);
+      }
+    }
+    .el-input-group__prepend,
+    .el-input-group__append{
+      @include e(inner) {
+        height: calc(#{$--input-small-height} - 2px);
+        line-height: calc(#{$--input-small-height} - 2px);
+      }
+    }
+
     @include e(inner) {
       height: $--input-small-height;
       line-height: $--input-small-height;
@@ -278,6 +306,20 @@
   }
   @include m(mini) {
     font-size: $--input-mini-font-size;
+
+    &.el-input-group{
+      @include e(inner) {
+        height: calc(#{$--input-mini-height} - 2px);
+        line-height: calc(#{$--input-mini-height} - 2px);
+      }
+    }
+    .el-input-group__prepend,
+    .el-input-group__append{
+      @include e(inner) {
+        height: calc(#{$--input-mini-height} - 2px);
+        line-height: calc(#{$--input-mini-height} - 2px);
+      }
+    }
 
     @include e(inner) {
       height: $--input-mini-height;
@@ -321,6 +363,11 @@
     }
   }
 
+  .el-input__inner{
+    height: 32px;
+    line-height: 32px;
+  }
+
   > .el-input__inner {
     vertical-align: middle;
     display: table-cell;
@@ -343,10 +390,11 @@
     }
 
     .el-select,
-    .el-button {
-      display: inline-block;
+    .el-button,
+    .el-cascader,
+    .el-tree-select {
+      display: block;
       margin: -10px -20px;
-      vertical-align: initial;
     }
 
     button.el-button {
@@ -371,10 +419,11 @@
     .el-input {
       font-size: inherit;
     }
+
   }
 
   @include e(prepend) {
-    .el-select {
+    .el-select{
       .el-input {
         border-right: $--border-base;
         @include when(focus) {
@@ -385,7 +434,7 @@
   }
 
   @include e(append) {
-    .el-select {
+    .el-select{
       .el-input {
         border-left: $--border-base;
         @include when(focus) {
