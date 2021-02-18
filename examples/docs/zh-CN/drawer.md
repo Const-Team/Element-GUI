@@ -20,7 +20,7 @@
   点我打开
 </el-button>
 
-<el-drawer title="我是标题" :visible.sync="drawer" :direction="direction" :modal-append-to-body="false" :before-close="handleClose">
+<el-drawer title="我是标题" :visible.sync="drawer" :direction="direction" :modal-append-to-body="false" :destroy-on-close="true" :before-close="handleClose">
   <span>我来啦!</span>
 </el-drawer>
 
