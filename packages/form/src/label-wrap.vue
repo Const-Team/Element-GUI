@@ -61,7 +61,7 @@ export default {
 
   watch: {
     computedWidth(val, oldVal) {
-      if (this.updateAll) {
+      if (this.updateAll || this.isAutoWidth) {
         this.elForm.registerLabelWidth(val, oldVal);
         this.elFormItem.updateComputedLabelWidth(val);
       }
