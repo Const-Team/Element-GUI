@@ -113,7 +113,12 @@ export default {
           Utils.focusFirstDescendant(this.$refs.drawer);
         });
       } else {
-        if (!this.closed) this.$emit('close');
+        if (!this.closed) {
+          this.$emit('close');
+          if (this.destroyOnClose === true) {
+            this.rendered = false;
+          }
+        }
         this.$nextTick(() => {
           if (this.prevActiveElement) {
             this.prevActiveElement.focus();
