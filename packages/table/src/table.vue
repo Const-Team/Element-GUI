@@ -174,7 +174,10 @@ export default {
 
     filterIcon: String,
 
-    tooltipEffect: String,
+    tooltipEffect: {
+      type: String,
+      default: 'dark'
+    },
 
     card: Boolean,
 

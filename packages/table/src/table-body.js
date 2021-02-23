@@ -541,7 +541,8 @@ export default {
       this._tooltip = new TooltipChild({
         propsData: {
           placement: 'top',
-          effect: this.table.tooltipEffect
+          effect: this.table.tooltipEffect,
+          popperClass: 'table-tooltip'
         }
       });
       const Wapper = document.createElement('div');

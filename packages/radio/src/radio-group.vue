@@ -1,12 +1,19 @@
 <template>
-  <component
+  <!-- <component
     :is="_elTag"
     class="el-radio-group"
     role="radiogroup"
     @keydown="handleKeydown"
   >
     <slot></slot>
-  </component>
+  </component> -->
+  <div
+    class="el-radio-group"
+    role="radiogroup"
+    @keydown="handleKeydown"
+  >
+    <slot></slot>
+  </div>
 </template>
 <script>
   import Emitter from 'element-gui/src/mixins/emitter';
@@ -42,9 +49,9 @@
       _elFormItemSize() {
         return (this.elFormItem || {}).elFormItemSize;
       },
-      _elTag() {
-        return (this.$vnode.data || {}).tag || 'div';
-      },
+      // _elTag() {
+      //   return (this.$vnode.data || {}).tag || 'div';
+      // },
       radioGroupSize() {
         return this.size || this._elFormItemSize || (this.$ELEMENT || {}).size;
       }

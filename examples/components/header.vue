@@ -188,6 +188,10 @@
       }
     }
   }
+
+  .theme-picker{
+    margin-bottom: 13px;
+  }
 }
 
 .nav-dropdown {
