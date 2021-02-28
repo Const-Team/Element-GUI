@@ -213,9 +213,7 @@ export default {
         clientHeight: containerHeight
       } = this.$el;
 
-      if (!imageWidth || !imageHeight || !containerWidth || !containerHeight) {
-        return;
-      }
+      if (!imageWidth || !imageHeight || !containerWidth || !containerHeight) return {};
 
       const imageAspectRatio = imageWidth / imageHeight;
       const containerAspectRatio = containerWidth / containerHeight;
