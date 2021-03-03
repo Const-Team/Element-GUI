@@ -9,7 +9,7 @@
         :class="[popperClass, content && 'el-popover--plain']"
         ref="popper"
         v-show="!disabled && showPopper"
-        :style="{ width: width + 'px' , maxWidth: maxWidth + 'px' }"
+        :style="{ width: formateWidth , maxWidth: formateMaxWidth }"
         role="tooltip"
         :id="tooltipId"
         :aria-hidden="(disabled || !showPopper) ? 'true' : 'false'"
@@ -53,8 +53,8 @@ export default {
     content: String,
     reference: {},
     popperClass: String,
-    width: {},
-    maxWidth: {},
+    width: String,
+    maxWidth: String,
     visibleArrow: {
       default: true
     },
@@ -75,6 +75,12 @@ export default {
   computed: {
     tooltipId() {
       return `el-popover-${generateId()}`;
+    },
+    formateWidth() {
+      return /(%|px)/.test(this.width) ? this.width : this.width + 'px';
+    },
+    formateMaxWidth() {
+      return /(%|px)/.test(this.maxWidth) ? this.maxWidth : this.maxWidth + 'px';
     }
   },
   watch: {

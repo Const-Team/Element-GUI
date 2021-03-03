@@ -18,10 +18,9 @@ Popover 的属性与 Tooltip 很类似，它们都是基于`Vue-popper`开发的
   <el-popover
     placement="bottom"
     title="标题"
-    width="200"
     max-width="300"
     trigger="click"
-    content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
+    content="这是一段内容,这是一段内容,这是一段内容,这是一段内容,这是一段内容,这是一段内容,这是一段内容,这是一段内容,这是一段内容,这是一段内容,这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
     <el-button slot="reference">click 激活</el-button>
   </el-popover>
 
@@ -140,8 +139,8 @@ Popover 的属性与 Tooltip 很类似，它们都是基于`Vue-popper`开发的
 | trigger | 触发方式 | String  | click/focus/hover/manual |    click    |
 |  title              | 标题 | String | — | — |
 |  content        |  显示的内容，也可以通过 `slot` 传入 DOM   | String            | — | — |
-|  width        |  宽度  | String, Number            | — | 最小宽度 150px |
-|  max-width        |  最大宽度  | String, Number            | — |  |
+|  width        |  当使用 number 类型时, 以像素为单位, 当使用 string 类型时, 请传入 'x%', 否则便会以 number 类型解释  | String, Number            | — | 最小宽度 150px |
+|  max-width        |  当使用 number 类型时, 以像素为单位, 当使用 string 类型时, 请传入 'x%', 否则便会以 number 类型解释  | String, Number            | — |  |
 |  placement        |  出现位置  | String | top/top-start/top-end/bottom/bottom-start/bottom-end/left/left-start/left-end/right/right-start/right-end |  bottom |
 |  disabled       |  Popover 是否可用  | Boolean           | — |  false |
 |  value / v-model        |  状态是否可见  | Boolean           | — |  false |
