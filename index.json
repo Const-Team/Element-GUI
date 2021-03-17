@@ -1,0 +1,8245 @@
+[
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/layout",
+    "name": "row",
+    "type": "object",
+    "classify": "layout",
+    "tag": "el-row",
+    "title": "栅格布局",
+    "props": {
+      "type": {
+        "key": "type",
+        "label": "布局模式",
+        "value": "",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "",
+            "label": "默认"
+          },
+          {
+            "value": "flex",
+            "label": "flex"
+          }
+        ]
+      },
+      "justify": {
+        "key": "justify",
+        "label": "水平排列",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "start",
+            "label": "左对齐"
+          },
+          {
+            "value": "end",
+            "label": "右对齐"
+          },
+          {
+            "value": "center",
+            "label": "居中"
+          },
+          {
+            "value": "space-around",
+            "label": "间隔相等"
+          },
+          {
+            "value": "space-between",
+            "label": "两端对齐"
+          }
+        ]
+      },
+      "align": {
+        "key": "align",
+        "label": "垂直排列",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "top",
+            "label": "顶部"
+          },
+          {
+            "value": "middle",
+            "label": "居中"
+          },
+          {
+            "value": "bottom",
+            "label": "底部"
+          }
+        ]
+      },
+      "gutter": {
+        "key": "gutter",
+        "label": "栅格间距",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": 0
+      }
+    },
+    "children": [
+      {
+        "tag": "el-col",
+        "title": "列布局",
+        "props": {
+          "span": {
+            "key": "span",
+            "label": "栅格间距",
+            "value": 12,
+            "el": "number",
+            "type": "number",
+            "max": 24,
+            "min": 1
+          },
+          "align": {
+            "key": "align",
+            "label": "对齐方式",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": "left",
+                "label": "左对齐"
+              },
+              {
+                "value": "center",
+                "label": "居中"
+              },
+              {
+                "value": "right",
+                "label": "右对齐"
+              }
+            ]
+          },
+          "offset": {
+            "key": "offset",
+            "label": "左侧间隔格数",
+            "value": null,
+            "el": "number",
+            "type": "number",
+            "max": 24,
+            "min": 0
+          },
+          "push": {
+            "key": "push",
+            "label": "右移动格数",
+            "value": null,
+            "el": "number",
+            "type": "number",
+            "max": 24,
+            "min": 0
+          },
+          "pull": {
+            "key": "pull",
+            "label": "左移动格数",
+            "value": null,
+            "el": "number",
+            "type": "number",
+            "max": 24,
+            "min": 0
+          }
+        },
+        "children": []
+      },
+      {
+        "tag": "el-col",
+        "title": "列布局",
+        "props": {
+          "span": {
+            "key": "span",
+            "label": "栅格间距",
+            "value": 12,
+            "el": "number",
+            "type": "number",
+            "max": 24,
+            "min": 1
+          },
+          "align": {
+            "key": "align",
+            "label": "对齐方式",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": "left",
+                "label": "左对齐"
+              },
+              {
+                "value": "center",
+                "label": "居中"
+              },
+              {
+                "value": "right",
+                "label": "右对齐"
+              }
+            ]
+          },
+          "offset": {
+            "key": "offset",
+            "label": "左侧间隔格数",
+            "value": null,
+            "el": "number",
+            "type": "number",
+            "max": 24,
+            "min": 0
+          },
+          "push": {
+            "key": "push",
+            "label": "右移动格数",
+            "value": null,
+            "el": "number",
+            "type": "number",
+            "max": 24,
+            "min": 0
+          },
+          "pull": {
+            "key": "pull",
+            "label": "左移动格数",
+            "value": null,
+            "el": "number",
+            "type": "number",
+            "max": 24,
+            "min": 0
+          }
+        },
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081",
+    "name": "empty",
+    "type": "array",
+    "classify": "layout",
+    "tag": "div",
+    "title": "占位组件",
+    "props": {
+      "class": {
+        "key": "class",
+        "label": "类名",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "style": {
+        "key": "style",
+        "label": "行内样式",
+        "value": null,
+        "el": "code",
+        "type": "string"
+      }
+    },
+    "children": []
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/container",
+    "name": "header-main",
+    "type": "object",
+    "classify": "layout",
+    "tag": "el-container",
+    "title": "上下布局",
+    "props": {
+      "direction": {
+        "key": "direction",
+        "label": "排列方向",
+        "value": "vertical",
+        "el": "input",
+        "type": "string",
+        "disabled": true
+      }
+    },
+    "children": [
+      {
+        "tag": "el-header",
+        "noGrag": true,
+        "type": "array",
+        "props": {
+          "height": {
+            "key": "height",
+            "label": "头部高度",
+            "value": "60px",
+            "el": "input",
+            "type": "string"
+          }
+        },
+        "children": []
+      },
+      {
+        "tag": "el-main",
+        "type": "array",
+        "props": {},
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/container",
+    "name": "main-footer",
+    "type": "object",
+    "classify": "layout",
+    "tag": "el-container",
+    "title": "下上布局",
+    "props": {
+      "direction": {
+        "key": "direction",
+        "label": "排列方向",
+        "value": "vertical",
+        "el": "input",
+        "type": "string",
+        "disabled": true
+      }
+    },
+    "children": [
+      {
+        "tag": "el-main",
+        "type": "array",
+        "props": {},
+        "children": []
+      },
+      {
+        "tag": "el-footer",
+        "type": "array",
+        "noGrag": true,
+        "props": {
+          "height": {
+            "key": "height",
+            "label": "底栏高度",
+            "value": "60px",
+            "el": "input",
+            "type": "string"
+          }
+        },
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/container",
+    "name": "aside-main",
+    "type": "object",
+    "classify": "layout",
+    "tag": "el-container",
+    "title": "左右布局",
+    "props": {
+      "direction": {
+        "key": "direction",
+        "label": "排列方向",
+        "value": "horizontal",
+        "el": "input",
+        "type": "string",
+        "disabled": true
+      }
+    },
+    "children": [
+      {
+        "tag": "el-aside",
+        "type": "array",
+        "noGrag": true,
+        "props": {
+          "width": {
+            "key": "width",
+            "label": "左边栏宽度",
+            "value": "300px",
+            "el": "input",
+            "type": "string"
+          }
+        },
+        "children": []
+      },
+      {
+        "tag": "el-main",
+        "type": "array",
+        "props": {},
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/container",
+    "name": "main-aside",
+    "type": "object",
+    "classify": "layout",
+    "tag": "el-container",
+    "title": "右左布局",
+    "props": {
+      "direction": {
+        "key": "direction",
+        "label": "排列方向",
+        "value": "horizontal",
+        "el": "input",
+        "type": "string",
+        "disabled": true
+      }
+    },
+    "children": [
+      {
+        "tag": "el-main",
+        "type": "array",
+        "props": {},
+        "children": []
+      },
+      {
+        "tag": "el-aside",
+        "type": "array",
+        "noGrag": true,
+        "props": {
+          "width": {
+            "key": "width",
+            "label": "右边栏宽度",
+            "value": "300px",
+            "el": "input",
+            "type": "string"
+          }
+        },
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/container",
+    "name": "header-main-footer",
+    "type": "object",
+    "classify": "layout",
+    "tag": "el-container",
+    "title": "上中下布局",
+    "props": {
+      "direction": {
+        "key": "direction",
+        "label": "排列方向",
+        "value": "vertical",
+        "el": "input",
+        "type": "string",
+        "disabled": true
+      }
+    },
+    "children": [
+      {
+        "tag": "el-header",
+        "type": "array",
+        "noGrag": true,
+        "props": {
+          "height": {
+            "key": "height",
+            "label": "头部高度",
+            "value": "60px",
+            "el": "input",
+            "type": "string"
+          }
+        },
+        "children": []
+      },
+      {
+        "tag": "el-main",
+        "type": "array",
+        "props": {},
+        "children": []
+      },
+      {
+        "tag": "el-footer",
+        "type": "array",
+        "noGrag": true,
+        "props": {
+          "height": {
+            "key": "height",
+            "label": "底栏高度",
+            "value": "60px",
+            "el": "input",
+            "type": "string"
+          }
+        },
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/container",
+    "name": "aside-main-aside",
+    "type": "object",
+    "classify": "layout",
+    "tag": "el-container",
+    "title": "左中右布局",
+    "props": {
+      "direction": {
+        "key": "direction",
+        "label": "排列方向",
+        "value": "horizontal",
+        "el": "input",
+        "type": "string",
+        "disabled": true
+      }
+    },
+    "children": [
+      {
+        "tag": "el-aside",
+        "type": "array",
+        "noGrag": true,
+        "props": {
+          "width": {
+            "key": "width",
+            "label": "左边栏宽度",
+            "value": "300px",
+            "el": "input",
+            "type": "string"
+          }
+        },
+        "children": []
+      },
+      {
+        "tag": "el-main",
+        "type": "array",
+        "props": {},
+        "children": []
+      },
+      {
+        "tag": "el-aside",
+        "type": "array",
+        "noGrag": true,
+        "props": {
+          "width": {
+            "key": "width",
+            "label": "右边栏宽度",
+            "value": "300px",
+            "el": "input",
+            "type": "string"
+          }
+        },
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "",
+    "doc": "https: //uxd.const.team/#/component/button",
+    "name": "button",
+    "type": "string",
+    "classify": "basic",
+    "tag": "el-button",
+    "title": "按钮",
+    "props": {
+      "class": {
+        "key": "class",
+        "label": "class类名",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "size": {
+        "key": "size",
+        "label": "尺寸",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "",
+            "label": "默认"
+          },
+          {
+            "value": "medium",
+            "label": "中等"
+          },
+          {
+            "value": "small",
+            "label": "小型"
+          },
+          {
+            "value": "mini",
+            "label": "迷你"
+          }
+        ]
+      },
+      "type": {
+        "key": "type",
+        "label": "按钮类型",
+        "value": "",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "",
+            "label": "默认"
+          },
+          {
+            "value": "primary",
+            "label": "重要"
+          },
+          {
+            "value": "success",
+            "label": "成功"
+          },
+          {
+            "value": "warning",
+            "label": "警告"
+          },
+          {
+            "value": "danger",
+            "label": "危险"
+          },
+          {
+            "value": "info",
+            "label": "提示"
+          },
+          {
+            "value": "text",
+            "label": "文本"
+          }
+        ]
+      },
+      "plain": {
+        "key": "plain",
+        "label": "是否朴素",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "round": {
+        "key": "round",
+        "label": "是否圆角",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "circle": {
+        "key": "circle",
+        "label": "是否圆形",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "loading": {
+        "key": "loading",
+        "label": "加载中状态",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "disabled": {
+        "key": "disabled",
+        "label": "是否禁用",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "icon": {
+        "key": "icon",
+        "label": "前缀图标",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "icon-right": {
+        "key": "icon-right",
+        "label": "后缀图标",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "autofocus": {
+        "key": "autofocus",
+        "label": "默认聚焦",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "native-type": {
+        "key": "native-type",
+        "label": "原生属性",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "button",
+            "label": "button"
+          },
+          {
+            "value": "submit",
+            "label": "submit"
+          },
+          {
+            "value": "reset",
+            "label": "reset"
+          }
+        ],
+        "clear": false
+      }
+    },
+    "text": "默认按钮",
+    "events": {
+      "click": {
+        "key": "click",
+        "label": "click",
+        "description": "点击事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/button",
+    "name": "button-group",
+    "type": "object",
+    "classify": "basic",
+    "tag": "el-button-group",
+    "title": "按钮组",
+    "props": {
+      "class": {
+        "key": "class",
+        "label": "class类名",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "children": [
+      {
+        "tag": "el-button",
+        "type": "string",
+        "props": {
+          "size": {
+            "key": "size",
+            "label": "尺寸",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": "",
+                "label": "默认"
+              },
+              {
+                "value": "medium",
+                "label": "中等"
+              },
+              {
+                "value": "small",
+                "label": "小型"
+              },
+              {
+                "value": "mini",
+                "label": "迷你"
+              }
+            ]
+          },
+          "type": {
+            "key": "type",
+            "label": "按钮类型",
+            "value": "",
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": "",
+                "label": "默认"
+              },
+              {
+                "value": "primary",
+                "label": "重要"
+              },
+              {
+                "value": "success",
+                "label": "成功"
+              },
+              {
+                "value": "warning",
+                "label": "警告"
+              },
+              {
+                "value": "danger",
+                "label": "危险"
+              },
+              {
+                "value": "info",
+                "label": "提示"
+              },
+              {
+                "value": "text",
+                "label": "文本"
+              }
+            ]
+          },
+          "plain": {
+            "key": "plain",
+            "label": "是否朴素",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "round": {
+            "key": "round",
+            "label": "是否圆角",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "circle": {
+            "key": "circle",
+            "label": "是否圆形",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "loading": {
+            "key": "loading",
+            "label": "加载中状态",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "disabled": {
+            "key": "disabled",
+            "label": "是否禁用",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "icon": {
+            "key": "icon",
+            "label": "前缀图标",
+            "value": null,
+            "el": "input",
+            "type": "string"
+          },
+          "icon-right": {
+            "key": "icon-right",
+            "label": "后缀图标",
+            "value": null,
+            "el": "input",
+            "type": "string"
+          },
+          "autofocus": {
+            "key": "autofocus",
+            "label": "默认聚焦",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "native-type": {
+            "key": "native-type",
+            "label": "原生属性",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": "button",
+                "label": "button"
+              },
+              {
+                "value": "submit",
+                "label": "submit"
+              },
+              {
+                "value": "reset",
+                "label": "reset"
+              }
+            ],
+            "clear": false
+          }
+        },
+        "text": "默认按钮1"
+      },
+      {
+        "tag": "el-button",
+        "type": "string",
+        "props": {
+          "size": {
+            "key": "size",
+            "label": "尺寸",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": "",
+                "label": "默认"
+              },
+              {
+                "value": "medium",
+                "label": "中等"
+              },
+              {
+                "value": "small",
+                "label": "小型"
+              },
+              {
+                "value": "mini",
+                "label": "迷你"
+              }
+            ]
+          },
+          "type": {
+            "key": "type",
+            "label": "按钮类型",
+            "value": "",
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": "",
+                "label": "默认"
+              },
+              {
+                "value": "primary",
+                "label": "重要"
+              },
+              {
+                "value": "success",
+                "label": "成功"
+              },
+              {
+                "value": "warning",
+                "label": "警告"
+              },
+              {
+                "value": "danger",
+                "label": "危险"
+              },
+              {
+                "value": "info",
+                "label": "提示"
+              },
+              {
+                "value": "text",
+                "label": "文本"
+              }
+            ]
+          },
+          "plain": {
+            "key": "plain",
+            "label": "是否朴素",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "round": {
+            "key": "round",
+            "label": "是否圆角",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "circle": {
+            "key": "circle",
+            "label": "是否圆形",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "loading": {
+            "key": "loading",
+            "label": "加载中状态",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "disabled": {
+            "key": "disabled",
+            "label": "是否禁用",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "icon": {
+            "key": "icon",
+            "label": "前缀图标",
+            "value": null,
+            "el": "input",
+            "type": "string"
+          },
+          "icon-right": {
+            "key": "icon-right",
+            "label": "后缀图标",
+            "value": null,
+            "el": "input",
+            "type": "string"
+          },
+          "autofocus": {
+            "key": "autofocus",
+            "label": "默认聚焦",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "native-type": {
+            "key": "native-type",
+            "label": "原生属性",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": "button",
+                "label": "button"
+              },
+              {
+                "value": "submit",
+                "label": "submit"
+              },
+              {
+                "value": "reset",
+                "label": "reset"
+              }
+            ],
+            "clear": false
+          }
+        },
+        "text": "默认按钮2"
+      }
+    ]
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/checkbox",
+    "name": "checkbox",
+    "type": "object",
+    "classify": "basic",
+    "tag": "el-checkbox-group",
+    "title": "多选框组",
+    "props": {
+      "value": {
+        "key": "value",
+        "value": [],
+        "hidden": true
+      },
+      "disabled": {
+        "key": "disabled",
+        "label": "是否禁用",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "min": {
+        "key": "min",
+        "label": "可勾选最小数",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": 1
+      },
+      "max": {
+        "key": "max",
+        "label": "可勾选最大数",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": 1
+      }
+    },
+    "children": [
+      {
+        "tag": "el-checkbox",
+        "type": "string",
+        "props": {
+          "label": {
+            "key": "label",
+            "label": "label",
+            "value": 1,
+            "el": "input",
+            "type": "string"
+          },
+          "border": {
+            "key": "border",
+            "label": "是否显示边框",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "disabled": {
+            "key": "disabled",
+            "label": "是否禁用",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "name": {
+            "key": "name",
+            "label": "name 属性",
+            "value": null,
+            "el": "input",
+            "type": "string"
+          }
+        },
+        "text": "复选框1"
+      },
+      {
+        "tag": "el-checkbox",
+        "type": "string",
+        "props": {
+          "label": {
+            "key": "label",
+            "label": "label",
+            "value": 2,
+            "el": "input",
+            "type": "string"
+          },
+          "border": {
+            "key": "border",
+            "label": "是否显示边框",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "disabled": {
+            "key": "disabled",
+            "label": "是否禁用",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "name": {
+            "key": "name",
+            "label": "name 属性",
+            "value": null,
+            "el": "input",
+            "type": "string"
+          }
+        },
+        "text": "复选框2"
+      }
+    ],
+    "events": {
+      "change": {
+        "key": "change",
+        "label": "change",
+        "description": "当绑定值变化时触发的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "model": {
+      "key": "",
+      "value": ""
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/checkbox",
+    "name": "checkbox",
+    "type": "object",
+    "classify": "basic",
+    "tag": "el-checkbox-group",
+    "title": "复选框按钮组",
+    "props": {
+      "value": {
+        "key": "value",
+        "value": [],
+        "hidden": true
+      },
+      "disabled": {
+        "key": "disabled",
+        "label": "是否禁用",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "size": {
+        "key": "size",
+        "label": "尺寸",
+        "value": "",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "",
+            "label": "默认"
+          },
+          {
+            "value": "medium",
+            "label": "中等"
+          },
+          {
+            "value": "small",
+            "label": "小型"
+          },
+          {
+            "value": "mini",
+            "label": "迷你"
+          }
+        ]
+      },
+      "min": {
+        "key": "min",
+        "label": "可勾选最小数",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": 1
+      },
+      "max": {
+        "key": "max",
+        "label": "可勾选最大数",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": 1
+      },
+      "text-color": {
+        "key": "text-color",
+        "label": "激活文本颜色",
+        "value": "",
+        "el": "color",
+        "type": "string"
+      },
+      "fill": {
+        "key": "fill",
+        "label": "激活填充色",
+        "value": "",
+        "el": "color",
+        "type": "string"
+      }
+    },
+    "children": [
+      {
+        "tag": "el-checkbox-button",
+        "type": "string",
+        "props": {
+          "label": {
+            "key": "label",
+            "label": "label",
+            "value": 1,
+            "el": "input",
+            "type": "string"
+          },
+          "disabled": {
+            "key": "disabled",
+            "label": "是否禁用",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "name": {
+            "key": "name",
+            "label": "name 属性",
+            "value": null,
+            "el": "input",
+            "type": "string"
+          }
+        },
+        "text": "复选框1"
+      },
+      {
+        "tag": "el-checkbox-button",
+        "type": "string",
+        "props": {
+          "label": {
+            "key": "label",
+            "label": "label",
+            "value": 2,
+            "el": "input",
+            "type": "string"
+          },
+          "disabled": {
+            "key": "disabled",
+            "label": "是否禁用",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "name": {
+            "key": "name",
+            "label": "name 属性",
+            "value": null,
+            "el": "input",
+            "type": "string"
+          }
+        },
+        "text": "复选框2"
+      }
+    ],
+    "events": {
+      "change": {
+        "key": "change",
+        "label": "change",
+        "description": "当绑定值变化时触发的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "model": {
+      "key": "",
+      "value": ""
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/checkbox",
+    "name": "checkbox",
+    "type": "string",
+    "classify": "basic",
+    "tag": "el-checkbox",
+    "title": "复选框",
+    "props": {
+      "label": {
+        "key": "label",
+        "label": "label",
+        "value": 1,
+        "el": "input",
+        "type": "string"
+      },
+      "border": {
+        "key": "border",
+        "label": "是否显示边框",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "disabled": {
+        "key": "disabled",
+        "label": "是否禁用",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "name": {
+        "key": "name",
+        "label": "name 属性",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "text": "复选框",
+    "events": {
+      "change": {
+        "key": "change",
+        "label": "change",
+        "description": "当绑定值变化时触发的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "model": {
+      "key": "",
+      "value": ""
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/radio",
+    "name": "radio",
+    "type": "object",
+    "classify": "basic",
+    "tag": "el-radio-group",
+    "title": "单选框组",
+    "props": {
+      "value": {
+        "key": "value",
+        "value": null,
+        "hidden": true
+      },
+      "disabled": {
+        "key": "disabled",
+        "label": "是否禁用",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      }
+    },
+    "children": [
+      {
+        "tag": "el-radio",
+        "type": "string",
+        "props": {
+          "label": {
+            "key": "label",
+            "label": "label",
+            "value": 1,
+            "el": "input",
+            "type": "string"
+          },
+          "border": {
+            "key": "border",
+            "label": "是否显示边框",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "disabled": {
+            "key": "disabled",
+            "label": "是否禁用",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "name": {
+            "key": "name",
+            "label": "name 属性",
+            "value": null,
+            "el": "input",
+            "type": "string"
+          }
+        },
+        "text": "单选框1"
+      },
+      {
+        "tag": "el-radio",
+        "type": "string",
+        "props": {
+          "label": {
+            "key": "label",
+            "label": "label",
+            "value": 2,
+            "el": "input",
+            "type": "string"
+          },
+          "border": {
+            "key": "border",
+            "label": "是否显示边框",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "disabled": {
+            "key": "disabled",
+            "label": "是否禁用",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "name": {
+            "key": "name",
+            "label": "name 属性",
+            "value": null,
+            "el": "input",
+            "type": "string"
+          }
+        },
+        "text": "单选框2"
+      }
+    ],
+    "events": {
+      "change": {
+        "key": "change",
+        "label": "change",
+        "description": "当绑定值变化时触发的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "model": {
+      "key": "",
+      "value": ""
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/radio",
+    "name": "radio",
+    "type": "object",
+    "classify": "basic",
+    "tag": "el-radio-group",
+    "title": "单选框按钮组",
+    "props": {
+      "value": {
+        "key": "value",
+        "value": null,
+        "hidden": true
+      },
+      "disabled": {
+        "key": "disabled",
+        "label": "是否禁用",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "size": {
+        "key": "size",
+        "label": "尺寸",
+        "value": "",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "",
+            "label": "默认"
+          },
+          {
+            "value": "medium",
+            "label": "中等"
+          },
+          {
+            "value": "small",
+            "label": "小型"
+          },
+          {
+            "value": "mini",
+            "label": "迷你"
+          }
+        ]
+      },
+      "text-color": {
+        "key": "text-color",
+        "label": "激活文本颜色",
+        "value": "",
+        "el": "color",
+        "type": "string"
+      },
+      "fill": {
+        "key": "fill",
+        "label": "激活填充色",
+        "value": "",
+        "el": "color",
+        "type": "string"
+      }
+    },
+    "children": [
+      {
+        "tag": "el-radio-button",
+        "type": "string",
+        "props": {
+          "label": {
+            "key": "label",
+            "label": "label",
+            "value": 1,
+            "el": "input",
+            "type": "string"
+          },
+          "disabled": {
+            "key": "disabled",
+            "label": "是否禁用",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "name": {
+            "key": "name",
+            "label": "name 属性",
+            "value": null,
+            "el": "input",
+            "type": "string"
+          }
+        },
+        "text": "单选框1"
+      },
+      {
+        "tag": "el-radio-button",
+        "type": "string",
+        "props": {
+          "label": {
+            "key": "label",
+            "label": "label",
+            "value": 2,
+            "el": "input",
+            "type": "string"
+          },
+          "disabled": {
+            "key": "disabled",
+            "label": "是否禁用",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "name": {
+            "key": "name",
+            "label": "name 属性",
+            "value": null,
+            "el": "input",
+            "type": "string"
+          }
+        },
+        "text": "单选框2"
+      }
+    ],
+    "events": {
+      "change": {
+        "key": "change",
+        "label": "change",
+        "description": "当绑定值变化时触发的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "model": {
+      "key": "",
+      "value": ""
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/radio",
+    "name": "radio",
+    "type": "string",
+    "classify": "basic",
+    "tag": "el-radio",
+    "title": "单选框",
+    "props": {
+      "label": {
+        "key": "label",
+        "label": "label",
+        "value": 1,
+        "el": "input",
+        "type": "string"
+      },
+      "border": {
+        "key": "border",
+        "label": "是否显示边框",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "disabled": {
+        "key": "disabled",
+        "label": "是否禁用",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "name": {
+        "key": "name",
+        "label": "name 属性",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "text": "单选框",
+    "events": {
+      "change": {
+        "key": "change",
+        "label": "change",
+        "description": "当绑定值变化时触发的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "model": {
+      "key": "",
+      "value": ""
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/input",
+    "name": "input",
+    "type": "string",
+    "classify": "basic",
+    "tag": "el-input",
+    "title": "单行文本",
+    "props": {
+      "type": {
+        "key": "type",
+        "label": "类型",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "name": {
+        "key": "name",
+        "label": "name属性",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "class": {
+        "key": "class",
+        "label": "class类名",
+        "value": "el-width_full",
+        "el": "input",
+        "type": "string"
+      },
+      "placeholder": {
+        "key": "placeholder",
+        "label": "占位文本",
+        "value": "请输入",
+        "el": "input",
+        "type": "string"
+      },
+      "size": {
+        "key": "size",
+        "label": "尺寸",
+        "value": "",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "",
+            "label": "默认"
+          },
+          {
+            "value": "medium",
+            "label": "中等"
+          },
+          {
+            "value": "small",
+            "label": "小型"
+          },
+          {
+            "value": "mini",
+            "label": "迷你"
+          }
+        ]
+      },
+      "autocomplete": {
+        "key": "autocomplete",
+        "label": "自动补全",
+        "value": "",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "off",
+            "label": "off"
+          },
+          {
+            "value": "on",
+            "label": "on"
+          }
+        ]
+      },
+      "clearable": {
+        "key": "clearable",
+        "label": "能否清空",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "readonly": {
+        "key": "readonly",
+        "label": "能否可读",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "disabled": {
+        "key": "disabled",
+        "label": "能否编辑",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "show-password": {
+        "key": "show-password",
+        "label": "切换密码图标",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "autofocus": {
+        "key": "autofocus",
+        "label": "获取焦点",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "prefix-icon": {
+        "key": "prefix-icon",
+        "label": "前缀图标",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "suffix-icon": {
+        "key": "suffix-icon",
+        "label": "后缀图标",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "show-word-limit": {
+        "key": "show-word-limit",
+        "label": "字数统计",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "minlength": {
+        "key": "minlength",
+        "label": "最小输入长度",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": 1
+      },
+      "maxlength": {
+        "key": "maxlength",
+        "label": "最大输入长度",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": 1
+      },
+      "min": {
+        "key": "min",
+        "label": "最小值",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": null
+      },
+      "max": {
+        "key": "max",
+        "label": "最大值",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": null
+      }
+    },
+    "events": {
+      "blur": {
+        "key": "blur",
+        "label": "blur",
+        "description": "在 Input 失去焦点时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "focus": {
+        "key": "focus",
+        "label": "focus",
+        "description": "在 Input 获得焦点时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "input": {
+        "key": "input",
+        "label": "input",
+        "description": "在 Input 值改变时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "change": {
+        "key": "change",
+        "label": "change",
+        "description": "仅在输入框失去焦点或用户按下回车时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "clear": {
+        "key": "clear",
+        "label": "clear",
+        "description": "在点击由 clearable 属性生成的清空按钮时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "model": {
+      "key": "",
+      "value": ""
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/input",
+    "name": "textarea",
+    "type": "string",
+    "classify": "basic",
+    "tag": "el-input",
+    "title": "多行文本",
+    "props": {
+      "type": {
+        "key": "type",
+        "label": "类型",
+        "value": "textarea",
+        "el": "input",
+        "type": "string",
+        "disabled": true
+      },
+      "name": {
+        "key": "name",
+        "label": "name属性",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "class": {
+        "key": "class",
+        "label": "class类名",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "placeholder": {
+        "key": "placeholder",
+        "label": "占位文本",
+        "value": "请输入",
+        "el": "input",
+        "type": "string"
+      },
+      "resize": {
+        "key": "resize",
+        "label": "缩放",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "none",
+            "label": "不可缩放"
+          },
+          {
+            "value": "both",
+            "label": "都可缩放"
+          },
+          {
+            "value": "horizontal",
+            "label": "横向缩放"
+          },
+          {
+            "value": "vertical",
+            "label": "纵向缩放"
+          }
+        ]
+      },
+      "clearable": {
+        "key": "clearable",
+        "label": "能否清空",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "readonly": {
+        "key": "readonly",
+        "label": "能否可读",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "disabled": {
+        "key": "disabled",
+        "label": "能否编辑",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "autosize": {
+        "key": "autosize",
+        "label": "自适应高度",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "rows": {
+        "key": "rows",
+        "label": "输入框行数",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": 1
+      },
+      "show-word-limit": {
+        "key": "show-word-limit",
+        "label": "字数统计",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "minlength": {
+        "key": "minlength",
+        "label": "最小输入长度",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": 1
+      },
+      "maxlength": {
+        "key": "maxlength",
+        "label": "最大输入长度",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": 1
+      }
+    },
+    "events": {
+      "blur": {
+        "key": "blur",
+        "label": "blur",
+        "description": "在 Input 失去焦点时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "focus": {
+        "key": "focus",
+        "label": "focus",
+        "description": "在 Input 获得焦点时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "input": {
+        "key": "input",
+        "label": "input",
+        "description": "在 Input 值改变时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "change": {
+        "key": "change",
+        "label": "change",
+        "description": "仅在输入框失去焦点或用户按下回车时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "clear": {
+        "key": "clear",
+        "label": "clear",
+        "description": "在点击由 clearable 属性生成的清空按钮时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "model": {
+      "key": "",
+      "value": ""
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/input-number",
+    "name": "input-number",
+    "type": "string",
+    "classify": "basic",
+    "tag": "el-input-number",
+    "title": "计数器",
+    "props": {
+      "name": {
+        "key": "name",
+        "label": "name属性",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "class": {
+        "key": "class",
+        "label": "class类名",
+        "value": "el-width_full",
+        "el": "input",
+        "type": "string"
+      },
+      "placeholder": {
+        "key": "placeholder",
+        "label": "占位文本",
+        "value": "请输入",
+        "el": "input",
+        "type": "string"
+      },
+      "label": {
+        "key": "label",
+        "label": "关联文本",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "disabled": {
+        "key": "disabled",
+        "label": "是否禁用",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "size": {
+        "key": "size",
+        "label": "尺寸",
+        "value": "",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "",
+            "label": "默认"
+          },
+          {
+            "value": "medium",
+            "label": "中等"
+          },
+          {
+            "value": "small",
+            "label": "小型"
+          },
+          {
+            "value": "mini",
+            "label": "迷你"
+          }
+        ]
+      },
+      "controls": {
+        "key": "controls",
+        "label": "是否控制按钮",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "step-strictly": {
+        "key": "step-strictly",
+        "label": "严格步数",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "default-value": {
+        "key": "default-value",
+        "label": "默认值",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": null
+      },
+      "min": {
+        "key": "min",
+        "label": "最小值",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": null
+      },
+      "max": {
+        "key": "max",
+        "label": "最大值",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": null
+      },
+      "step": {
+        "key": "step",
+        "label": "步数",
+        "value": 1,
+        "el": "number",
+        "type": "number",
+        "min": 1
+      },
+      "precision": {
+        "key": "precision",
+        "label": "精度",
+        "value": 1,
+        "el": "number",
+        "type": "number",
+        "min": 1
+      },
+      "controls-position": {
+        "key": "controls-position",
+        "label": "按钮位置",
+        "value": "",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "",
+            "label": "默认"
+          },
+          {
+            "value": "right",
+            "label": "右边"
+          }
+        ]
+      }
+    },
+    "events": {
+      "blur": {
+        "key": "blur",
+        "label": "blur",
+        "description": "在 Input 失去焦点时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "focus": {
+        "key": "focus",
+        "label": "focus",
+        "description": "在 Input 获得焦点时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "change": {
+        "key": "change",
+        "label": "change",
+        "description": "绑定值被改变时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "model": {
+      "key": "",
+      "value": 0
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/link",
+    "name": "link",
+    "type": "string",
+    "classify": "basic",
+    "tag": "el-link",
+    "title": "文字链接",
+    "props": {
+      "href": {
+        "key": "href",
+        "label": "href链接",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "to": {
+        "key": "to",
+        "label": "路由对象",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "type": {
+        "key": "type",
+        "label": "链接类型",
+        "value": "",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "",
+            "label": "默认"
+          },
+          {
+            "value": "primary",
+            "label": "重要"
+          },
+          {
+            "value": "success",
+            "label": "成功"
+          },
+          {
+            "value": "warning",
+            "label": "警告"
+          },
+          {
+            "value": "danger",
+            "label": "危险"
+          },
+          {
+            "value": "info",
+            "label": "提示"
+          },
+          {
+            "value": "text",
+            "label": "文本"
+          }
+        ]
+      },
+      "underline": {
+        "key": "underline",
+        "label": "划过下划线",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "disabled": {
+        "key": "disabled",
+        "label": "是否禁用",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "icon": {
+        "key": "icon",
+        "label": "前缀图标",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "icon-right": {
+        "key": "icon-right",
+        "label": "后缀图标",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "text": "文字链接"
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/select",
+    "name": "select",
+    "type": "object",
+    "classify": "basic",
+    "tag": "el-select",
+    "title": "下拉选择器",
+    "props": {
+      "value": {
+        "key": "value",
+        "value": "",
+        "hidden": true
+      },
+      "name": {
+        "key": "name",
+        "label": "name属性",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "placeholder": {
+        "key": "placeholder",
+        "label": "占位文本",
+        "value": "请选择",
+        "el": "input",
+        "type": "string"
+      },
+      "class": {
+        "key": "class",
+        "label": "class类名",
+        "value": "el-width_full",
+        "el": "input",
+        "type": "string"
+      },
+      "size": {
+        "key": "size",
+        "label": "尺寸",
+        "value": "",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "",
+            "label": "默认"
+          },
+          {
+            "value": "medium",
+            "label": "中等"
+          },
+          {
+            "value": "small",
+            "label": "小型"
+          },
+          {
+            "value": "mini",
+            "label": "迷你"
+          }
+        ]
+      },
+      "disabled": {
+        "key": "disabled",
+        "label": "是否禁用",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "filterable": {
+        "key": "filterable",
+        "label": "是否可搜索",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "allow-create": {
+        "key": "allow-create",
+        "label": "创建新条目",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "popper-append-to-body": {
+        "key": "popper-append-to-body",
+        "label": "插入至body",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "multiple": {
+        "key": "multiple",
+        "label": "是否多选",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "multiple-limit": {
+        "key": "multiple-limit",
+        "label": "最多可选数",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": 0
+      },
+      "collapse-tags-max-num": {
+        "key": "collapse-tags-max-num",
+        "label": "开始折叠数",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": 0
+      },
+      "collapse-tags": {
+        "key": "collapse-tags",
+        "label": "多选tag形式",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "collapse-texts": {
+        "key": "collapse-texts",
+        "label": "多选文字形式",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "no-data-text": {
+        "key": "no-data-text",
+        "label": "空选项提示",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "popper-class": {
+        "key": "popper-class",
+        "label": "下拉框的类名",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "option-max-width": {
+        "key": "option-max-width",
+        "label": "下拉最大宽度",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "clearable": {
+        "key": "clearable",
+        "label": "是否可以清空",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      }
+    },
+    "children": [
+      {
+        "tag": "el-option",
+        "type": "string",
+        "props": {
+          "label": {
+            "key": "label",
+            "label": "选项的标签",
+            "value": "选项1",
+            "el": "input",
+            "type": "string",
+            "only": true
+          },
+          "value": {
+            "key": "value",
+            "label": "选项的值",
+            "value": "1",
+            "el": "input",
+            "type": "string",
+            "only": true
+          },
+          "disabled": {
+            "key": "disabled",
+            "label": "是否禁用",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "tag": "el-option",
+        "type": "string",
+        "props": {
+          "label": {
+            "key": "label",
+            "label": "选项的标签",
+            "value": "选项2",
+            "el": "input",
+            "type": "string",
+            "only": true
+          },
+          "value": {
+            "key": "value",
+            "label": "选项的值",
+            "value": "2",
+            "el": "input",
+            "type": "string",
+            "only": true
+          },
+          "disabled": {
+            "key": "disabled",
+            "label": "是否禁用",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          }
+        }
+      }
+    ],
+    "events": {
+      "change": {
+        "key": "change",
+        "label": "change",
+        "description": "选中值发生变化时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "visible-change": {
+        "key": "visible-change",
+        "label": "visible-change",
+        "description": "下拉框出现/隐藏时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "remove-tag": {
+        "key": "remove-tag",
+        "label": "remove-tag",
+        "description": "多选模式下移除tag时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "clear": {
+        "key": "clear",
+        "label": "clear",
+        "description": "可清空的单选模式下用户点击清空按钮时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "blur": {
+        "key": "blur",
+        "label": "blur",
+        "description": "在 Input 失去焦点时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "focus": {
+        "key": "focus",
+        "label": "focus",
+        "description": "在 Input 获得焦点时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "model": {
+      "key": "",
+      "value": ""
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/tree-select",
+    "name": "select",
+    "type": "string",
+    "classify": "basic",
+    "tag": "el-tree-select",
+    "title": "下拉树选择器",
+    "props": {
+      "value": {
+        "key": "value",
+        "value": "",
+        "hidden": true
+      },
+      "data": {
+        "key": "data",
+        "value": [],
+        "hidden": true
+      },
+      "placeholder": {
+        "key": "placeholder",
+        "label": "占位文本",
+        "value": "请选择",
+        "el": "input",
+        "type": "string"
+      },
+      "name": {
+        "key": "name",
+        "label": "name属性",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "class": {
+        "key": "class",
+        "label": "class类名",
+        "value": "el-width_full",
+        "el": "input",
+        "type": "string"
+      },
+      "popper-class": {
+        "key": "popper-class",
+        "label": "下拉框的类名",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "size": {
+        "key": "size",
+        "label": "尺寸",
+        "value": "",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "",
+            "label": "默认"
+          },
+          {
+            "value": "medium",
+            "label": "中等"
+          },
+          {
+            "value": "small",
+            "label": "小型"
+          },
+          {
+            "value": "mini",
+            "label": "迷你"
+          }
+        ]
+      },
+      "disabled": {
+        "key": "disabled",
+        "label": "是否禁用",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "filterable": {
+        "key": "filterable",
+        "label": "是否可搜索",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "multiple": {
+        "key": "multiple",
+        "label": "是否多选",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "clearable": {
+        "key": "clearable",
+        "label": "可以清空",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "default-expand-all": {
+        "key": "default-expand-all",
+        "label": "默认展开所有",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "expand-on-click-node": {
+        "key": "expand-on-click-node",
+        "label": "点击节点时展开",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "collapse-tags": {
+        "key": "collapse-tags",
+        "label": "按tag文字展示",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "collapse-tags-max-num": {
+        "key": "collapse-tags-max-num",
+        "label": "多选多少后折叠",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": 1
+      },
+      "show-checkbox": {
+        "key": "show-checkbox",
+        "label": "显示复选框",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "check-strictly": {
+        "key": "check-strictly",
+        "label": "父子不关联",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "show-checked-strategy": {
+        "key": "show-checked-strategy",
+        "label": "回填的方式",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "child",
+            "label": "显示子节点"
+          },
+          {
+            "value": "parent",
+            "label": "显示父节点"
+          }
+        ]
+      },
+      "option-max-width": {
+        "key": "option-max-width",
+        "label": "下拉最大宽度",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "events": {
+      "change": {
+        "key": "change",
+        "label": "change",
+        "description": "选中值发生变化时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "blur": {
+        "key": "blur",
+        "label": "blur",
+        "description": "当组件失去焦点时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "focus": {
+        "key": "focus",
+        "label": "focus",
+        "description": "当组件获得焦点时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "model": {
+      "key": "",
+      "value": ""
+    },
+    "datas": {
+      "data": {
+        "key": "data",
+        "label": "下拉树数据",
+        "value": []
+      }
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/cascader",
+    "name": "select",
+    "type": "string",
+    "classify": "basic",
+    "tag": "el-cascader",
+    "title": "级联选择器",
+    "props": {
+      "placeholder": {
+        "key": "placeholder",
+        "label": "占位文本",
+        "value": "请选择",
+        "el": "input",
+        "type": "string"
+      },
+      "class": {
+        "key": "class",
+        "label": "class类名",
+        "value": "el-width_full",
+        "el": "input",
+        "type": "string"
+      },
+      "size": {
+        "key": "size",
+        "label": "尺寸",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "",
+            "label": "默认"
+          },
+          {
+            "value": "medium",
+            "label": "中等"
+          },
+          {
+            "value": "small",
+            "label": "小型"
+          },
+          {
+            "value": "mini",
+            "label": "迷你"
+          }
+        ]
+      },
+      "disabled": {
+        "key": "disabled",
+        "label": "是否禁用",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "clearable": {
+        "key": "clearable",
+        "label": "是否可清空",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "filterable": {
+        "key": "filterable",
+        "label": "是否可搜索",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "show-all-levels": {
+        "key": "show-all-levels",
+        "label": "显示完整路径",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "option-max-width": {
+        "key": "option-max-width",
+        "label": "下拉最大宽度",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "separator": {
+        "key": "separator",
+        "label": "选项分隔符",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "collapse-tags": {
+        "key": "collapse-tags",
+        "label": "折叠Tag",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "collapse-tags-max-num": {
+        "key": "collapse-tags-max-num",
+        "label": "开始折叠数量",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": 1
+      },
+      "popper-class": {
+        "key": "popper-class",
+        "label": "自定义浮层类名",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "events": {
+      "change": {
+        "key": "change",
+        "label": "change",
+        "description": "当选中节点变化时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "expand-change": {
+        "key": "expand-change",
+        "label": "expand-change",
+        "description": "当展开节点发生变化时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "blur": {
+        "key": "blur",
+        "label": "blur",
+        "description": "当失去焦点时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "focus": {
+        "key": "focus",
+        "label": "focus",
+        "description": "当获得焦点时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "visible-change": {
+        "key": "visible-change",
+        "label": "visible-change",
+        "description": "下拉框出现/隐藏时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "remove-tag": {
+        "key": "remove-tag",
+        "label": "remove-tag",
+        "description": "在多选模式下，移除Tag时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "model": {
+      "key": "",
+      "value": ""
+    },
+    "datas": {
+      "options": {
+        "key": "options",
+        "label": "级联数据",
+        "value": []
+      },
+      "props": {
+        "key": "props",
+        "label": "级联配置",
+        "value": {}
+      }
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/switch",
+    "name": "switch",
+    "type": "string",
+    "classify": "basic",
+    "tag": "el-switch",
+    "title": "开关",
+    "props": {
+      "disabled": {
+        "key": "disabled",
+        "label": "是否禁用",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "active-text": {
+        "key": "active-text",
+        "label": "打开文字描述",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "inactive-text": {
+        "key": "inactive-text",
+        "label": "关闭文字描述",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "active-value": {
+        "key": "active-value",
+        "label": "打开时的值",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "inactive-value": {
+        "key": "inactive-value",
+        "label": "关闭时的值",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "active-color": {
+        "key": "active-color",
+        "label": "打开背景色",
+        "value": "",
+        "el": "color",
+        "type": "string"
+      },
+      "inactive-color": {
+        "key": "inactive-color",
+        "label": "关闭背景色",
+        "value": "",
+        "el": "color",
+        "type": "string"
+      },
+      "active-text-color": {
+        "key": "active-text-color",
+        "label": "打开文本颜色",
+        "value": "",
+        "el": "color",
+        "type": "string"
+      },
+      "inactive-text-color": {
+        "key": "inactive-text-color",
+        "label": "关闭文本颜色",
+        "value": "",
+        "el": "color",
+        "type": "string"
+      }
+    },
+    "events": {
+      "change": {
+        "key": "change",
+        "label": "change",
+        "description": "switch 状态发生变化时的回调函数",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "model": {
+      "key": "",
+      "value": true
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/date-picker",
+    "name": "date-picker",
+    "type": "string",
+    "classify": "basic",
+    "tag": "el-date-picker",
+    "title": "日期选择器",
+    "props": {
+      "name": {
+        "key": "name",
+        "label": "name属性",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "placeholder": {
+        "key": "placeholder",
+        "label": "占位内容",
+        "value": "选择时间",
+        "el": "input",
+        "type": "string"
+      },
+      "class": {
+        "key": "class",
+        "label": "class类名",
+        "value": "el-width_full",
+        "el": "input",
+        "type": "string"
+      },
+      "popper-class": {
+        "key": "popper-class",
+        "label": "下拉框的类名",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "size": {
+        "key": "size",
+        "label": "尺寸",
+        "value": "",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "",
+            "label": "默认"
+          },
+          {
+            "value": "medium",
+            "label": "中等"
+          },
+          {
+            "value": "small",
+            "label": "小型"
+          },
+          {
+            "value": "mini",
+            "label": "迷你"
+          }
+        ]
+      },
+      "align": {
+        "key": "align",
+        "label": "对齐方式",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "left",
+            "label": "左对齐"
+          },
+          {
+            "value": "center",
+            "label": "居中对齐"
+          },
+          {
+            "value": "right",
+            "label": "右对齐"
+          }
+        ]
+      },
+      "start-placeholder": {
+        "key": "start-placeholder",
+        "label": "开始占位内容",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "end-placeholder": {
+        "key": "end-placeholder",
+        "label": "结束占位内容",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "range-separator": {
+        "key": "range-separator",
+        "label": "分隔符",
+        "value": "-",
+        "el": "input",
+        "type": "string"
+      },
+      "readonly": {
+        "key": "readonly",
+        "label": "是否只读",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "disabled": {
+        "key": "disabled",
+        "label": "是否禁用",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "editable": {
+        "key": "editable",
+        "label": "是否可输入",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "clearable": {
+        "key": "clearable",
+        "label": "是否清除",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "unlink-panels": {
+        "key": "unlink-panels",
+        "label": "取消面板联动",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "prefix-icon": {
+        "key": "prefix-icon",
+        "label": "日期图标",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "clear-icon": {
+        "key": "clear-icon",
+        "label": "清空图标",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "type": {
+        "key": "type",
+        "label": "显示类型",
+        "value": "date",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "year",
+            "label": "year"
+          },
+          {
+            "value": "month",
+            "label": "month"
+          },
+          {
+            "value": "date",
+            "label": "date"
+          },
+          {
+            "value": "dates",
+            "label": "dates"
+          },
+          {
+            "value": "week",
+            "label": "week"
+          },
+          {
+            "value": "datetime",
+            "label": "datetime"
+          },
+          {
+            "value": "datetimerange",
+            "label": "datetimerange"
+          },
+          {
+            "value": "daterange",
+            "label": "daterange"
+          },
+          {
+            "value": "monthrange",
+            "label": "monthrange"
+          },
+          {
+            "value": "yearrange",
+            "label": "yearrange"
+          }
+        ]
+      },
+      "format": {
+        "key": "format",
+        "label": "输入框中的格式",
+        "value": "yyyy-MM-dd",
+        "el": "input",
+        "type": "string"
+      },
+      "value-format": {
+        "key": "value-format",
+        "label": "绑定值的格式",
+        "value": "yyyy-MM-dd",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "events": {
+      "change": {
+        "key": "change",
+        "label": "change",
+        "description": "用户确认选定的值时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "blur": {
+        "key": "blur",
+        "label": "blur",
+        "description": "在 Input 失去焦点时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "focus": {
+        "key": "focus",
+        "label": "focus",
+        "description": "在 Input 获得焦点时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "model": {
+      "key": "",
+      "value": ""
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/time-picker",
+    "name": "time-picker",
+    "type": "string",
+    "classify": "basic",
+    "tag": "el-time-picker",
+    "title": "时间区间选择器",
+    "props": {
+      "name": {
+        "key": "name",
+        "label": "name属性",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "class": {
+        "key": "class",
+        "label": "class类名",
+        "value": "el-width_full",
+        "el": "input",
+        "type": "string"
+      },
+      "popper-class": {
+        "key": "popper-class",
+        "label": "下拉框的类名",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "size": {
+        "key": "size",
+        "label": "尺寸",
+        "value": "",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "",
+            "label": "默认"
+          },
+          {
+            "value": "medium",
+            "label": "中等"
+          },
+          {
+            "value": "small",
+            "label": "小型"
+          },
+          {
+            "value": "mini",
+            "label": "迷你"
+          }
+        ]
+      },
+      "align": {
+        "key": "align",
+        "label": "对齐方式",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "left",
+            "label": "左对齐"
+          },
+          {
+            "value": "center",
+            "label": "居中对齐"
+          },
+          {
+            "value": "right",
+            "label": "右对齐"
+          }
+        ]
+      },
+      "is-range": {
+        "key": "is-range",
+        "label": "区间选择",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "value-format": {
+        "key": "value-format",
+        "label": "绑定格式",
+        "value": "HH:mm:ss",
+        "el": "input",
+        "type": "string"
+      },
+      "placeholder": {
+        "key": "placeholder",
+        "label": "占位内容",
+        "value": "选择时间",
+        "el": "input",
+        "type": "string"
+      },
+      "start-placeholder": {
+        "key": "start-placeholder",
+        "label": "开始占位内容",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "end-placeholder": {
+        "key": "end-placeholder",
+        "label": "结束占位内容",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "range-separator": {
+        "key": "range-separator",
+        "label": "分隔符",
+        "value": "-",
+        "el": "input",
+        "type": "string"
+      },
+      "readonly": {
+        "key": "readonly",
+        "label": "是否只读",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "disabled": {
+        "key": "disabled",
+        "label": "是否禁用",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "clearable": {
+        "key": "clearable",
+        "label": "是否清除",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "arrow-control": {
+        "key": "arrow-control",
+        "label": "是否箭头选择",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "prefix-icon": {
+        "key": "prefix-icon",
+        "label": "时间图标",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "clear-icon": {
+        "key": "clear-icon",
+        "label": "清空图标",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "events": {
+      "change": {
+        "key": "change",
+        "label": "change",
+        "description": "用户确认选定的值时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "blur": {
+        "key": "blur",
+        "label": "blur",
+        "description": "在 Input 失去焦点时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "focus": {
+        "key": "focus",
+        "label": "focus",
+        "description": "在 Input 获得焦点时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "model": {
+      "key": "",
+      "value": ""
+    },
+    "datas": {
+      "pickerOptions": {
+        "key": "pickerOptions",
+        "label": "时间配置",
+        "value": {
+          "selectableRange": []
+        }
+      }
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/time-picker",
+    "name": "time-picker",
+    "type": "string",
+    "classify": "basic",
+    "tag": "el-time-select",
+    "title": "时间选择器",
+    "props": {
+      "name": {
+        "key": "name",
+        "label": "name属性",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "placeholder": {
+        "key": "placeholder",
+        "label": "占位内容",
+        "value": "选择时间",
+        "el": "input",
+        "type": "string"
+      },
+      "class": {
+        "key": "class",
+        "label": "class类名",
+        "value": "el-width_full",
+        "el": "input",
+        "type": "string"
+      },
+      "popper-class": {
+        "key": "popper-class",
+        "label": "下拉框的类名",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "size": {
+        "key": "size",
+        "label": "尺寸",
+        "value": "",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "",
+            "label": "默认"
+          },
+          {
+            "value": "medium",
+            "label": "中等"
+          },
+          {
+            "value": "small",
+            "label": "小型"
+          },
+          {
+            "value": "mini",
+            "label": "迷你"
+          }
+        ]
+      },
+      "align": {
+        "key": "align",
+        "label": "对齐方式",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "left",
+            "label": "左对齐"
+          },
+          {
+            "value": "center",
+            "label": "居中对齐"
+          },
+          {
+            "value": "right",
+            "label": "右对齐"
+          }
+        ]
+      },
+      "readonly": {
+        "key": "readonly",
+        "label": "是否只读",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "disabled": {
+        "key": "disabled",
+        "label": "是否禁用",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "clearable": {
+        "key": "clearable",
+        "label": "是否清除",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "prefix-icon": {
+        "key": "prefix-icon",
+        "label": "头部图标",
+        "value": "",
+        "el": "select",
+        "type": "input"
+      },
+      "clear-icon": {
+        "key": "clearIcon",
+        "label": "清空图标",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "events": {
+      "change": {
+        "key": "change",
+        "label": "change",
+        "description": "用户确认选定的值时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "blur": {
+        "key": "blur",
+        "label": "blur",
+        "description": "在 Input 失去焦点时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "focus": {
+        "key": "focus",
+        "label": "focus",
+        "description": "在 Input 获得焦点时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "model": {
+      "key": "",
+      "value": ""
+    },
+    "datas": {
+      "pickerOptions": {
+        "key": "pickerOptions",
+        "label": "时间配置",
+        "value": {}
+      }
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/slider",
+    "name": "slider",
+    "type": "string",
+    "classify": "basic",
+    "tag": "el-slider",
+    "title": "滑块",
+    "props": {
+      "tooltip-effect": {
+        "key": "tooltip-effect",
+        "label": "Tooltip主题",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "dark",
+            "label": "暗色"
+          },
+          {
+            "value": "light",
+            "label": "亮色"
+          }
+        ]
+      },
+      "class": {
+        "key": "class",
+        "label": "class类名",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "show-tooltip": {
+        "key": "show-tooltip",
+        "label": "是否显示tooltip",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "tooltip-class": {
+        "key": "tooltip-class",
+        "label": "自定义类名",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "disabled": {
+        "key": "disabled",
+        "label": "是否禁用",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "show-input": {
+        "key": "show-input",
+        "label": "带有输入框",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "show-input-controls": {
+        "key": "show-input-controls",
+        "label": "显示控制按钮",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "input-size": {
+        "key": "input-size",
+        "label": "输入框的尺寸",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "medium",
+            "label": "中等"
+          },
+          {
+            "value": "small",
+            "label": "小型"
+          },
+          {
+            "value": "mini",
+            "label": "迷你"
+          }
+        ]
+      },
+      "show-stops": {
+        "key": "show-stops",
+        "label": "是否显示间断点",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "vertical": {
+        "key": "vertical",
+        "label": "是否竖向模式",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "range": {
+        "key": "range",
+        "label": "是否为范围选择",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "step": {
+        "key": "step",
+        "label": "步长",
+        "value": 1,
+        "el": "number",
+        "type": "number",
+        "min": 1
+      },
+      "height": {
+        "key": "height",
+        "label": "高度",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "events": {
+      "change": {
+        "key": "change",
+        "label": "change",
+        "description": "值改变时触发（使用鼠标拖曳时，只在松开鼠标后触发）",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "input": {
+        "key": "input",
+        "label": "input",
+        "description": "数据改变时触发（使用鼠标拖曳时，活动过程实时触发）",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "model": {
+      "key": "",
+      "value": null
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/rate",
+    "name": "rate",
+    "type": "string",
+    "classify": "basic",
+    "tag": "el-rate",
+    "title": "评分",
+    "props": {
+      "show-text": {
+        "key": "show-text",
+        "label": "是否辅助文字",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "disabled": {
+        "key": "disabled",
+        "label": "是否禁用",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "show-score": {
+        "key": "show-score",
+        "label": "是否显示分数",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "allow-half": {
+        "key": "allow-half",
+        "label": "是否允许半选",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "text-color": {
+        "key": "text-color",
+        "label": "文字的颜色",
+        "value": null,
+        "el": "color",
+        "type": "string"
+      },
+      "void-color": {
+        "key": "void-color",
+        "label": "未选中颜色",
+        "value": null,
+        "el": "color",
+        "type": "string"
+      },
+      "max": {
+        "key": "max",
+        "label": "最大分值",
+        "value": 5,
+        "el": "number",
+        "type": "number",
+        "min": null
+      }
+    },
+    "events": {
+      "change": {
+        "key": "change",
+        "label": "change",
+        "description": "分值改变时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "model": {
+      "key": "",
+      "value": 0
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/color-picker",
+    "name": "color-picker",
+    "type": "string",
+    "classify": "basic",
+    "tag": "el-color-picker",
+    "title": "取色器",
+    "props": {
+      "disabled": {
+        "key": "disabled",
+        "label": "是否禁用",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "size": {
+        "key": "size",
+        "label": "尺寸",
+        "value": "",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "",
+            "label": "默认"
+          },
+          {
+            "value": "medium",
+            "label": "中等"
+          },
+          {
+            "value": "small",
+            "label": "小型"
+          },
+          {
+            "value": "mini",
+            "label": "迷你"
+          }
+        ]
+      },
+      "show-alpha": {
+        "key": "show-alpha",
+        "label": "支持透明度",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "popper-class": {
+        "key": "popper-class",
+        "label": "下拉框的类名",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "color-format": {
+        "key": "color-format",
+        "label": "颜色格式",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "hex",
+            "label": "HEX"
+          },
+          {
+            "value": "hsl",
+            "label": "HSL"
+          },
+          {
+            "value": "hsv",
+            "label": "HSV"
+          },
+          {
+            "value": "rgb",
+            "label": "RGB"
+          }
+        ]
+      },
+      "append-to-body": {
+        "key": "append-to-body",
+        "label": "插入至body",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      }
+    },
+    "events": {
+      "change": {
+        "key": "change",
+        "label": "change",
+        "description": "当绑定值变化时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "active-change": {
+        "key": "active-change",
+        "label": "active-change",
+        "description": "面板中当前显示的颜色发生改变时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "model": {
+      "key": "",
+      "value": ""
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/transfer",
+    "name": "transfer",
+    "type": "object",
+    "classify": "basic",
+    "tag": "el-transfer",
+    "title": "穿梭框",
+    "props": {
+      "filterable": {
+        "key": "filterable",
+        "label": "是否筛选",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "filter-placeholder": {
+        "key": "filter-placeholder",
+        "label": "搜索框占位符",
+        "value": "请输入搜索内容",
+        "el": "input",
+        "type": "string"
+      },
+      "target-order": {
+        "key": "target-order",
+        "label": "右侧排序策略",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "original",
+            "label": "同数据源"
+          },
+          {
+            "value": "push",
+            "label": "新加在后"
+          },
+          {
+            "value": "unshift",
+            "label": "新加在前"
+          }
+        ]
+      }
+    },
+    "slots": [
+      {
+        "tag": "div",
+        "type": "array",
+        "props": {
+          "slot": {
+            "key": "slot",
+            "label": "左侧插槽",
+            "value": "left-footer"
+          }
+        },
+        "children": []
+      },
+      {
+        "tag": "div",
+        "type": "array",
+        "props": {
+          "slot": {
+            "key": "slot",
+            "label": "右侧插槽",
+            "value": "right-footer"
+          }
+        },
+        "children": []
+      }
+    ],
+    "events": {
+      "change": {
+        "key": "change",
+        "label": "change",
+        "description": "右侧列表元素变化时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "left-check-change": {
+        "key": "left-check-change",
+        "label": "left-check-change",
+        "description": "左侧列表元素被用户选中 / 取消选中时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "right-check-change": {
+        "key": "right-check-change",
+        "label": "right-check-change",
+        "description": "右侧列表元素被用户选中 / 取消选中时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "model": {
+      "key": "",
+      "value": []
+    },
+    "datas": {
+      "data": {
+        "key": "data",
+        "label": "数据",
+        "value": []
+      },
+      "props": {
+        "key": "props",
+        "label": "属性别名",
+        "value": {}
+      }
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/form",
+    "name": "form",
+    "type": "object",
+    "classify": "basic",
+    "tag": "el-form",
+    "title": "表单",
+    "props": {
+      "size": {
+        "key": "size",
+        "label": "尺寸",
+        "value": "",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "",
+            "label": "默认"
+          },
+          {
+            "value": "medium",
+            "label": "中等"
+          },
+          {
+            "value": "small",
+            "label": "小型"
+          },
+          {
+            "value": "mini",
+            "label": "迷你"
+          }
+        ]
+      },
+      "disabled": {
+        "key": "disabled",
+        "label": "是否禁用",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "inline": {
+        "key": "inline",
+        "label": "行内表单",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "grid": {
+        "key": "grid",
+        "label": "栅格表单",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "gutter": {
+        "key": "gutter",
+        "label": "栅格间距",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": 0
+      },
+      "label-position": {
+        "key": "label-position",
+        "label": "对齐方式",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "left",
+            "label": "左对齐"
+          },
+          {
+            "value": "right",
+            "label": "右对齐"
+          },
+          {
+            "value": "top",
+            "label": "顶对齐"
+          }
+        ]
+      },
+      "label-width": {
+        "key": "label-width",
+        "label": "文本宽度",
+        "value": "auto",
+        "el": "input",
+        "type": "string"
+      },
+      "label-max-width": {
+        "key": "label-max-width",
+        "label": "文本最大宽度",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "label-suffix": {
+        "key": "label-suffix",
+        "label": "标签后缀",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "hide-required-asterisk": {
+        "key": "hide-required-asterisk",
+        "label": "显示红色星号",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "show-message": {
+        "key": "show-message",
+        "label": "显示错误信息",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "inline-message": {
+        "key": "inline-message",
+        "label": "行内展示校验",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "validate-on-rule-change": {
+        "key": "validate-on-rule-change",
+        "label": "立即触发验证",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "block-message": {
+        "key": "block-message",
+        "label": "块级展示校验",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "status-icon": {
+        "key": "statusIcon",
+        "label": "显示反馈图标",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      }
+    },
+    "children": [
+      {
+        "tag": "el-form-item",
+        "type": "array",
+        "props": {
+          "span": {
+            "key": "span",
+            "label": "栅格数",
+            "value": 12,
+            "el": "number",
+            "type": "number",
+            "max": 24,
+            "min": 1
+          },
+          "prop": {
+            "key": "prop",
+            "label": "prop",
+            "value": null,
+            "el": "input",
+            "type": "string"
+          },
+          "label": {
+            "key": "label",
+            "label": "文本",
+            "value": "aaa：",
+            "el": "input",
+            "type": "string"
+          },
+          "required": {
+            "key": "required",
+            "label": "是否必填",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          }
+        },
+        "children": []
+      },
+      {
+        "tag": "el-form-item",
+        "type": "array",
+        "props": {
+          "span": {
+            "key": "span",
+            "label": "栅格数",
+            "value": 12,
+            "el": "number",
+            "type": "number",
+            "max": 24,
+            "min": 1
+          },
+          "prop": {
+            "key": "prop",
+            "label": "prop",
+            "value": null,
+            "el": "input",
+            "type": "string"
+          },
+          "label": {
+            "key": "label",
+            "label": "文本",
+            "value": "bbb：",
+            "el": "input",
+            "type": "string"
+          },
+          "required": {
+            "key": "required",
+            "label": "是否必填",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          }
+        },
+        "children": []
+      }
+    ],
+    "events": {
+      "validate": {
+        "key": "validate",
+        "label": "validate",
+        "description": "任一表单项被校验后触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "model": {
+      "key": "",
+      "value": {}
+    },
+    "datas": {
+      "rules": {
+        "key": "rules",
+        "label": "表单验证",
+        "value": {}
+      }
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/table",
+    "name": "table",
+    "type": "object",
+    "classify": "data",
+    "tag": "el-table",
+    "title": "表格",
+    "props": {
+      "name": {
+        "key": "name",
+        "label": "name属性",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "height": {
+        "key": "height",
+        "label": "表格高度",
+        "value": "300px",
+        "el": "input",
+        "type": "string"
+      },
+      "max-height": {
+        "key": "max-height",
+        "label": "最大高度",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "border": {
+        "key": "border",
+        "label": "是否有边框",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "stripe": {
+        "key": "stripe",
+        "label": "是否为斑马纹",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "isdrag": {
+        "key": "isdrag",
+        "label": "是否可拖拽列宽",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "show-header": {
+        "key": "show-header",
+        "label": "显示表头",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "card": {
+        "key": "card",
+        "label": "是否为卡片",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "tooltip-effect": {
+        "key": "tooltip-effect",
+        "label": "对齐方式",
+        "value": "",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "dark",
+            "label": "暗模式"
+          },
+          {
+            "value": "light",
+            "label": "亮模式"
+          }
+        ]
+      },
+      "show-summary": {
+        "key": "show-summary",
+        "label": "是否合计行",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "sum-text": {
+        "key": "sum-text",
+        "label": "合计行文本",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "fit": {
+        "key": "fit",
+        "label": "列宽是否撑开",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "default-expand-all": {
+        "key": "default-expand-all",
+        "label": "展开所有行",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "highlight-current-row": {
+        "key": "highlight-current-row",
+        "label": "高亮当前行",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "no-hover": {
+        "key": "no-hover",
+        "label": "关闭滑过高亮",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "empty-text": {
+        "key": "empty-text",
+        "label": "空数据文本",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "children": [
+      {
+        "tag": "el-table-column",
+        "type": "string",
+        "props": {
+          "prop": {
+            "key": "prop",
+            "label": "列prop值",
+            "value": "date",
+            "el": "input",
+            "type": "string"
+          },
+          "label": {
+            "key": "label",
+            "label": "列名称",
+            "value": "日期",
+            "el": "input",
+            "type": "string"
+          },
+          "width": {
+            "key": "width",
+            "label": "列宽",
+            "value": "180px",
+            "el": "input",
+            "type": "string"
+          },
+          "class-name": {
+            "key": "class-name",
+            "label": "列的类名",
+            "value": null,
+            "el": "input",
+            "type": "string"
+          },
+          "label-class-name": {
+            "key": "label-class-name",
+            "label": "列头的类名",
+            "value": null,
+            "el": "input",
+            "type": "string"
+          },
+          "sortable": {
+            "key": "sortable",
+            "label": "排序",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": false,
+                "label": "不排序"
+              },
+              {
+                "value": true,
+                "label": "默认排序"
+              },
+              {
+                "value": "custom",
+                "label": "自定义排序"
+              }
+            ]
+          },
+          "show-overflow-tooltip": {
+            "key": "show-overflow-tooltip",
+            "label": "显示tooltip",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "resizable": {
+            "key": "resizable",
+            "label": "改变宽度",
+            "value": true,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "type": {
+            "key": "type",
+            "label": "列类型",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": null,
+                "label": "默认"
+              },
+              {
+                "value": "selection",
+                "label": "复选"
+              },
+              {
+                "value": "index",
+                "label": "序号"
+              },
+              {
+                "value": "expand",
+                "label": "可展开"
+              }
+            ]
+          },
+          "fixed": {
+            "key": "fixed",
+            "label": "固定列",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": false,
+                "label": "不固定"
+              },
+              {
+                "value": "left",
+                "label": "左侧"
+              },
+              {
+                "value": "right",
+                "label": "右侧"
+              }
+            ]
+          },
+          "align": {
+            "key": "align",
+            "label": "对齐方式",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": "left",
+                "label": "左对齐"
+              },
+              {
+                "value": "center",
+                "label": "居中"
+              },
+              {
+                "value": "right",
+                "label": "右对齐"
+              }
+            ]
+          },
+          "header-align": {
+            "key": "header-align",
+            "label": "头部对齐方式",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": "left",
+                "label": "左对齐"
+              },
+              {
+                "value": "center",
+                "label": "居中"
+              },
+              {
+                "value": "right",
+                "label": "右对齐"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "tag": "el-table-column",
+        "type": "string",
+        "props": {
+          "prop": {
+            "key": "prop",
+            "label": "列prop值",
+            "value": "name",
+            "el": "input",
+            "type": "string"
+          },
+          "label": {
+            "key": "label",
+            "label": "列名称",
+            "value": "姓名",
+            "el": "input",
+            "type": "string"
+          },
+          "width": {
+            "key": "width",
+            "label": "列宽",
+            "value": "300px",
+            "el": "input",
+            "type": "string"
+          },
+          "class-name": {
+            "key": "class-name",
+            "label": "列的类名",
+            "value": null,
+            "el": "input",
+            "type": "string"
+          },
+          "label-class-name": {
+            "key": "label-class-name",
+            "label": "列头的类名",
+            "value": null,
+            "el": "input",
+            "type": "string"
+          },
+          "sortable": {
+            "key": "sortable",
+            "label": "排序",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": false,
+                "label": "不排序"
+              },
+              {
+                "value": true,
+                "label": "默认排序"
+              },
+              {
+                "value": "custom",
+                "label": "自定义排序"
+              }
+            ]
+          },
+          "show-overflow-tooltip": {
+            "key": "show-overflow-tooltip",
+            "label": "显示tooltip",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "resizable": {
+            "key": "resizable",
+            "label": "改变宽度",
+            "value": true,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "type": {
+            "key": "type",
+            "label": "列类型",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": null,
+                "label": "默认"
+              },
+              {
+                "value": "selection",
+                "label": "复选"
+              },
+              {
+                "value": "index",
+                "label": "序号"
+              },
+              {
+                "value": "expand",
+                "label": "可展开"
+              }
+            ]
+          },
+          "fixed": {
+            "key": "fixed",
+            "label": "固定列",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": false,
+                "label": "不固定"
+              },
+              {
+                "value": "left",
+                "label": "左侧"
+              },
+              {
+                "value": "right",
+                "label": "右侧"
+              }
+            ]
+          },
+          "align": {
+            "key": "align",
+            "label": "对齐方式",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": "left",
+                "label": "左对齐"
+              },
+              {
+                "value": "center",
+                "label": "居中"
+              },
+              {
+                "value": "right",
+                "label": "右对齐"
+              }
+            ]
+          },
+          "header-align": {
+            "key": "header-align",
+            "label": "头部对齐方式",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": "left",
+                "label": "左对齐"
+              },
+              {
+                "value": "center",
+                "label": "居中"
+              },
+              {
+                "value": "right",
+                "label": "右对齐"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "tag": "el-table-column",
+        "type": "string",
+        "props": {
+          "prop": {
+            "key": "prop",
+            "label": "列prop值",
+            "value": "address",
+            "el": "input",
+            "type": "string"
+          },
+          "label": {
+            "key": "label",
+            "label": "列名称",
+            "value": "地址",
+            "el": "input",
+            "type": "string"
+          },
+          "width": {
+            "key": "width",
+            "label": "列宽",
+            "value": "400px",
+            "el": "input",
+            "type": "string"
+          },
+          "class-name": {
+            "key": "class-name",
+            "label": "列的类名",
+            "value": null,
+            "el": "input",
+            "type": "string"
+          },
+          "label-class-name": {
+            "key": "label-class-name",
+            "label": "列头的类名",
+            "value": null,
+            "el": "input",
+            "type": "string"
+          },
+          "sortable": {
+            "key": "sortable",
+            "label": "排序",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": false,
+                "label": "不排序"
+              },
+              {
+                "value": true,
+                "label": "默认排序"
+              },
+              {
+                "value": "custom",
+                "label": "自定义排序"
+              }
+            ]
+          },
+          "show-overflow-tooltip": {
+            "key": "show-overflow-tooltip",
+            "label": "显示tooltip",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "resizable": {
+            "key": "resizable",
+            "label": "改变宽度",
+            "value": true,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "type": {
+            "key": "type",
+            "label": "列类型",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": null,
+                "label": "默认"
+              },
+              {
+                "value": "selection",
+                "label": "复选"
+              },
+              {
+                "value": "index",
+                "label": "序号"
+              },
+              {
+                "value": "expand",
+                "label": "可展开"
+              }
+            ]
+          },
+          "fixed": {
+            "key": "fixed",
+            "label": "固定列",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": false,
+                "label": "不固定"
+              },
+              {
+                "value": "left",
+                "label": "左侧"
+              },
+              {
+                "value": "right",
+                "label": "右侧"
+              }
+            ]
+          },
+          "align": {
+            "key": "align",
+            "label": "对齐方式",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": "left",
+                "label": "左对齐"
+              },
+              {
+                "value": "center",
+                "label": "居中"
+              },
+              {
+                "value": "right",
+                "label": "右对齐"
+              }
+            ]
+          },
+          "header-align": {
+            "key": "header-align",
+            "label": "头部对齐方式",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": "left",
+                "label": "左对齐"
+              },
+              {
+                "value": "center",
+                "label": "居中"
+              },
+              {
+                "value": "right",
+                "label": "右对齐"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "events": {
+      "select": {
+        "key": "select",
+        "label": "select",
+        "description": "手动勾选数据行的 Checkbox 时触发的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "select-all": {
+        "key": "select-all",
+        "label": "select-all",
+        "description": "手动勾选全选 Checkbox 时触发的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "selection-change": {
+        "key": "selection-change",
+        "label": "selection-change",
+        "description": "选择项发生变化时会触发该事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "cell-mouse-enter": {
+        "key": "cell-mouse-enter",
+        "label": "cell-mouse-enter",
+        "description": "单元格 hover 进入时会触发该事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "cell-mouse-leave": {
+        "key": "cell-mouse-leave",
+        "label": "cell-mouse-leave",
+        "description": "单元格 hover 退出时会触发该事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "cell-click": {
+        "key": "cell-click",
+        "label": "cell-click",
+        "description": "某个单元格被点击时会触发该事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "cell-dblclick": {
+        "key": "cell-dblclick",
+        "label": "cell-dblclick",
+        "description": "某个单元格被双击击时会触发该事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "row-click": {
+        "key": "row-click",
+        "label": "row-click",
+        "description": "某一行被点击时会触发该事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "row-contextmenu": {
+        "key": "row-contextmenu",
+        "label": "row-contextmenu",
+        "description": "某一行被鼠标右键点击时会触发该事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "row-dblclick": {
+        "key": "row-dblclick",
+        "label": "row-dblclick",
+        "description": "某一行被双击时会触发该事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "header-click": {
+        "key": "header-click",
+        "label": "header-click",
+        "description": "某一列的表头被点击时会触发该事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "header-contextmenu": {
+        "key": "header-contextmenu",
+        "label": "header-contextmenu",
+        "description": "某一列的表头被鼠标右键点击时触发该事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "sort-change": {
+        "key": "sort-change",
+        "label": "sort-change",
+        "description": "表格的排序条件发生变化的时候会触发该事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "filter-change": {
+        "key": "filter-change",
+        "label": "filter-change",
+        "description": "表格的筛选条件发生变化的时候会触发该事件，参数的值是一个对象，对象的 key 是 column 的 columnKey，对应的 value 为用户选择的筛选条件的数组。",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "current-change": {
+        "key": "current-change",
+        "label": "current-change",
+        "description": "表格的当前行发生变化的时候会触发该事件，如果要高亮当前行，请打开表格的 highlight-current-row 属性",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "header-dragend": {
+        "key": "header-dragend",
+        "label": "header-dragend",
+        "description": "拖动表头改变了列的宽度的时候会触发该事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "expand-change": {
+        "key": "expand-change",
+        "label": "expand-change",
+        "description": "用户对某一行展开或者关闭的时候会触发该事件（展开行时，回调的第二个参数为 expandedRows；树形表格时第二参数为 expanded）",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "table-scroll": {
+        "key": "table-scroll",
+        "label": "table-scroll",
+        "description": "表格滚动时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "datas": {
+      "data": {
+        "key": "data",
+        "label": "表格数据",
+        "value": []
+      }
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/pagination",
+    "name": "pagination",
+    "type": "string",
+    "classify": "data",
+    "tag": "el-pagination",
+    "title": "分页器",
+    "props": {
+      "current-page": {
+        "key": "current-page",
+        "label": "当前页面",
+        "value": 1,
+        "el": "number",
+        "type": "number",
+        "min": 1
+      },
+      "align": {
+        "key": "align",
+        "label": "对齐方式",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "left",
+            "label": "左对齐"
+          },
+          {
+            "value": "center",
+            "label": "居中对齐"
+          },
+          {
+            "value": "right",
+            "label": "右对齐"
+          }
+        ]
+      },
+      "disabled": {
+        "key": "disabled",
+        "label": "是否禁用",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "hide-on-single-page": {
+        "key": "hide-on-single-page",
+        "label": "一页是否隐藏",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "small": {
+        "key": "small",
+        "label": "小型分页",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "background": {
+        "key": "background",
+        "label": "是否加背景色",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "page-size": {
+        "key": "page-size",
+        "label": "每页显示个数",
+        "value": 10,
+        "el": "number",
+        "type": "number",
+        "min": 1
+      },
+      "pager-count": {
+        "key": "pager-count",
+        "label": "页码按钮的数量",
+        "value": 7,
+        "el": "number",
+        "type": "number",
+        "min": 5,
+        "max": 21,
+        "step": 2
+      },
+      "total": {
+        "key": "total",
+        "label": "总条目数",
+        "value": 100,
+        "el": "number",
+        "type": "number",
+        "min": 1
+      },
+      "layout": {
+        "key": "layout",
+        "label": "组件布局",
+        "value": "total,sizes,prev,pager,next,jumper",
+        "el": "input",
+        "type": "string"
+      },
+      "prev-text": {
+        "key": "prev-text",
+        "label": "上一页文字",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "next-text": {
+        "key": "next-text",
+        "label": "下一页文字",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "events": {
+      "size-change": {
+        "key": "size-change",
+        "label": "size-change",
+        "description": "pageSize 改变时会触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "current-change": {
+        "key": "current-change",
+        "label": "current-change",
+        "description": "currentPage 改变时会触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "prev-click": {
+        "key": "prev-click",
+        "label": "prev-click",
+        "description": "用户点击上一页按钮改变当前页后触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "next-click": {
+        "key": "next-click",
+        "label": "next-click",
+        "description": "用户点击下一页按钮改变当前页后触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "datas": {
+      "pageSizes": {
+        "key": "pageSizes",
+        "label": "每页显示",
+        "value": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          100
+        ]
+      }
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/tree",
+    "name": "tree",
+    "type": "string",
+    "classify": "data",
+    "tag": "el-tree",
+    "title": "树组件",
+    "props": {
+      "empty-text": {
+        "key": "empty-text",
+        "label": "空文本提示",
+        "value": "暂无数据",
+        "el": "input",
+        "type": "string"
+      },
+      "render-after-expand": {
+        "key": "render-after-expand",
+        "label": "展开后渲染子",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "highlight-current": {
+        "key": "highlight-current",
+        "label": "高亮选中节点",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "default-expand-all": {
+        "key": "default-expand-all",
+        "label": "默认展开所有节点",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "expand-on-click-node": {
+        "key": "expand-on-click-node",
+        "label": "点击节点展开或收缩",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "auto-expand-parent": {
+        "key": "auto-expand-parent",
+        "label": "展开子自动展开父",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "show-checkbox": {
+        "key": "show-checkbox",
+        "label": "显示复选",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "check-strictly": {
+        "key": "check-strictly",
+        "label": "严格的遵循父子",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "accordion": {
+        "key": "accordion",
+        "label": "同级树只展开一节点",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "lazy": {
+        "key": "lazy",
+        "label": "懒加载",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "draggable": {
+        "key": "draggable",
+        "label": "拖拽节点",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "indent": {
+        "key": "indent",
+        "label": "水平缩进",
+        "value": 15,
+        "el": "number",
+        "type": "number",
+        "min": 10
+      },
+      "icon-class": {
+        "key": "icon-class",
+        "label": "收起图标",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "expand-icon-class": {
+        "key": "expand-icon-class",
+        "label": "展开图标",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "events": {
+      "node-click": {
+        "key": "node-click",
+        "label": "node-click",
+        "description": "节点被点击时的回调",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "node-dblclick": {
+        "key": "node-dblclick",
+        "label": "node-dblclick",
+        "description": "节点被双击时的回调",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "node-contextmenu": {
+        "key": "node-contextmenu",
+        "label": "node-contextmenu",
+        "description": "当某一节点被鼠标右键点击时会触发该事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "check-change": {
+        "key": "check-change",
+        "label": "check-change",
+        "description": "节点选中状态发生变化时的回调",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "check": {
+        "key": "check",
+        "label": "check",
+        "description": "当复选框被点击的时候触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "current-change": {
+        "key": "current-change",
+        "label": "current-change",
+        "description": "当前选中节点变化时触发的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "node-expand": {
+        "key": "node-expand",
+        "label": "node-expand",
+        "description": "节点被展开时触发的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "node-collapse": {
+        "key": "node-collapse",
+        "label": "node-collapse",
+        "description": "节点被关闭时触发的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "node-drag-start": {
+        "key": "node-drag-start",
+        "label": "node-drag-start",
+        "description": "节点开始拖拽时触发的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "node-drag-enter": {
+        "key": "node-drag-enter",
+        "label": "node-drag-enter",
+        "description": "拖拽进入其他节点时触发的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "node-drag-leave": {
+        "key": "node-drag-leave",
+        "label": "node-drag-leave",
+        "description": "拖拽离开某个节点时触发的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "node-drag-over": {
+        "key": "node-drag-over",
+        "label": "node-drag-over",
+        "description": "在拖拽节点时触发的事件（类似浏览器的 mouseover 事件）",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "node-drag-end": {
+        "key": "node-drag-end",
+        "label": "node-drag-end",
+        "description": "拖拽结束时（可能未成功）触发的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "node-drop": {
+        "key": "node-drop",
+        "label": "node-drop",
+        "description": "拖拽成功完成时触发的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "datas": {
+      "data": {
+        "key": "data",
+        "label": "树型数据",
+        "value": []
+      },
+      "props": {
+        "key": "props",
+        "label": "树型设置",
+        "value": {
+          "children": "children",
+          "label": "label"
+        }
+      }
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/progress",
+    "name": "progress",
+    "type": "string",
+    "classify": "data",
+    "tag": "el-progress",
+    "title": "进度条",
+    "props": {
+      "percentage": {
+        "key": "percentage",
+        "label": "百分比",
+        "value": 0,
+        "el": "number",
+        "type": "number",
+        "min": 0,
+        "max": 100
+      },
+      "type": {
+        "key": "type",
+        "label": "链接类型",
+        "value": "line",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "line",
+            "label": "线性"
+          },
+          {
+            "value": "circle",
+            "label": "圆形"
+          },
+          {
+            "value": "dashboard",
+            "label": "仪表盘"
+          }
+        ]
+      },
+      "stroke-linecap": {
+        "key": "stroke-linecap",
+        "label": "两端的形状",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "butt",
+            "label": "平形"
+          },
+          {
+            "value": "round",
+            "label": "圆形"
+          },
+          {
+            "value": "square",
+            "label": "方块"
+          }
+        ]
+      },
+      "status": {
+        "key": "status",
+        "label": "状态",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "default",
+            "label": "默认"
+          },
+          {
+            "value": "success",
+            "label": "成功"
+          },
+          {
+            "value": "exception",
+            "label": "例外"
+          },
+          {
+            "value": "warning",
+            "label": "警告"
+          }
+        ]
+      },
+      "active": {
+        "key": "active",
+        "label": "进度条动效",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "text-inside": {
+        "key": "text-inside",
+        "label": "文字内置",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "show-text": {
+        "key": "show-text",
+        "label": "显示进度条文字",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "stroke-width": {
+        "key": "stroke-width",
+        "label": "进度条的宽度",
+        "value": 10,
+        "el": "number",
+        "type": "number",
+        "min": 10
+      },
+      "color": {
+        "key": "color",
+        "label": "进度条背景色",
+        "value": "",
+        "el": "color",
+        "type": "string"
+      }
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/badge",
+    "name": "badge",
+    "type": "array",
+    "classify": "data",
+    "tag": "el-badge",
+    "title": "标记",
+    "props": {
+      "type": {
+        "key": "type",
+        "label": "标记类型",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "primary",
+            "label": "重要"
+          },
+          {
+            "value": "success",
+            "label": "成功"
+          },
+          {
+            "value": "warning",
+            "label": "警告"
+          },
+          {
+            "value": "danger",
+            "label": "危险"
+          },
+          {
+            "value": "info",
+            "label": "提示"
+          }
+        ]
+      },
+      "value": {
+        "key": "value",
+        "label": "显示值",
+        "value": "2",
+        "el": "input",
+        "type": "string"
+      },
+      "max": {
+        "key": "max",
+        "label": "最大值",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": 0
+      },
+      "is-dot": {
+        "key": "is-dot",
+        "label": "小圆点",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "hidden": {
+        "key": "hidden",
+        "label": "隐藏",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      }
+    },
+    "children": []
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/tag",
+    "name": "tag",
+    "type": "string",
+    "classify": "data",
+    "tag": "el-tag",
+    "title": "标签",
+    "props": {
+      "type": {
+        "key": "type",
+        "label": "类型",
+        "value": "",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "",
+            "label": "默认"
+          },
+          {
+            "value": "success",
+            "label": "成功"
+          },
+          {
+            "value": "warning",
+            "label": "警告"
+          },
+          {
+            "value": "danger",
+            "label": "危险"
+          },
+          {
+            "value": "info",
+            "label": "提示"
+          }
+        ]
+      },
+      "closable": {
+        "key": "closable",
+        "label": "可关闭",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "disable-transitions": {
+        "key": "disable-transitions",
+        "label": "禁用渐变动画",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "hit": {
+        "key": "hit",
+        "label": "边框描边",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "color": {
+        "key": "color",
+        "label": "文本色",
+        "value": null,
+        "el": "color",
+        "type": "string"
+      },
+      "bg-color": {
+        "key": "bg-color",
+        "label": "背景色",
+        "value": null,
+        "el": "color",
+        "type": "string"
+      },
+      "border-color": {
+        "key": "border-color",
+        "label": "边框色",
+        "value": null,
+        "el": "color",
+        "type": "string"
+      },
+      "size": {
+        "key": "size",
+        "label": "尺寸",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "medium",
+            "label": "中等"
+          },
+          {
+            "value": "small",
+            "label": "小型"
+          },
+          {
+            "value": "mini",
+            "label": "迷你"
+          }
+        ]
+      },
+      "effect": {
+        "key": "effect",
+        "label": "主题",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "dark",
+            "label": "暗色"
+          },
+          {
+            "value": "light",
+            "label": "亮色"
+          },
+          {
+            "value": "plain",
+            "label": "简约"
+          }
+        ]
+      }
+    },
+    "events": {
+      "click": {
+        "key": "click",
+        "label": "click",
+        "description": "点击 Tag 时触发的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "close": {
+        "key": "close",
+        "label": "close",
+        "description": "关闭 Tag 时触发的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "text": "标签"
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/tabs",
+    "name": "tabs",
+    "type": "object",
+    "classify": "other",
+    "tag": "el-tabs",
+    "title": "页签容器",
+    "props": {
+      "value": {
+        "key": "value",
+        "value": "a",
+        "hidden": true
+      },
+      "type": {
+        "key": "type",
+        "label": "风格类型",
+        "value": "",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "",
+            "label": "线性"
+          },
+          {
+            "value": "card",
+            "label": "选项卡"
+          },
+          {
+            "value": "border-card",
+            "label": "卡片风格"
+          }
+        ]
+      },
+      "closable": {
+        "key": "closable",
+        "label": "可以关闭",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "addable": {
+        "key": "addable",
+        "label": "是否可增加",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "editable": {
+        "key": "editable",
+        "label": "可增加关闭",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "stretch": {
+        "key": "stretch",
+        "label": "是否自撑开",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "tab-position": {
+        "key": "tab-position",
+        "label": "页签位置",
+        "value": "top",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "top",
+            "label": "顶端"
+          },
+          {
+            "value": "left",
+            "label": "左边"
+          },
+          {
+            "value": "right",
+            "label": "右边"
+          },
+          {
+            "value": "bottom",
+            "label": "底部"
+          }
+        ]
+      }
+    },
+    "children": [
+      {
+        "tag": "el-tab-pane",
+        "type": "array",
+        "props": {
+          "label": {
+            "key": "label",
+            "label": "页签文本",
+            "value": "页签a",
+            "el": "input",
+            "type": "string",
+            "only": true
+          },
+          "name": {
+            "key": "name",
+            "label": "页签名称",
+            "value": "a",
+            "el": "input",
+            "type": "string",
+            "only": true
+          },
+          "lazy": {
+            "key": "lazy",
+            "label": "延迟渲染",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "disabled": {
+            "key": "disabled",
+            "label": "是否禁用",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "closable": {
+            "key": "closable",
+            "label": "是否可关闭",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          }
+        },
+        "children": []
+      },
+      {
+        "tag": "el-tab-pane",
+        "type": "array",
+        "props": {
+          "label": {
+            "key": "label",
+            "label": "页签文本",
+            "value": "页签b",
+            "el": "input",
+            "type": "string",
+            "only": true
+          },
+          "name": {
+            "key": "name",
+            "label": "页签名称",
+            "value": "b",
+            "el": "input",
+            "type": "string",
+            "only": true
+          },
+          "lazy": {
+            "key": "lazy",
+            "label": "延迟渲染",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "disabled": {
+            "key": "disabled",
+            "label": "是否禁用",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "closable": {
+            "key": "closable",
+            "label": "是否可关闭",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          }
+        },
+        "children": []
+      }
+    ],
+    "events": {
+      "tab-click": {
+        "key": "tab-click",
+        "label": "tab-click",
+        "description": "tab 被选中时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "tab-remove": {
+        "key": "tab-remove",
+        "label": "tab-remove",
+        "description": "点击 tab 移除按钮后触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "tab-add": {
+        "key": "tab-add",
+        "label": "tab-add",
+        "description": "点击 tabs 的新增按钮后触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "edit": {
+        "key": "edit",
+        "label": "edit",
+        "description": "点击 tabs 的新增按钮或 tab 被关闭后触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "model": {
+      "key": "",
+      "value": ""
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/dialog",
+    "name": "dialog",
+    "type": "object",
+    "classify": "other",
+    "tag": "el-dialog",
+    "title": "对话框",
+    "props": {
+      "visible": {
+        "key": "visible",
+        "label": "是否显示",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "title": {
+        "key": "title",
+        "label": "标题",
+        "value": "标题",
+        "el": "input",
+        "type": "string"
+      },
+      "custom-class": {
+        "key": "custom-class",
+        "label": "自定义类名",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "width": {
+        "key": "width",
+        "label": "宽度",
+        "value": "50%",
+        "el": "input",
+        "type": "string"
+      },
+      "top": {
+        "key": "top",
+        "label": "距离顶部",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "fullscreen": {
+        "key": "fullscreen",
+        "label": "是否为全屏",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "draggable": {
+        "key": "draggable",
+        "label": "是否拖拽",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "modal": {
+        "key": "modal",
+        "label": "是否遮罩层",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "modal-append-to-body": {
+        "key": "modal-append-to-body",
+        "label": "遮罩层插入至body",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "append-to-body": {
+        "key": "append-to-body",
+        "label": "Dialog插入至body",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "lock-scroll": {
+        "key": "lock-scroll",
+        "label": "滚动锁定",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "close-on-click-modal": {
+        "key": "close-on-click-modal",
+        "label": "点击modal关闭",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "close-on-press-escape": {
+        "key": "close-on-press-escape",
+        "label": "ESC关闭",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "show-close": {
+        "key": "show-close",
+        "label": "是否显示关闭",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "center": {
+        "key": "center",
+        "label": "居中布局",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "destroy-on-close": {
+        "key": "destroy-on-close",
+        "label": "关闭时销毁",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      }
+    },
+    "slots": [
+      {
+        "tag": "div",
+        "type": "array",
+        "props": {
+          "slot": {
+            "key": "slot",
+            "label": "默认插槽",
+            "value": "default"
+          }
+        },
+        "children": []
+      },
+      {
+        "tag": "div",
+        "type": "array",
+        "props": {
+          "slot": {
+            "key": "slot",
+            "label": "底部插槽",
+            "value": "footer"
+          }
+        },
+        "children": []
+      }
+    ],
+    "events": {
+      "open": {
+        "key": "open",
+        "label": "open",
+        "description": "Dialog 打开的回调",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "opened": {
+        "key": "opened",
+        "label": "opened",
+        "description": "Dialog 打开动画结束时的回调",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "close": {
+        "key": "close",
+        "label": "close",
+        "description": "Dialog 关闭的回调",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "closed": {
+        "key": "closed",
+        "label": "closed",
+        "description": "Dialog 关闭动画结束时的回调",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/drawer",
+    "name": "drawer",
+    "type": "object",
+    "classify": "other",
+    "tag": "el-drawer",
+    "title": "抽屉",
+    "props": {
+      "visible": {
+        "key": "visible",
+        "label": "是否显示",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "title": {
+        "key": "title",
+        "label": "标题",
+        "value": "标题",
+        "el": "input",
+        "type": "string"
+      },
+      "direction": {
+        "key": "direction",
+        "label": "打开的方向",
+        "value": "rtl",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "ltr",
+            "label": "从左往右开"
+          },
+          {
+            "value": "rtl",
+            "label": "从右往左开"
+          },
+          {
+            "value": "ttb",
+            "label": "从上往下开"
+          },
+          {
+            "value": "btt",
+            "label": "从下往上开"
+          }
+        ]
+      },
+      "size": {
+        "key": "size",
+        "label": "窗体的大小",
+        "value": "30%",
+        "el": "input",
+        "type": "string"
+      },
+      "modal": {
+        "key": "modal",
+        "label": "是否遮罩层",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "modal-append-to-body": {
+        "key": "modal-append-to-body",
+        "label": "遮罩层插入至body",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "append-to-body": {
+        "key": "append-to-body",
+        "label": "Drawer插入至body",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "wrapper-closable": {
+        "key": "wrapper-closable",
+        "label": "点击modal关闭",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "close-on-press-escape": {
+        "key": "close-on-press-escape",
+        "label": "ESC关闭",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "show-close": {
+        "key": "show-close",
+        "label": "是否显示关闭",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "destroy-on-close": {
+        "key": "destroy-on-close",
+        "label": "关闭时销毁",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "with-header": {
+        "key": "with-header",
+        "label": "是否显示头部",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      }
+    },
+    "slots": [
+      {
+        "tag": "div",
+        "type": "array",
+        "props": {
+          "slot": {
+            "key": "slot",
+            "label": "默认插槽",
+            "value": "default"
+          }
+        },
+        "children": []
+      }
+    ],
+    "events": {
+      "open": {
+        "key": "open",
+        "label": "open",
+        "description": "Drawer 打开的回调",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "opened": {
+        "key": "opened",
+        "label": "opened",
+        "description": "Drawer 打开动画结束时的回调",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "close": {
+        "key": "close",
+        "label": "close",
+        "description": "Drawer 关闭的回调",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "closed": {
+        "key": "closed",
+        "label": "closed",
+        "description": "Drawer 关闭动画结束时的回调",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/carousel",
+    "name": "carousel",
+    "type": "object",
+    "classify": "other",
+    "tag": "el-carousel",
+    "title": "走马灯",
+    "props": {
+      "width": {
+        "key": "width",
+        "label": "宽度",
+        "value": "100%",
+        "el": "input",
+        "type": "string"
+      },
+      "height": {
+        "key": "height",
+        "label": "高度",
+        "value": "400px",
+        "el": "input",
+        "type": "string"
+      },
+      "class": {
+        "key": "class",
+        "label": "class类名",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "initial-index": {
+        "key": "initial-index",
+        "label": "初始索引",
+        "value": 0,
+        "el": "number",
+        "type": "number",
+        "min": 0
+      },
+      "trigger": {
+        "key": "trigger",
+        "label": "触发方式",
+        "value": "",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "",
+            "label": "划过"
+          },
+          {
+            "value": "click",
+            "label": "点击"
+          }
+        ]
+      },
+      "autoplay": {
+        "key": "autoplay",
+        "label": "自动切换",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "loop": {
+        "key": "loop",
+        "label": "循环显示",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "interval": {
+        "key": "interval",
+        "label": "间隔（毫秒）",
+        "value": 3000,
+        "el": "number",
+        "type": "number",
+        "min": 1000
+      },
+      "indicator-position": {
+        "key": "indicator-position",
+        "label": "指示器的位置",
+        "value": "",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "",
+            "label": "默认"
+          },
+          {
+            "value": "outside",
+            "label": "外侧"
+          },
+          {
+            "value": "none",
+            "label": "隐藏"
+          }
+        ]
+      },
+      "arrow": {
+        "key": "arrow",
+        "label": "箭头显示时机",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "hover",
+            "label": "滑过"
+          },
+          {
+            "value": "always",
+            "label": "始终"
+          },
+          {
+            "value": "never",
+            "label": "永不"
+          }
+        ]
+      },
+      "type": {
+        "key": "type",
+        "label": "走马灯的类型",
+        "value": "",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "",
+            "label": "默认"
+          },
+          {
+            "value": "card",
+            "label": "卡片"
+          }
+        ]
+      },
+      "direction": {
+        "key": "direction",
+        "label": "方向",
+        "value": "horizontal",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "horizontal",
+            "label": "水平"
+          },
+          {
+            "value": "vertical",
+            "label": "垂直"
+          }
+        ]
+      }
+    },
+    "children": [
+      {
+        "tag": "el-carousel-item",
+        "type": "array",
+        "props": {
+          "label": {
+            "key": "label",
+            "label": "对应指示器的文本",
+            "value": "carousel-1",
+            "el": "input",
+            "type": "string"
+          },
+          "name": {
+            "key": "name",
+            "label": "幻灯片的名字",
+            "value": "a",
+            "el": "input",
+            "type": "string"
+          },
+          "lazy": {
+            "key": "lazy",
+            "label": "延迟渲染",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          }
+        },
+        "children": []
+      },
+      {
+        "tag": "el-carousel-item",
+        "type": "array",
+        "props": {
+          "label": {
+            "key": "label",
+            "label": "对应指示器的文本",
+            "value": "carousel-2",
+            "el": "input",
+            "type": "string"
+          },
+          "name": {
+            "key": "name",
+            "label": "幻灯片的名字",
+            "value": "b",
+            "el": "input",
+            "type": "string"
+          },
+          "lazy": {
+            "key": "lazy",
+            "label": "延迟渲染",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          }
+        },
+        "children": []
+      }
+    ],
+    "events": {
+      "change": {
+        "key": "change",
+        "label": "change",
+        "description": "幻灯片切换时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/collapse",
+    "name": "collapse",
+    "type": "object",
+    "classify": "other",
+    "tag": "el-collapse",
+    "title": "折叠面板",
+    "props": {
+      "class": {
+        "key": "class",
+        "label": "class类名",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "accordion": {
+        "key": "accordion",
+        "label": "是否手风琴",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      }
+    },
+    "children": [
+      {
+        "tag": "el-collapse-item",
+        "type": "array",
+        "props": {
+          "title": {
+            "key": "title",
+            "label": "面板文本",
+            "value": "面板a",
+            "el": "input",
+            "type": "string",
+            "only": true
+          },
+          "name": {
+            "key": "name",
+            "label": "面板名称",
+            "value": "a",
+            "el": "input",
+            "type": "string",
+            "only": true
+          },
+          "disabled": {
+            "key": "disabled",
+            "label": "是否禁用",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "lazy": {
+            "key": "lazy",
+            "label": "延迟渲染",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          }
+        },
+        "children": []
+      },
+      {
+        "tag": "el-collapse-item",
+        "type": "array",
+        "props": {
+          "title": {
+            "key": "title",
+            "label": "面板文本",
+            "value": "面板b",
+            "el": "input",
+            "type": "string",
+            "only": true
+          },
+          "name": {
+            "key": "name",
+            "label": "面板名称",
+            "value": "b",
+            "el": "input",
+            "type": "string",
+            "only": true
+          },
+          "disabled": {
+            "key": "disabled",
+            "label": "是否禁用",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "lazy": {
+            "key": "lazy",
+            "label": "延迟渲染",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          }
+        },
+        "children": []
+      }
+    ],
+    "events": {
+      "change": {
+        "key": "change",
+        "label": "change",
+        "description": "当前激活面板改变时触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "model": {
+      "key": "",
+      "value": ""
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/card",
+    "name": "card",
+    "type": "object",
+    "classify": "other",
+    "tag": "el-card",
+    "title": "卡片",
+    "props": {
+      "class": {
+        "key": "class",
+        "label": "class类名",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "shadow": {
+        "key": "shadow",
+        "label": "设置阴影",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "always",
+            "label": "总是"
+          },
+          {
+            "value": "hover",
+            "label": "划过"
+          },
+          {
+            "value": "never",
+            "label": "永不"
+          }
+        ]
+      }
+    },
+    "slots": [
+      {
+        "tag": "div",
+        "type": "array",
+        "props": {
+          "slot": {
+            "key": "slot",
+            "label": "头部插槽",
+            "value": "header"
+          }
+        },
+        "children": []
+      },
+      {
+        "tag": "div",
+        "type": "array",
+        "props": {
+          "slot": {
+            "key": "slot",
+            "label": "默认插槽",
+            "value": "default"
+          }
+        },
+        "children": []
+      },
+      {
+        "tag": "div",
+        "type": "array",
+        "props": {
+          "slot": {
+            "key": "slot",
+            "label": "底部插槽",
+            "value": "footer"
+          }
+        },
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/splitpanes",
+    "name": "splitpanes",
+    "type": "object",
+    "classify": "other",
+    "tag": "el-splitpanes",
+    "title": "分割面板",
+    "props": {
+      "horizontal": {
+        "key": "horizontal",
+        "label": "纵向排布",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "push-other-panes": {
+        "key": "push-other-panes",
+        "label": "是否挤压",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "first-splitter": {
+        "key": "first-splitter",
+        "label": "第一面板加分割",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "dblclick-splitter": {
+        "key": "dblclick-splitter",
+        "label": "双击分割条面板最大化",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      }
+    },
+    "children": [
+      {
+        "tag": "el-pane",
+        "type": "array",
+        "props": {
+          "size": {
+            "key": "size",
+            "label": "初始百分比",
+            "value": 50,
+            "el": "number",
+            "type": "number",
+            "min": 0
+          },
+          "max-size": {
+            "key": "max-size",
+            "label": "最大百分比",
+            "value": 100,
+            "el": "number",
+            "type": "number",
+            "min": 0,
+            "max": 100
+          },
+          "min-size": {
+            "key": "min-size",
+            "label": "最小百分比",
+            "value": 0,
+            "el": "number",
+            "type": "number",
+            "min": 0,
+            "max": 100
+          }
+        },
+        "children": []
+      },
+      {
+        "tag": "el-pane",
+        "type": "array",
+        "props": {
+          "size": {
+            "key": "size",
+            "label": "初始百分比",
+            "value": 50,
+            "el": "number",
+            "type": "number",
+            "min": 0
+          },
+          "max-size": {
+            "key": "max-size",
+            "label": "最大百分比",
+            "value": 100,
+            "el": "number",
+            "type": "number",
+            "min": 0,
+            "max": 100
+          },
+          "min-size": {
+            "key": "min-size",
+            "label": "最小百分比",
+            "value": 0,
+            "el": "number",
+            "type": "number",
+            "min": 0,
+            "max": 100
+          }
+        },
+        "children": []
+      }
+    ],
+    "events": {
+      "ready": {
+        "key": "ready",
+        "label": "ready",
+        "description": "面板完成加载后的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "resize": {
+        "key": "resize",
+        "label": "resize",
+        "description": "面板中任何的尺寸变化过程对应触发的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "resized": {
+        "key": "resized",
+        "label": "resized",
+        "description": "面板中任何的尺寸变化完成时对应触发的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "pane-maximize": {
+        "key": "pane-maximize",
+        "label": "pane-maximize",
+        "description": "双击分割条导致面板被最大化的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "pane-click": {
+        "key": "pane-click",
+        "label": "pane-click",
+        "description": "面板非分割条部分被点击触发的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "splitter-click": {
+        "key": "splitter-click",
+        "label": "splitter-click",
+        "description": "分割条部分被点击触发的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/steps",
+    "name": "steps",
+    "type": "object",
+    "classify": "other",
+    "tag": "el-steps",
+    "title": "步骤条",
+    "props": {
+      "active": {
+        "key": "active",
+        "label": "当前步骤",
+        "value": 0,
+        "el": "number",
+        "type": "number",
+        "min": 0
+      },
+      "process-status": {
+        "key": "process-status",
+        "label": "当前步骤的状态",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "process",
+            "label": "过程中"
+          },
+          {
+            "value": "finish",
+            "label": "结束"
+          },
+          {
+            "value": "error",
+            "label": "错误"
+          },
+          {
+            "value": "success",
+            "label": "成功"
+          }
+        ]
+      },
+      "finish-status": {
+        "key": "finish-status",
+        "label": "结束步骤的状态",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "process",
+            "label": "过程中"
+          },
+          {
+            "value": "finish",
+            "label": "结束"
+          },
+          {
+            "value": "error",
+            "label": "错误"
+          },
+          {
+            "value": "success",
+            "label": "成功"
+          }
+        ]
+      },
+      "simple": {
+        "key": "simple",
+        "label": "简洁风格",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "average": {
+        "key": "average",
+        "label": "是否均分",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "direction": {
+        "key": "direction",
+        "label": "显示方向",
+        "value": "horizontal",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "horizontal",
+            "label": "横向"
+          },
+          {
+            "value": "vertical",
+            "label": "纵向"
+          }
+        ]
+      }
+    },
+    "children": [
+      {
+        "tag": "el-step",
+        "type": "array",
+        "props": {
+          "title": {
+            "key": "title",
+            "label": "标题",
+            "value": "步骤1",
+            "el": "input",
+            "type": "string"
+          },
+          "description": {
+            "key": "description",
+            "label": "描述文字",
+            "value": "步骤1描述文字",
+            "el": "textarea",
+            "type": "string"
+          },
+          "icon": {
+            "key": "icon",
+            "label": "图标",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": "iconList",
+            "clear": true
+          },
+          "status": {
+            "key": "status",
+            "label": "当前步骤的状态",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": "wait",
+                "label": "等待"
+              },
+              {
+                "value": "process",
+                "label": "过程"
+              },
+              {
+                "value": "finish",
+                "label": "结束"
+              },
+              {
+                "value": "error",
+                "label": "错误"
+              },
+              {
+                "value": "success",
+                "label": "成功"
+              }
+            ],
+            "clear": true
+          }
+        }
+      },
+      {
+        "tag": "el-step",
+        "type": "array",
+        "props": {
+          "title": {
+            "key": "title",
+            "label": "标题",
+            "value": "步骤2",
+            "el": "input",
+            "type": "string"
+          },
+          "description": {
+            "key": "description",
+            "label": "描述文字",
+            "value": "步骤2描述文字",
+            "el": "textarea",
+            "type": "string"
+          },
+          "icon": {
+            "key": "icon",
+            "label": "图标",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": "iconList",
+            "clear": true
+          },
+          "status": {
+            "key": "status",
+            "label": "当前步骤的状态",
+            "value": null,
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": "wait",
+                "label": "等待"
+              },
+              {
+                "value": "process",
+                "label": "过程"
+              },
+              {
+                "value": "finish",
+                "label": "结束"
+              },
+              {
+                "value": "error",
+                "label": "错误"
+              },
+              {
+                "value": "success",
+                "label": "成功"
+              }
+            ],
+            "clear": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/timeline",
+    "name": "timeline",
+    "type": "object",
+    "classify": "other",
+    "tag": "el-timeline",
+    "title": "时间线",
+    "props": {
+      "reverse": {
+        "key": "reverse",
+        "label": "排序方向",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      }
+    },
+    "children": [
+      {
+        "tag": "el-timeline-item",
+        "type": "array",
+        "props": {
+          "timestamp": {
+            "key": "timestamp",
+            "label": "时间戳",
+            "value": "2020-10-08",
+            "el": "date",
+            "type": "string"
+          },
+          "hide-timestamp": {
+            "key": "hide-timestamp",
+            "label": "隐藏时间戳",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "placement": {
+            "key": "placement",
+            "label": "时间戳位置",
+            "value": "top",
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": "top",
+                "label": "顶部"
+              },
+              {
+                "value": "bottom",
+                "label": "底部"
+              }
+            ]
+          },
+          "type": {
+            "key": "type",
+            "label": "节点类型",
+            "value": "",
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": "",
+                "label": "默认"
+              },
+              {
+                "value": "primary",
+                "label": "主色"
+              },
+              {
+                "value": "success",
+                "label": "成功"
+              },
+              {
+                "value": "warning",
+                "label": "提示"
+              },
+              {
+                "value": "danger",
+                "label": "危险"
+              },
+              {
+                "value": "info",
+                "label": "信息"
+              }
+            ]
+          },
+          "color": {
+            "key": "color",
+            "label": "节点颜色",
+            "value": "",
+            "el": "color",
+            "type": "string"
+          },
+          "size": {
+            "key": "size",
+            "label": "节点尺寸",
+            "value": "normal",
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": "normal",
+                "label": "正常"
+              },
+              {
+                "value": "large",
+                "label": "超大"
+              }
+            ]
+          },
+          "icon": {
+            "key": "icon",
+            "label": "图标",
+            "value": "",
+            "el": "input",
+            "type": "string"
+          }
+        },
+        "children": []
+      },
+      {
+        "tag": "el-timeline-item",
+        "type": "array",
+        "props": {
+          "timestamp": {
+            "key": "timestamp",
+            "label": "时间戳",
+            "value": "2020-10-09",
+            "el": "date",
+            "type": "string"
+          },
+          "hide-timestamp": {
+            "key": "hide-timestamp",
+            "label": "隐藏时间戳",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          },
+          "placement": {
+            "key": "placement",
+            "label": "时间戳位置",
+            "value": "top",
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": "top",
+                "label": "顶部"
+              },
+              {
+                "value": "bottom",
+                "label": "底部"
+              }
+            ]
+          },
+          "type": {
+            "key": "type",
+            "label": "节点类型",
+            "value": "",
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": "",
+                "label": "默认"
+              },
+              {
+                "value": "primary",
+                "label": "主色"
+              },
+              {
+                "value": "success",
+                "label": "成功"
+              },
+              {
+                "value": "warning",
+                "label": "提示"
+              },
+              {
+                "value": "danger",
+                "label": "危险"
+              },
+              {
+                "value": "info",
+                "label": "信息"
+              }
+            ]
+          },
+          "color": {
+            "key": "color",
+            "label": "节点颜色",
+            "value": null,
+            "el": "color",
+            "type": "string"
+          },
+          "size": {
+            "key": "size",
+            "label": "节点尺寸",
+            "value": "normal",
+            "el": "select",
+            "type": "string",
+            "options": [
+              {
+                "value": "normal",
+                "label": "正常"
+              },
+              {
+                "value": "large",
+                "label": "超大"
+              }
+            ]
+          },
+          "icon": {
+            "key": "icon",
+            "label": "图标",
+            "value": "",
+            "el": "input",
+            "type": "string"
+          }
+        },
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/alert",
+    "name": "alert",
+    "type": "string",
+    "classify": "other",
+    "tag": "el-alert",
+    "title": "警告",
+    "props": {
+      "title": {
+        "key": "title",
+        "label": "标题",
+        "value": "提示文案",
+        "el": "input",
+        "type": "string"
+      },
+      "type": {
+        "key": "type",
+        "label": "主题",
+        "value": "info",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "success",
+            "label": "成功"
+          },
+          {
+            "value": "warning",
+            "label": "警告"
+          },
+          {
+            "value": "info",
+            "label": "信息"
+          },
+          {
+            "value": "error",
+            "label": "错误"
+          }
+        ]
+      },
+      "description": {
+        "key": "description",
+        "label": "辅助性文字",
+        "value": "文字说明",
+        "el": "textarea",
+        "type": "string"
+      },
+      "closable": {
+        "key": "closable",
+        "label": "是否关闭",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "center": {
+        "key": "center",
+        "label": "文字居中",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "close-text": {
+        "key": "close-text",
+        "label": "关闭文本",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "show-icon": {
+        "key": "show-icon",
+        "label": "显示图标",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "effect": {
+        "key": "effect",
+        "label": "主题",
+        "value": "light",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "light",
+            "label": "浅色"
+          },
+          {
+            "value": "dark",
+            "label": "深色"
+          }
+        ]
+      }
+    },
+    "events": {
+      "close": {
+        "key": "close",
+        "label": "close",
+        "description": "关闭alert时触发的事件",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/breadcrumb",
+    "name": "breadcrumb",
+    "type": "object",
+    "classify": "other",
+    "tag": "el-breadcrumb",
+    "title": "面包屑",
+    "props": {
+      "class": {
+        "key": "class",
+        "label": "class类名",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "separator": {
+        "key": "separator",
+        "label": "分隔符",
+        "value": "/",
+        "el": "input",
+        "type": "string"
+      },
+      "separator-class": {
+        "key": "separator-class",
+        "label": "分割图标",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "children": [
+      {
+        "tag": "el-breadcrumb-item",
+        "type": "array",
+        "props": {
+          "title": {
+            "key": "title",
+            "label": "名称",
+            "value": "面包屑1",
+            "el": "input",
+            "type": "string"
+          },
+          "to": {
+            "key": "to",
+            "label": "路由跳转对象",
+            "value": "/a",
+            "el": "input",
+            "type": "string"
+          },
+          "replace": {
+            "key": "replace",
+            "label": "是否添加新记录",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "tag": "el-breadcrumb-item",
+        "type": "array",
+        "props": {
+          "title": {
+            "key": "title",
+            "label": "名称",
+            "value": "面包屑2",
+            "el": "input",
+            "type": "string"
+          },
+          "to": {
+            "key": "to",
+            "label": "路由跳转对象",
+            "value": "/b",
+            "el": "input",
+            "type": "string"
+          },
+          "replace": {
+            "key": "replace",
+            "label": "是否添加新记录",
+            "value": null,
+            "el": "switch",
+            "type": "boolean"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/divider",
+    "name": "divider",
+    "type": "string",
+    "classify": "other",
+    "tag": "el-divider",
+    "title": "分割线",
+    "props": {
+      "direction": {
+        "key": "direction",
+        "label": "分割线方向",
+        "value": "horizontal",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "horizontal",
+            "label": "横向"
+          },
+          {
+            "value": "vertical",
+            "label": "纵向"
+          }
+        ]
+      },
+      "content-position": {
+        "key": "content-position",
+        "label": "文案位置",
+        "value": "center",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "left",
+            "label": "靠左"
+          },
+          {
+            "value": "center",
+            "label": "居中"
+          },
+          {
+            "value": "right",
+            "label": "靠右"
+          }
+        ]
+      }
+    },
+    "text": "分割线"
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/image",
+    "name": "image",
+    "type": "string",
+    "classify": "other",
+    "tag": "el-image",
+    "title": "图片",
+    "props": {
+      "src": {
+        "key": "src",
+        "label": "图片路径",
+        "value": "https://s3.meituan.net/v1/mss_3d027b52ec5a4d589e68050845611e68/avatar/l0/00/qn/z4.jpg",
+        "el": "input",
+        "type": "string"
+      },
+      "width": {
+        "key": "width",
+        "label": "图片宽度",
+        "value": "auto",
+        "el": "input",
+        "type": "string"
+      },
+      "height": {
+        "key": "height",
+        "label": "图片高度",
+        "value": "auto",
+        "el": "input",
+        "type": "string"
+      },
+      "alt": {
+        "key": "alt",
+        "label": "alt",
+        "value": "图片",
+        "el": "input",
+        "type": "string"
+      },
+      "lazy": {
+        "key": "lazy",
+        "label": "懒加载",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "fit": {
+        "key": "fit",
+        "label": "适应容器框",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "",
+            "label": "默认"
+          },
+          {
+            "value": "fill",
+            "label": "填充"
+          },
+          {
+            "value": "contain",
+            "label": "包含"
+          },
+          {
+            "value": "cover",
+            "label": "覆盖"
+          },
+          {
+            "value": "none",
+            "label": "无"
+          },
+          {
+            "value": "scale-down",
+            "label": "缩小"
+          }
+        ]
+      }
+    },
+    "events": {
+      "load": {
+        "key": "load",
+        "label": "load",
+        "description": "图片加载成功触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "error": {
+        "key": "error",
+        "label": "error",
+        "description": "图片加载失败触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/page-header",
+    "name": "page-header",
+    "classify": "other",
+    "tag": "el-page-header",
+    "type": "string",
+    "title": "页头",
+    "props": {
+      "title": {
+        "key": "title",
+        "label": "标题",
+        "value": "返回",
+        "el": "input",
+        "type": "string"
+      },
+      "content": {
+        "key": "content",
+        "label": "内容",
+        "value": "详情页面",
+        "el": "input",
+        "type": "string"
+      }
+    },
+    "events": {
+      "back": {
+        "key": "back",
+        "label": "back",
+        "description": "点击左侧区域触发",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      }
+    }
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/tooltip",
+    "name": "tooltip",
+    "type": "array",
+    "classify": "other",
+    "tag": "el-tooltip",
+    "title": "文字提示",
+    "props": {
+      "effect": {
+        "key": "effect",
+        "label": "主题",
+        "value": "dark",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "dark",
+            "label": "暗色"
+          },
+          {
+            "value": "light",
+            "label": "亮色"
+          }
+        ]
+      },
+      "content": {
+        "key": "content",
+        "label": "描述文字",
+        "value": "描述文字",
+        "el": "textarea",
+        "type": "string"
+      },
+      "placement": {
+        "key": "placement",
+        "label": "位置",
+        "value": "bottom",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "top-start",
+            "label": "上左"
+          },
+          {
+            "value": "top",
+            "label": "上边"
+          },
+          {
+            "value": "top-end",
+            "label": "上右"
+          },
+          {
+            "value": "left-start",
+            "label": "左上"
+          },
+          {
+            "value": "left",
+            "label": "左边"
+          },
+          {
+            "value": "left-end",
+            "label": "左下"
+          },
+          {
+            "value": "right-start",
+            "label": "右上"
+          },
+          {
+            "value": "right",
+            "label": "右边"
+          },
+          {
+            "value": "right-end",
+            "label": "右下"
+          },
+          {
+            "value": "bottom-start",
+            "label": "下左"
+          },
+          {
+            "value": "bottom",
+            "label": "下边"
+          },
+          {
+            "value": "bottom-end",
+            "label": "下右"
+          }
+        ]
+      },
+      "disabled": {
+        "key": "disabled",
+        "label": "是否可用",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "offset": {
+        "key": "offset",
+        "label": "偏移量",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": null
+      },
+      "open-delay": {
+        "key": "open-delay",
+        "label": "延迟出现",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": 0
+      },
+      "max-width": {
+        "key": "max-width",
+        "label": "最大宽度",
+        "value": "300px",
+        "el": "input",
+        "type": "string"
+      },
+      "visible-arrow": {
+        "key": "visible-arrow",
+        "label": "是否箭头",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "enterable": {
+        "key": "enterable",
+        "label": "鼠标是否可进入",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "popper-class": {
+        "key": "popper-class",
+        "label": "popper类名",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "transition": {
+        "key": "transition",
+        "label": "动画",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "el-fade-in-linear",
+            "label": "el-fade-in-linear"
+          },
+          {
+            "value": "el-fade-in",
+            "label": "el-fade-in"
+          },
+          {
+            "value": "el-zoom",
+            "label": "el-zoom"
+          },
+          {
+            "value": "el-zoom-in-center",
+            "label": "el-zoom-in-center"
+          },
+          {
+            "value": "el-zoom-in-top",
+            "label": "el-zoom-in-top"
+          },
+          {
+            "value": "el-zoom-in-bottom",
+            "label": "el-zoom-in-bottom"
+          },
+          {
+            "value": "el-slide-up",
+            "label": "el-slide-up"
+          },
+          {
+            "value": "el-slide-down",
+            "label": "el-slide-down"
+          },
+          {
+            "value": "el-slide-left",
+            "label": "el-slide-left"
+          },
+          {
+            "value": "el-slide-right",
+            "label": "el-slide-right"
+          }
+        ]
+      }
+    },
+    "children": []
+  },
+  {
+    "id": "",
+    "doc": "http://mc.glodon.com:8081/#/component/popover",
+    "name": "tooltip",
+    "type": "object",
+    "classify": "other",
+    "tag": "el-popover",
+    "title": "弹出框",
+    "props": {
+      "value": {
+        "key": "value",
+        "value": null,
+        "hidden": true
+      },
+      "trigger": {
+        "key": "trigger",
+        "label": "触发方式",
+        "value": "click",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "click",
+            "label": "点击"
+          },
+          {
+            "value": "focus",
+            "label": "激活"
+          },
+          {
+            "value": "hover",
+            "label": "划过"
+          },
+          {
+            "value": "manual",
+            "label": "自定义"
+          }
+        ]
+      },
+      "title": {
+        "key": "title",
+        "label": "标题",
+        "value": "标题",
+        "el": "textarea",
+        "type": "string"
+      },
+      "content": {
+        "key": "content",
+        "label": "描述文字",
+        "value": "描述文字",
+        "el": "textarea",
+        "type": "string"
+      },
+      "width": {
+        "key": "width",
+        "label": "宽度",
+        "value": "150px",
+        "el": "input",
+        "type": "string"
+      },
+      "max-width": {
+        "key": "max-width",
+        "label": "最大宽度",
+        "value": "",
+        "el": "input",
+        "type": "string"
+      },
+      "placement": {
+        "key": "placement",
+        "label": "位置",
+        "value": "bottom",
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "top-start",
+            "label": "上左"
+          },
+          {
+            "value": "top",
+            "label": "上边"
+          },
+          {
+            "value": "top-end",
+            "label": "上右"
+          },
+          {
+            "value": "left-start",
+            "label": "左上"
+          },
+          {
+            "value": "left",
+            "label": "左边"
+          },
+          {
+            "value": "left-end",
+            "label": "左下"
+          },
+          {
+            "value": "right-start",
+            "label": "右上"
+          },
+          {
+            "value": "right",
+            "label": "右边"
+          },
+          {
+            "value": "right-end",
+            "label": "右下"
+          },
+          {
+            "value": "bottom-start",
+            "label": "下左"
+          },
+          {
+            "value": "bottom",
+            "label": "下边"
+          },
+          {
+            "value": "bottom-end",
+            "label": "下右"
+          }
+        ]
+      },
+      "disabled": {
+        "key": "disabled",
+        "label": "是否可用",
+        "value": null,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "offset": {
+        "key": "offset",
+        "label": "偏移量",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": null
+      },
+      "visible-arrow": {
+        "key": "visible-arrow",
+        "label": "是否箭头",
+        "value": true,
+        "el": "switch",
+        "type": "boolean"
+      },
+      "popper-class": {
+        "key": "popper-class",
+        "label": "popper类名",
+        "value": null,
+        "el": "input",
+        "type": "string"
+      },
+      "open-delay": {
+        "key": "open-delay",
+        "label": "显示延迟",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": 0
+      },
+      "close-delay": {
+        "key": "close-delay",
+        "label": "隐藏延迟",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": 0
+      },
+      "tabindex": {
+        "key": "tabindex",
+        "label": "tabindex",
+        "value": null,
+        "el": "number",
+        "type": "number",
+        "min": null
+      },
+      "transition": {
+        "key": "transition",
+        "label": "动画",
+        "value": null,
+        "el": "select",
+        "type": "string",
+        "options": [
+          {
+            "value": "el-fade-in-linear",
+            "label": "el-fade-in-linear"
+          },
+          {
+            "value": "el-fade-in",
+            "label": "el-fade-in"
+          },
+          {
+            "value": "el-zoom",
+            "label": "el-zoom"
+          },
+          {
+            "value": "el-zoom-in-center",
+            "label": "el-zoom-in-center"
+          },
+          {
+            "value": "el-zoom-in-top",
+            "label": "el-zoom-in-top"
+          },
+          {
+            "value": "el-zoom-in-bottom",
+            "label": "el-zoom-in-bottom"
+          },
+          {
+            "value": "el-slide-up",
+            "label": "el-slide-up"
+          },
+          {
+            "value": "el-slide-down",
+            "label": "el-slide-down"
+          },
+          {
+            "value": "el-slide-left",
+            "label": "el-slide-left"
+          },
+          {
+            "value": "el-slide-right",
+            "label": "el-slide-right"
+          }
+        ]
+      }
+    },
+    "slots": [
+      {
+        "tag": "div",
+        "type": "array",
+        "props": {
+          "slot": {
+            "key": "slot",
+            "label": "默认插槽",
+            "value": "default"
+          }
+        },
+        "children": []
+      },
+      {
+        "tag": "span",
+        "type": "array",
+        "props": {
+          "slot": {
+            "key": "slot",
+            "label": "底部插槽",
+            "value": "reference"
+          }
+        },
+        "children": []
+      }
+    ]
+  }
+]
