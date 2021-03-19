@@ -5,7 +5,7 @@ _2021-03-19_
 
 #### 特别注意
 
-- `Calendar-pro` 在此版本移除，独立成单独的组件 [vue-lunar-calendar-pro](https://www.npmjs.com/package/vue-lunar-calendar-pro) 进行维护。
+- `Calendar-pro` 在此版本移除，拆分为 [vue-lunar-calendar-pro](https://www.npmjs.com/package/vue-lunar-calendar-pro) 组件进行维护。
 
 #### 修复
 
