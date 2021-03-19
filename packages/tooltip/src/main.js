@@ -24,7 +24,7 @@ export default {
       type: Number,
       default: 0
     },
-    maxWidth: {},
+    maxWidth: String,
     popperClass: String,
     content: String,
     visibleArrow: {
@@ -90,7 +90,7 @@ export default {
             id={this.tooltipId}
             aria-hidden={ (this.disabled || !this.showPopper) ? 'true' : 'false' }
             v-show={!this.disabled && this.showPopper}
-            style={'max-width:' + this.maxWidth + 'px' }
+            style={'max-width:' + this.formateMaxWidth }
             class={
               ['el-tooltip__popper', 'is-' + this.effect, this.popperClass]
             }>
@@ -135,6 +135,11 @@ export default {
       } else {
         removeClass(this.referenceElm, 'focusing');
       }
+    }
+  },
+  computed: {
+    formateMaxWidth() {
+      return /(%|px)/.test(this.maxWidth) ? this.maxWidth : this.maxWidth + 'px';
     }
   },
   methods: {

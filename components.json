@@ -75,7 +75,6 @@
   "divider": "./packages/divider/index.js",
   "image": "./packages/image/index.js",
   "calendar": "./packages/calendar/index.js",
-  "calendar-pro": "./packages/calendar-pro/index.js",
   "backtop": "./packages/backtop/index.js",
   "infinite-scroll": "./packages/infinite-scroll/index.js",
   "page-header": "./packages/page-header/index.js",

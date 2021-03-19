@@ -1,7 +1,35 @@
 ## 更新日志
 
+### 1.2.0
+_2021-03-19_
+
+#### 特别注意
+
+- `Calendar-pro` 在此版本移除，拆分为 [vue-lunar-calendar-pro](https://www.npmjs.com/package/vue-lunar-calendar-pro) 组件进行维护。
+
+#### 修复
+
+- Table
+  - 修复卡片表格树样式。
+
+- Popover
+  - 修复`Popover`宽度。
+
+- Cascader
+  - 修复`Cascader`懒加载。 
+  - 修复`Cascader`当前路径。 
+
+- Radio
+  - 修复使用 `RadioGroup` 作为动态组件报错。
+
+- ColorPicker
+  - 修复选择8位十六进制颜色。
+
+- Image
+  - 修复IE中图像匹配错误比率。
+
 ### 1.1.94
-_2021-02-18_
+_2021-02-23_
 
 #### 特别注意
 
