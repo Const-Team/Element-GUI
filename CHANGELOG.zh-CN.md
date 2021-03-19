@@ -17,6 +17,16 @@ _2021-03-19_
 
 - Cascader
   - 修复`Cascader`懒加载。 
+  - 修复`Cascader`当前路径。 
+
+- Radio
+  - 修复使用 `RadioGroup` 作为动态组件报错。
+
+- ColorPicker
+  - 修复选择8位十六进制颜色。
+
+- Image
+  - 修复IE中图像匹配错误比率。
 
 ### 1.1.94
 _2021-02-23_
