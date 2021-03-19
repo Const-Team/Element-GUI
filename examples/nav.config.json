@@ -295,10 +295,6 @@
               "title": "Calendar 日历"
             },
             {
-              "path": "/calendar-pro",
-              "title": "Calendar 日历（PRO）"
-            },
-            {
               "path": "/image",
               "title": "Image 图片"
             },

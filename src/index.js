@@ -76,7 +76,6 @@ import Link from '../packages/link/index.js';
 import Divider from '../packages/divider/index.js';
 import Image from '../packages/image/index.js';
 import Calendar from '../packages/calendar/index.js';
-import CalendarPro from '../packages/calendar-pro/index.js';
 import Backtop from '../packages/backtop/index.js';
 import InfiniteScroll from '../packages/infinite-scroll/index.js';
 import PageHeader from '../packages/page-header/index.js';
@@ -165,7 +164,6 @@ const components = [
   Divider,
   Image,
   Calendar,
-  CalendarPro,
   Backtop,
   PageHeader,
   CascaderPanel,
@@ -294,7 +292,6 @@ export default {
   Divider,
   Image,
   Calendar,
-  CalendarPro,
   Backtop,
   InfiniteScroll,
   PageHeader,
