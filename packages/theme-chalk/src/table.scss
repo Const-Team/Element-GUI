@@ -718,11 +718,16 @@
             border-color: $--color-primary;
           }
         }
-        
-        
       }
       tr{
         background-color: transparent;
+      }
+      tr[class*="el-table__row--level"]:not(.el-table__row--level-0){
+        &.hover-row{
+          td:first-child,td:last-child{
+            border-color: $--border-color-base;
+          }
+        }
       }
       tr[class*="el-table__row--level"]:not(.el-table__row--level-0){
         &:hover{
