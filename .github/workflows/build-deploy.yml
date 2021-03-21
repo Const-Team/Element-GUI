@@ -56,6 +56,6 @@ jobs:
       with:
         source_repo_url: git@github.com:Const-Team/Element.git
         source_branch: gh-pages
-        destination_repo_url: git@e.coding.net:wangdaodao/element-ui/element-ui.git
+        destination_repo_url: git@gitee.com:wangdaodao/element-gui.git
         destination_branch: master
-        ssh_private_key: ${{ secrets.CODING_SSH_PRIVATE_KEY }}
+        ssh_private_key: ${{ secrets.GITEE_SSH_PRIVATE_KEY }}
