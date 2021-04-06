@@ -15,11 +15,8 @@
         :tabindex="disabled ? undefined : 0"
         @keyup.space.enter.stop="handleEnterClick"
         :class="{
-          'focusing': focusing,
           'is-active': isActive
         }"
-        @focus="handleFocus"
-        @blur="focusing = false"
       >
         <slot name="title">{{title}}</slot>
         <i
@@ -67,7 +64,6 @@
           display: 'block'
         },
         contentHeight: 0,
-        focusing: false,
         isClick: false,
         loaded: false,
         id: generateId()
@@ -103,19 +99,9 @@
     },
 
     methods: {
-      handleFocus() {
-        setTimeout(() => {
-          if (!this.isClick) {
-            this.focusing = true;
-          } else {
-            this.isClick = false;
-          }
-        }, 50);
-      },
       handleHeaderClick() {
         if (this.disabled || this.triggerTarget === 'icon') return;
         this.dispatch('ElCollapse', 'item-click', this);
-        this.focusing = false;
         this.isClick = true;
       },
       handleEnterClick() {
@@ -124,7 +110,6 @@
       handleIconClick() {
         if (this.disabled) return;
         this.dispatch('ElCollapse', 'item-click', this);
-        this.focusing = false;
         this.isClick = true;
       }
     }
