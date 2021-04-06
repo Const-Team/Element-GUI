@@ -23,6 +23,7 @@
       >
         <slot name="title">{{title}}</slot>
         <i
+          @click.stop="handleIconClick"
           class="el-collapse-item__arrow el-icon-arrow-right"
           :class="{'is-active': isActive}">
         </i>
@@ -77,6 +78,7 @@
 
     props: {
       title: String,
+      trigger: String,
       name: {
         type: [String, Number],
         default() {
@@ -88,6 +90,9 @@
     },
 
     computed: {
+      triggerTarget() {
+        return this.trigger || (this.collapse || {}).trigger;
+      },
       isActive() {
         const active = this.collapse.activeNames.indexOf(this.name) > -1;
         if (active) {
@@ -108,13 +113,19 @@
         }, 50);
       },
       handleHeaderClick() {
-        if (this.disabled) return;
+        if (this.disabled || this.triggerTarget === 'icon') return;
         this.dispatch('ElCollapse', 'item-click', this);
         this.focusing = false;
         this.isClick = true;
       },
       handleEnterClick() {
         this.dispatch('ElCollapse', 'item-click', this);
+      },
+      handleIconClick() {
+        if (this.disabled) return;
+        this.dispatch('ElCollapse', 'item-click', this);
+        this.focusing = false;
+        this.isClick = true;
       }
     }
   };
