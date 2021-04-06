@@ -25,6 +25,10 @@ Vue.component('main-header', MainHeader);
 Vue.component('side-nav', SideNav);
 Vue.component('footer-nav', FooterNav);
 
+// 关于vue项目在IE浏览器上出现[vue-router] Failed to resolve async component default: ReferenceError: “Promise”未定义
+require('es6-promise').polyfill();
+require('es6-promise/auto');
+
 const globalEle = new Vue({
   data: { $isEle: false } // 是否 ele 用户
 });
