@@ -7,6 +7,8 @@ _2021-04-04_
 
 - Collapse
   - 新增 `trigger` 属性。
+- DatePicker
+  - 新增 `quarterange` 属性。
 
 #### 修复
 

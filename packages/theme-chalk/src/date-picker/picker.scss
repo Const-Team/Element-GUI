@@ -17,7 +17,7 @@
       color: $--color-primary;
     }
   }
-  @include m((monthrange)) {
+  @include m((monthrange,yearrange,quarterrange)) {
     &.el-input,
     &.el-input__inner {
       width: 300px;

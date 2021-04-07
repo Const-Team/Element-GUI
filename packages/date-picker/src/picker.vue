@@ -2,7 +2,7 @@
   <el-input
     class="el-date-editor"
     :class="'el-date-editor--' + type"
-    :readonly="!editable || readonly || type === 'dates' || type === 'week'"
+    :readonly="!editable || readonly || type === 'dates' || type === 'week' || type === 'quarter'"
     :disabled="pickerDisabled"
     :size="pickerSize"
     :name="name"
@@ -120,7 +120,8 @@ const DEFAULT_FORMATS = {
   datetimerange: 'yyyy-MM-dd HH:mm:ss',
   year: 'yyyy',
   yearrange: 'yyyy',
-  quarter: 'yyyy-qQ'
+  quarter: 'yyyy-qQ',
+  quarterrange: 'yyyy-qQ'
 };
 const HAVE_TRIGGER_TYPES = [
   'date',
@@ -136,7 +137,8 @@ const HAVE_TRIGGER_TYPES = [
   'datetimerange',
   'yearrange',
   'dates',
-  'quarter'
+  'quarter',
+  'quarterrange'
 ];
 const DATE_FORMATTER = function(value, format) {
   if (format === 'timestamp') return value.getTime();
@@ -169,6 +171,23 @@ const RANGE_PARSER = function(array, format, separator) {
   }
   return [];
 };
+const QUARTER_FORMATTER = function(value, format) {
+  const quarter = getQuarterNumber(value);
+  let date = formatDate(value, format);
+  if (/Q/.test(date)) {
+    date = date.replace(/Q/, quarter);
+  }
+  return date;
+};
+const QUARTER_PARSER = function(value, format) {
+  const yearPosition = format.indexOf('yyyy');
+  const quarterPosition = format.indexOf('Q');
+  let year = /yyyy/.test(format)
+    ? value.substring(yearPosition, yearPosition + 4)
+    : (new Date()).getFullYear();
+  let quarter = value.substring(quarterPosition, quarterPosition + 1);
+  return new Date(year, (quarter - 1) * 3 + 1);
+};
 const TYPE_VALUE_RESOLVER_MAP = {
   default: {
     formatter(value) {
@@ -194,20 +213,6 @@ const TYPE_VALUE_RESOLVER_MAP = {
       date = /WW/.test(date)
         ? date.replace(/WW/, week < 10 ? '0' + week : week)
         : date.replace(/W/, week);
-      return date;
-    },
-    parser(text, format) {
-      // parse as if a normal date
-      return TYPE_VALUE_RESOLVER_MAP.date.parser(text, format);
-    }
-  },
-  quarter: {
-    formatter(value, format) {
-      const quarter = getQuarterNumber(value);
-      let date = formatDate(value, format);
-      if (/Q/.test(date)) {
-        date = date.replace(/Q/, quarter);
-      }
       return date;
     },
     parser(text, format) {
@@ -277,6 +282,32 @@ const TYPE_VALUE_RESOLVER_MAP = {
     parser(value, format) {
       return (typeof value === 'string' ? value.split(', ') : value)
         .map(date => date instanceof Date ? date : DATE_PARSER(date, format));
+    }
+  },
+  quarter: {
+    formatter: QUARTER_FORMATTER,
+    parser: QUARTER_PARSER
+  },
+  quarterrange: {
+    formatter(value, format) {
+      if (Array.isArray(value) && value.length === 2) {
+        const start = value[0];
+        const end = value[1];
+        if (start && end) {
+          return [QUARTER_FORMATTER(start, format), QUARTER_FORMATTER(end, format)];
+        }
+      }
+      return '';
+    },
+    parser(value, format) {
+      if (Array.isArray(value) && value.length === 2) {
+        const start = value[0];
+        const end = value[1];
+        if (start && end) {
+          return [QUARTER_PARSER(start, format), QUARTER_PARSER(end, format)];
+        }
+      }
+      return '';
     }
   }
 };
