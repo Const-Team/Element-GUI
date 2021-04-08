@@ -319,60 +319,6 @@
 ```
 :::
 
-### 选择年份范围
-
-可在一个选择器中便捷地选择一个年份范围
-
-:::demo 在选择月份范围时，默认情况下左右面板会联动。如果希望两个面板各自独立切换当前年份，可以使用`unlink-panels`属性解除联动。
-```html
-<template>
-  <div class="block">
-    <span class="demonstration">默认</span>
-    <el-date-picker
-      v-model="value1"
-      type="yearrange"
-      range-separator="至"
-      start-placeholder="开始年份"
-      end-placeholder="结束年份">
-    </el-date-picker>
-  </div>
-  <div class="block">
-    <span class="demonstration">带快捷选项</span>
-    <el-date-picker
-      v-model="value2"
-      type="yearrange"
-      align="right"
-      unlink-panels
-      range-separator="至"
-      start-placeholder="开始年份"
-      end-placeholder="结束年份"
-      :picker-options="pickerOptions">
-    </el-date-picker>
-  </div>
-</template>
-
-<script>
-  export default {
-    data() {
-      return {
-        pickerOptions: {
-          shortcuts: [{
-            text: '最近三年',
-            onClick(picker) {
-              const end = new Date();
-              picker.$emit('pick', [new Date(), end.setFullYear(end.getFullYear() + 3)]);
-            }
-          }]
-        },
-        value1: '',
-        value2: ''
-      };
-    }
-  };
-</script>
-```
-:::
-
 ### 选择季度范围
 
 可在一个选择器中便捷地选择一个季度范围
@@ -423,6 +369,60 @@
         },
         value1: [],
         value2: []
+      };
+    }
+  };
+</script>
+```
+:::
+
+### 选择年份范围
+
+可在一个选择器中便捷地选择一个年份范围
+
+:::demo 在选择月份范围时，默认情况下左右面板会联动。如果希望两个面板各自独立切换当前年份，可以使用`unlink-panels`属性解除联动。
+```html
+<template>
+  <div class="block">
+    <span class="demonstration">默认</span>
+    <el-date-picker
+      v-model="value1"
+      type="yearrange"
+      range-separator="至"
+      start-placeholder="开始年份"
+      end-placeholder="结束年份">
+    </el-date-picker>
+  </div>
+  <div class="block">
+    <span class="demonstration">带快捷选项</span>
+    <el-date-picker
+      v-model="value2"
+      type="yearrange"
+      align="right"
+      unlink-panels
+      range-separator="至"
+      start-placeholder="开始年份"
+      end-placeholder="结束年份"
+      :picker-options="pickerOptions">
+    </el-date-picker>
+  </div>
+</template>
+
+<script>
+  export default {
+    data() {
+      return {
+        pickerOptions: {
+          shortcuts: [{
+            text: '最近三年',
+            onClick(picker) {
+              const end = new Date();
+              picker.$emit('pick', [new Date(), end.setFullYear(end.getFullYear() + 3)]);
+            }
+          }]
+        },
+        value1: '',
+        value2: ''
       };
     }
   };
