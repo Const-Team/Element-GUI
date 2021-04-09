@@ -24,7 +24,7 @@ export default {
       type: Number,
       default: 0
     },
-    maxWidth: String,
+    maxWidth: [String, Number],
     popperClass: String,
     content: String,
     visibleArrow: {
