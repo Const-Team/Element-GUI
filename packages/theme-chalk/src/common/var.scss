@@ -976,6 +976,17 @@ $--splitter-handle-size: 30px !default;
 $--splitter-background-color: #efefef !default;
 $--splitter-hover-background-color: $--border-color-base !default;
 
+/* Empty
+-------------------------- */
+$--empty-padding: 40px 0 !default;
+$--empty-image-width: 160px !default;
+$--empty-description-margin-top: 20px !default;
+$--empty-bottom-margin-top: 20px !default;
+
+/* Svg
+--------------- */
+$--svg-monochrome-grey: #DCDDE0;
+
 /* Break-point
 --------------------------*/
 $--sm: 768px !default;

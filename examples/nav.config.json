@@ -190,6 +190,10 @@
             {
               "path": "/avatar",
               "title": "Avatar 头像"
+            },
+            {
+              "path": "/empty",
+              "title": "Empty 空状态"
             }
           ]
         },
