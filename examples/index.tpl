@@ -17,7 +17,7 @@
     </script>
     <div id="app"></div>
     <% if (process.env.NODE_ENV === 'production') { %>
-      <script src="https://lib.baomitu.com/vue/2.6.11/vue.runtime.min.js"></script>
+      <script src="https://lib.baomitu.com/vue/2.5.21/vue.runtime.min.js"></script>
       <script src="https://lib.baomitu.com/vue-router/3.1.3/vue-router.min.js"></script>
       <script src="https://lib.baomitu.com/highlight.js/9.15.10/highlight.min.js"></script>
     <% } %>

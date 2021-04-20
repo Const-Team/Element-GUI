@@ -86,5 +86,6 @@
   "loading-bar": "./packages/loading-bar/index.js",
   "pane": "./packages/pane/index.js",
   "splitpanes": "./packages/splitpanes/index.js",
-  "text-ellipsis": "./packages/text-ellipsis/index.js"
+  "text-ellipsis": "./packages/text-ellipsis/index.js",
+  "empty": "./packages/empty/index.js"
 }

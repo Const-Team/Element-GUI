@@ -384,7 +384,9 @@ export default {
     },
     handlePasswordVisible() {
       this.passwordVisible = !this.passwordVisible;
-      this.focus();
+      this.$nextTick(() => {
+        this.focus();
+      });
     },
     getInput() {
       return this.$refs.input || this.$refs.textarea;

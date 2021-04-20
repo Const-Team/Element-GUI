@@ -88,6 +88,7 @@ import LoadingBar from '../packages/loading-bar/index.js';
 import Pane from '../packages/pane/index.js';
 import Splitpanes from '../packages/splitpanes/index.js';
 import TextEllipsis from '../packages/text-ellipsis/index.js';
+import Empty from '../packages/empty/index.js';
 import locale from 'element-gui/src/locale';
 import CollapseTransition from 'element-gui/src/transitions/collapse-transition';
 
@@ -174,6 +175,7 @@ const components = [
   Pane,
   Splitpanes,
   TextEllipsis,
+  Empty,
   CollapseTransition
 ];
 
@@ -303,5 +305,6 @@ export default {
   LoadingBar,
   Pane,
   Splitpanes,
-  TextEllipsis
+  TextEllipsis,
+  Empty
 };

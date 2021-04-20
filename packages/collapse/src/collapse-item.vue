@@ -15,14 +15,12 @@
         :tabindex="disabled ? undefined : 0"
         @keyup.space.enter.stop="handleEnterClick"
         :class="{
-          'focusing': focusing,
           'is-active': isActive
         }"
-        @focus="handleFocus"
-        @blur="focusing = false"
       >
         <slot name="title">{{title}}</slot>
         <i
+          @click.stop="handleIconClick"
           class="el-collapse-item__arrow el-icon-arrow-right"
           :class="{'is-active': isActive}">
         </i>
@@ -66,7 +64,6 @@
           display: 'block'
         },
         contentHeight: 0,
-        focusing: false,
         isClick: false,
         loaded: false,
         id: generateId()
@@ -77,6 +74,7 @@
 
     props: {
       title: String,
+      trigger: String,
       name: {
         type: [String, Number],
         default() {
@@ -88,6 +86,9 @@
     },
 
     computed: {
+      triggerTarget() {
+        return this.trigger || (this.collapse || {}).trigger;
+      },
       isActive() {
         const active = this.collapse.activeNames.indexOf(this.name) > -1;
         if (active) {
@@ -98,23 +99,18 @@
     },
 
     methods: {
-      handleFocus() {
-        setTimeout(() => {
-          if (!this.isClick) {
-            this.focusing = true;
-          } else {
-            this.isClick = false;
-          }
-        }, 50);
-      },
       handleHeaderClick() {
-        if (this.disabled) return;
+        if (this.disabled || this.triggerTarget === 'icon') return;
         this.dispatch('ElCollapse', 'item-click', this);
-        this.focusing = false;
         this.isClick = true;
       },
       handleEnterClick() {
         this.dispatch('ElCollapse', 'item-click', this);
+      },
+      handleIconClick() {
+        if (this.disabled) return;
+        this.dispatch('ElCollapse', 'item-click', this);
+        this.isClick = true;
       }
     }
   };

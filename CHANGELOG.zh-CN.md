@@ -1,5 +1,28 @@
 ## 更新日志
 
+### 1.2.1
+_2021-04-20_
+
+#### 新特性
+
+- Empty
+  - 移植 `element-plus` 空状态组件。
+- Collapse
+  - 新增点击图标展开面板 `trigger`。
+- DatePicker
+  - 新增季度区间选择器 `quarterrange`。
+
+#### 修复
+
+- Tree
+  - 修复 `disabled` 高亮状态。
+- Calendar
+  - 修复多语言切换bug。
+- Input
+  - 修复切换密码框光标bug。
+- Tooltip
+  - 修复`max-width`属性类型判断bug。
+
 ### 1.2.0
 _2021-03-19_
 
