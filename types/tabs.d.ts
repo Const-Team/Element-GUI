@@ -24,7 +24,10 @@ export declare class ElTabs extends ElementUIComponent {
   tabPosition: TabPosition
 
   /** Whether width of tab automatically fits its container */
-  stretch: Boolean
+  stretch: boolean
+
+  /** Whether Tab is toggled with arrow keys */
+  controllable: boolean
 
   /** Hook function before switching tab. If false or a Promise is returned and then is rejected, switching will be prevented */
   beforeLeave: (activeName: string, oldActiveName: string) => boolean | Promise<any>

@@ -20,7 +20,8 @@
         default: 'top'
       },
       beforeLeave: Function,
-      stretch: Boolean
+      stretch: Boolean,
+      controllable: Boolean
     },
 
     provide() {
@@ -120,7 +121,8 @@
         editable,
         addable,
         tabPosition,
-        stretch
+        stretch,
+        controllable
       } = this;
 
       const newButton = editable || addable
@@ -144,7 +146,8 @@
           editable,
           type,
           panes,
-          stretch
+          stretch,
+          controllable
         },
         ref: 'nav'
       };

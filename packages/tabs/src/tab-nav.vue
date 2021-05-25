@@ -29,7 +29,8 @@
         default: noop
       },
       type: String,
-      stretch: Boolean
+      stretch: Boolean,
+      controllable: Boolean
     },
 
     data() {
@@ -199,6 +200,7 @@
         panes,
         editable,
         stretch,
+        controllable,
         onTabClick,
         onTabRemove,
         navStyle,
@@ -264,7 +266,7 @@
               ref="nav"
               style={navStyle}
               role="tablist"
-              on-keydown={ changeTab }
+              on-keydown={ (ev) => { if (controllable) { changeTab(ev); } } }
             >
               {!type ? <tab-bar tabs={panes}></tab-bar> : null}
               {tabs}
