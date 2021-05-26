@@ -145,8 +145,12 @@ export default {
         this.closed = true;
       }
     },
-    handleWrapperClick() {
-      if ( this.wrapperClosable && (!this.clickStartElement || this.clickStartElement.contains(event.target))) {
+    handleWrapperClick(event) {
+      if (
+        this.wrapperClosable &&
+        (!this.clickStartElement ||
+          this.clickStartElement.contains(event.target))
+      ) {
         this.closeDrawer();
       }
     },
