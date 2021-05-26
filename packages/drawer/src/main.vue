@@ -1,7 +1,7 @@
 <template>
   <transition name="el-drawer-fade" @after-enter="afterEnter" @after-leave="afterLeave">
     <div class="el-drawer__wrapper" tabindex="-1" v-show="visible" :class="{'el-drawer__inner':!appendToBody}">
-      <div class="el-drawer__container" :class="visible && 'el-drawer__open'" @click.self="handleWrapperClick" role="document" tabindex="-1">
+      <div class="el-drawer__container" :class="visible && 'el-drawer__open'" @mousedown="clickStartElement = $event.target" @click.self="handleWrapperClick" role="document" tabindex="-1">
         <div aria-modal="true" aria-labelledby="el-drawer__title" :aria-label="title" class="el-drawer" :class="[direction, customClass]" :style="isHorizontal ? `width: ${formateSize}` : `height: ${formateSize}`" ref="drawer" role="dialog" tabindex="-1">
           <header class="el-drawer__header" id="el-drawer__title" v-if="withHeader">
             <slot name="title">
@@ -97,7 +97,8 @@ export default {
   data() {
     return {
       closed: false,
-      prevActiveElement: null
+      prevActiveElement: null,
+      clickStartElement: null
     };
   },
   watch: {
@@ -144,8 +145,12 @@ export default {
         this.closed = true;
       }
     },
-    handleWrapperClick() {
-      if (this.wrapperClosable) {
+    handleWrapperClick(event) {
+      if (
+        this.wrapperClosable &&
+        (!this.clickStartElement ||
+          this.clickStartElement.contains(event.target))
+      ) {
         this.closeDrawer();
       }
     },

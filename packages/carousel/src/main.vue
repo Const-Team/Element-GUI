@@ -161,6 +161,11 @@ export default {
 
     loop() {
       this.setActiveItem(this.activeIndex);
+    },
+
+    interval() {
+      this.pauseTimer();
+      this.startTimer();
     }
   },
 

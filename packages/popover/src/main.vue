@@ -89,6 +89,12 @@ export default {
         return;
       }
       val ? this.$emit('show') : this.$emit('hide');
+    },
+
+    disabled(val) {
+      if (!val && this.showPopper) {
+        this.updatePopper();
+      }
     }
   },
 
@@ -148,6 +154,7 @@ export default {
 
   deactivated() {
     this.cleanup();
+    this.doClose();
   },
 
   methods: {

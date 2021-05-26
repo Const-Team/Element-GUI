@@ -61,6 +61,7 @@
     background: transparent;
     font-size: $--message-close-size;
     cursor: pointer;
+    height: 40px;
 
     .el-message-box__close {
       color: $--messagebox-title-color;
