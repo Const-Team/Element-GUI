@@ -127,6 +127,7 @@
           this.$el.addEventListener('scroll', this.updatePopper);
           this.$nextTick(() => {
             this.$refs.dialog.scrollTop = 0;
+            this.$refs.dialog.focus();
           });
           if (this.appendToBody) {
             document.body.appendChild(this.$el);
