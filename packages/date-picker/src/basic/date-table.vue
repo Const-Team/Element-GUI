@@ -21,7 +21,7 @@
         :class="getCellClasses(cell)"
         :key="key">
         <div>
-          <span>
+          <span class="cell">
             {{ cell.text }}
           </span>
         </div>

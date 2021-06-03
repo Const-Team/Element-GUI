@@ -4,7 +4,7 @@
     <tr v-for="(row, key) in rows" :key="key">
       <td :class="getCellStyle(cell)" v-for="(cell, key) in row" :key="key">
         <div>
-          <a class="cell">{{ t('el.datepicker.months.' + months[cell.text]) }}</a>
+          <span class="cell">{{ t('el.datepicker.months.' + months[cell.text]) }}</span>
         </div>
       </td>
     </tr>
@@ -40,6 +40,7 @@
   export default {
     props: {
       disabledDate: {},
+      cellClassName: {},
       value: {},
       selectionMode: {
         default: 'month'
@@ -122,6 +123,13 @@
             style['end-date'] = true;
           }
         }
+
+        if (cell.customClass && typeof cell.customClass === 'string') {
+          cell.customClass.split(' ').forEach(className => {
+            style[className] = true;
+          });
+        }
+
         return style;
       },
       getMonthOfCell(month) {
@@ -151,7 +159,7 @@
         if (!this.rangeState.selecting) return;
 
         let target = event.target;
-        if (target.tagName === 'A') {
+        if (target.tagName === 'SPAN') {
           target = target.parentNode.parentNode;
         }
         if (target.tagName === 'DIV') {
@@ -181,7 +189,7 @@
       },
       handleMonthTableClick(event) {
         let target = event.target;
-        if (target.tagName === 'A') {
+        if (target.tagName === 'SPAN') {
           target = target.parentNode.parentNode;
         }
         if (target.tagName === 'DIV') {
@@ -216,6 +224,7 @@
         // TODO: refactory rows / getCellClasses
         const rows = this.tableRows;
         const disabledDate = this.disabledDate;
+        const cellClassName = this.cellClassName;
         const selectedDate = [];
         const now = getMonthTimestamp(new Date());
 
@@ -243,7 +252,7 @@
             let cellDate = new Date(time);
             cell.disabled = typeof disabledDate === 'function' && disabledDate(cellDate);
             cell.selected = arrayFind(selectedDate, date => date.getTime() === cellDate.getTime());
-
+            cell.customClass = typeof cellClassName === 'function' && cellClassName(cellDate);
             this.$set(row, j, cell);
           }
         }

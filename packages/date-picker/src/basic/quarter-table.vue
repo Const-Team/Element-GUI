@@ -4,7 +4,7 @@
       <tr v-for="(row, key) in rows" :key="key">
         <td :class="getCellStyle(cell)" v-for="(cell, key) in row" :key="key" :cellNum="quarter[cell.text]">
           <div>
-            <a class="cell">{{ t('el.datepicker.quarter' + quarter[cell.text]) }}</a>
+            <span class="cell">{{ t('el.datepicker.quarter' + quarter[cell.text]) }}</span>
           </div>
         </td>
       </tr>
@@ -40,6 +40,7 @@
   export default {
     props: {
       disabledDate: {},
+      cellClassName: {},
       date: {},
       value: {},
       minDate: {},
@@ -115,6 +116,12 @@
             style['end-date'] = true;
           }
         }
+        let classes = typeof this.cellClassName === 'function' && this.cellClassName(quarter);
+        if (classes && typeof classes === 'string') {
+          classes.split(' ').forEach(className => {
+            style[className] = true;
+          });
+        }
         return style;
       },
       getDateOfQuarter(quarter) {
@@ -142,7 +149,7 @@
       handleMouseMove(event) {
         if (!this.rangeState.selecting) return;
         let target = event.target;
-        if (target.tagName === 'A') {
+        if (target.tagName === 'SPAN') {
           target = target.parentNode.parentNode;
         }
         if (target.tagName === 'DIV') {
@@ -170,7 +177,7 @@
       },
       handleQuarterTableClick(event) {
         let target = event.target;
-        if (target.tagName === 'A') {
+        if (target.tagName === 'SPAN') {
           target = target.parentNode.parentNode;
         }
         if (target.tagName === 'DIV') {
