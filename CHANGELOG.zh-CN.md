@@ -12,6 +12,7 @@ _2021-06-3_
 
 - DatePicker
   - 修复 `cellClassName` 仅在 `type = 'date'` 生效
+  - 修复日期区间时间选择bug
 
 ### 1.2.3
 _2021-05-30_
