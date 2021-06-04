@@ -217,7 +217,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '1.2.3',
+  version: '1.2.4',
   locale: locale.use,
   i18n: locale.i18n,
   install,
@@ -310,5 +310,7 @@ export default {
   Pane,
   Splitpanes,
   TextEllipsis,
-  Empty
+  Empty,
+  Skeleton,
+  SkeletonItem
 };

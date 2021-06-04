@@ -2,7 +2,7 @@
   .page-resource {
     padding-top: 55px;
     box-sizing: border-box;
-    
+    text-align: center;
     .resource-placeholder {
       margin: 50px auto 100px;
       text-align: center;

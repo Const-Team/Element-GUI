@@ -31,10 +31,6 @@ html, body {
       left: 0;
       top: 0;
       z-index: 1500;
-      
-      .container {
-        padding: 0;
-      }
     }
   }
   &.is-resource{
@@ -85,9 +81,8 @@ button, input, select, textarea {
 
 .container,
 .page-container {
-  width: 1190px;
-  padding: 0;
-  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .page-container {
@@ -156,18 +151,8 @@ button, input, select, textarea {
 .demo {
   margin: 20px 0;
 }
-@media (max-width: 1140px) {
-  .container,
-  .page-container {
-    width: 100%;
-  }
-}
 
 @media (max-width: 768px) {
-  .container,
-  .page-container {
-    padding: 0 20px;
-  }
 
   #app.is-component .headerWrapper .container {
     padding: 0 12px;
