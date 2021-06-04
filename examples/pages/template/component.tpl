@@ -19,9 +19,10 @@
     .page-component__nav {
       width: 240px;
       position: fixed;
+      left: 20px;
       top: 0;
       bottom: 0;
-      margin-top: 80px;
+      margin-top: 60px;
       transition: padding-top .3s;
 
       > .el-scrollbar__wrap {
@@ -47,6 +48,7 @@
 
     .page-component__content {
       padding-left: 270px;
+      padding-right: 240px;
       padding-bottom: 100px;
       box-sizing: border-box;
     }
@@ -142,7 +144,7 @@
       v-if="showBackToTop"
       target=".page-component__scroll .el-scrollbar__wrap"
       :right="100"
-      :bottom="150"
+      :bottom="20"
     ></el-backtop>
   </div>
   </el-scrollbar>

@@ -43,6 +43,7 @@
                             selection-mode="range"
                             :rangeState="rangeState"
                             :disabled-date="disabledDate"
+                            :cell-class-name="cellClassName"
                             @changerange="handleChangeRange"
                             @pick="handleRangePick">
                         </quarter-table>
@@ -72,6 +73,7 @@
                             selection-mode="range"
                             :rangeState="rangeState"
                             :disabled-date="disabledDate"
+                            :cell-class-name="cellClassName"
                             @changerange="handleChangeRange"
                             @pick="handleRangePick">
                         </quarter-table>
@@ -141,6 +143,7 @@ export default {
       value: [],
       visible: '',
       disabledDate: '',
+      cellClassName: '',
       format: '',
       unlinkPanels: false,
       arrowControl: false

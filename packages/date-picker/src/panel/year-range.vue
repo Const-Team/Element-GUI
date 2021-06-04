@@ -15,7 +15,7 @@
               <button type="button" v-if="unlinkPanels" @click="nextYear(true)" :disabled="!enableYearArrow" :class="{ 'is-disabled': !enableYearArrow }" class="el-picker-panel__icon-btn el-icon-d-arrow-right"></button>
               <div>{{ leftYear }} {{t('el.datepicker.year')}}</div>
             </div>
-            <year-table :date="date" :min-date="minDate" :max-date="maxDate" :year="leftYear" selection-mode="range" :rangeState="rangeState" :disabled-date="disabledDate" @changerange="handleChangeRange" @pick="handleRangePick">
+            <year-table :date="date" :min-date="minDate" :max-date="maxDate" :year="leftYear" selection-mode="range" :rangeState="rangeState" :cell-class-name="cellClassName" :disabled-date="disabledDate" @changerange="handleChangeRange" @pick="handleRangePick">
             </year-table>
           </div>
           <div class="el-picker-panel__content el-date-range-picker__content is-right">
@@ -24,7 +24,7 @@
               <button type="button" @click="nextYear(false)" class="el-picker-panel__icon-btn el-icon-d-arrow-right"></button>
               <div>{{ rightYear }} {{t('el.datepicker.year')}}</div>
             </div>
-            <year-table :min-date="minDate" :max-date="maxDate" :date="rightDate" :year="rightYear" selection-mode="range" :rangeState="rangeState" :disabled-date="disabledDate" @changerange="handleChangeRange" @pick="handleRangePick">
+            <year-table :min-date="minDate" :max-date="maxDate" :date="rightDate" :year="rightYear" selection-mode="range" :rangeState="rangeState" :cell-class-name="cellClassName" :disabled-date="disabledDate" @changerange="handleChangeRange" @pick="handleRangePick">
             </year-table>
           </div>
         </div>
@@ -88,6 +88,7 @@ export default {
       value: '',
       visible: '',
       disabledDate: '',
+      cellClassName: '',
       firstDayOfWeek: 7,
       format: '',
       toolTipTop: 0,

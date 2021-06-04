@@ -89,6 +89,8 @@ import Pane from '../packages/pane/index.js';
 import Splitpanes from '../packages/splitpanes/index.js';
 import TextEllipsis from '../packages/text-ellipsis/index.js';
 import Empty from '../packages/empty/index.js';
+import Skeleton from '../packages/skeleton/index.js';
+import SkeletonItem from '../packages/skeleton-item/index.js';
 import locale from 'element-gui/src/locale';
 import CollapseTransition from 'element-gui/src/transitions/collapse-transition';
 
@@ -176,6 +178,8 @@ const components = [
   Splitpanes,
   TextEllipsis,
   Empty,
+  Skeleton,
+  SkeletonItem,
   CollapseTransition
 ];
 
@@ -213,7 +217,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '1.2.1',
+  version: '1.2.4',
   locale: locale.use,
   i18n: locale.i18n,
   install,
@@ -306,5 +310,7 @@ export default {
   Pane,
   Splitpanes,
   TextEllipsis,
-  Empty
+  Empty,
+  Skeleton,
+  SkeletonItem
 };

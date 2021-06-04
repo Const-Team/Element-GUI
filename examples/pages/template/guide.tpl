@@ -20,8 +20,9 @@
       width: 240px;
       position: fixed;
       top: 0;
+      left: 20px;
       bottom: 0;
-      margin-top: 80px;
+      margin-top: 60px;
       transition: padding-top .3s;
 
       > .el-scrollbar__wrap {
@@ -47,6 +48,7 @@
 
     .page-component__content {
       padding-left: 270px;
+      padding-right: 240px;
       padding-bottom: 100px;
       box-sizing: border-box;
     }

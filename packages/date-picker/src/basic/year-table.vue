@@ -3,36 +3,36 @@
     <tbody>
     <tr>
       <td class="available" :class="getCellStyle(startYear + 0)">
-        <div><a class="cell">{{ startYear }}</a></div>
+        <div><span class="cell">{{ startYear }}</span></div>
       </td>
       <td class="available" :class="getCellStyle(startYear + 1)">
-        <div><a class="cell">{{ startYear + 1 }}</a></div>
+        <div><span class="cell">{{ startYear + 1 }}</span></div>
       </td>
       <td class="available" :class="getCellStyle(startYear + 2)">
-        <div><a class="cell">{{ startYear + 2 }}</a></div>
+        <div><span class="cell">{{ startYear + 2 }}</span></div>
       </td>
       <td class="available" :class="getCellStyle(startYear + 3)">
-        <div><a class="cell">{{ startYear + 3 }}</a></div>
+        <div><span class="cell">{{ startYear + 3 }}</span></div>
       </td>
       <td class="available" :class="getCellStyle(startYear + 4)">
-        <div><a class="cell">{{ startYear + 4 }}</a></div>
+        <div><span class="cell">{{ startYear + 4 }}</span></div>
       </td>
     </tr>
     <tr>
       <td class="available" :class="getCellStyle(startYear + 5)">
-        <div><a class="cell">{{ startYear + 5 }}</a></div>
+        <div><span class="cell">{{ startYear + 5 }}</span></div>
       </td>
       <td class="available" :class="getCellStyle(startYear + 6)">
-        <div><a class="cell">{{ startYear + 6 }}</a></div>
+        <div><span class="cell">{{ startYear + 6 }}</span></div>
       </td>
       <td class="available" :class="getCellStyle(startYear + 7)">
-        <div><a class="cell">{{ startYear + 7 }}</a></div>
+        <div><span class="cell">{{ startYear + 7 }}</span></div>
       </td>
       <td class="available" :class="getCellStyle(startYear + 8)">
-        <div><a class="cell">{{ startYear + 8 }}</a></div>
+        <div><span class="cell">{{ startYear + 8 }}</span></div>
       </td>
       <td class="available" :class="getCellStyle(startYear + 9)">
-        <div><a class="cell">{{ startYear + 9 }}</a></div>
+        <div><span class="cell">{{ startYear + 9 }}</span></div>
       </td>
       <td></td>
       <td></td>
@@ -43,7 +43,7 @@
 
 <script type="text/babel">
   import { hasClass } from 'element-gui/src/utils/dom';
-  import { isDate, range, nextDate, getDayCountOfYear } from 'element-gui/src/utils/date-util';
+  import { isDate, range, nextDate, getDayCountOfYear, parseDate } from 'element-gui/src/utils/date-util';
   import { arrayFindIndex, coerceTruthyValueToArray } from 'element-gui/src/utils/util';
 
   const datesInYear = year => {
@@ -61,6 +61,7 @@
         }
       },
       disabledDate: {},
+      cellClassName: {},
       date: {},
       value: {},
       year: {},
@@ -105,6 +106,13 @@
         } else {
           style.current = arrayFindIndex(coerceTruthyValueToArray(this.value), date => date.getFullYear() === year) >= 0;
         }
+        let yearDate = parseDate(year + '', 'yyyy');
+        let classes = typeof this.cellClassName === 'function' && this.cellClassName(yearDate);
+        if (classes && typeof classes === 'string') {
+          classes.split(' ').forEach(className => {
+            style[className] = true;
+          });
+        }
         return style;
       },
 
@@ -118,7 +126,7 @@
 
       handleYearTableClick(event) {
         let target = event.target;
-        if (target.tagName === 'A') {
+        if (target.tagName === 'SPAN') {
           target = target.parentNode.parentNode;
         }
         if (target.tagName === 'DIV') {
@@ -149,7 +157,7 @@
       handleMouseMove(event) {
         let target = event.target;
         if (!this.rangeState.selecting) return;
-        if (target.tagName === 'A') {
+        if (target.tagName === 'SPAN') {
           target = target.parentNode.parentNode;
         }
         if (target.tagName === 'DIV') {
