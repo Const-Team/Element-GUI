@@ -114,5 +114,8 @@ export default {
   .right-nav {
     display: none;
   }
+  .page-component .page-component__content{
+    padding-right: 20px!important;
+  }
 }
 </style>

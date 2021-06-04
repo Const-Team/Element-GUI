@@ -1,5 +1,3 @@
-
-@@ -0,0 +1,106 @@
 import Skeleton from 'packages/skeleton';
 import { createTest, destroyVM, createVue, waitImmediate, wait} from '../util';
 
