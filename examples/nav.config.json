@@ -194,6 +194,10 @@
             {
               "path": "/empty",
               "title": "Empty 空状态"
+            },
+            {
+              "path": "/skeleton",
+              "title": "Skeleton 骨架屏"
             }
           ]
         },
