@@ -1,7 +1,7 @@
 <template>
   <div class="right-nav" v-if="anchors">
     <ul>
-      <li v-for="item in anchors" :key="item" class="right-nav-link">
+      <li v-for="(item, i) in anchors" :key="'item' + i" class="right-nav-link">
         <el-link :id="item" :title="item" class="link" :type="active === item ? 'primary' : 'default'" @click="handleAnchorClick(item)">
           {{ item }}
         </el-link>
@@ -20,6 +20,11 @@ export default {
     ElLink
   },
   mounted() {
+    if (!Array.from) {
+      Array.from = function(el) {
+        return Array.apply(this, el);
+      };
+    };
     this.$nextTick(() => {
       const map = this.map;
       this.scrollContainer = document.querySelector(
@@ -53,8 +58,10 @@ export default {
         if (cachedIndex !== index && index !== -1) {
           that.active = mapKeys[index];
           cachedIndex = index;
-          document.getElementById(that.active) &&
+          if (document.getElementById(that.active)) {
             document.getElementById(that.active).focus();
+            document.getElementById(that.active).scrollIntoView(true);
+          }
         }
       });
     });
@@ -74,7 +81,7 @@ export default {
   },
   methods: {
     handleAnchorClick(anchor) {
-      this.scrollContainer.scrollTop = this.map.get(anchor);
+      this.scrollContainer.scrollTop = this.map.get(anchor) - 10;
       this.active = anchor;
     }
   }
@@ -90,15 +97,14 @@ export default {
   margin-left: 10px;
   height: calc(100% - 140px);
   overflow: hidden;
-  ul{
+  ul {
     margin: 0;
     padding: 0;
     width: calc(100% + 17px);
-    height: calc(100% + 17px);
-    overflow: scroll;
+    height: 100%;
+    overflow-y: scroll;
   }
   .right-nav-link {
-    margin: 3px 0;
     list-style: none;
     .link {
       ::v-deep span {
@@ -114,8 +120,8 @@ export default {
   .right-nav {
     display: none;
   }
-  .page-component .page-component__content{
-    padding-right: 20px!important;
+  .page-component .page-component__content {
+    padding-right: 20px !important;
   }
 }
 </style>
