@@ -1,3 +1,7 @@
+## 感谢
+
+组件基于 [`element-ui`](https://github.com/ElemeFE/element) 做了二次封装，感谢饿了么前端团队开源！
+
 ## 安装
 
 组件会根据现有bug进行升级，使用前请查看更新日志，但是建议在使用某一版本稳定后，请锁死版本，以免将来组件升级时受到非兼容性更新的影响。
@@ -235,7 +239,6 @@ import {
   Divider,
   Image,
   Calendar,
-  CalendarPro,
   Backtop,
   PageHeader,
   CascaderPanel,
@@ -243,7 +246,10 @@ import {
   MessageBox,
   Message,
   Notification,
-  LoadingBar
+  LoadingBar,
+  TextEllipsis,
+  Empty,
+  Skeleton,
 } from 'element-gui';
 
 Vue.use(Affix);
@@ -319,11 +325,13 @@ Vue.use(Link);
 Vue.use(Divider);
 Vue.use(Image);
 Vue.use(Calendar);
-Vue.use(CalendarPro);
 Vue.use(Backtop);
 Vue.use(PageHeader);
 Vue.use(CascaderPanel);
 Vue.use(LoadingBar);
+Vue.use(TextEllipsis);
+Vue.use(Empty);
+Vue.use(Skeleton);
 
 Vue.use(Loading.directive);
 
@@ -364,10 +372,6 @@ Vue.use(Button);
 ### 开始使用
 
 至此，一个基于 Vue 和 Element 的开发环境已经搭建完毕，现在就可以编写代码了。各个组件的使用方法请参阅它们各自的文档。
-
-## 感谢
-
-组件基于 `element-ui` 做了二次封装，感谢饿了么前端团队开源！
 
 ## 版权
 
