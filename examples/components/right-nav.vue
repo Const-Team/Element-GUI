@@ -24,7 +24,7 @@ export default {
       Array.from = function(el) {
         return Array.apply(this, el);
       };
-    }
+    };
     this.$nextTick(() => {
       const map = this.map;
       this.scrollContainer = document.querySelector(
@@ -59,8 +59,8 @@ export default {
           that.active = mapKeys[index];
           cachedIndex = index;
           if (document.getElementById(that.active)) {
-            document.getElementById(that.active).scrollIntoView(true);
             document.getElementById(that.active).focus();
+            document.getElementById(that.active).scrollIntoView(true);
           }
         }
       });
