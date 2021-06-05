@@ -47,7 +47,7 @@
     }
 
     .page-component__content {
-      padding-left: 270px;
+      padding-left: 280px;
       padding-right: 240px;
       padding-bottom: 100px;
       box-sizing: border-box;
