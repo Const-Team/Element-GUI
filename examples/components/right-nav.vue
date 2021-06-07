@@ -1,10 +1,9 @@
 <template>
   <div class="right-nav" v-if="anchors">
     <ul>
-      <li v-for="(item, i) in anchors" :key="'item' + i" class="right-nav-link">
-        <el-link :title="item" class="link" :type="active === item ? 'primary' : 'default'" @click="handleAnchorClick(item)">
-          {{ item }}
-        </el-link>
+      <li :id="item" v-for="(item, i) in anchors" :key="'item' + i" class="right-nav-link" :class="active === item ? 'primary' : 'default'">
+        <div class="line"></div>
+        <em :title="item" class="link" @click="handleAnchorClick(item)">{{ item }}</em>
       </li>
     </ul>
   </div>
@@ -76,9 +75,6 @@ export default {
       map: new Map()
     };
   },
-  beforeUnmount() {
-    this.resizeObserver.disconnect();
-  },
   methods: {
     handleAnchorClick(anchor) {
       this.scrollContainer.scrollTop = this.map.get(anchor) - 10;
@@ -103,16 +99,56 @@ export default {
     width: calc(100% + 17px);
     height: 100%;
     overflow-y: scroll;
+    .right-nav-link:last-child{
+      .line{
+        border-left-color: transparent;
+      }
+    }
   }
   .right-nav-link {
+    position: relative;
     list-style: none;
-    .link {
-      ::v-deep span {
-        font-size: 12px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
+    line-height: 26px;
+    .link:hover{
+      color: #46a6ff
+    }
+    &.primary{
+      .line{
+        &::before{
+          background-color: #46a6ff;
+        }
       }
+      .link{
+        color: #46a6ff;
+      }
+    }
+    .line{
+      position: absolute;
+      top: 13px;
+      left: 4px;
+      height: 100%;
+      border-left: 1px solid #d2d2d2;
+      &::before{
+        content: '';
+        position: absolute;
+        left: -4px;
+        top: -4px;
+        background-color: #d2d2d2;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+      }
+    }
+    .link {
+      display: inline-block;
+      width: 190px;
+      font-style: normal;
+      margin-left: 15px;
+      font-size: 12px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      cursor: pointer;
     }
   }
 }

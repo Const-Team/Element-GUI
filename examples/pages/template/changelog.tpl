@@ -1,4 +1,4 @@
-<style>
+<style lang="scss">
   .page-changelog {
     details {
       padding: 0;
