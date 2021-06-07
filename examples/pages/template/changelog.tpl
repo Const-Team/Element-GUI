@@ -1,7 +1,5 @@
 <style>
   .page-changelog {
-    padding-bottom: 100px;
-
     details {
       padding: 0;
       padding-bottom: 10px;
@@ -12,7 +10,6 @@
 
       summary{
         position: relative;
-        padding: 5px;
       }
 
       span {
@@ -22,8 +19,7 @@
       }
 
       em {
-        position: absolute;
-        right: 30px;
+        float: right;
         font-style: normal;
         font-size: 16px;
         color: #666;
