@@ -1,4 +1,4 @@
-<style>
+<style lang="scss">
   .page-component__scroll {
     height: calc(100% - 60px);
     margin-top: 60px;
