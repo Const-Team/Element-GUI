@@ -1,6 +1,6 @@
 ## 更新日志
 
-<details>
+<details open="open">
 
 <summary>
   <span>1.2.4</span><em>2021-06-04</em>
@@ -160,7 +160,7 @@
 
 <details>
   <summary>
-    <span>1.1.88</span><em>2020-12-31 🎉 新年快乐 🥳</em>
+    <span>1.1.88</span><em>🎉 新年快乐 🥳 2020-12-31</em>
   </summary>
 
 #### 新特性
@@ -497,7 +497,7 @@
 
 <details>
   <summary>
-    <span>1.1.20</span><em>2019-12-25 🎉 圣诞快乐 🎄</em>
+    <span>1.1.20</span><em>🎉 圣诞快乐 🎄 2019-12-25</em>
   </summary>
 
 #### 新特性
