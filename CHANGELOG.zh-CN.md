@@ -1,7 +1,10 @@
 ## 更新日志
 
-### 1.2.4
-_2021-06-4_
+<details>
+
+<summary>
+  <span>1.2.4<em>2021-06-04</em></span>
+</summary>
 
 #### 新特性
 
@@ -17,8 +20,13 @@ _2021-06-4_
 - Table
   - 修复懒加载数据
 
-### 1.2.3
-_2021-05-30_
+</details>
+
+<details>
+
+<summary>
+  <span>1.2.3<em>2021-05-30</em></span>
+</summary>
 
 #### 新特性
 
@@ -42,8 +50,12 @@ _2021-05-30_
 - Dialog
   - 修复IE下弹窗无法遮盖焦点
 
-### 1.2.1
-_2021-04-20_
+</details>
+
+<details>
+  <summary>
+    <span>1.2.1<em>2021-04-20</em></span>
+  </summary>
 
 #### 新特性
 
@@ -65,8 +77,12 @@ _2021-04-20_
 - Tooltip
   - 修复`max-width`属性类型判断bug。
 
-### 1.2.0
-_2021-03-19_
+</details>
+
+<details>
+  <summary>
+    <span>1.2.0<em>2021-03-19</em></span>
+  </summary>
 
 #### 特别注意
 
@@ -93,8 +109,12 @@ _2021-03-19_
 - Image
   - 修复IE中图像匹配错误比率。
 
-### 1.1.94
-_2021-02-23_
+</details>
+
+<details>
+  <summary>
+    <span>1.1.94<em>2021-02-23</em></span>
+  </summary>
 
 #### 特别注意
 
@@ -124,16 +144,24 @@ _2021-02-23_
 - Form
   - 修复`form-item`中`label-wrap`的报错问题。
 
-### 1.1.89
-_2021-01-15_
+</details>
+
+<details>
+  <summary>
+    <span>1.1.89<em>2021-01-15</em></span>
+  </summary>
 
 #### 修复
 
 - Cascader
   - 修复级联多选bug。
 
-### 1.1.88
-_2020-12-31 🎉 新年快乐 🥳_
+</details>
+
+<details>
+  <summary>
+    <span>1.1.88<em>2020-12-31 🎉 新年快乐 🥳</em></span>
+  </summary>
 
 #### 新特性
 
@@ -177,8 +205,12 @@ _2020-12-31 🎉 新年快乐 🥳_
 - Table
   - 优化 ` show-overflow-tooltip ` 导致整个 Table 的重新渲染
 
-### 1.1.83
-_2020-11-27_
+</details>
+
+<details>
+  <summary>
+    <span>1.1.83<em>2020-11-27</em></span>
+  </summary>
 
 #### 新特性
 
@@ -198,8 +230,12 @@ _2020-11-27_
 - 表单元素
   - 修复表单元素对齐。
 
-### 1.1.73
-_2020-10-29_
+</details>
+
+<details>
+  <summary>
+    <span>1.1.73<em>2020-10-29</em></span>
+  </summary>
 
 #### 新特性
 
@@ -229,8 +265,12 @@ _2020-10-29_
   - 优化 ` Pagination ` ，为页码按钮等添加唯一 ` id ` ；
 - 增加常用原子样式
 
-### 1.1.60
-_2020-08-21_
+</details>
+
+<details>
+  <summary>
+    <span>1.1.60<em>2020-08-21</em></span>
+  </summary>
 
 #### 新特性
 
@@ -267,8 +307,12 @@ _2020-08-21_
 - TreeSelect
   - 增加 ` node-key ` 
 
-### 1.1.46
-_2020-07-23_
+</details>
+
+<details>
+  <summary>
+    <span>1.1.46<em>2020-07-23</em></span>
+  </summary>
 
 #### 新特性
 
@@ -292,9 +336,12 @@ _2020-07-23_
 - Cascader
   - 修复清空 ` options ` 时报错 
 
-### 1.1.41
+</details>
 
-_2020-05-14_
+<details>
+  <summary>
+    <span>1.1.41<em>2020-05-14</em></span>
+  </summary>
 
 #### 新特性
 
@@ -310,9 +357,12 @@ _2020-05-14_
 - NavMenu
   -  ` SubMenu ` 组件堆栈溢出bug
 
-### 1.1.37
+</details>
 
-_2020-04-28_
+<details>
+  <summary>
+    <span>1.1.37<em>2020-04-28</em></span>
+  </summary>
 
 #### 新特性
 
@@ -371,9 +421,12 @@ _2020-04-28_
 - MessageBox
   - 优化相关样式
 
-### 1.1.31
+</details>
 
-_2020-03-24_
+<details>
+  <summary>
+    <span>1.1.31<em>2020-03-24</em></span>
+  </summary>
 
 #### 新特性
 
@@ -387,18 +440,24 @@ _2020-03-24_
 - Form
   - 修复 Form 表单验证覆盖 bug
 
-### 1.1.28
+</details>
 
-_2020-02-05_
+<details>
+  <summary>
+    <span>1.1.28<em>2020-02-05</em></span>
+  </summary>
 
 #### 新特性
 
 - 全局配置
   - 增加 ` duration ` 全局配置。
 
-### 1.1.27
+</details>
 
-_2020-01-15_
+<details>
+  <summary>
+    <span>1.1.27<em>2020-01-15</em></span>
+  </summary>
 
 #### 修复
 
@@ -414,9 +473,12 @@ _2020-01-15_
 - Slider
   - 增加 ` rangeClick ` 属性
 
-### 1.1.23
+</details>
 
-_2019-12-27_
+<details>
+  <summary>
+    <span>1.1.23<em>2019-12-27</em></span>
+  </summary>
 
 #### 修复
 
@@ -431,9 +493,12 @@ _2019-12-27_
 - Slider
   - 增加 ` disabled-point ` 属性
 
-### 1.1.20
+</details>
 
-_2019-12-25 🎉 圣诞快乐 🎄_
+<details>
+  <summary>
+    <span>1.1.20<em>2019-12-25 🎉 圣诞快乐 🎄</em></span>
+  </summary>
 
 #### 新特性
 
@@ -495,9 +560,12 @@ _2019-12-25 🎉 圣诞快乐 🎄_
   - 增加 ` active ` 动效
   - 增加 插槽
 
-### 1.0.96
+</details>
 
-_2019-11-27_
+<details>
+  <summary>
+    <span>1.0.96<em>2019-11-27</em></span>
+  </summary>
 
 #### 新特性
 
@@ -563,9 +631,12 @@ _2019-11-27_
   - 增加 ` input event ` 相关文档 
   - 移除 ` Input repeat change event ` 相关文档 
 
-### 1.0.94 之前版本
+</details>
 
-_2019-11-20_
+<details>
+  <summary>
+    <span>1.0.94 之前版本<em>2019-11-20</em></span>
+  </summary>
 
 #### 新特性
 
@@ -613,3 +684,4 @@ _2019-11-20_
   - 更新 ` DatePicker ` 语言包
 - Icon
   - 优化字体包体积，删除组件无用图标
+</details>

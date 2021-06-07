@@ -138,7 +138,7 @@
       <side-nav :data="navsData[lang]" :base="`/component`"></side-nav>
     </el-scrollbar>
     <div class="page-component__content">
-      <router-view class="content"></router-view>
+      <router-view></router-view>
     </div>
     <el-backtop 
       v-if="showBackToTop"
