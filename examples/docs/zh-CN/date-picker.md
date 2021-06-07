@@ -135,9 +135,7 @@
     </el-date-picker>
   </div>
   </el-col>
-</el-row>
-<el-row :gutter="80">
-  <el-col :span="12">
+  <el-col :span="8">
   <div class="block">
     <span class="demonstration">周</span>
     <el-date-picker
@@ -148,7 +146,7 @@
     </el-date-picker>
   </div>
   </el-col>
-  <el-col :span="12">
+  <el-col :span="8">
   <div class="block">
     <span class="demonstration">多个日期</span>
     <el-date-picker

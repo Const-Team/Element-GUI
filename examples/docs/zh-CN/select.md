@@ -294,61 +294,61 @@
 :::demo 为`el-select`设置`multiple`属性即可启用多选，此时`v-model`的值为当前选中值所组成的数组。默认情况下选中值会以 Tag 的形式展现，你也可以设置`collapse-tags`属性将它们合并为单独的标签文字，`collapse-tags-max-num` 来配置超过几个来进行折叠，超出隐藏会触发 `tooltip` 效果，可以使用 `tooltip-effect` 来配置 `tooltip` 主题。新增`collapse-texts`属性，可以将文字合并为简单的文字。
 ```html
 <template>
-  <P>
+  <el-row :gutter="80">
+  <el-col :span="12">
     <el-select v-model="value1" multiple placeholder="请选择">
-    <el-option
-      v-for="item in options"
-      :key="item.value"
-      :label="item.label"
-      :value="item.value">
-    </el-option>
-  </el-select>
-
-  <el-select
-    v-model="value2"
-    multiple
-    collapse-tags
-    style="margin-left: 20px;"
-    placeholder="请选择">
-    <el-option
-      v-for="item in options"
-      :key="item.value"
-      :label="item.label"
-      :value="item.value">
-    </el-option>
-  </el-select>
-
-  <el-select
-    v-model="value2"
-    multiple
-    collapse-tags
-    :collapse-tags-max-num="2"
-    style="margin-left: 20px;"
-    placeholder="请选择">
-    <el-option
-      v-for="item in options"
-      :key="item.value"
-      :label="item.label"
-      :value="item.value">
-    </el-option>
-  </el-select>
-  </p>
-  
-  <p>
+      <el-option
+        v-for="item in options"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value">
+      </el-option>
+    </el-select>
+  </el-col>
+  <el-col :span="12">
     <el-select
-    v-model="value2"
-    multiple
-    collapse-texts
-    placeholder="请选择">
-    <el-option
-      v-for="item in options"
-      :key="item.value"
-      :label="item.label"
-      :value="item.value">
-    </el-option>
-  </el-select>
-  </p>
-  
+      v-model="value2"
+      multiple
+      collapse-tags
+      placeholder="请选择">
+      <el-option
+        v-for="item in options"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value">
+      </el-option>
+    </el-select>
+  </el-col>
+  <el-col :span="12">
+    <el-select
+      v-model="value2"
+      multiple
+      collapse-tags
+      :collapse-tags-max-num="2"
+      placeholder="请选择">
+      <el-option
+        v-for="item in options"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value">
+      </el-option>
+    </el-select>
+  </el-col>
+  <el-col :span="12">
+    <el-select
+      v-model="value2"
+      multiple
+      collapse-texts
+      placeholder="请选择">
+      <el-option
+        v-for="item in options"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value">
+      </el-option>
+    </el-select>
+  </el-col>
+  </el-row>
 </template>
 
 <script>
