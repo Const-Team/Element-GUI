@@ -33,7 +33,6 @@ export default {
       const content = document.querySelector('.element-doc');
       if (!content) return;
       const h3 = content.querySelectorAll('h3');
-      console.log(h3)
       this.anchors = Array.from(h3).map((item) => {
         const text = item.childNodes[1].textContent.trim();
         map.set(text, item.offsetTop);
