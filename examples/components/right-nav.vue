@@ -2,7 +2,7 @@
   <div class="right-nav" v-if="anchors">
     <ul>
       <li v-for="(item, i) in anchors" :key="'item' + i" class="right-nav-link">
-        <el-link :id="item" :title="item" class="link" :type="active === item ? 'primary' : 'default'" @click="handleAnchorClick(item)">
+        <el-link :title="item" class="link" :type="active === item ? 'primary' : 'default'" @click="handleAnchorClick(item)">
           {{ item }}
         </el-link>
       </li>
@@ -30,9 +30,10 @@ export default {
       this.scrollContainer = document.querySelector(
         '.el-scrollbar.page-component__scroll>.el-scrollbar__wrap'
       );
-      const content = document.querySelector('.content.element-doc.content');
+      const content = document.querySelector('.element-doc');
       if (!content) return;
       const h3 = content.querySelectorAll('h3');
+      console.log(h3)
       this.anchors = Array.from(h3).map((item) => {
         const text = item.childNodes[1].textContent.trim();
         map.set(text, item.offsetTop);
