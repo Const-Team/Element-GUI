@@ -3,7 +3,7 @@
 <details>
 
 <summary>
-  <span>1.2.4<em>2021-06-04</em></span>
+  <span>1.2.4</span><em>2021-06-04</em>
 </summary>
 
 #### 新特性
@@ -25,7 +25,7 @@
 <details>
 
 <summary>
-  <span>1.2.3<em>2021-05-30</em></span>
+  <span>1.2.3</span><em>2021-05-30</em>
 </summary>
 
 #### 新特性
@@ -54,7 +54,7 @@
 
 <details>
   <summary>
-    <span>1.2.1<em>2021-04-20</em></span>
+    <span>1.2.1</span><em>2021-04-20</em>
   </summary>
 
 #### 新特性
@@ -81,7 +81,7 @@
 
 <details>
   <summary>
-    <span>1.2.0<em>2021-03-19</em></span>
+    <span>1.2.0</span><em>2021-03-19</em>
   </summary>
 
 #### 特别注意
@@ -113,7 +113,7 @@
 
 <details>
   <summary>
-    <span>1.1.94<em>2021-02-23</em></span>
+    <span>1.1.94</span><em>2021-02-23</em>
   </summary>
 
 #### 特别注意
@@ -148,7 +148,7 @@
 
 <details>
   <summary>
-    <span>1.1.89<em>2021-01-15</em></span>
+    <span>1.1.89</span><em>2021-01-15</em>
   </summary>
 
 #### 修复
@@ -160,7 +160,7 @@
 
 <details>
   <summary>
-    <span>1.1.88<em>2020-12-31 🎉 新年快乐 🥳</em></span>
+    <span>1.1.88</span><em>2020-12-31 🎉 新年快乐 🥳</em>
   </summary>
 
 #### 新特性
@@ -209,7 +209,7 @@
 
 <details>
   <summary>
-    <span>1.1.83<em>2020-11-27</em></span>
+    <span>1.1.83</span><em>2020-11-27</em>
   </summary>
 
 #### 新特性
@@ -234,7 +234,7 @@
 
 <details>
   <summary>
-    <span>1.1.73<em>2020-10-29</em></span>
+    <span>1.1.73</span><em>2020-10-29</em>
   </summary>
 
 #### 新特性
@@ -269,7 +269,7 @@
 
 <details>
   <summary>
-    <span>1.1.60<em>2020-08-21</em></span>
+    <span>1.1.60</span><em>2020-08-21</em>
   </summary>
 
 #### 新特性
@@ -311,7 +311,7 @@
 
 <details>
   <summary>
-    <span>1.1.46<em>2020-07-23</em></span>
+    <span>1.1.46</span><em>2020-07-23</em>
   </summary>
 
 #### 新特性
@@ -340,7 +340,7 @@
 
 <details>
   <summary>
-    <span>1.1.41<em>2020-05-14</em></span>
+    <span>1.1.41</span><em>2020-05-14</em>
   </summary>
 
 #### 新特性
@@ -361,7 +361,7 @@
 
 <details>
   <summary>
-    <span>1.1.37<em>2020-04-28</em></span>
+    <span>1.1.37</span><em>2020-04-28</em>
   </summary>
 
 #### 新特性
@@ -425,7 +425,7 @@
 
 <details>
   <summary>
-    <span>1.1.31<em>2020-03-24</em></span>
+    <span>1.1.31</span><em>2020-03-24</em>
   </summary>
 
 #### 新特性
@@ -444,7 +444,7 @@
 
 <details>
   <summary>
-    <span>1.1.28<em>2020-02-05</em></span>
+    <span>1.1.28</span><em>2020-02-05</em>
   </summary>
 
 #### 新特性
@@ -456,7 +456,7 @@
 
 <details>
   <summary>
-    <span>1.1.27<em>2020-01-15</em></span>
+    <span>1.1.27</span><em>2020-01-15</em>
   </summary>
 
 #### 修复
@@ -477,7 +477,7 @@
 
 <details>
   <summary>
-    <span>1.1.23<em>2019-12-27</em></span>
+    <span>1.1.23</span><em>2019-12-27</em>
   </summary>
 
 #### 修复
@@ -497,7 +497,7 @@
 
 <details>
   <summary>
-    <span>1.1.20<em>2019-12-25 🎉 圣诞快乐 🎄</em></span>
+    <span>1.1.20</span><em>2019-12-25 🎉 圣诞快乐 🎄</em>
   </summary>
 
 #### 新特性
@@ -564,7 +564,7 @@
 
 <details>
   <summary>
-    <span>1.0.96<em>2019-11-27</em></span>
+    <span>1.0.96</span><em>2019-11-27</em>
   </summary>
 
 #### 新特性
@@ -635,7 +635,7 @@
 
 <details>
   <summary>
-    <span>1.0.94 之前版本<em>2019-11-20</em></span>
+    <span>1.0.94 之前版本</span><em>2019-11-20</em>
   </summary>
 
 #### 新特性

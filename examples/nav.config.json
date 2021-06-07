@@ -123,8 +123,12 @@
               "title": "Slider 滑块"
             },
             {
+              "path": "/time-select",
+              "title": "TimeSelect 时间选择器"
+            },
+            {
               "path": "/time-picker",
-              "title": "TimePicker 时间选择器"
+              "title": "TimePicker 时分秒选择器"
             },
             {
               "path": "/date-picker",
