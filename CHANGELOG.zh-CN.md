@@ -23,6 +23,9 @@
 - Row
   - 修复顶部对齐
 
+- DOM
+  - 修复IE浏览器下 `addClass` 报错
+
 </details>
 
 <details>
