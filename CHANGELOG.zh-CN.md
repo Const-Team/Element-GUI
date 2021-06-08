@@ -3,7 +3,7 @@
 <details open="open">
 
 <summary>
-  <span>1.2.4</span><em>2021-06-04</em>
+  <span>1.2.4</span><em>2021-06-08</em>
 </summary>
 
 #### 新特性
@@ -19,6 +19,9 @@
 
 - Table
   - 修复懒加载数据
+
+- Row
+  - 修复顶部对齐
 
 </details>
 
