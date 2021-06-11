@@ -555,19 +555,6 @@
       background-color: $--table-current-row-background-color;
     }
 
-    tr.current-row td:first-child{
-      &::before{
-        content: ' ';
-        height: 100%;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        width: 2px;
-        background:$--color-primary;
-        opacity:0.7;
-      }
-    }
   }
 
   @include e(column-resize-proxy) {
@@ -683,19 +670,9 @@
         }
         td:first-child{
           border-left: $--table-border;
-          border-radius:2px 0px 0px 2px;
+          border-radius: 2px 0px 0px 2px;
           padding-left: 3px;
-          .cell::before{
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            width: 4px;
-            background:$--color-primary;
-            border-radius:2px 0px 0px 2px;
-            opacity:0.5;
-          }
+          border-left: 4px solid $--color-primary-light-5;
         }
         td:last-child{
           border-right:$--table-border;
