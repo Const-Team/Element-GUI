@@ -3,7 +3,7 @@
 <details open="open">
 
 <summary>
-  <span>1.2.4</span><em>2021-06-08</em>
+  <span>1.2.5</span><em>2021-06-11</em>
 </summary>
 
 #### 新特性
@@ -16,15 +16,25 @@
 - DatePicker
   - 修复 `cellClassName` 仅在 `type = 'date'` 生效
   - 修复日期区间时间选择bug
-
 - Table
   - 修复懒加载数据
-
+  - 修复IE下卡片样式
 - Row
   - 修复顶部对齐
-
 - DOM
   - 修复IE浏览器下 `addClass` 报错
+  - 修复 `isScroll` 判断
+- Calendar
+  - 修复日历面板周起始日
+- Select
+  - 修复下拉值为布尔类型
+- Drawer
+  - 添加内容溢出滚动样式
+
+#### 优化
+
+- Image
+  - 优化在 `iframe` 中使用图片预览时事件不能注销
 
 </details>
 
@@ -98,20 +108,15 @@
 
 - Table
   - 修复卡片表格树样式。
-
 - Popover
   - 修复`Popover`宽度。
-
 - Cascader
   - 修复`Cascader`懒加载。 
   - 修复`Cascader`当前路径。 
-
 - Radio
   - 修复使用 `RadioGroup` 作为动态组件报错。
-
 - ColorPicker
   - 修复选择8位十六进制颜色。
-
 - Image
   - 修复IE中图像匹配错误比率。
 
