@@ -73,7 +73,7 @@
     data() {
       return {
         value: null,
-        iconClasses: ['icon-rate-face-1', 'icon-rate-face-2', 'icon-rate-face-3'] // 等同于 { 2: 'icon-rate-face-1', 4: { value: 'icon-rate-face-2', excluded: true }, 5: 'icon-rate-face-3' }
+        iconfont: ['el-icon-error', 'el-icon-warning', 'el-icon-success', ] // 等同于 { 2: 'el-icon-error', 4: { value: 'el-icon-warning', excluded: true }, 5: 'el-icon-success' }
       }
     }
   }

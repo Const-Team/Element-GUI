@@ -608,7 +608,7 @@
         }
         if (option) return option;
         const label = (!isObject && !isNull && !isUndefined)
-          ? value : '';
+          ? String(value) : '';
         let newOption = {
           value: value,
           currentLabel: label

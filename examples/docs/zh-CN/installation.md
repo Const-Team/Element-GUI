@@ -7,9 +7,9 @@
 本组件兼容现代浏览器，IE浏览器兼容到**IE10**及以上！
 :::
 
-### npm 安装
+### NPM 安装
 
-推荐使用 npm 的方式安装，它能更好地和 [webpack](https://webpack.js.org/) 打包工具配合使用。
+推荐使用 `NPM` 的方式安装，它能更好地和 [webpack](https://webpack.js.org/) 打包工具配合使用。
 
 ```shell
 npm i element-gui -S
@@ -19,7 +19,7 @@ npm i element-gui -S
 
 目前可以通过 [unpkg.com/element-gui](https://unpkg.com/element-gui/) 或者 [www.jsdelivr.com/package/npm/element-gui](https://www.jsdelivr.com/package/npm/element-gui) 获取到最新版本的资源，在页面上引入 js 和 css 文件即可开始使用。
 
-因为组件是基于element-ui二次封装，老项目里面已经引用了element-gui，也可以只引用组件样式，达到风格快速统一！
+因为组件是基于 element-ui 二次封装，老项目里面已经引用了 element-gui，也可以只引用组件样式，达到风格快速统一！
 
 ```html
 <!-- 引入样式 -->

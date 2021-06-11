@@ -1,6 +1,10 @@
 ## TextEllipsis 文本截断
 
-轻松实现多行文本截断。 
+简单实现多行文本截断。
+
+::: tip
+注意：组件不支持布局变化时自动更新，如需支持更多截断内容，请使用 [vue-clamp](https://www.npmjs.com/package/vue-clamp)。
+:::
 
 ### 基础用法
 :::demo

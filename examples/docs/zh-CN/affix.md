@@ -85,7 +85,6 @@
 :::
 ```
 <el-affix :style="{ position: 'absolute', top: y, left: x}">
-
 </el-affix>
 ```
 
