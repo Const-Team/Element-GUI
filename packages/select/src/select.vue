@@ -192,7 +192,6 @@
   import debounce from 'throttle-debounce/debounce';
   import Clickoutside from 'element-gui/src/utils/clickoutside';
   import { addResizeListener, removeResizeListener } from 'element-gui/src/utils/resize-event';
-  import { t } from 'element-gui/src/locale';
   import scrollIntoView from 'element-gui/src/utils/scroll-into-view';
   import { getValueByPath, valueEquals, isIE, isEdge } from 'element-gui/src/utils/util';
   import NavigationMixin from './navigation-mixin';
@@ -298,6 +297,10 @@
         return ['small', 'mini'].indexOf(this.selectSize) > -1
           ? 'mini'
           : 'small';
+      },
+
+      propPlaceholder() {
+        return typeof this.placeholder !== 'undefined' ? this.placeholder : this.t('el.select.placeholder');
       }
     },
 
@@ -350,12 +353,7 @@
         type: Number,
         default: 0
       },
-      placeholder: {
-        type: String,
-        default() {
-          return t('el.select.placeholder');
-        }
-      },
+      placeholder: String,
       defaultFirstOption: Boolean,
       reserveKeyword: Boolean,
       valueKey: {
@@ -420,7 +418,7 @@
         });
       },
 
-      placeholder(val) {
+      propPlaceholder(val) {
         this.cachedPlaceHolder = this.currentPlaceholder = val;
       },
 
@@ -933,7 +931,7 @@
     },
 
     created() {
-      this.cachedPlaceHolder = this.currentPlaceholder = this.placeholder;
+      this.cachedPlaceHolder = this.currentPlaceholder = this.propPlaceholder;
       if (this.multiple && !Array.isArray(this.value)) {
         this.$emit('input', []);
       }
