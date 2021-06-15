@@ -169,9 +169,12 @@ export default {
       if (instance && instance.focus) {
         instance.focus();
       } else {
-        this.focusing = true;
-        this.show();
+        this.doFocus();
       }
+    },
+    doFocus() {
+      this.focusing = true;
+      this.show();
     },
     handleBlur() {
       this.focusing = false;
