@@ -135,7 +135,6 @@
       &.is-fixed {
         position: fixed;
         bottom: 0;
-        width: 918px;
       }
 
       i {
@@ -251,10 +250,11 @@
       },
 
       scrollHandler() {
-        const { top, bottom, left } = this.$refs.meta.getBoundingClientRect();
+        const { top, bottom, left, right } = this.$refs.meta.getBoundingClientRect();
         this.fixedControl = bottom > document.documentElement.clientHeight &&
           top + 44 <= document.documentElement.clientHeight;
         this.$refs.control.style.left = this.fixedControl ? `${ left }px` : '0';
+        this.$refs.control.style.width = this.fixedControl ? `${ right - left }px` : 'auto';
       },
 
       removeScrollHandler() {
