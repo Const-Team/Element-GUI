@@ -281,6 +281,8 @@
       const props = tree.props || {};
       const childrenKey = props['children'] || 'children';
 
+      // data may be changed before created
+      this.node.updateChildren();
       this.$watch(`node.data.${childrenKey}`, () => {
         this.node.updateChildren();
       });
