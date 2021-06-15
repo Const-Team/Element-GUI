@@ -3,13 +3,17 @@
 <details open="open">
 
 <summary>
-  <span>1.2.5</span><em>2021-06-11</em>
+  <span>1.2.6</span><em>2021-06-15</em>
 </summary>
 
 #### 新特性
 
 - Skeleton
   - 增加骨架屏组件
+- Progress
+  - `SVG` 元素添加宽高属性
+- Tooltip
+  - 添加 `close-delay` 属性
 
 #### 修复
 
@@ -28,6 +32,7 @@
   - 修复日历面板周起始日
 - Select
   - 修复下拉值为布尔类型
+  - 修复 `placeholder` 切换语言转换
 - Drawer
   - 添加内容溢出滚动样式
 
