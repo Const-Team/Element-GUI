@@ -21,6 +21,59 @@
 ```
 :::
 
+### Custom Header
+
+:::demo 通过设置名为 `header` 的 `scoped slot` ，自定义日历标题中显示的内容。在 `header` 中可以得到 `dateText` 、`toPrev` 、`tototoday` 、`toNextMonth` 。有关详细信息，请参阅下面的API文档。
+```html
+<el-calendar>
+  <!-- Use 2.5 slot syntax. If you use Vue 2.6, please use new slot syntax-->
+  <template
+    slot="header"
+    slot-scope="{dateText, toPrevMonth, toToday, toNextMonth, pickDay}">
+    <div style="
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;">
+      <el-button
+        size="mini"
+        @click="toPrevMonth">
+        上个月
+      </el-button>
+      <p>
+        {{ dateText }}
+        <el-button
+          size="mini"
+          @click="toToday">
+          今天
+        </el-button>
+        <el-button
+          size="mini"
+          @click="pickDay('1985-02-24')"
+          >
+          1985-02-24
+        </el-button>
+      </p>
+      <el-button
+        size="mini"
+        @click="toNextMonth">
+        下个月
+      </el-button>
+    </div>
+  </template>
+
+</el-calendar>
+<style>
+  .custom-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+</style>
+```
+:::
+
 ### 自定义内容
 
 :::demo 通过设置名为 `dateCell` 的 `scoped-slot` 来自定义日历单元格中显示的内容。在 `scoped-slot` 可以获取到 date（当前单元格的日期）, data（包括 type，isSelected，day 属性）。详情解释参考下方的 API 文档。
@@ -58,6 +111,16 @@
 | value / v-model | 绑定值         | Date/string/number | —  | —      |
 | range           | 时间范围，包括开始时间与结束时间。开始时间必须是周一，结束时间必须是周日，且时间跨度不能超过两个月。 | Array     | —           | —      |
 | first-day-of-week | 周起始日	    | Number    | 1 到 7      |  1     |
+
+
+### header Scoped Slot Parameters
+| Attribute       | Description   | Type      | Accepted Values       | Default  |
+|-----------------|-------------- |---------- |---------------------- |--------- |
+| dateText        | 日期文本      | String   | — | — |
+| toPrevMonth     | 上个月  | Function | — | — |
+| toNextMonth     | 下个月      | Function | — | — |
+| toToday         | 当天           | Function | — | — |
+| pickDay         | 跳转到目标日期     | Function | 'yyyy-MMM-dd' | — |
 
 ### dateCell scoped slot 参数
 | 参数             | 说明          | 类型      | 可选值        | 默认值  |
