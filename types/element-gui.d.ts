@@ -82,6 +82,7 @@ import { ElDrawer } from './drawer'
 import { ElPopconfirm } from './popconfirm'
 import { ElSkeleton } from './skeleton'
 import { ElSkeletonItem } from './skeleton-item'
+import { ElEmpty } from './empty'
 
 export interface InstallationOptions {
   locale: any,
@@ -351,4 +352,7 @@ export class Popconfirm extends ElPopconfirm { }
 export class Skeleton extends ElSkeleton {}
 
 /** Skeleton Item Component */
-export class SkeletonItem extends ElSkeletonItem {}
+export class SkeletonItem extends ElSkeletonItem { }
+
+/** Empty Component */
+export class Empty extends ElEmpty {}
