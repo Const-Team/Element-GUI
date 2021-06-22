@@ -1118,7 +1118,7 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 | label-width             | 表单域标签的宽度，例如 '50px'。作为 Form 直接子元素的 form-item 会继承该值。支持 `auto`。 | string  | —                     | —      |
 | label-max-width         | 表单域标签的最大宽度，当`label-width`为`auto`下生效，例如 '200px'。                       | string  | —                     | —      |
 | label-suffix            | 表单域标签的后缀                                                                          | string  | —                     | —      |
-| hide-required-asterisk  | 是否显示必填字段的标签旁边的红色星号                                                      | boolean | —                     | false  |
+| hide-required-asterisk  | 是否隐藏必填字段的标签旁边的红色星号                                                      | boolean | —                     | false  |
 | show-message            | 是否显示校验错误信息                                                                      | boolean | —                     | true   |
 | inline-message          | 是否以行内形式展示校验信息                                                                | boolean | —                     | false  |
 | block-message          | 是否以块级形式展示校验信息                                                                | boolean | —                     | false  |
