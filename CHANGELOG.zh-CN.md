@@ -3,17 +3,60 @@
 <details open="open">
 
 <summary>
-  <span>1.2.6</span><em>2021-06-15</em>
+  <span>1.2.6</span><em>2021-06-22</em>
+</summary>
+
+#### 新特性
+
+- Progress
+  - `SVG` 元素添加宽高属性
+- Tooltip
+  - 添加 `close-delay` 属性
+- Calendar
+  - 添加 `header` 插槽
+- Dropdown
+  - 针对分割按钮添加 `disabled` 和 `loading` 属性
+- Slider
+  - 添加过渡动画配置
+
+#### 修复
+
+- Select
+  - 修复 `placeholder` 切换语言转换
+  - 修复异步获取选项和下拉列表无法修改标签
+- ButtonGroup
+  - 修复按钮组 `el-dropdown` 和 `el-popover`中按钮样式
+- Carousel
+  - 修复切换时间间隔错误
+- Popover
+  - 修复内存泄漏
+- Upload
+  - 修复自定义上传文件时代码异常
+- Message
+  - 修复 `message` 类型判断
+- Utils
+  - 修复使用2位数日期截断年份
+  - 修复DOM报错
+
+#### 优化
+
+- Tree
+  - 优化在创建节点之前可以更改数据
+- Empty
+  - 优化语言包
+
+</details>
+
+<details>
+
+<summary>
+  <span>1.2.5</span><em>2021-06-11</em>
 </summary>
 
 #### 新特性
 
 - Skeleton
   - 增加骨架屏组件
-- Progress
-  - `SVG` 元素添加宽高属性
-- Tooltip
-  - 添加 `close-delay` 属性
 
 #### 修复
 
@@ -32,7 +75,6 @@
   - 修复日历面板周起始日
 - Select
   - 修复下拉值为布尔类型
-  - 修复 `placeholder` 切换语言转换
 - Drawer
   - 添加内容溢出滚动样式
 
@@ -46,7 +88,7 @@
 <details>
 
 <summary>
-  <span>1.2.3</span><em>2021-05-30</em>
+  <span>1.2.3</span><em>🎉 儿童节快乐 🥳 2021-05-30</em>
 </summary>
 
 #### 新特性
@@ -59,7 +101,7 @@
 - MessageBox
   - 修复关闭按钮居中
 - Carousel
-  - 修复间隔和缩放错误
+  - 修复缩放错误
 - Tabs
   - 修复控制台报错 `scrollToActiveTab of undefined`
   - 修复激活页签样式
