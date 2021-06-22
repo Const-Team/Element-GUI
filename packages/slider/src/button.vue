@@ -47,6 +47,20 @@
         type: Boolean,
         default: false
       },
+      enableTransition: {
+        type: Boolean,
+        default: false
+      },
+      transition: {
+        type: Object,
+        default: () => {
+          return {
+            duration: 1,
+            mode: 'linear',
+            delay: 0
+          };
+        }
+      },
       tooltipClass: String,
       tooltipEffect: {
         type: String,
@@ -107,6 +121,16 @@
       },
 
       wrapperStyle() {
+        if (this.enableTransition) {
+          return this.vertical
+            ? {
+              bottom: this.currentPosition,
+              transition: `bottom  ${this.transition.duration}s ${this.transition.mode} ${this.transition.delay}s`
+            } : {
+              left: this.currentPosition,
+              transition: `left  ${this.transition.duration}s ${this.transition.mode} ${this.transition.delay}s`
+            };
+        }
         return this.vertical ? { bottom: this.currentPosition } : { left: this.currentPosition };
       }
     },
