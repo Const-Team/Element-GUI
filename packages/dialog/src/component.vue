@@ -5,7 +5,7 @@
     @after-leave="afterLeave">
     <div
       v-show="visible"
-      class="el-dialog__wrapper"
+      :class="['el-dialog__wrapper', wrapperClass]"
       @mousedown.self="handleWrapperClick">
       <div
         role="dialog"
@@ -93,6 +93,11 @@
       fullscreen: Boolean,
 
       draggable: Boolean,
+
+      wrapperClass: {
+        type: String,
+        default: ''
+      },
 
       customClass: {
         type: String,

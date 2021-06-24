@@ -255,6 +255,7 @@ Dialog 的内容是懒渲染的，即在第一次被打开之前，传入的默�
 | modal-append-to-body     | 遮罩层是否插入至 body 元素上，若为 false，则遮罩层会插入至 Dialog 的父元素上   | boolean   | — | true |
 | append-to-body     | Dialog 自身是否插入至 body 元素上。嵌套的 Dialog 必须指定该属性并赋值为 true   | boolean   | — | false |
 | lock-scroll | 是否在 Dialog 出现时将 body 滚动锁定 | boolean | — | true |
+| wrapper-class      | Dialog Wrapper 的自定义类名 | string    | — | — |
 | custom-class      | Dialog 的自定义类名 | string    | — | — |
 | close-on-click-modal | 是否可以通过点击 modal 关闭 Dialog | boolean    | — | true |
 | close-on-press-escape | 是否可以通过按下 ESC 关闭 Dialog | boolean    | — | true |
