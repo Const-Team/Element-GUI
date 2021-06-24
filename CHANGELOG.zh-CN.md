@@ -3,7 +3,7 @@
 <details open="open">
 
 <summary>
-  <span>1.2.6</span><em>2021-06-22</em>
+  <span>1.2.6</span><em>2021-06-24</em>
 </summary>
 
 #### 新特性
@@ -18,6 +18,10 @@
   - 针对分割按钮添加 `disabled` 和 `loading` 属性
 - Slider
   - 添加过渡动画配置
+- Dialog
+  - 添加 `wrapper-class` 属性
+- Rate
+  - 添加 `keydown-disabled` 属性
 
 #### 修复
 
@@ -30,10 +34,18 @@
   - 修复切换时间间隔错误
 - Popover
   - 修复内存泄漏
+  - 修复关闭状态下不必要的 `update`
 - Upload
   - 修复自定义上传文件时代码异常
 - Message
   - 修复 `message` 类型判断
+- Alert
+  - 修复关闭后无法再次打开
+- Form
+  - 修复 `model` 中的属性没有初始化属性时，重置表单会导致控件不刷新
+- Table
+  - 修复拖拽列后，计算高度时由于宽度引起固定列高度错误
+  - 修复固定列底边线样式
 - Utils
   - 修复使用2位数日期截断年份
   - 修复DOM报错
