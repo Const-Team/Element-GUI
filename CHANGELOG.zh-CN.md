@@ -22,6 +22,8 @@
   - 添加 `wrapper-class` 属性
 - Rate
   - 添加 `keydown-disabled` 属性
+- Timeline
+  - 添加 `timestamp` 插槽
 
 #### 修复
 
@@ -49,6 +51,7 @@
 - Utils
   - 修复使用2位数日期截断年份
   - 修复DOM报错
+  - 修复偶现双击事件
 
 #### 优化
 
@@ -56,6 +59,8 @@
   - 优化在创建节点之前可以更改数据
 - Empty
   - 优化语言包
+- Input
+  - 优化计算高度性能
 
 </details>
 
