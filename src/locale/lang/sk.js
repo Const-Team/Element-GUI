@@ -124,6 +124,9 @@ export default {
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
       cancelButtonText: 'No' // to be translated
+    },
+    empty: {
+      description: 'Žiadne dáta'
     }
   }
 };

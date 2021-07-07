@@ -384,7 +384,11 @@ export default {
 
     doLayout() {
       if (this.shouldUpdateHeight) {
+        const oldScrollY = this.layout.scrollY;
         this.layout.updateElsHeight();
+        if (oldScrollY !== this.layout.scrollY) {
+          this.layout.updateColumnsWidth();
+        }
       }
       this.layout.updateColumnsWidth();
       this.updateScrollBar();

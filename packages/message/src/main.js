@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Main from './main.vue';
 import { PopupManager } from 'element-gui/src/utils/popup';
 import { isVNode } from 'element-gui/src/utils/vdom';
+import { isObject } from 'element-gui/src/utils/types';
 let MessageConstructor = Vue.extend(Main);
 
 let instance;
@@ -51,14 +52,17 @@ const Message = function(options) {
 };
 
 ['success', 'warning', 'info', 'error'].forEach(type => {
-  Message[type] = options => {
-    if (typeof options === 'string') {
-      options = {
-        message: options
-      };
+  Message[type] = (options) => {
+    if (isObject(options) && !isVNode(options)) {
+      return Message({
+        ...options,
+        type
+      });
     }
-    options.type = type;
-    return Message(options);
+    return Message({
+      type,
+      message: options
+    });
   };
 });
 

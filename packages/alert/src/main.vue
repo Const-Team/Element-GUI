@@ -3,7 +3,7 @@
     <div
       class="el-alert"
       :class="[typeClass, center ? 'is-center' : '', 'is-' + effect]"
-      v-show="visible"
+      v-show="selfVisible"
       role="alert"
     >
       <i class="el-alert__icon" :class="[ iconClass, isBigIcon ]" v-if="showIcon"></i>
@@ -68,7 +68,7 @@
 
     methods: {
       close() {
-        this.visible = false;
+        this.selfVisible = false;
         this.$emit('close');
       }
     },
@@ -88,6 +88,15 @@
 
       isBoldTitle() {
         return this.description || this.$slots.default ? 'is-bold' : '';
+      },
+
+      selfVisible: {
+        get() {
+          return this.visible;
+        },
+        set(val) {
+          return val;
+        }
       }
     }
   };

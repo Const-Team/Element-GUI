@@ -3,6 +3,70 @@
 <details open="open">
 
 <summary>
+  <span>1.2.6</span><em>悼念同胞，永怀先烈，吾辈自强！💖 2021-07-07</em>
+</summary>
+
+#### 新特性
+
+- Progress
+  - `SVG` 元素添加宽高属性
+- Tooltip
+  - 添加 `close-delay` 属性
+- Calendar
+  - 添加 `header` 插槽
+- Dropdown
+  - 针对分割按钮添加 `disabled` 和 `loading` 属性
+- Slider
+  - 添加过渡动画配置
+- Dialog
+  - 添加 `wrapper-class` 属性
+- Rate
+  - 添加 `keydown-disabled` 属性
+- Timeline
+  - 添加 `timestamp` 插槽
+
+#### 修复
+
+- Select
+  - 修复 `placeholder` 切换语言转换
+  - 修复异步获取选项和下拉列表无法修改标签
+- ButtonGroup
+  - 修复按钮组 `el-dropdown` 和 `el-popover`中按钮样式
+- Carousel
+  - 修复切换时间间隔错误
+- Popover
+  - 修复内存泄漏
+  - 修复关闭状态下不必要的 `update`
+- Upload
+  - 修复自定义上传文件时代码异常
+- Message
+  - 修复 `message` 类型判断
+- Alert
+  - 修复关闭后无法再次打开
+- Form
+  - 修复 `model` 中的属性没有初始化属性时，重置表单会导致控件不刷新
+- Table
+  - 修复拖拽列后，计算高度时由于宽度引起固定列高度错误
+  - 修复固定列底边线样式
+- Utils
+  - 修复使用2位数日期截断年份
+  - 修复DOM报错
+  - 修复偶现双击事件
+
+#### 优化
+
+- Tree
+  - 优化在创建节点之前可以更改数据
+- Empty
+  - 优化语言包
+- Input
+  - 优化计算高度性能
+
+</details>
+
+<details>
+
+<summary>
   <span>1.2.5</span><em>2021-06-11</em>
 </summary>
 
@@ -41,7 +105,7 @@
 <details>
 
 <summary>
-  <span>1.2.3</span><em>2021-05-30</em>
+  <span>1.2.3</span><em>🎉 儿童节快乐 🥳 2021-05-30</em>
 </summary>
 
 #### 新特性
@@ -54,7 +118,7 @@
 - MessageBox
   - 修复关闭按钮居中
 - Carousel
-  - 修复间隔和缩放错误
+  - 修复缩放错误
 - Tabs
   - 修复控制台报错 `scrollToActiveTab of undefined`
   - 修复激活页签样式

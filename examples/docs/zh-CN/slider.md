@@ -11,7 +11,7 @@
 <template>
   <div class="block">
     <span class="demonstration">默认</span>
-    <el-slider v-model="value1"></el-slider>
+    <el-slider enableTransition v-model="value1"></el-slider>
   </div>
   <div class="block">
     <span class="demonstration">自定义初始值</span>
@@ -265,6 +265,8 @@
 | tooltip-effect | tooltip 的主题 | string | dark/light | dark |
 | marks | 标记， key 的类型必须为 number 且取值在闭区间 `[min, max]` 内，每个标记可以单独设置样式 | object | — | — |
 | rangeClick | 仅在`range`下生效，点击滑块时，两个拖拽点直接定位到点击位置 | boolean | — | false |
+| enableTransition | 是否使用过渡动画 | boolean | — | false |
+| transition | 过渡动画 | object | — | {duration: 1, mode: 'linear', delay: 0} |
 
 ### Events
 | 事件名称      | 说明    | 回调参数      |

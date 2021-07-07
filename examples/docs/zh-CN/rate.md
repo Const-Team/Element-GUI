@@ -113,6 +113,7 @@
 | value / v-model | 绑定值 | number | — | 0 |
 | max | 最大分值 | number | — | 5 |
 | disabled | 是否为只读 | boolean | — | false |
+| keydown-disabled | 是否键盘可控制 | boolean | — | false |
 | allow-half | 是否允许半选 | boolean | — | false |
 | low-threshold | 低分和中等分数的界限值，值本身被划分在低分中 | number | — | 2 |
 | high-threshold | 高分和中等分数的界限值，值本身被划分在高分中 | number | — | 4 |

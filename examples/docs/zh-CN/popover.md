@@ -151,6 +151,7 @@ Popover 的属性与 Tooltip 很类似，它们都是基于`Vue-popper`开发的
 | popper-class | 为 popper 添加类名 | String | — | — |
 | open-delay | 触发方式为 hover 时的显示延迟，单位为毫秒 | Number | — | — |
 | close-delay | 触发方式为 hover 时的隐藏延迟，单位为毫秒 | number | — | 200 |
+| append-to-body     | Popover 自身是否插入至 body 元素上 | boolean   | — | true |
 | tabindex   | Popover 组件的 [tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) | number | — | 0 |
 
 ### Slot

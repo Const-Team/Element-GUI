@@ -35,6 +35,8 @@
       <slider-button
         :vertical="vertical"
         v-model="firstValue"
+        :enableTransition="enableTransition"
+        :transition="transition"
         :tooltip-class="tooltipClass"
         :tooltip-effect="tooltipEffect"
         ref="button1">
@@ -42,6 +44,8 @@
       <slider-button
         :vertical="vertical"
         v-model="secondValue"
+        :enableTransition="enableTransition"
+        :transition="transition"
         :tooltip-class="tooltipClass"
         :tooltip-effect="tooltipEffect"
         ref="button2"
@@ -53,13 +57,15 @@
         :key="'point-'+key"
         :style="getPointStyle(item)">
       </div>
-      <div
-        class="el-slider__stop"
-        v-for="(item, key) in stops"
-        :key="key"
-        :style="getStopStyle(item)"
-        v-if="showStops">
-      </div>
+      <template v-if="showStops">
+        <div
+          class="el-slider__stop"
+          v-for="(item, key) in stops"
+          :key="key"
+          :style="getStopStyle(item)"
+          >
+        </div>
+      </template>
       <template v-if="markList.length > 0">
         <div>
           <div
@@ -161,6 +167,20 @@
         default: 'dark'
       },
       marks: Object,
+      enableTransition: {
+        type: Boolean,
+        default: false
+      },
+      transition: {
+        type: Object,
+        default: () => {
+          return {
+            duration: 1,
+            mode: 'linear',
+            delay: 0
+          };
+        }
+      },
       disabledPoint: {
         type: Array
       },
@@ -400,6 +420,18 @@
       },
 
       barStyle() {
+        if (!this.range && this.enableTransition) {
+          return this.vertical
+            ? {
+              height: this.barSize,
+              bottom: this.barStart,
+              transition: `height ${this.transition.duration}s ${this.transition.mode} ${this.transition.delay}s`
+            } : {
+              width: this.barSize,
+              left: this.barStart,
+              transition: `width ${this.transition.duration}s ${this.transition.mode} ${this.transition.delay}s`
+            };
+        }
         return this.vertical
           ? {
             height: this.barSize,

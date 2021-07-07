@@ -127,6 +127,10 @@
       scoreTemplate: {
         type: String,
         default: '{value}'
+      },
+      keydownDisabled: {
+        type: Boolean,
+        default: false
       }
     },
 
@@ -274,7 +278,7 @@
       },
 
       handleKey(e) {
-        if (this.rateDisabled) {
+        if (this.rateDisabled || this.keydownDisabled) {
           return;
         }
         let currentValue = this.currentValue;

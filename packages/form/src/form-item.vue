@@ -37,40 +37,40 @@
   </div>
 </el-col>
 <div v-else class="el-form-item" :class="[{
-      'el-form-item--feedback': elForm && elForm.statusIcon,
-      'is-error': validateState === 'error',
-      'is-validating': validateState === 'validating',
-      'is-success': validateState === 'success',
-      'is-required': isRequired || required,
-      'is-no-asterisk': elForm && elForm.hideRequiredAsterisk
-    },
-    sizeClass ? 'el-form-item--' + sizeClass : ''
-  ]">
-    <label-wrap :is-auto-width="labelStyle && labelStyle.width === 'auto'" :update-all="form.labelWidth === 'auto'">
-      <label :for="labelFor" class="el-form-item__label" :style="labelStyle" v-if="label || $slots.label">
-        <slot name="label">{{label + form.labelSuffix}}</slot>
-      </label>
-    </label-wrap>
-    <div class="el-form-item__content" :class="{'el-form-item__block': typeof blockMessage === 'boolean'
-                ? blockMessage
-                : (elForm && elForm.blockMessage || false)}" :style="contentStyle">
-      <slot></slot>
-      <transition name="el-zoom-in-top">
-        <slot v-if="validateState === 'error' && showMessage && form.showMessage" name="error" :error="validateMessage">
-          <div class="el-form-item__error" :class="[{
-              'el-form-item__error--inline': typeof inlineMessage === 'boolean'
-                ? inlineMessage
-                : (elForm && elForm.inlineMessage || false),
-                'el-form-item__error--block': typeof blockMessage === 'boolean'
-                ? blockMessage
-                : (elForm && elForm.blockMessage || false)
-            }]">
-            {{validateMessage}}
-          </div>
-        </slot>
-      </transition>
-    </div>
+    'el-form-item--feedback': elForm && elForm.statusIcon,
+    'is-error': validateState === 'error',
+    'is-validating': validateState === 'validating',
+    'is-success': validateState === 'success',
+    'is-required': isRequired || required,
+    'is-no-asterisk': elForm && elForm.hideRequiredAsterisk
+  },
+  sizeClass ? 'el-form-item--' + sizeClass : ''
+]">
+  <label-wrap :is-auto-width="labelStyle && labelStyle.width === 'auto'" :update-all="form.labelWidth === 'auto'">
+    <label :for="labelFor" class="el-form-item__label" :style="labelStyle" v-if="label || $slots.label">
+      <slot name="label">{{label + form.labelSuffix}}</slot>
+    </label>
+  </label-wrap>
+  <div class="el-form-item__content" :class="{'el-form-item__block': typeof blockMessage === 'boolean'
+              ? blockMessage
+              : (elForm && elForm.blockMessage || false)}" :style="contentStyle">
+    <slot></slot>
+    <transition name="el-zoom-in-top">
+      <slot v-if="validateState === 'error' && showMessage && form.showMessage" name="error" :error="validateMessage">
+        <div class="el-form-item__error" :class="[{
+            'el-form-item__error--inline': typeof inlineMessage === 'boolean'
+              ? inlineMessage
+              : (elForm && elForm.inlineMessage || false),
+              'el-form-item__error--block': typeof blockMessage === 'boolean'
+              ? blockMessage
+              : (elForm && elForm.blockMessage || false)
+          }]">
+          {{validateMessage}}
+        </div>
+      </slot>
+    </transition>
   </div>
+</div>
 </template>
 <script>
 import AsyncValidator from 'async-validator';
@@ -298,6 +298,7 @@ export default {
       this.validateMessage = '';
 
       let model = this.form.model;
+      let value = this.fieldValue;
       let path = this.prop;
       if (path.indexOf(':') !== -1) {
         path = path.replace(/:/, '.');
@@ -306,7 +307,12 @@ export default {
       let prop = getPropByPath(model, path, true);
 
       this.validateDisabled = true;
-      prop.o[prop.k] = this.initialValue;
+
+      if (Array.isArray(value)) {
+        this.$set(prop.o, prop.k, [].concat(this.initialValue));
+      } else {
+        this.$set(prop.o, prop.k, this.initialValue);
+      }
 
       // reset validateDisabled after onFieldChange triggered
       this.$nextTick(() => {

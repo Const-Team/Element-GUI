@@ -8,7 +8,7 @@
     </div>
     <div class="el-empty__description">
       <slot v-if="$slots.description" name="description"></slot>
-      <p v-else>{{ description || t('el.table.emptyText') }}</p>
+      <p v-else>{{ emptyDescription }}</p>
     </div>
     <div v-if="$slots.default" class="el-empty__bottom">
       <slot></slot>
@@ -17,11 +17,10 @@
 </template>
 
 <script>
-import Locale from 'element-gui/src/mixins/locale';
 import ImgEmpty from './img-empty.vue';
+import { t } from 'element-gui/src/locale';
 export default {
   name: 'ElEmpty',
-  mixins: [Locale],
   components: {
     ImgEmpty
   },
@@ -37,6 +36,9 @@ export default {
     }
   },
   computed: {
+    emptyDescription() {
+      return this.description || t('el.empty.description');
+    },
     imageStyle() {
       return { width: this.imageSize ? `${this.imageSize}px` : '' };
     }

@@ -1,7 +1,6 @@
 <template>
   <div class="el-switch" :class="{ 'is-disabled': switchDisabled, 'is-checked': checked }" role="switch" :aria-checked="checked" :aria-disabled="switchDisabled" @click.prevent="switchValue">
     <input class="el-switch__input" type="checkbox" @change="handleChange" ref="input" :id="id" :name="_elFormItemName" :true-value="activeValue" :false-value="inactiveValue" :disabled="switchDisabled" @keydown.enter="switchValue">
-    <!-- <span class="el-switch__core" ref="core" :style="{ 'width': width + 'px' }"> -->
     <span class="el-switch__core" ref="core">
       <span :class="['el-switch__label', checked ? 'is-active' : '']" v-if="activeIconClass || activeText">
         <i :class="[activeIconClass]" v-if="activeIconClass"></i>
