@@ -3,7 +3,7 @@
 <details open="open">
 
 <summary>
-  <span>1.2.6</span><em>悼念同胞，永怀先烈，吾辈自强！ 2021-07-07</em>
+  <span>1.2.6</span><em>悼念同胞，永怀先烈，吾辈自强！💖 2021-07-07</em>
 </summary>
 
 #### 新特性
