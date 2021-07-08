@@ -3,11 +3,13 @@
 <details open="open">
 
 <summary>
-  <span>1.2.6</span><em>悼念同胞，永怀先烈，吾辈自强！💖 2021-07-07</em>
+  <span>1.2.7</span><em>悼念同胞，永怀先烈，吾辈自强！💖 2021-07-07</em>
 </summary>
 
 #### 新特性
 
+- Descriptions
+  - 增加描述列表组件
 - Progress
   - `SVG` 元素添加宽高属性
 - Tooltip

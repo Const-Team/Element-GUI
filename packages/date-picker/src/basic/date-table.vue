@@ -365,7 +365,8 @@
         if (target.tagName !== 'TD') return;
 
         const row = target.parentNode.rowIndex - 1;
-        const column = target.cellIndex;
+        // const column = target.cellIndex;
+        const column = this.selectionMode === 'week' ? 0 : target.cellIndex;
 
         // can not select disabled date
         if (this.rows[row][column].disabled) return;
