@@ -91,5 +91,6 @@
   "skeleton": "./packages/skeleton/index.js",
   "skeleton-item": "./packages/skeleton-item/index.js",
   "descriptions": "./packages/descriptions/index.js",
-  "descriptions-item": "./packages/descriptions-item/index.js"
+  "descriptions-item": "./packages/descriptions-item/index.js",
+  "result": "./packages/result/index.js"
 }
