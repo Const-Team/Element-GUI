@@ -90,6 +90,6 @@
   "empty": "./packages/empty/index.js",
   "skeleton": "./packages/skeleton/index.js",
   "skeleton-item": "./packages/skeleton-item/index.js",
-  "descriptions": "./packages/description/index.js",
-  "descriptions-item": "./packages/description-item/index.js"
+  "descriptions": "./packages/descriptions/index.js",
+  "descriptions-item": "./packages/descriptions-item/index.js"
 }
