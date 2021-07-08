@@ -84,10 +84,6 @@ export default {
         return;
       }
 
-      if (this.popperOptions.beforeUpdate === undefined) {
-        this.popperOptions.beforeUpdate = () => this.value;
-      }
-
       const options = this.popperOptions;
       const popper = this.popperElm = this.popperElm || this.popper || this.$refs.popper;
       let reference = this.referenceElm = this.referenceElm || this.reference || this.$refs.reference;
