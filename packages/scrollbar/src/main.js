@@ -98,10 +98,10 @@ export default {
 
   methods: {
     handleScroll(e) {
-      this.$emit('doScroll', e);
       const wrap = this.wrap;
       this.moveY = ((wrap.scrollTop * 100) / wrap.clientHeight);
       this.moveX = ((wrap.scrollLeft * 100) / wrap.clientWidth);
+      this.$emit('doScroll', {scrollTop: this.moveY, scrollLeft: this.moveX} , e);
     },
 
     update() {

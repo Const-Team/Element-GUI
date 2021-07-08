@@ -23,8 +23,8 @@
       };
     },
     methods: {
-      scroll(event) {
-        console.log(event)
+      scroll(obj) {
+        console.log(obj)
       }
     }
   };
@@ -49,4 +49,4 @@
 
 | 事件名称 | 说明                        | 回调参数 |
 | -------- | --------------------------- | -------- |
-| doScroll     | 滚动事件回调           | event        |
+| doScroll     | 滚动事件回调           | 滚动距离 { scrollTop, scrollLeft }    |
