@@ -8,6 +8,8 @@
 
 #### 新特性
 
+- Descriptions
+  - 增加描述列表组件
 - Progress
   - `SVG` 元素添加宽高属性
 - Tooltip
