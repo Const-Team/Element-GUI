@@ -202,6 +202,10 @@
             {
               "path": "/skeleton",
               "title": "Skeleton 骨架屏"
+            },
+            {
+              "path": "/descriptions",
+              "title": "Descriptions 描述列表"
             }
           ]
         },

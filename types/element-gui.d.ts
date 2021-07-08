@@ -83,6 +83,8 @@ import { ElPopconfirm } from './popconfirm'
 import { ElSkeleton } from './skeleton'
 import { ElSkeletonItem } from './skeleton-item'
 import { ElEmpty } from './empty'
+import { ElDescriptions } from './descriptions'
+import { ElDescriptionsItem } from './descriptions-item'
 
 export interface InstallationOptions {
   locale: any,
@@ -355,4 +357,10 @@ export class Skeleton extends ElSkeleton {}
 export class SkeletonItem extends ElSkeletonItem { }
 
 /** Empty Component */
-export class Empty extends ElEmpty {}
+export class Empty extends ElEmpty { }
+
+/** Description Component */
+export class Descripitions extends ElDescriptions {}
+
+/** Description Item Component */
+export class DescripitionsItem extends ElDescriptionsItem {} 

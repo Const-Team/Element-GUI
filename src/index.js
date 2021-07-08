@@ -91,6 +91,8 @@ import TextEllipsis from '../packages/text-ellipsis/index.js';
 import Empty from '../packages/empty/index.js';
 import Skeleton from '../packages/skeleton/index.js';
 import SkeletonItem from '../packages/skeleton-item/index.js';
+import Descriptions from '../packages/descriptions/index.js';
+import DescriptionsItem from '../packages/descriptions-item/index.js';
 import locale from 'element-gui/src/locale';
 import CollapseTransition from 'element-gui/src/transitions/collapse-transition';
 
@@ -180,6 +182,8 @@ const components = [
   Empty,
   Skeleton,
   SkeletonItem,
+  Descriptions,
+  DescriptionsItem,
   CollapseTransition
 ];
 
@@ -312,5 +316,7 @@ export default {
   TextEllipsis,
   Empty,
   Skeleton,
-  SkeletonItem
+  SkeletonItem,
+  Descriptions,
+  DescriptionsItem
 };
