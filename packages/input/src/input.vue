@@ -409,7 +409,9 @@ export default {
 
   mounted() {
     this.setNativeInputValue();
-    this.resizeTextarea();
+    this.$nextTick(()=>{
+      this.resizeTextarea();
+    });
     this.updateIconOffset();
   },
 
