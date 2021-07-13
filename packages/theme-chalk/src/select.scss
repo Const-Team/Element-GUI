@@ -65,10 +65,6 @@
       & .el-input__inner {
         cursor: not-allowed;
 
-        &:hover {
-          // 按钮组下拉禁用
-          // border-color: $--select-disabled-border;
-        }
       }
       &:hover{
         .el-input__icon{
@@ -80,10 +76,6 @@
     &.is-focus .el-input__inner {
       border-color: $--select-input-focus-border-color;
     }
-  }
-
-  > .el-input {
-    display: block;
   }
 
   @include e(input) {

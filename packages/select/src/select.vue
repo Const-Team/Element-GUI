@@ -8,7 +8,7 @@
       class="el-select__tags"
       v-if="multiple"
       ref="tags"
-      :style="{ 'max-width': inputWidth - 32 + 'px', width: '100%' }">
+      :style="{ 'max-width': inputWidth - 32 + 'px', width: '100%', 'margin-left': inputMarginLeft + 'px' }">
       <!-- 文字简洁版 -->
       <template v-if="collapseTexts && selected.length">
         <el-tooltip popper-class="select-tooltip" :offset="-8" :max-width="inputWidth - 20" class="el-select-text" :effect="tooltipEffect" :content="selectedTitle" :disabled="selected.length && (getLength*8 < inputWidth - 32)" placement="top">
@@ -138,12 +138,18 @@
       @paste.native="debouncedOnInputChange"
       @mouseenter.native="inputHovering = true"
       @mouseleave.native="inputHovering = false">
+      <template slot="prepend" v-if="$slots.prepend">
+        <slot name="prepend"></slot>
+      </template>
       <template slot="prefix" v-if="$slots.prefix">
         <slot name="prefix"></slot>
       </template>
       <template slot="suffix">
         <i v-show="!showClose" :class="['el-select__caret', 'el-input__icon', iconClass]" @click="handleCaretClose"></i>
         <i v-if="showClose" class="el-select__caret el-input__icon el-icon-circle-close" @click="handleClearClick"></i>
+      </template>
+      <template slot="append" v-if="$slots.append">
+        <slot name="append"></slot>
       </template>
     </el-input>
     <transition
@@ -392,6 +398,7 @@
         selected: this.multiple ? [] : {},
         inputLength: 20,
         inputWidth: 0,
+        inputMarginLeft: 0,
         initialInputHeight: 0,
         cachedPlaceHolder: '',
         optionsCount: 0,
@@ -887,7 +894,10 @@
       },
 
       resetInputWidth() {
-        this.inputWidth = this.$refs.reference.$el.getBoundingClientRect().width;
+        const inputBoundingClientRect = this.$refs.reference.$el.querySelector('input').getBoundingClientRect();
+        const componentBoundingClientRect = this.$refs.reference.$el.getBoundingClientRect();
+        this.inputMarginLeft = inputBoundingClientRect.left - componentBoundingClientRect.left;
+        this.inputWidth = inputBoundingClientRect.width;
       },
 
       handleResize() {
@@ -976,7 +986,7 @@
       }
       this.$nextTick(() => {
         if (reference && reference.$el) {
-          this.inputWidth = reference.$el.getBoundingClientRect().width;
+          this.inputWidth = reference.$el.querySelector('input').getBoundingClientRect().width;
         }
       });
       this.setSelected();

@@ -452,6 +452,57 @@
 ```
 :::
 
+### 复合型输入框
+
+可前置或后置元素，一般为标签或按钮
+
+:::demo 可通过 slot 来指定在 input 中前置或者后置内容。
+```html
+<template>
+  <el-select size="medium" v-model="value" class="el-width400" multiple clearable placeholder="请选择">
+    <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
+    </el-option>
+    <template slot="prepend">类别</template>
+    <template slot="append">
+      <el-button @click.stop.prevent icon="el-icon-search"></el-button>
+    </template>
+  </el-select>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      options: [
+        {
+          value: '选项1',
+          label: '黄金糕'
+        },
+        {
+          value: '选项2',
+          label: '双皮奶'
+        },
+        {
+          value: '选项3',
+          label: '蚵仔煎'
+        },
+        {
+          value: '选项4',
+          label: '龙须面'
+        },
+        {
+          value: '选项5',
+          label: '北京烤鸭'
+        }
+      ],
+      value: []
+    };
+  }
+};
+</script>
+```
+:::
+
 ### 自定义模板
 
 可以自定义备选项
@@ -782,6 +833,8 @@
 |    —    | Option 组件列表 |
 | prefix  | Select 组件头部内容 |
 | empty | 无选项时的列表 |
+| prepend | 下拉框前置内容 |
+| append  | 下拉框后置内容 |
 
 ### Option Group Attributes
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
