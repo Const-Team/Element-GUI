@@ -7,8 +7,7 @@
 :::demo
 ```html
 <div>
-  <el-link href="https://www.glodon.com" target="_blank">广联达</el-link>
- 
+  <el-link href="https://www.baidu.com" target="_blank">百度</el-link>
   <el-link type="primary">主要链接</el-link>
   <el-link type="success">成功链接</el-link>
   <el-link type="warning">警告链接</el-link>
