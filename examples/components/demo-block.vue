@@ -19,12 +19,12 @@
       class="demo-block-control"
       ref="control"
       :class="{ 'is-fixed': fixedControl }"
-      @click="isExpanded = !isExpanded">
+      >
       <transition name="arrow-slide">
-        <i :class="[iconClass, { 'hovering': hovering }]"></i>
+        <i @click="isExpanded = !isExpanded" :class="[iconClass, { 'hovering': hovering }]"></i>
       </transition>
       <transition name="text-slide">
-        <span v-show="hovering">{{ controlText }}</span>
+        <span @click="isExpanded = !isExpanded" v-show="hovering">{{ controlText }}</span>
       </transition>
       <el-tooltip effect="dark" :content="langConfig['tooltip-text']" placement="right">
         <transition name="text-slide">
@@ -38,6 +38,16 @@
           </el-button>
         </transition>
       </el-tooltip>
+      <transition name="text-slide">
+        <el-button
+          v-show="hovering || isExpanded"
+          size="small"
+          type="text"
+          class="copy-code"
+          @click="copyCode">
+          复制代码
+        </el-button>
+      </transition>
     </div>
   </div>
 </template>
@@ -129,9 +139,10 @@
       text-align: center;
       margin-top: -1px;
       color: #d3dce6;
-      cursor: pointer;
       position: relative;
-    
+      span {
+        cursor: pointer;
+      }
       &.is-fixed {
         position: fixed;
         bottom: 0;
@@ -175,6 +186,15 @@
         padding-left: 5px;
         padding-right: 25px;
       }
+      .copy-code{
+        line-height: 26px;
+        position: absolute;
+        top: 0;
+        left: 10px;
+        font-size: 14px;
+        padding-left: 5px;
+        padding-right: 25px;
+      }
     }
   }
   .element-doc > table {
@@ -195,8 +215,8 @@
   import compoLang from '../i18n/component.json';
   import Element from 'main/index.js';
   import { stripScript, stripStyle, stripTemplate } from '../util';
+  import Clipboard from 'clipboard';
   const { version } = Element;
-
   export default {
     data() {
       return {
@@ -213,6 +233,33 @@
     },
 
     methods: {
+      copyCode() {
+        const { script, html, style } = this.codepen;
+        const newScript = '\n\<script>\n' + script + '\n\<\/script>';
+        const newStyle = '\n\<style>\n' + style + '\n\<\/style>';
+        var clipboard = new Clipboard('.copy-code', {
+          text: function() {
+            return html + newScript + newStyle;
+          }
+        });
+        clipboard.on('success', e => {
+          this.$message({
+            message: '复制成功',
+            type: 'success'
+          });
+          // 释放内存
+          clipboard.destroy();
+        });
+        clipboard.on('error', e => {
+          // 不支持复制
+          this.$message({
+            message: '复制失败',
+            type: 'error'
+          });
+          // 释放内存
+          clipboard.destroy();
+        });
+      },
       goCodepen() {
         // since 2.6.2 use code rather than jsfiddle https://blog.codepen.io/documentation/api/prefill/
         const { script, html, style } = this.codepen;
