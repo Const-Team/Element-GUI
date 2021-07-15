@@ -235,8 +235,8 @@
     methods: {
       copyCode() {
         const { script, html, style } = this.codepen;
-        const newScript = '\n\<script>\n' + script + '\n\<\/script>';
-        const newStyle = '\n\<style>\n' + style + '\n\<\/style>';
+        const newScript = script ? '\n\<script>\n' + script + '\n\<\/script>' : '';
+        const newStyle = style ? '\n\<style>\n' + style + '\n\<\/style>' : '';
         var clipboard = new Clipboard('.copy-code', {
           text: function() {
             return html + newScript + newStyle;
