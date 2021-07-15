@@ -575,9 +575,6 @@ export default {
     },
     handleResize() {
       this.resetInputWidth();
-      if (this.multiple) {
-        this.resetInputHeight();
-      };
     },
     setSelected() {
       if (this.multiple) {
