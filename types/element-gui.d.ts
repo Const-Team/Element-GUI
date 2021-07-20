@@ -85,6 +85,7 @@ import { ElSkeletonItem } from './skeleton-item'
 import { ElEmpty } from './empty'
 import { ElDescriptions } from './descriptions'
 import { ElDescriptionsItem } from './descriptions-item'
+import { ElResult } from './result'
 
 export interface InstallationOptions {
   locale: any,
@@ -363,4 +364,7 @@ export class Empty extends ElEmpty { }
 export class Descripitions extends ElDescriptions {}
 
 /** Description Item Component */
-export class DescripitionsItem extends ElDescriptionsItem {} 
+export class DescripitionsItem extends ElDescriptionsItem { }
+
+/** Result Component */
+export class Result extends ElResult {}
