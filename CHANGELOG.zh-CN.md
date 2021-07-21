@@ -3,6 +3,38 @@
 <details open="open">
 
 <summary>
+  <span>1.2.8</span><em>2021-07-09</em>
+</summary>
+
+#### 新特性
+
+- Result
+  - 增加结果组件
+- Select
+  - 增加前后插槽
+
+#### 修复
+
+- Input
+  - 修复表格内渲染输入框高度计算错误
+- DatePicker
+  - 修复日期多选默认当天无法高亮
+  - 日期选择器周开始时间为周五时跨年显示问题
+- Tabs
+  - 选项卡无限循环更新页签
+- Select
+  - 多选时窗口缩放会抖动
+
+#### 优化
+
+- Style
+  - 替换 `node-sass`为 `dart-sass`
+
+</details>
+
+<details>
+
+<summary>
   <span>1.2.7</span><em>悼念同胞，永怀先烈，吾辈自强！💖 2021-07-07</em>
 </summary>
 

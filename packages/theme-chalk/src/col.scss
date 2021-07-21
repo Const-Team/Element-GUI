@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "./common/var.scss";
 @import "./mixins/mixins.scss";
 
@@ -12,21 +13,21 @@
 
 @for $i from 0 through 24 {
   .el-col-#{$i} {
-    width: (1 / 24 * $i * 100) * 1%;
+    width: (math.div(1 , 24) * $i * 100) * 1%;
   }
 
   .el-col-offset-#{$i} {
-    margin-left: (1 / 24 * $i * 100) * 1%;
+    margin-left: (math.div(1 , 24) * $i * 100) * 1%;
   }
 
   .el-col-pull-#{$i} {
     position: relative;
-    right: (1 / 24 * $i * 100) * 1%;
+    right: (math.div(1 , 24) * $i * 100) * 1%;
   }
 
   .el-col-push-#{$i} {
     position: relative;
-    left: (1 / 24 * $i * 100) * 1%;
+    left: (math.div(1 , 24) * $i * 100) * 1%;
   }
 }
 
@@ -43,21 +44,21 @@
     }
     @for $i from 0 through 24 {
       .el-col-#{$size}-#{$i} {
-        width: (1 / 24 * $i * 100) * 1%;
+        width: (math.div(1 , 24) * $i * 100) * 1%;
       }
 
       .el-col-#{$size}-offset-#{$i} {
-        margin-left: (1 / 24 * $i * 100) * 1%;
+        margin-left: (math.div(1 , 24) * $i * 100) * 1%;
       }
 
       .el-col-#{$size}-pull-#{$i} {
         position: relative;
-        right: (1 / 24 * $i * 100) * 1%;
+        right: (math.div(1 , 24) * $i * 100) * 1%;
       }
 
       .el-col-#{$size}-push-#{$i} {
         position: relative;
-        left: (1 / 24 * $i * 100) * 1%;
+        left: (math.div(1 , 24) * $i * 100) * 1%;
       }
     }
   }
