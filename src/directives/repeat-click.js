@@ -2,31 +2,23 @@ import { once, on } from 'element-gui/src/utils/dom';
 
 export default {
   bind(el, binding, vnode) {
-    const DELAY = 300;
-    const INTERVAL = 100;
-    let intervalTimer = null;
-    let delayTimer = null;
+    let interval = null;
+    let startTime;
     const handler = () => vnode.context[binding.expression].apply();
     const clear = () => {
-      clearInterval(intervalTimer);
-      clearTimeout(delayTimer);
-      intervalTimer = null;
-      delayTimer = null;
+      if (Date.now() - startTime < 100) {
+        handler();
+      }
+      clearInterval(interval);
+      interval = null;
     };
 
     on(el, 'mousedown', (e) => {
       if (e.button !== 0) return;
+      startTime = Date.now();
       once(document, 'mouseup', clear);
-      clearInterval(intervalTimer);
-
-      if (delayTimer) {
-        clearTimeout(delayTimer);
-      }
-
-      delayTimer = setTimeout(() => {
-        intervalTimer = setInterval(handler, INTERVAL);
-        delayTimer = null;
-      }, DELAY);
+      clearInterval(interval);
+      interval = setInterval(handler, 100);
     });
   }
 };
