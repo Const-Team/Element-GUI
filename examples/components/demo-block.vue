@@ -19,6 +19,7 @@
       class="demo-block-control"
       ref="control"
       :class="{ 'is-fixed': fixedControl }"
+      @click.self="isExpanded = !isExpanded"
       >
       <transition name="arrow-slide">
         <i @click="isExpanded = !isExpanded" :class="[iconClass, { 'hovering': hovering }]"></i>
@@ -140,9 +141,7 @@
       margin-top: -1px;
       color: #d3dce6;
       position: relative;
-      span {
-        cursor: pointer;
-      }
+      cursor: pointer;
       &.is-fixed {
         position: fixed;
         bottom: 0;
